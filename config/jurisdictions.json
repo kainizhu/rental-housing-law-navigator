@@ -1,0 +1,16 @@
+{
+  "_comment": "Address-resolution config only (postal city -> legal municipality). No law content here.",
+  "states": {"CA": "California", "NJ": "New Jersey", "MA": "Massachusetts"},
+  "cities": {
+    "Los Angeles, CA": {"aliases": ["Los Angeles", "Van Nuys", "North Hollywood", "Sylmar", "Sun Valley", "Tujunga", "Sunland", "Panorama City", "Pacoima", "Reseda", "Encino", "Sherman Oaks", "Studio City", "Hollywood"]},
+    "San Francisco, CA": {"aliases": ["San Francisco"]},
+    "San Diego, CA": {"aliases": ["San Diego", "San Ysidro", "La Jolla"]},
+    "Berkeley, CA": {"aliases": ["Berkeley"]},
+    "Santa Ana, CA": {"aliases": ["Santa Ana"]},
+    "Jersey City, NJ": {"aliases": ["Jersey City"]},
+    "Hoboken, NJ": {"aliases": ["Hoboken"]},
+    "Newark, NJ": {"aliases": ["Newark"]},
+    "Boston, MA": {"aliases": ["Boston", "Dorchester", "Roxbury", "East Boston", "Brighton", "Allston", "South Boston", "Jamaica Plain", "Hyde Park", "Mattapan", "Charlestown", "West Roxbury", "Roslindale"]},
+    "Cambridge, MA": {"aliases": ["Cambridge"]}
+  }
+}

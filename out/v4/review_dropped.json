@@ -1,0 +1,44 @@
+[
+ {
+  "id": "BOS-JC-01",
+  "citation": "Housing Stability Notification Act (Sec. 10-11.7)",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This ordinance requires a tenant-rights/resources notice when serving a notice to quit or non-renewal, but it does not limit eviction to specified causes. The record itself states it is not a cause limitation on eviction, so it is not an operative just-cause eviction rule."
+ },
+ {
+  "id": "CA-DEP-02",
+  "citation": "Cal. Civ. Code § 1950.6",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This provision mainly clarifies that application screening fees are not security deposits and are governed by the separate screening-fee statute; it does not itself impose an operative security-deposit rule."
+ },
+ {
+  "id": "LA-RENT-P02",
+  "citation": "Los Angeles City Council Motion 24-1031",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This motion concerns possible future regulation of algorithm-based rent-setting software, not an operative rent-increase-limit rule; it is better categorized under algorithmic_rent_setting, and even there it is only a study motion."
+ },
+ {
+  "id": "LA-ALG-P01",
+  "citation": "Los Angeles City Council Motion 24-1031",
+  "decision": "drop_not_a_rule",
+  "duplicate_of": null,
+  "reason": "City Council motion directs a report/study on possible future ban but does not itself create operative algorithmic rent-setting rules, definitions, penalties, or effective date."
+ },
+ {
+  "id": "MA-RENT-P04",
+  "citation": "S.2983",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This pending bill's subject is algorithmic rent setting, not rent increase limits, and the provided materials do not show any operative rent-cap or rent-control provisions in this category."
+ },
+ {
+  "id": "MA-RENT-P03",
+  "citation": "H.5222",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This pending bill concerns algorithmic rent fixing/setting rather than rent increase limits, and no operative rent-cap rule is provided here."
+ }
+]

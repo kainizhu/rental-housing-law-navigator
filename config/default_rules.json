@@ -1,0 +1,5 @@
+{
+  "_comment": "General legal defaults for WHEN enacted state statutes take effect if the text is silent. Applied only to state-level enacted records with effective.kind == 'missing' and a known enactment date. Provenance is tagged 'default_rule'.",
+  "CA": {"statute_effective": {"rule": "january_1_following_enactment_year", "source": "Cal. Const. art. IV, § 8(c)(1) (regular-session statutes take effect January 1 of the year following enactment)"}},
+  "MA": {"statute_effective": {"rule": "days_after_enactment", "days": 90, "source": "Mass. Const. amend. art. 48 (laws take effect 90 days after enactment unless an emergency preamble applies)"}}
+}

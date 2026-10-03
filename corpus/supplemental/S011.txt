@@ -1,0 +1,174 @@
+SOURCE: https://docs.sandiego.gov/municode/municodechapter09/ch09art08division8.pdf
+RETRIEVED: 2026-10-03 23:40 UTC
+CAPTURE: direct download (pdftotext -layout) of official City of San Diego municipal code PDF, same publisher/path as corpus D073 (supplemental; Division 8 source of income)
+
+San Diego Municipal Code                                   Chapter 9: Building, Housing and Sign Regulations
+(10-2018)
+
+
+
+
+                                            Article 8: Housing
+
+            Division 8: Prohibition of Discrimination Based on a Tenant’s Source of Income
+                  (“Prohibition of Discrimination Based on a Tenant’s Source of Income”
+                         added 9-18-2018 by O–20986 N.S.; effective 10-18-2018.)
+
+
+§98.0801          Purpose and Intent
+
+                  It is the purpose and intent of this Division to ensure that landlords in the City of San
+                  Diego cannot discriminate against any person based on that person’s source of
+                  income. The California Fair Employment and Housing Act (FEHA), as amended
+                  from time to time, makes it unlawful for the owner of any housing accommodation to
+                  discriminate against any person based on certain factors, including the person’s
+                  source of income. FEHA defines source of income as “lawful, verifiable income paid
+                  directly to a tenant or paid to a representative of a tenant [excluding a landlord].” This
+                  Division defines source of income more broadly to include rental assistance from any
+                  federal, state, local, or nonprofit-administered benefit or subsidy program, among
+                  other sources. Under this Division, landlords retain their right to reject prospective
+                  tenants for other lawful reasons consistent with federal, state, and local laws.
+                  (“Purpose and Intent” added 9-18-2018 by O–20986 N.S.; effective 10-18-2018.)
+
+§98.0802          Definitions
+
+                  For purposes of this Division, defined terms appear in italics. The following
+                  definitions apply in this Division:
+
+                  Source of income means all lawful, verifiable sources of income, or rental
+                  assistance from any federal, state, local, or nonprofit-administered benefit or
+                  subsidy program, or any financial aid from any rental assistance program,
+                  homeless assistance program, security deposit assistance program, or housing
+                  subsidy program, whether paid directly to the program participant, landlord, or
+                  representative of either.
+
+                  Rental-unit has the same meaning as in Municipal Code section 98.0720.
+
+                  Tenancy has the same meaning as in Municipal Code section 98.0720.
+                  (“Definitions” added 9-18-2018 by O–20986 N.S.; effective 10-18-2018.)
+
+
+
+
+                                                                                                   Ch.   Art.   Div.
+                                                                                                     9     8      8    1
+San Diego Municipal Code                                    Chapter 9: Building, Housing and Sign Regulations
+(10-2018)
+
+
+
+§98.0803            Prohibited Activity
+
+                    (a)    It is unlawful for any person to do any of the following acts, wholly or in
+                           part, based on a person’s source of income (except as may be necessary to
+                           comply with any program requirements related to source of income):
+
+                           1.     To refuse to enter into or renew an agreement for tenancy;
+
+                           2.     To interrupt or terminate any tenancy;
+
+                           3.     To falsely represent that a rental-unit is not available for tenancy;
+
+                           4.     To require inclusion in the terms of an agreement for tenancy any
+                                  clause, condition, or restriction; or
+
+                           5.     To restrict a tenant’s access to facilities or services on real property
+                                  associated with the tenancy, or refuse repairs or improvements to real
+                                  property associated with the tenancy.
+
+                    (b)    It is unlawful for any person to make, print, publish, advertise, or
+                           disseminate in any way, or cause to be made, printed, published,
+                           advertised, or disseminated in any way, any notice, statement, or
+                           advertisement with respect to a rental-unit, or with respect to financing
+                           related to a rental-unit, which indicates discrimination based on a
+                           person’s source of income.
+
+                    (c)    It is unlawful for any person to use a financial or income standard for
+                           entering into or renewing a tenancy that does either of the following:
+
+                           (1)    Fails to account for any tenant’s or prospective tenant’s entire
+                                  source of income; or
+
+                           (2)    Fails to account for the aggregate source of income of tenants
+                                  residing together or proposing to reside together, or the aggregate
+                                  source of income of tenants or prospective tenants and their
+                                  cosigners or proposed cosigners, on the same basis as the
+                                  aggregate source of income of married persons residing together or
+                                  proposing to reside together.
+
+                    (“Prohibited Activity” added 9-18-2018 by O–20986 N.S.; effective 10-18-2018.)
+
+
+
+
+Ch.   Art.   Div.
+  9     8      8    2
+San Diego Municipal Code                               Chapter 9: Building, Housing and Sign Regulations
+(10-2018)
+
+
+
+§98.0804       Exceptions for Owner-Occupied Rental-Units
+
+               Nothing in this Division shall apply to any tenancy in which the owner or any
+               member of his or her family resides within the same residential building as the
+               tenant and the owner or family member share a bathroom or a kitchen facility with
+               the tenant or prospective tenant.
+               (“Exceptions for Owner-Occupied Rental-Units” added 9-18-2018 by
+               O-20986 N.S.; effective 10-18-2018.)
+
+§98.0805       Effect on Other Laws
+
+               Nothing in this Division shall be deemed to permit a transaction in real property
+               that is otherwise prohibited by any applicable law.
+               (“Effect on Other Laws” added 9-18-2018 by O–20986 N.S.; effective 10-18-2018.)
+§98.0806       Enforcement and Remedies
+
+               (a)    An aggrieved person claiming a violation of this Division may file an action
+                      against a person in a court of competent jurisdiction for a violation(s) that is
+                      alleged to have occurred on or after August 1, 2019, within one year after
+                      discovery of the alleged violation.
+
+               (b)    An aggrieved person may seek an injunction under this section.
+
+               (c)    The court may award monetary damages to an aggrieved person who proves
+                      a violation of this Division. If the court determines that a violation occurred
+                      during a tenancy, then the court shall award to the individual whose rights
+                      are violated three (3) times the amount of one month’s rent that was being
+                      charged for the rental-unit at the time of violation. If the court determines
+                      that a violation occurred prior to a tenancy, then the court shall award to the
+                      individual whose rights are violated three (3) times the amount of one
+                      month’s rent that the landlord advertised for the rental-unit at the time of the
+                      violation.
+
+               (d)    The court may award punitive damages, as well as attorneys’ fees and costs
+                      of action.
+
+               (e)    Nothing in this section shall be interpreted to limit or restrict the City’s
+                      authority to administer and enforce the provisions of this Division pursuant to
+                      Chapter 1 of this Code.
+
+
+
+
+                                                                                               Ch.   Art.   Div.
+                                                                                                 9     8      8    3
+San Diego Municipal Code                                   Chapter 9: Building, Housing and Sign Regulations
+(10-2018)
+
+
+
+
+                    (f)   This Division is not to be construed to limit an aggrieved person’s right to
+                          bring legal action for a violation of any other laws concerning housing
+                          discrimination, or other standards or rights, nor is exhaustion of remedies
+                          under this Division a prerequisite to the assertion of any other such right.
+                    (“Enforcement and Remedies” added 9-18-2018 by O–20986 N.S.; effective
+                    10-18-2018.)
+
+
+
+
+Ch.   Art.   Div.
+  9     8      8    4
+

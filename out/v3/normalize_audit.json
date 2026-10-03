@@ -1,0 +1,80 @@
+[
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "Berkeley, CA",
+   "application_screening_fees"
+  ],
+  "into": "Berkeley Municipal Code § 13.78.010",
+  "from": "Berkeley Municipal Code § 13.78.016"
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "Berkeley, CA",
+   "application_screening_fees"
+  ],
+  "into": "Berkeley Municipal Code § 13.78.010",
+  "from": "Berkeley Municipal Code § 13.78.018"
+ },
+ {
+  "action": "drop_wrong_level",
+  "cell": [
+   "Boston, MA",
+   "rent_increase_limits"
+  ],
+  "citation": "Mass. H.3744 (193rd Gen. Ct. 2023-2024)",
+  "why": {
+   "flag": "state_citation_at_city_level",
+   "normalized": "H.3744"
+  }
+ },
+ {
+  "action": "drop_wrong_level",
+  "cell": [
+   "Boston, MA",
+   "just_cause_eviction"
+  ],
+  "citation": "H.3744",
+  "why": {
+   "flag": "state_citation_at_city_level",
+   "normalized": "H.3744"
+  }
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "Boston, MA",
+   "screening_restrictions"
+  ],
+  "into": "Boston Fair Chance Tenant Selection Policy",
+  "from": "Boston Fair Chance Tenant Selection Policy"
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "MA",
+   "screening_restrictions"
+  ],
+  "into": "G.L. c. 151B § 4",
+  "from": "G.L. c. 151B § 4"
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "San Francisco, CA",
+   "rent_increase_limits"
+  ],
+  "into": "San Francisco Rent Ordinance",
+  "from": "San Francisco Rent Ordinance"
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "San Francisco, CA",
+   "just_cause_eviction"
+  ],
+  "into": "San Francisco Rent Ordinance § 37.9(a)",
+  "from": "San Francisco Rent Ordinance § 37.9A"
+ }
+]

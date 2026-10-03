@@ -1,0 +1,7 @@
+rules 49 addresses 500
+results Counter({'applies': 3312, 'unknown': 587, 'superseded': 380, 'pending': 220, 'not_yet_effective': 140})
+T1 affected 250 conflicts 0 | as_of: rules ['CA-ALG-01']
+T2 affected 90 conflicts 0 | boundary: rules ['HOB-ALG-01', 'JC-ALG-01']
+T3 affected 140 conflicts 90 | as_of: rules ['NJ-ALG-01']; conflicts with ['HOB-ALG-01', 'JC-ALG-01']
+T4 affected 110 conflicts 0 | pending: rules ['MA-ALG-P01', 'MA-ALG-P02']
+T5 affected 0 conflicts 0 | negative: rules ['MA-RENT-02']

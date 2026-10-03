@@ -1,0 +1,17 @@
+SOURCE: https://hudsoncountyview.com/jersey-city-council-approves-realpage-ban-and-increasing-benefits-for-laborers/
+RETRIEVED: 2026-10-03 22:17 UTC
+CAPTURE: manual, built-in browser page text (supplemental; secondary/news; same URL as manifest D035, link-only); relevant paragraphs only
+
+Jersey City Council approves RealPage ban and increasing benefits for laborers
+By Daniel Ulloa -
+May 22, 2025 10:14 am
+
+The Jersey City Council unanimously approved (9-0) a measure banning rent-setting algorithms such as RealPage, as well as increasing benefits for laborers, at last night’s meeting.
+
+Daniel Feldman said that while the ordinance is a good first step, it does not address rents already inflated and felt that a $2,000 daily fine may be a little light for large corporate landlords.
+
+New Jersey Association of Relators lobbyist Bruce Shapiro said they did not want the law to apply to real estate agents and was pleased that Solomon obliged them as the sponsor.
+
+The Jersey City Council passed the ordinance unanimously (9-0) to applause.
+
+“We are disappointed to hear about the City of Jersey City passing legislation that will ban the use of certain nonpublic data in our revenue management software, as we believe such data can be used in pro-competitive ways that benefit the entire rental housing ecosystem, including renters and housing providers,” she said in a statement.

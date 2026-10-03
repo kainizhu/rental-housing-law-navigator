@@ -1,0 +1,53 @@
+SOURCE: https://ecode360.com/46833413
+RETRIEVED: 2026-10-03 22:08 UTC
+CAPTURE: manual, built-in browser page text (supplemental; not part of the official starter corpus)
+
+Chapter 158: Rent Increases - City of Hoboken, NJ
+Chapter 158
+Rent Increases
+[HISTORY: Adopted by the Mayor and Council of the City of Hoboken as indicated in article histories. Amendments noted where applicable.]
+[Editor's Note: Former Ch. 158, Rooming Houses; Licenses, adopted 12-18-1974 by Ord. No. C-25, as amended, was repealed 2-15-2023 by Ord. No. B-537.]
+Article I
+Mandatory Disclosures for Certain Rent Increases
+§ 158-1
+Mandatory disclosures for rental increases over 10%.
+Article II
+Algorithmic Rent Fixing in Rental Housing Market
+§ 158-2
+Algorithmic rent fixing in rental housing market prohibited.
+Article I
+Mandatory Disclosures for Certain Rent Increases
+[Adopted 4-2-2025 by Ord. No. B-750]
+§ 158-1
+Mandatory disclosures for rental increases over 10%.
+A.
+All residential landlords seeking to increase rent by more than 10% upon a renewal of a lease with a current tenant year over year shall be required to make the following disclosures to existing tenants either in the lease upon renewal (must be clearly indicated on the first page) or on a form provided by the Hoboken Division of Housing prior to the increase being implemented:
+(1)
+An itemization of the costs associated with the rent increase;
+(2)
+A statement as to whether a rent algorithm was used to determine the rent increase;
+(3)
+A statement notifying the tenant of their right to take legal action (at their own expense) if they believe that the proposed rent increase is unconscionable or otherwise not in accordance with local or state law; and
+(4)
+The contact information for the Hoboken Division of Housing and a statement indicating that tenants may reach out to the Hoboken Division of Housing and/or Tenant Advocate with questions or concerns.
+B.
+Any landlord who pleads guilty to or is found guilty of failing to provide the disclosures to tenants as provided herein shall be subject to a fine not exceeding $1,000 per incident.
+Article II
+Algorithmic Rent Fixing in Rental Housing Market
+[Adopted 7-9-2025 by Ord. No. B-781]
+§ 158-2
+Algorithmic rent fixing in rental housing market prohibited.
+A.
+Prohibited conduct. Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing. For purposes of this chapter, "price fixing using algorithmic pricing" shall be defined as the use of software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels for residential dwelling units among competing real estate lessors. For purposes of this chapter, "nonpublic competitor information" shall be defined as information including, but not limited to, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material terms that is less than 365 days old and is not widely and readily available to the public at no cost.
+B.
+Enforcement.
+(1)
+Enforcement. Alleged violations of this chapter may be brought by the Division of Housing, or any private citizen alleging to be aggrieved, to the Hoboken Municipal Court for adjudication.
+C.
+Penalties. Any person violating the requirements set forth in this chapter shall, upon conviction, be subject to one or more of the following penalties:
+(1)
+Penalties as prescribed under N.J.S.A. 40:49-5; or
+(2)
+By a fine not exceeding $2,000; or
+(3)
+By a period of community service not exceeding 90 days.

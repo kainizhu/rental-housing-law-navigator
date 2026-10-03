@@ -1,0 +1,122 @@
+# Hand-written expectations. Written BEFORE any model output exists.
+# Sources: challenge brief (category table, illustrative output, T1-T6), README §4.1/§7/§9,
+# and direct reading of corpus/supplemental text. Never fed into prompts.
+# "silver" = best available evidence, not ground truth.
+
+meta:
+  default_as_of: "2026-10-01"
+  assumptions:            # switchable; proxy evaluator reports results under each
+    ma_40p_in_lookups: [applies, omit]          # default: applies (miss costs 2x)
+    unknown_credit: [0.0, 0.25, 0.5]
+    citation_match: [strict, loose]
+    nj_4c_implies_5plus_units: [hint_only, supported]   # default hint_only
+    allow_supplemental_spans: [true, false]
+
+# ---------------------------------------------------------------- silver rule key
+# key fields: jurisdiction, category, raw citation (as the brief writes it), key_value,
+# effective_date (precision as stated), status as of 2026-10-01, evidence doc ids.
+silver_rules:
+  - {id: CA-RENT, jur: CA, cat: rent_increase_limits, cite: "Cal. Civ. Code § 1947.12", key_value: "5% + CPI, max 10%", status: in_force, sunset: "2030-01-01", docs: [D024]}
+  - {id: CA-JC, jur: CA, cat: just_cause_eviction, cite: "Cal. Civ. Code § 1946.2", status: in_force, sunset: "2030-01-01", docs: [D023]}
+  - {id: CA-DEP, jur: CA, cat: security_deposits, cite: "Cal. Civ. Code § 1950.5", key_value: "1 month (2 for qualifying small landlords)", effective_date: "2024-07-01", status: in_force, docs: [D025]}
+  - {id: CA-FEE, jur: CA, cat: application_screening_fees, cite: "Cal. Civ. Code § 1950.6", key_value: "CPI-adjusted cap", status: in_force, docs: [D026], note: "no single official 2026 dollar figure (README §9) -> conflict/low confidence on key_value"}
+  - {id: CA-SCR, jur: CA, cat: screening_restrictions, cite: "Cal. Gov. Code § 12955", status: in_force, docs: [D027], note: "FEHA source-of-income (SB 329)"}
+  - {id: CA-ALG-01, jur: CA, cat: algorithmic_rent_setting, cite: "AB 325 / SB 763", effective_date: "2026-01-01", status: in_force, date_provenance: default_rule, docs: [D022]}
+  - {id: SF-RENT, jur: "San Francisco, CA", cat: rent_increase_limits, cite: "S.F. Admin. Code ch. 37", coverage: "certificate of occupancy on or before 1979-06-13", status: in_force, docs: [D080, D083]}
+  - {id: SF-JC, jur: "San Francisco, CA", cat: just_cause_eviction, cite: "S.F. Admin. Code § 37.9", status: in_force, docs: [D079]}
+  - {id: SF-ALG, jur: "San Francisco, CA", cat: algorithmic_rent_setting, cite: "S.F. Admin. Code § 37.10C", effective_date: "2024-10-14", status: in_force, docs: [D081]}
+  - {id: LA-RENT, jur: "Los Angeles, CA", cat: rent_increase_limits, cite: "LAMC ch. XV (RSO)", coverage: "certificate of occupancy on or before 1978-10-01", status: in_force, docs: [D041, D042], note: "new formula date conflict 2026-02-02 (LAHD) vs 2026-01-24 (landlord assn) -> prefer official"}
+  - {id: LA-JC, jur: "Los Angeles, CA", cat: just_cause_eviction, cite: "LAMC (JCO)", status: in_force, docs: [D040]}
+  - {id: SD-ALG, jur: "San Diego, CA", cat: algorithmic_rent_setting, cite: "San Diego Mun. Code §§ 98.1101–98.1104", effective_date: "2025-06", status: in_force, docs: [D076]}
+  - {id: SD-JC, jur: "San Diego, CA", cat: just_cause_eviction, cite: "San Diego Mun. Code ch. 9 art. 8 div. 7 (TPO)", status: in_force, docs: [D073]}
+  - {id: BRK-ALG, jur: "Berkeley, CA", cat: algorithmic_rent_setting, cite: "Berkeley Mun. Code ch. 13.63", effective_date: null, status: in_force, docs: [D001], conflict: "README says 2026-03-01 in ordinance text (not in captured text); law firm S002 says January 2026"}
+  - {id: SA-ALG, jur: "Santa Ana, CA", cat: algorithmic_rent_setting, cite: "Santa Ana Ord. NS-3090", effective_date: "2026-04-02", date_provenance: computed_from_quote, status: in_force, docs: [S003]}
+  - {id: NJ-DEP, jur: NJ, cat: security_deposits, cite: "N.J.S.A. 46:8-21.2", key_value: "1.5 months' rent", status: in_force, docs: [D067]}
+  - {id: NJ-JC, jur: NJ, cat: just_cause_eviction, cite: "N.J.S.A. 2A:18-61.1", status: in_force, docs: [D065, D067]}
+  - {id: NJ-FEE, jur: NJ, cat: application_screening_fees, cite: "P.L.2025, c.405", key_value: "$50 cap", effective_date: "2026-05-01", status: in_force, docs: [D066]}
+  - {id: NJ-SCR, jur: NJ, cat: screening_restrictions, cite: "Fair Chance in Housing Act (P.L.2021, c.110)", status: in_force, docs: [D065]}
+  - {id: NJ-ALG-01, jur: NJ, cat: algorithmic_rent_setting, cite: "P.L.2026, c.43 (FAIR Act)", effective_date: "2027-07-01", date_provenance: computed_from_quote, status: not_yet_effective, docs: [D069]}
+  - {id: JC-ALG-01, jur: "Jersey City, NJ", cat: algorithmic_rent_setting, cite: "Jersey City Code § 218-12", effective_date: "2025-06", status: in_force, docs: [S002, S005]}
+  - {id: HOB-ALG-01, jur: "Hoboken, NJ", cat: algorithmic_rent_setting, cite: "Hoboken Code § 158-2", effective_date: "2025-07-09", status: in_force, docs: [S001]}
+  - {id: MA-RENT-40P, jur: MA, cat: rent_increase_limits, cite: "G.L. c. 40P", status: in_force, docs: [D048], note: "bar on local rent control, NOT a cap"}
+  - {id: MA-RENT-P1, jur: MA, cat: rent_increase_limits, cite: "2026 rent-control ballot question", status: failed, docs: [S004]}
+  - {id: MA-DEP, jur: MA, cat: security_deposits, cite: "G.L. c. 186 § 15B", key_value: "first month's rent", status: in_force, docs: [D052]}
+  - {id: MA-FEE, jur: MA, cat: application_screening_fees, cite: "G.L. c. 186 § 15B", key_value: "upfront limited to first/last month, deposit, lock", status: in_force, docs: [D052]}
+  - {id: MA-BROKER, jur: MA, cat: application_screening_fees, cite: "G.L. c. 112 § 87DDD½", effective_date: "2025-08-01", status: in_force, docs: [D057]}
+  - {id: MA-ALG-P1, jur: MA, cat: algorithmic_rent_setting, cite: "S.2983", status: pending, docs: [D046, D047]}
+  - {id: MA-ALG-P2, jur: MA, cat: algorithmic_rent_setting, cite: "H.5222", status: pending, docs: [D045]}
+
+silver_no_rule_cells:          # must produce zero in_force rules
+  - {jur: "Boston, MA", cat: rent_increase_limits}
+  - {jur: "Cambridge, MA", cat: rent_increase_limits}
+
+# ---------------------------------------------------------------- S1 multi-rule cells
+S1:
+  - {jur: MA, cat: application_screening_fees, expect_count: 2, cites: ["G.L. c. 186 § 15B", "G.L. c. 112 § 87DDD½"]}
+  - {jur: MA, cat: security_deposits, expect_count: 1, cites: ["G.L. c. 186 § 15B"]}
+  - {jur: MA, cat: algorithmic_rent_setting, expect_count: 2, statuses: [pending, pending]}
+  - {jur: NJ, cat: security_deposits, expect_count: 1, cites: ["N.J.S.A. 46:8-21.2"]}
+  - {jur: "Cambridge, MA", cat: rent_increase_limits, expect_count: 0}
+  # pass: "all counts exact; 15B survives dedupe in both categories; no subsection fragments"
+
+# ---------------------------------------------------------------- S2 wrong-level leakage
+S2:
+  cells:
+    - {jur: "Los Angeles, CA", cat: rent_increase_limits}
+    - {jur: "San Diego, CA", cat: just_cause_eviction}
+    - {jur: "San Francisco, CA", cat: security_deposits}
+    - {jur: "Berkeley, CA", cat: application_screening_fees}
+  # pass: "zero city-level records whose normalized citation is a state code (Cal. Civ./Gov. Code, N.J.S.A., G.L.)"
+
+# ---------------------------------------------------------------- S3 dates
+S3:
+  - {rule: NJ-ALG-01, effective_date: "2027-07-01", provenance: computed_from_quote, anchor: "approved July 20, 2026", status: not_yet_effective}
+  - {rule: NJ-FEE, effective_date: "2026-05-01", provenance: computed_from_quote, status: in_force}
+  - {rule: SF-ALG, effective_date: "2024-10-14", provenance: explicit_quote, status: in_force}
+  - {rule: CA-ALG-01, effective_date: "2026-01-01", provenance: default_rule, status: in_force, alt: "null + flag if default rules disabled"}
+  - {rule: SA-ALG, effective_date: "2026-04-02", provenance: computed_from_quote, anchor: "ADOPTED this 3rd day of March, 2026"}
+  - {rule: BRK-ALG, effective_date: null, provenance: missing, hard_fail_if_non_null: true}
+  - {rule: CA-RENT, sunset: "2030-01-01", provenance: explicit_quote}
+  - {rule: MA-ALG-P1, effective_date: null, status: pending, hard_fail_if_non_null: true}
+  # pass: ">=6/8 exact; zero fabricated dates; every non-null date has provenance + grounded quote"
+
+# ---------------------------------------------------------------- S4 grounding
+S4:
+  hard_docs: [D069, D052, D043]
+  # pass: "100% located within 1 retry; >=80% raw-exact; 0 fuzzy-only"
+
+# ---------------------------------------------------------------- S5 unknown behavior (fixtures, no LLM)
+S5:
+  cases:
+    - {rule: LA-RENT, facts: {year_built: 1927, units: 32}, expect: applies}
+    - {rule: LA-RENT, facts: {year_built: 1978, units: 10}, expect: unknown, why: "CO cutoff 1978-10-01 falls inside year"}
+    - {rule: LA-RENT, facts: {year_built: 2019, units: 10}, expect: omit}
+    - {rule: CA-RENT, facts: {city: San Diego, year_built: null}, expect: unknown, why: "15-year exemption undecidable"}
+    - {rule: CA-RENT, facts: {city: Los Angeles, year_built: 1927}, expect: superseded, why: "local RSO covers"}
+    - {rule: CA-RENT, facts: {city: Los Angeles, year_built: 1978}, expect: unknown, why: "local coverage unknown propagates"}
+    - {rule: CA-RENT, facts: {city: Los Angeles, year_built: 2016}, expect: omit, why: "<15 years old as of 2026-10-01"}
+    - {rule: JC-RENT, facts: {units: null, use_description: "3S-F-D-6U-NH"}, expect: unknown, why: "hint only"}
+    - {rule: JC-RENT, facts: {address_id: A0227}, expect: unknown, why: "units=2 vs use code 93U conflict"}
+    - {rule: NJ-DEP, facts: {units: null}, expect: applies, why: "owner-occupied exemption is unobservable -> note, not unknown"}
+    - {rule: NJ-JC, facts: {units: null}, expect: applies}
+  metamorphic: "blanking any fact never moves unknown -> applies"
+  sensitivity: "rank strict-unknown vs liberal-unknown policy across unknown_credit x ma_40p; pass if stable"
+
+# ---------------------------------------------------------------- S6 relations
+S6:
+  - {a: CA-RENT, b: LA-RENT, expect: local_governs_where_covered}
+  - {a: CA-JC, b: SD-JC, expect: local_governs_where_covered}
+  - {a: CA-DEP, b: SF-DEP-INTEREST, expect: cumulative}
+  - {a: NJ-ALG-01, b: JC-ALG-01, expect: possible_conflict, from: "2027-07-01", evidence_doc: D069}
+  - {a: NJ-ALG-01, b: HOB-ALG-01, expect: possible_conflict, from: "2027-07-01", evidence_doc: D069}
+  - {a: NJ-DEP, b: JC-RENT, expect: none}
+  # pass: ">=5/6 type+direction; all evidence grounded; 0 invented cross-category relations"
+
+# ---------------------------------------------------------------- S7 hour-16 rehearsal
+S7:
+  doc: spike/synthetic/SYN001_cambridge.txt
+  expect_rules:
+    - {cat: just_cause_eviction, status: not_yet_effective, effective_date: "2027-03-01", coverage: "units >= 6"}
+    - {cat: rent_increase_limits, status: not_yet_effective, effective_date: "2027-03-01", conflict_with: MA-RENT-40P}
+  expect_affected_count: {variant_A_ge6: 45, variant_B_gt6: 21}
+  invariants: ["non-Cambridge lookups byte-identical", "zero code changes", "owner-occupied exemption -> note not unknown"]

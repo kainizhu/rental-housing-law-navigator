@@ -1,0 +1,25 @@
+SOURCE: https://www.wbur.org/news/2026/06/23/massachusetts-high-court-rent-control-ballot-question-struck
+RETRIEVED: 2026-10-03 22:17 UTC
+CAPTURE: manual, built-in browser page text (supplemental; secondary/news; same URL as manifest D059, link-only); article body only
+
+High court derails rent control ballot question, citing mention of religion
+Gintautas Dumcius
+Updated June 23, 2026
+
+The state’s Supreme Judicial Court ruled a ballot question seeking to bring rent control back to Massachusetts cannot go forward this November, because it includes a religious exemption.
+
+The proposal limits annual rent increases for residences, but it carved out exemptions for several types of units, including ones “operated solely for … religious … purposes." As a result, the court said it concluded the petition “relates to religion, religious practices or religious institutions,” which the state Constitution does not allow to go before voters.
+
+The ruling ends what promised to be one of the most expensive ballot initiative showdowns this year.
+
+Attorney General Andrea Campbell’s office had argued it properly certified the petition because the question did not discriminate in favor of religious institutions, and pointed to exemptions for units that would be considered secular.
+
+But the court’s ruling said the existence of secular exemptions does not change the fact that the proposal has a carveout for religious facilities.
+
+Four voters who oppose rent control brought the lawsuit before the Supreme Judicial Court.
+
+In recent weeks, rent control supporters pushed for a compromise bill, urging state lawmakers to pass it as legislation before July 1. But top lawmakers balked, in part because the Supreme Judicial Court hadn’t yet ruled.
+
+She and other proponents hinted they could try to get another rent control petition on the 2028 statewide ballot. Ramos wrote the court’s issue with the current question is “easily fixable.”
+
+This article was originally published on June 23, 2026.

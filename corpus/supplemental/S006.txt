@@ -1,0 +1,325 @@
+SOURCE: https://ecode360.com/36623772
+RETRIEVED: 2026-10-03 23:15 UTC
+CAPTURE: manual, built-in browser page text; blank lines removed (supplemental; manifest D070, link-only)
+
+Chapter 19:2
+Rent Control Regulations; Rent Control Board.
+gavel
+help_center
+New
+Laws
+Title
+Adopted
+Subject
+Affects
+Ord. No. 6PSF-C, 06-17-2026  pdf
+2026-06-17
+Title XIX, Rent Control, Chapter 2, Rent Control Regulations; Rent Control Board; amends §§ 19:2-27 and 19:2-32
+Ch 19:2
+[Prior ordinance history: R.O. 1966 C.S. § 15:9B-1 through 15:9B-22; Ordinance Nos: 6 S+FM 9-4-1985; 6 S+FX 10-2-1985; 6 S+FBO 12-18-1985; 6 S+FC 2-19-1986; 6 S+FC 4-16-1986; 6 S+FU 2-7-1988; 6 S+FR 10-5-1988; 6 S+FU 12-1-1988; 6 S+FD 12-18-1991; 6 S+FF 6-3-1992; 6 S+FP 9-2-1992; 6 S+FQ 9-2-1992; 6 S+FG 9-6-1995; 6 S+FM 2-21-1996; 6 S+FB 10-17-2001; 6 S+FG 1-9-2002; 6 S+FE 7-10-2002; 6PSF-B 5-16-2012; 6PSF-D 5-20-2014; 6PSF-F 6-15-2016; 6PSF-A(S) 3-7-2017.]
+§ 19:2-1
+STATEMENT OF POLICY.
+§ 19:2-2
+DEFINITIONS.
+§ 19:2-2.1
+Applicability.
+§ 19:2-3
+RENT INCREASES.
+§ 19:2-3.1
+Determination of Rents.
+§ 19:2-3.2
+Increases Limited; Notice of Increase.
+§ 19:2-3.3
+Parking Fees.
+§ 19:2-3.4
+Substantial Compliance and Registration Compliance for Any Rent Increase.
+§ 19:2-4
+RENT REBATE.
+§ 19:2-5
+TAX SURCHARGE.
+§ 19:2-5.1
+Formula for Surcharge.
+§ 19:2-5.2
+Petition for Surcharge.
+§ 19:2-5.3
+Payment of Surcharge.
+§ 19:2-5.4
+Appeals.
+§ 19:2-6
+TAX DECREASES.
+§ 19:2-6.1
+Apportionment.
+§ 19:2-6.2
+Tax Appeal, Reduction.
+§ 19:2-6.3
+Rebates.
+§ 19:2-7
+MAJOR NEW IMPROVEMENTS; ADDITIONAL RENT.
+§ 19:2-7.1
+Computation of Increase.
+§ 19:2-7.2
+Increase Prorated.
+§ 19:2-7.3
+Applicability; Notification.
+§ 19:2-7.4
+Appeals.
+§ 19:2-8
+LANDLORD HARDSHIPS.
+§ 19:2-8.1
+Appeal for Increase.
+§ 19:2-8.2
+Code Violations.
+§ 19:2-8.3
+Submission of Records and Proofs.
+§ 19:2-8.4
+Fees Not Applicable.
+§ 19:2-8.5
+Impartial Appraisal.
+§ 19:2-8.6
+Apportionment of Increase.
+§ 19:2-8.7
+Time Period for Increase.
+§ 19:2-8.8
+Excessive Purchase Price; Efficient Operator.
+§ 19:2-8.9
+Appeals.
+§ 19:2-9
+RENT CONTROL BOARD.
+§ 19:2-9.1
+Membership.
+§ 19:2-9.2
+Interests.
+§ 19:2-9.3
+Rules and Regulations.
+§ 19:2-9.4
+Meetings.
+§ 19:2-9.5
+Quorum.
+§ 19:2-9.6
+Dockets.
+§ 19:2-9.7
+Language.
+§ 19:2-9.8
+Registration.
+§ 19:2-10
+POWERS OF THE RENT CONTROL BOARD AND THE RENT REGULATION OFFICER.
+§ 19:2-10.1
+Authorization.
+§ 19:2-10.2
+Powers of the Board.
+§ 19:2-10.3
+Powers of the Rent Regulation Officer.
+§ 19:2-11
+CONDOMINIUM; SENIOR CITIZENS AND DISABLED CITIZENS PROTECTED FROM EVICTION.
+§ 19:2-11.1
+Applications for Protected Tenancy.
+§ 19:2-11.2
+Fees.
+§ 19:2-11.3
+Appeals Heard by Board.
+§ 19:2-12
+RENT DECREASES.
+§ 19:2-12.1
+Cause for Reduction.
+§ 19:2-12.2
+Percentage of Reduction Allowed.
+§ 19:2-12.3
+Minimum Percentage of Decrease.
+§ 19:2-12.4
+Time Periods.
+§ 19:2-12.5
+Conditional Decrease; Correction.
+§ 19:2-12.6
+Change of Heating Service.
+§ 19:2-12.7
+Policy Statement Available.
+§ 19:2-13
+PUBLIC HEARING.
+§ 19:2-13.1
+Petitions.
+§ 19:2-13.2
+Notice.
+§ 19:2-13.3
+Records.
+§ 19:2-13.4
+Open Hearing.
+§ 19:2-13.5
+Right to Assistance.
+§ 19:2-13.6
+Hearing Record.
+§ 19:2-13.7
+Decision.
+§ 19:2-13.8
+Hearing Officer.
+§ 19:2-14
+RETALIATORY EVICTION.
+§ 19:2-15
+APPEAL JUDICIAL REVIEW.
+§ 19:2-16
+NO EXCESSIVE RENTS.
+§ 19:2-17
+UTILITIES SURCHARGE.
+§ 19:2-17.1
+Grant by Administrator.
+§ 19:2-17.2
+Notification of Tenants.
+§ 19:2-17.3
+Time Limit for Decision.
+§ 19:2-17.4
+Appeal by Landlord.
+§ 19:2-17.5
+Failure to Provide Heat, Water.
+§ 19:2-17.6
+Formula for Surcharge.
+§ 19:2-17.7
+Notice to Tenants.
+§ 19:2-18
+NEW CONSTRUCTION, VACANT PROPERTIES, SUBSTANTIAL REHABILITATION AND SUBSTANTIALLY REHABILITATED VACANT UNITS.
+§ 19:2-18.1
+New Construction.
+§ 19:2-18.2
+Vacant Properties.
+§ 19:2-18.3
+Substantial Rehabilitation.
+§ 19:2-18.4
+Substantially Rehabilitated Vacant Apartment Units.
+§ 19:2-18.5
+City Auction Manual Required Notice.
+§ 19:2-18.6
+Application Submission.
+§ 19:2-19
+VIOLATIONS.
+§ 19:2-20
+LIBERALLY CONSTRUED.
+§ 19:2-21
+EXTENSION.
+§ 19:2-22
+LIMITATION ON INCREASES.
+§ 19:2-23
+APPLICATION AND INSPECTION FEES.
+§ 19:2-24
+LEASING OF PREMISES LOCATED IN EXEMPTED MULTIPLE DWELLINGS; EXEMPTION STATEMENT AND NOTICES.
+§ 19:2-24.1
+Statement of Owner's Claim of Exemption; Filing; Contents; Notice of Termination.
+§ 19:2-25
+INSPECTIONS.
+§ 19:2-25.1
+Access for Inspections and Repairs; Complaints.
+§ 19:2-25.2
+Inspection Officers; Identification and Conduct.
+§ 19:2-25.3
+Refusal of Entry for Inspection; Court Order.
+§ 19:2-26
+PROHIBITIONS ON OCCUPANCY.
+§ 19:2-27
+CERTIFICATE OF HABITABILITY.
+§ 19:2-28
+SUPPLY AND POSTING OF CERTIFICATE OF HABITABILITY.
+§ 19:2-29
+MAXIMUM NUMBER OF OCCUPANTS; UNLAWFUL RESIDENTS.
+§ 19:2-30
+PREPAYMENT OF TAXES AND OTHER MUNICIPAL CHARGES.
+§ 19:2-31
+ADHERENCE TO OTHER STANDARDS.
+§ 19:2-32
+REVOCATION OF CERTIFICATE OF HABITABILITY.
+§ 19:2-1
+STATEMENT OF POLICY.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The Governing Body of the City of Newark does hereby declare that an emergency continues to exist within the City of Newark with respect to the rental of housing space in dwellings by reason of the demands for increases in rent, which are hereby determined to be excessive, unaffordable, and unwarranted; andThis emergency has been created by the continuing deterioration of a substantial portion of the existing housing stock, insufficient construction of affordable housing units, increasing costs of construction and finance, and, on the demand side, the fact that a substantial portion of current Newark residents rely on fixed or stagnating incomes. This has caused a substantial and increasing shortage of rental housing accommodations for families of low and moderate income and excessively high rents; andUnless residential rents of tenants are regulated and controlled, such emergency and the further displacement pressures resulting therefrom will produce serious threats to the public health, safety and general welfare of the citizens of the City of Newark; andThe fear of being evicted without just cause and being forced to seek housing in such a market discourages Newark tenants from complaining about excessive and unjustified increases in rent and about the continued deterioration of housing, and this fear also contributes to these persistent harmful conditions; this warrants legislative action by the Governing Body; andUnder the police powers granted to the City of Newark and in order to protect the health, safety and welfare of the citizens of the City of Newark, it is necessary to regulate, control and stabilize rents and create a Rent Control Board for the City of Newark.
+§ 19:2-2
+DEFINITIONS.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 8-2-2023 by Ord. No. 6PSF-I, 08-02-2023; 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024; 5-20-2026 by Ord. No. 6PSF-B, 05-20-2026]As used in this chapter:The individual or individuals designated by the owner as the person(s) authorized by the owner to perform any duty imposed upon the owner by this chapter. The owner must present a signed and notarized letter to the Rent Control Office containing the name and contact information of the agent, as well as an acknowledgement of the agent that the agent will have all the same liabilities and responsibilities of the owner under this chapter until that agency designation is revoked.Shall mean housing fit for habitation as defined by the statutes, codes and ordinances in effect in the State of New Jersey, County of Essex and City of Newark, and offered for rent, whether occupied or unoccupied.The person to whom the certificate of habitability is issued pursuant to this chapter. The term "certificate holder" includes within its definition the term "agent" where applicable.The certificate issued by the Rent Control Office, the Rent Regulation Officer, or designee, attesting that the rental unit is in compliance with all state and local laws and regulations including, but not limited to, the City's Zoning and Land Use Regulations Ordinance, Health Laws and Regulations, Property Maintenance Code, Uniform Construction Code, Housing Code, Building Code and/or Uniform Fire Safety Act.Shall mean the issuance of a Certificate of Occupancy pursuant to the "State Uniform Construction Code Act" P.L. 1975. c. 217 (N.J.S.A. 52:27D-133)Shall mean constructed, erected or converted, but excludes rehabilitation of premises rented previously for purposes without an intervening use for other purposes for a period of at least two years prior to conversion. Mere vacancy shall not be considered an intervening use for the purpose of newly constructed multiple dwelling.Shall mean the Consumer Price Index for All Urban Consumers (CPI-U), as published by the United States Department of Labor's Bureau of Labor Statistics for the New York - northern New Jersey- Long Island, NY-NJ area.Shall mean any building, structure, trailer or land used as a trailer park, rented or offered for rent to one or more tenants, or family units, whether occupied or vacant, inclusive of dwelling units as defined herein. A dwelling shall also mean one or more buildings, structures or trailers with a common owner and operated as a single complex, and which are situated on a common lot or on adjacent lots as described in the Tax Map of the Tax Assessor of the City of Newark.Shall mean any room or group of rooms located within a dwelling and forming a single habitable unit with facilities which are used or designed for living, sleeping, cooking and eating, bathing and toilet purposes.Shall mean the actual investment in cash by the landlord in the purchase price of the property, as well as those payments that he/she has made to any lender that reduce the lender's claim against the property, less any cash withdrawals.Shall mean dwellings to which this chapter shall not apply. Exempt dwellings include:All public housing; Any motel or hotel space rented on a day-to-day basis to transients; Any dwelling, building or structure, or portion thereof, rented for commercial use;Newly constructed multiple dwellings and vacant dwellings as set forth in this chapter at Subsections 19:2-18.1 and 19:2-18.2, respectively;Those units which have been rehabilitated by the Federal and State Rental Rehabilitation Programs as administered by the U.S. Department of Housing and Urban Development, the New Jersey Department of Community Affairs or the New Jersey Housing Mortgage Finance Agency and will be receiving Section 8 rent subsidies or Federal housing vouchers. In these units, rents will be allowed to be raised, but will not exceed the fair market rents as established by the United States Department of Housing and Urban Development. These units will be exempt only during the unit's tenure in the Section 8 subsidy or Rental Rehabilitation ProgramA contract between a landlord and a governmental agency duly providing for that governmental agency to regulate the amount of rent received by that landlord provided that, if the authority of that governmental agency supersedes the authority of the City of Newark to regulate such rents, then the application of this chapter shall be preempted during the period of governmental agency regulation specified in the contract. Until such a contract begins, and immediately after the contract terminates, this chapter shall continue to regulate such rents. Upon termination of such a contract, the starting rent for dwelling units under this section, for purposes of rent control, shall be the last rent received by the landlord prior to the termination of the preemptive governmental agency regulation reduced by an amount equal to the sum of all applicable tax, water, sewer, capital improvement, and any other surcharges as defined by this chapter, and calculated by the Rent Regulation Officer under this chapter.Shall mean a return of 5% on the landlord's investment in the property, which investment shall be considered herein as the landlord's equity.Shall mean repairs, replacement and maintenance, painting, providing light, heat, hot and cold water, elevator service (where applicable), storm windows and screens, superintendent services and any other benefit, privilege or facility connected with the use or occupancy of any proportionate part of services provided to common facilities of the building in which the dwelling is contained.Shall mean that portion of a dwelling rented or offered for rent for living and dwelling purposes to one individual or family unit, together with all privileges, services, furnishings, furniture, equipment, facilities, improvements and common areas connected with the use or occupancy of such portion of the property.Shall mean an agreement, oral, written or implied, between a landlord and tenant for the use and occupancy of a housing space or housing services or both.Shall mean an owner, lessor, sublessor or any other person entitled to receive rent for the use and occupancy of any housing space, or an agent or successor of any of the foregoing. As used in this chapter, this definition shall include any multiple dwelling subject to the Hotel and Multiple Dwelling Law, N.J.S.A. 55:13A-1 et seq.Shall mean a physical addition or change to the dwelling, which provides all tenants in the dwelling with something not previously provided that improves the quality of life in the dwelling. A replacement of an existing physical element, such as a roof, is not a major new improvement, whether that element was necessary for habitability or provided an amenity not required for habitability. Such a replacement is considered a maintenance expense. A physical addition or change, which does provide something new that benefits the tenants but is required by law to meet minimum standards of health, safety, security or habitability, is also not a major new improvement. A major new improvement must be something new that benefits the tenants, and is not required by law. A major new improvement for the purpose of this chapter is not in any way related to the term "Capital Improvement" or "Capital Expenditure" as used in IRS regulations, even if the IRS would categorize such improvements in these ways.Shall mean a tenant for a term of one month whose tenancy shall automatically be extended for each succeeding month, unless terminated as provided by statute.Shall mean and include any building or structure and land appurtenant thereto containing one or more apartments or rented or offered for rent to one or more tenants or family units.Shall mean written notice to a tenant or landlord, which is mailed to the tenant's residence or the landlord's residence or offices by regular mail, of any proceedings or determinations of the Board, unless another method of notice is specified in this chapter.Any person or persons, firm, corporation or officer thereof, partnership, association or trust or other legal entity who owns, operates, exercises control over or is in charge of a rental facility or dwelling.Shall mean any dwelling of four units or less in at least one unit of which the owner resides.Shall mean the time during which the principal amount of the loan and interest thereon would be paid entirely through periodic payments, whether or not term of the mortgage loan is for shorter period concluding with a balloon payment.Shall mean a tenant for a period of less than one year.An individual, firm, corporation, partnership, association, trust or other legal entity, or any combination thereof.Between the hours of 8:00 a.m. and 5:00 p.m. or such other time mutually agreed.Shall mean the consideration and shall include any bonus, benefits or gratuity demanded or received for or, in connection with, the use or occupancy of housing space or the transfer of a lease of such housing spaces, including, but not limited to monies demanded or paid for parking, pets, the use of furniture, subletting, security deposits and damage and cleaning deposits.Shall mean a person selected by the Mayor and the Business Administrator to be in charge of the Office of the Rent Control Board and shall carry out such duties and shall maintain such records as are necessary for the proper functioning of that office. The Rent Regulation Officer receives power through administrative assignment pursuant to Newark Code subsection 2:10-1.9. The title of "Rent Regulation Officer," for purposes of this chapter, shall also mean "Administrator." Both "Rent Regulation Officer" and "Administrator" shall be used interchangeably in this chapter and hold the same meaning and duties pursuant to as defined.Every building, group of buildings or a portion thereof which is kept, used, maintained, advertised or held out to be a place where living accommodations are supplied, whether furnished or unfurnished, for pay or other consideration to one or more individuals and is meant to include apartments and apartment complexes.A dwelling unit which is available for lease or rental purposes in a rental facility and is meant to include a dwelling unit offered for lease or rental, including but not limited to short-term rental property, one-family homes, two-family homes, three-family homes, four-family homes, etc., as well as individual apartments located within apartment complexes.Shall mean to reconstruct a building to a sound condition or good state after decay, injury, dilapidation or partial destruction; to remedy, heal, make right, or to mend.Shall mean a rental unit that is used and/or advertised for rent as a short-term rental by transient occupants as guests. Dwelling units rented to the same occupant for more than 28 continuous days, licensed bed-and-breakfast establishments, licensed rooming or boarding houses, hotels, and motels shall not be considered short-term rental property.Shall mean any multiple dwelling determined to be substandard by the Public Officer.Shall mean that the housing space and dwelling are free from all violations of State and Newark health, safety, building, property maintenance, and fire safety codes, statutes, regulations and ordinances, and that air-conditioning equipment provided by the landlord is in good working order. Compliance is to be determined by submission by the landlord of copies of all applicable code inspection reports which shall not be more than six months old at the time of the initial hearing for all applications requesting or objecting to any type of increase or surcharge, and submission by the landlord of evidence that air-conditioning equipment supplied by the landlord is in good working order at the time of the initial hearing. To be in compliance, the reports must show the housing space and dwelling to be free of violations, and any evidence submitted of properly functioning air-conditioning equipment is acceptable to the Board. If one or more violations appear on an inspection report, a follow-up inspection report showing abatement of the violations will establish compliance. Testimony by appropriate City and State code officials may also be used to supplement and clarify the inspection reports if needed. If a tenant alleges that a condition exists in violation of any of the above codes in a housing space or in the dwelling subject to an application for any type of increase or surcharge, which does not appear on the last inspection report, then a new inspection, limited to the allegation only, shall be made to determine compliance.Shall mean that the actual housing space/unit undergoes a substantial rehabilitation above normal apartment readiness, i.e. more than routine requirements, and/or cosmetic work, painting, cleaning, or items that would fall under normal property maintenance.Shall mean a tenant, subtenant, lessee, sublessee, or any other person entitled under the terms of a housing space agreement to the use or occupancy of any housing space.
+§ 19:2-2.1
+Applicability.
+[Added 8-2-2023 by Ord. No. 6PSF-I, 08-02-2023]All multiple dwellings, as defined in subsection 19:2-2, are subject to Rent Control pursuant to this Title XIX Rent Control,
+§ 19:2-3
+RENT INCREASES.
+§ 19:2-3.1
+Determination of Rents.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The establishment of rents between a landlord and tenant in all housing spaces shall hereafter be determined by the provisions of this chapter. At the expiration of a lease or at the termination of the lease of a periodic tenant, no landlord may request or receive an increase greater than the percentage increase in the Consumer Price Index (CPI) from the CPI 15 months prior to the month of the proposed rent increase to the CPI three months prior to the month of the proposed rent increase. In no case shall the allowable rent increase exceed 4%. The allowable annual increase will not be permitted, if the dwelling is not in substantial compliance and/or if the landlord has not met the registration requirements as specified in subsection 19:2-9.8.
+§ 19:2-3.2
+Increases Limited; Notice of Increase.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The rents for any housing space shall not be increased more than the percentages stated above in any consecutive twelve-month period irrespective of the number of different tenants occupying the housing space during the twelve-month period, any change of ownership of the landlord or vacancy of the housing space. This provision does not preclude a tenant from challenging the legality of the rent being charged immediately prior to an increase authorized by this section. Any landlord seeking an increase in rent, including the rent of a period tenant, shall notify the tenant and the Rent Regulation Officer in writing of the proposed rental increase and the proposed percentage increase, the prior year's rent, the allowable rental increase amount, and allowable percentage increase under the provisions of this section. Any landlord seeking a rental increase pursuant to this section shall give the Rent Regulation Officer and the affected tenant written notice of the proposed increase at least 30 days in advance. No rent increase shall be approved for any landlord who has failed to comply with all of the provisions of the Rent Control Ordinance, including, but not limited to, subsection 19:2-9.8, Registration.
+§ 19:2-3.3
+Parking Fees.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The landlord shall report and register all on-site parking fees with the Rent Control Board. Parking fees should be specifically included as being covered under all provisions of the rent control ordinance.
+§ 19:2-3.4
+Substantial Compliance and Registration Compliance for Any Rent Increase.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]No annual rent increase, major new improvement surcharge, tax surcharge, or hardship increase is allowed, if the dwelling is not in substantial compliance and/or has not met registration requirements as specified in subsection 19:2-9.8.
+§ 19:2-4
+RENT REBATE.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The landlord shall rebate to the tenant any amount of rent collected in excess of that permissible pursuant to the terms of this chapter by crediting the tenant with the amount of excess rent paid over a period not to exceed 14 months, or in the event the tenant is no longer in occupancy, by refunding within a one month period. This provision is not intended to preclude a tenant from seeking judicial remedies under statutory or common law. The rebate to the tenant shall be retroactive to two years from the date of the petition.
+§ 19:2-5
+TAX SURCHARGE.
+§ 19:2-5.1
+Formula for Surcharge.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]A landlord may seek a tax surcharge from a tenant because of an increase in municipal property taxes. The tax surcharge shall not exceed that amount authorized by the following provision: The landlord shall divide one-twelfth (1/12th) of the annual increase in the present property tax over the property tax of the previous year by the total monthly rent roll, and that product shall be multiplied by the monthly rent paid by each tenant to establish the amount of surcharge that each tenant shall be required to pay. The tenant shall not be liable for a tax surcharge exceeding the tenant's percentage of the entire rent roll for the dwelling.
+§ 19:2-5.2
+Petition for Surcharge.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Any landlord seeking a surcharge shall petition the Board for approval and shall give notice to the tenant and the Board, at least 30 days prior to the increase sought, of the calculations involved in computing the tax surcharge, including the present property tax for the dwelling; the property tax for the dwelling for the previous year; total rent rolls of all units, occupied or unoccupied in the dwelling; the percentage of the increase over the total rent roll; the rent of the tenant; and the percentage of his/her present rent compared to the total rent roll.Prior to making a determination on a landlord's petition for a tax surcharge, the Board shall obtain a report from the Office of Inspection and Enforcement in the Department of Engineering to determine whether there are any outstanding code violations on the subject property. In the event that the report reveals outstanding code violations, the Board shall deny the landlord's application or defer action on the application until the landlord has abated the violations and proof of same has been submitted to the Board.
+§ 19:2-5.3
+Payment of Surcharge.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024; 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The tax surcharge each tenant is liable for shall be paid in equal monthly payments only after the landlord gives the tenant one month prior notice of the increase as required by statute.
+§ 19:2-5.4
+Appeals.
+[Ord. 6 PSF-A(S), 9-5-2017; amended Ord. 6 PSF-G(S), 8-20-2019; 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Any party dissatisfied with the ruling of the Rent Control Board on a Tax Surcharge Application may appeal the matter to the Law Division of the Superior Court in accordance with New Jersey Court Rules within 45 days of the Board's ruling.
+§ 19:2-6
+TAX DECREASES.
+§ 19:2-6.1
+Apportionment.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]If the municipal property taxes are decreased in a given year due to either a decrease in the property tax rate or a lowering of the assessed evaluation of the property by the municipality, then the tenants are entitled to a tax decrease. Apportionment of such decrease shall be in the same manner as apportionment of tax surcharge under subsection 19:2-5.1.
+§ 19:2-6.2
+Tax Appeal, Reduction.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]In the event a tax appeal is taken by the landlord and the landlord is successful in the appeal and the taxes reduced, the tenant shall receive 75% of the reductions as applied to its tax portion, after deducting all reasonable expenses incurred by the landlord in prosecuting the appeal.
+§ 19:2-6.3
+Rebates.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The landlord shall be deemed to have received his/her rebate upon his/her receipt thereof from the receiver of taxes, or upon the execution of any agreement with the landlord. The tenant must receive notice within 14 days from when the landlord receives his/her notice of successful appeal. The landlord must notify the tenants within 30 days of the time the landlord receives his/her rebate of the amount he/she has received with the computations on how much the tenant is entitled to. The amount due the tenant shall be forwarded to the tenant within the same thirty-day period.
+§ 19:2-7
+MAJOR NEW IMPROVEMENTS; ADDITIONAL RENT.
+§ 19:2-7.1
+Computation of Increase.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The landlord may seek additional rent (surcharge) for a major new improvement(s) made by him/her in the dwelling or attributable to the dwelling. The landlord shall compute the average cost of the major new improvement(s) per year of useful life by dividing the cost of the completed major new improvement(s) by the number of years of useful life of the improvement(s) provided that the period shall not be less than one year. The useful life is the actual number of years that the major improvement(s) is expected to last before needing replacement. The burden of proof is on the landlord to establish the useful life of the improvement(s). If the major new improvement(s) lowers the landlord's operating costs, the annual cost savings must be subtracted from the annual major new improvement(s) surcharge. The landlord is required to disclose all expected cost savings that will result from the major new improvement(s). No increase shall be permitted for major new improvement(s) affecting more than 10 rental units, unless the total cost thereof exceeds $2,000. No increase shall be permitted for major new improvement(s) completed more than 24 months prior to the date upon which notice to the Board of the improvements has been provided by the landlord. In no case will a major new improvement(s) rent increase be granted if the dwelling is not in substantial compliance and/or if the landlord has not met the registration requirements as specified in subsection 19:1-10.
+§ 19:2-7.2
+Increase Prorated.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The amount of the monthly increase which a landlord may charge shall be prorated among all tenants benefiting from the improvements by dividing one-twelfth of the annual cost of the capital improvements by the total monthly rent roll of the units affected by the improvement in the dwelling, occupied or unoccupied, and that product shall be multiplied by the monthly rent paid by each tenant to establish the amount of capital improvement increase that each tenant shall be required to pay.
+§ 19:2-7.3
+Applicability; Notification.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]No tenant shall be liable for a major new improvement(s) increase if he/she receives no benefit from the improvement nor, if he/she benefits, shall be/she be liable for an increase exceeding the percentage of rent paid by him/her as calculated above, and all such rent increases shall be charged for no period greater than the useful life of the improvements. The landlord shall notify the Board and tenants at least 60 days before the effective date of the increase. The notice to the Board shall, on forms provided by the Board, include the amount of increase, a description of the improvement, and the figures used to compute the increase. The Board or a tenant may request a hearing within 30 days of receipt of notice from the landlord. After approval by the Board of a major new improvement surcharge, the landlord shall give to each tenant one month prior notice of the effective date of the major new improvement surcharge as required by statute.
+§ 19:2-7.4
+Appeals.
+[Ord. 6 PSF-A(S), 9-5-2017; amended Ord. 6PSF-G(S), 8-20-2019; 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Either the landlord or tenant may appeal the findings or order of the Rent Control Board regarding a major new improvement application to the Law Division of the Superior Court in accordance with New Jersey Court Rules within 45 days of the findings or order of the Board.
+§ 19:2-8
+LANDLORD HARDSHIPS.
+§ 19:2-8.1
+Appeal for Increase.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]To realize a just and reasonable return on the subject property, a landlord may appeal to the Board for a hardship rent increase if the landlord is unable to meet its reasonable and necessary operating expenses and earn a fair rate of return on his investment by submitting a Hardship Increase Application. The Board will hold a public hearing on the application following the procedure outlined in Section 19:2-13. Inspections of the dwelling must take place before a hearing. A reinspection may take place after the hearing as detailed in this section. An application will be granted only if the dwelling meets the definition of substantial compliance and the landlord has met the registration requirements specified in this chapter.
+§ 19:2-8.2
+Code Violations.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Inspection; Abatement. Within 30 days after a hardship appeal has been filed, supported by all the information that the Board requires to make its determination, the Board must request that the property be inspected by the Code Enforcement Division of the Department of Engineering for code violations. The inspection reports shall be prepared and filed with the Board within 30 days thereafter.The Board shall deny an application for an increase when a property fails to meet substantial compliance upon completion of an inspection or reinspection of the property. The Board may conditionally grant the increase subject to the landlord abating the violations within a reasonable time. However, in no event shall this period of time exceed 45 days.Failure to Comply; Refund to Tenants. In the event that such abatement has not taken place within 45 days, the application will be denied and the landlord will be barred from resubmitting an application for six months. The Board shall revoke any such conditional increase, and the landlord shall be required to restore to the affected tenants all of the additional monies collected pursuant to the increase. The restoration of monies shall be in the form of either a direct refund of all monies collected or a deduction from the next month's rent.Definition. As used in this section, code violations shall mean any violations of the existing building (construction), fire, plumbing, electrical or housing codes of the City of Newark then in effect. Violations which the Board may rely upon in implementing this section shall be only those violations which were found to have been in existence at the time of the original inspection as requested by the Board.Nothing in this section diminishes the requirement in subsection 19:2-8.1 that the dwelling be in substantial compliance with all State and Newark codes as defined in Section 19:2-3 prior to granting a hardship increase.Notice to Tenants. Thirty days before a public hearing on the landlord's application for a hardship increase, the landlord must place conspicuous notices in all common areas, including, but not limited to, all elevators, the first landing of all stairways and staircases, at security and/or receptionist desks, mail rooms and community rooms. Notices shall also be placed at the entrance(s) of: the building, laundry rooms, gym rooms, recreation rooms and meeting rooms. The notice must detail the proposed percentage increase in rent, a sample calculation of a new rent amount based on the percentage increase, the Rent Increase Factor Table, and the right of tenants and tenant associations to testify against the application as enumerated in Section 19:2-13. In a building or complex where tenants have formed a tenant association, notice must be hand delivered or delivered by Certified Mail Return Receipt Requested to the President of the association. The notices must be typed in a traditional font style such as Arial or Times New Roman. The font size must be between 32 and 48-point font so that a passerby may be able to read the notice from a distance of five feet. Artistic font styles and font styles that are difficult to read, pictures, text in all caps, text in reverse type (white text on a dark background), text that is completely italicized or in bold, and use of more than two font styles are prohibited.
+§ 19:2-8.3
+Submission of Records and Proofs.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Proofs. The landlord shall submit proof of expenses for operation, maintenance and repairs, including, but not limited to taxes, employees' salaries, all contracted expenses, insurance, fuel, utilities, maintenance and repairs, and reasonable superintendent and/or management fees, as well as expenses for vacancies, which have been held available for rental, to substantiate any hardship increase application.The landlord shall also submit proof of mortgage principal payments, which are to be considered additional equity investment, and mortgage interest payments. Only interest payments shall be considered an expense, mortgage principle shall not. The landlord shall also supply the details of any refinancing, specifying any change in the amount of principal to be repaid and the amount of any cash withdrawn from the property.The landlord shall submit the terms of all mortgages held by the landlord, or an equivalent entity, from the date of purchase to the date of application, including cash down payment, cash withdrawal, mortgage interest rate(s), and schedule of principal and interest payments.Expenses which recur periodically where the average period between occurrences is greater than one year must be identified. Only the portion attributable to the current year, calculated by dividing the total expense by the number of years in the average period between occurrences, may be listed as an expense, and the calculation must be submitted along with the expense.Amounts allowed for vacancies and for management costs shall be fully documented, and in no event shall allowable expenses in either category exceed 5% of the landlord's gross income. Management costs shall include all administrative and supervisory costs. The Board shall only allow a vacancy loss for housing spaces that are cleaned, repaired, and offered on the market within two months. Landlord must submit proofs of the same in the form of receipts, contracts, advertisements and lease offers.All expenses defined as capital improvements by the Internal Revenue Service must be submitted and itemized, along with calculations dividing the total expense by the number of years depreciated for Income Tax purposes. One year's depreciation shall be counted during the twelve-month hardship period.Affidavits. Such proof shall be supported by affidavits that the expenses are complete, reasonable and necessary. The following affidavits are required: 1) An affidavit describing any business, family or social relationship between the parties financing the purchase of the building and the landlord and 2) an affidavit signed by a Certified Public Accountant (CPA) stating that the CPA has reviewed and approved of the calculations based on the proofs submitted.Age of Proofs. The Board shall consider the proofs and expenses for a period not to exceed 60 months, but not less than 12 months prior to the date of the landlord's application.
+§ 19:2-8.4
+Fees Not Applicable.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]No attorney's fees, accountant's fees or application fees incurred by a landlord in connection with any application to the Board shall be included in determining whether a landlord is entitled to any rent increases.
+§ 19:2-8.5
+Impartial Appraisal.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Whenever a relationship other than a business relationship is found to exist between the parties financing the purchase of the building and the landlord, or for other good cause, the Board may require that the value of the property be appraised by an appraiser to be approved by the Board. The cost of appraisal shall be included as a separate cost in the application fee and paid for by the applicant when so required by the Board at the rent control hearing.
+§ 19:2-8.6
+Apportionment of Increase.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Any increase awarded to the landlord pursuant to this section by the Board shall be apportioned among the tenants in the following manner: The monthly increase shall be divided by the total monthly rent roll and that product shall be multiplied by the monthly rent paid by each tenant to establish the amount of increase that each tenant shall be required to pay.
+§ 19:2-8.7
+Time Period for Increase.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]No increase pursuant to this section shall be authorized with respect to a rental unit more than once in any twelve-month period, nor shall the Board conduct a hearing with respect to an application for such a rent increase for a rental unit more than once within a twelve-month period.The Board shall take into account rent increases of any kind, including Major New Improvement Surcharges, during the past 12 months in determining whether to grant an increase, and the amount and terms thereof.
+§ 19:2-8.8
+Excessive Purchase Price; Efficient Operator.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The Board shall deny all or a part of the relief requested where specific findings of fact support the conclusion that the landlord purchased the dwelling for an excessive price. Excessive purchase price is hereby defined as the purchase price such that at the time of purchase a reasonable investor could not expect to earn a fair return upon his/her investment. The Board shall also deny any expenses that an efficient operator would not incur. The Board, in its discretion, may require the landlord provide any information he received from the prior owner or from his own inspection regarding the income and expenses of the property and the physical condition of the property prior to the purchase. The term property, as used herein, means all buildings and structures, known as the dwelling, including all housing units and all common areas, as well as exterior common areas.
+§ 19:2-8.9
+Appeals.
+[Ord. 6 PSF-A(S), 9-5-2017; amended Ord. 6 PSF-G(S), 8-20-2019; 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]Either the landlord or tenant may appeal the findings or order of the Rent Control Board regarding a hardship increase application to the Law Division of the Superior Court in accordance with New Jersey Court Rules within 45 days of the findings or order by the Board.
+§ 19:2-9
+RENT CONTROL BOARD.
+§ 19:2-9.1
+Membership.
+[Ord. 6 PSF-A(S), 9-5-2017; amended 9-18-2024 by Ord. No. 6PSF-I, 09-18-2024]The Rent Control Board shall consist of five members appointed by the Mayor and approved by the Council. Its composition shall be two tenants, two landlords, and a fifth member who is a homeowner and neither a tenant nor a landlord. The term shall be for a period of two years each, except that one tenant and one landlord appointed to the Board after initial passage of this chapter shall serve for a term of one year. Successive terms, however, shall be for two years. The Board members must reside in the City of Newark. The members of the Board shall receive a stipend of not more than $3,500 per annum for attending Board meetings. Such salaries shall be paid quarterly and in proportion to the number of meetings attended during each quarter. One member of the Rent Control Board shall be designated as chairperson by the Mayor. It will be the responsibility of the chair to conduct monthly hearings of the Rent Control Board, conduct roll call, call for votes, and otherwise control all aspects of the monthly hearings. If the designated chair shall be unavailable for a meeting, the Rent Regulation Officer shall have the power to appoint an acting chair.Stipends. The stipend shall be paid only to the extent that members attend and deliberate on each item on the agenda at each meeting. Therefore, the stipend shall be divided into monthly payments. Each monthly payment will be divided by the number of meetings in a month. Each member shall be paid the divided amount only for those meetings that he or she has attended. In regard to those meetings that are attended by a member, the divided stipend shall be further divided by the number of items on the agenda of the meeting. Each member shall only be paid the divided stipend for each item on the agenda for which he or she deliberates or votes.Attendance. Whenever a member of the Rent Control Board has not been present at four consecutive meetings of the Board, then the remaining members of the Board shall determine by a majority vote whether the absence of the member shall be excused pursuant to N.J.S.A. 40A:9-12.1(g). If the failure to attend is due to a legitimate illness, the member's absence shall be excused. However, if the Board determines that the illness is so serious that it may affect the member's continued ability to participate at meetings, then the Board shall request the appointing authority to determine whether the member is physically or mentally incapable of service pursuant to N.J.S.A. 40A:9-12.1(d).Report of Vacancy. In those cases wherein a majority of the Rent Control Board has failed to confirm that the absence of any member at four consecutive meetings is excusable, the chair of the Board shall report the determination of the Board to the appointing authority and shall advise the appointing authority that a vacancy exists. The member in question who has been absent for four consecutive meetings may appear as a witness but may not vote on the issue
+[truncated to 60000 chars]

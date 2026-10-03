@@ -1,0 +1,176 @@
+SOURCE: https://publicdocs.santa-ana.org/weblink/1/doc/549791/Page1.aspx
+RETRIEVED: 2026-10-03 22:15 UTC
+CAPTURE: manual, built-in browser plain-text view of official City Clerk record (supplemental; pages 1-5, ordinance text only; publication-notice OCR omitted)
+
+ORDINANCE NO. NS-3090
+AN ORDINANCE OF THE CITY COUNCIL OF THE CITY OF
+SANTA ANA PROHIBITING ANTI-COMPETITIVE
+AUTOMATED RENT PRICE-FIXING
+THE CITY COUNCIL OF THE CITY OF SANTA ANA DOES HEREBY ORDAIN AS
+FOLLOWS:
+Section 1. The City Council of Santa Ana hereby finds, determines, and declares
+as follows:
+A. The housing rent burden and poverty faced by many residents in the City of Santa
+Ana (City) threatens the health, safety, and welfare to the City.
+B. The City Council has provided relief to residents by enacting a Rent Stabilization
+and Just Cause Eviction Ordinance, directing City staff to apply for housing grants
+to lower the cost of living for residents and placing a priority on assisting residents
+by providing information about issues that can negatively affect their lives.
+C. The high cost of living and housing shortage in the City have contributed to the
+City's unaffordability. According to an October 2025 Zillow report, a family must
+earn $220,000 a year to afford a home mortgage in Santa Ana. According to an
+October 22, 2025 Orange County Register article, the average rental rate for a
+residential dwelling unit in the City is $2,293, approximately 40.6% higher than the
+national median of$1,631.
+D. According to the U.S. Census Bureau's 2023 American Community Survey(ACS),
+Santa Ana has approximately 79,691 occupied housing units, of which 44,151 are
+renter-occupied households, accounting for over 55% of the total occupied housing
+units in Santa Ana. Approximately 53% of renter households are considered cost-
+burdened,with housing expenses exceeding 30% of household income. The City's
+median household income has not kept pace with the growth in rental housing
+costs, placing disproportionate pressure on low-income and working-class
+families.
+E. Landlords' use of algorithmic devices, which perform calculations of nonpublic
+competitor data concerning rental rates, occupancy levels, and other information,
+to set rental rates and occupancy levels has resulted in inflated rental rates an
+unfair rent increases and contributed to the City's unaffordability for families.
+F. A 2024 study by the White House reported that renters nationally spent an extra
+$3.8 billion in rent in 2023 because of pricing algorithms, and that Los Angeles
+renters in units managed with algorithms paid an average of $408 more than
+renters in units that were not managed with algorithms. The average monthly cost
+for Santa Ana is unavailable.
+Ordinance No. NS-3090
+Page 1 of 5
+
+G. In response to the use of algorithmic devices to set rental rates and occupancy
+levels, in August 2024, the United States Department of Justice (DOJ) filed a
+lawsuit against RealPage, Inc. Fight Attorneys General, including California
+Attorney General Rob Bonta, joined the DOJ's lawsuit. The DOJ amended its
+lawsuit in January 2025 to add two Attorneys General and name landlords and
+defendants. This lawsuit was settled in November 2025 and per the DOJ, "the
+proposed settlement would help restore free market competition in rental markets
+for millions of American renters." Per the settlement, RealPage did not admit any
+wrongdoing or liability, RealPage must not use their competitors' non-public
+information, and an independent monitor will ensure compliance for seven (7)
+years. City renters cannot hope that RealPage does not violate the settlement nor
+that RealPage will be caught by the independent monitor.
+H. RealPage filed a federal lawsuit against the City of Berkeley in April 2025
+challenging their ordinance that bans landlords from using algorithmic revenue
+management software for setting rental rates. While the litigation is pending, and
+as RealPage will be monitored City renters cannot wait for this lawsuit to run its
+course. The Council wishes to provide immediate relief to City renters by
+prohibiting the sale, licensing, and use of algorithmic devices that use or
+incorporate nonpublic competitor data to advise a landlord on, or recommend to a
+landlord, rental rates or occupancy levels that may be achieved for residential real
+property in the City.
+Section 2. The recitals and statements of fact set forth in the preamble to this
+ordinance are true and correct, constitute a substantive part of the ordinance, and are
+incorporated herein by reference.
+Section 3. Article XXIV (Prohibition of Anti-Competitive Automated Rent Price-
+Fixing) is added to Chapter 8 (Buildings and Structures) of the Santa Ana Municipal Code to
+read as follows:
+Section 8-3700 -- Purpose and Intent
+The purpose and intent of this Article is to protect the residents of Santa Ana from
+artificially inflated rental rates and unfair rent increases by prohibiting the sale,
+licensing, and use of Algorithmic Devices. This Article also provides Tenants with
+remedies for violations of this Article.
+Section 8-3701 — Definitions
+(a) For purposes of this Article, the words and phrases shall be defined as set forth
+herein, unless the context clearly indicates a different meaning is intended.
+(b) Words and phrases used in this Article, which are not specifically defined, shall
+be construed according to their context and the customary usage of the
+language.
+(c) Words and phrases defined:
+Ordinance No. NS-3090
+Page 2 of 5
+
+"Algorithmic Device" means a software or product that uses or incorporates one
+or more algorithms to perform calculations of Nonpublic Competitor Data
+concerning rental rates, occupancy levels, or other information regarding the
+leasing of Residential Rental Property to advise a Landlord on, or recommend
+to a Landlord, rental rates or occupancy levels that may be achieved for a
+Residential Rental Property in the City of Santa Ana. Algorithmic Device does
+not include either of the following:
+1) A software or product used by a Person to publish reports regarding
+rental rates or occupancy levels from aggregated historical Nonpublic
+Competitor Data that is more than 90 days old, or from information available to
+the general public, and does not recommend rental rates or occupancy levels
+for future Residential Rental Property Leases or renewals.
+2) A software or product used by a Person to establish rental rates or
+income limits in accordance with local, state, or federal affordable housing
+program guidelines.
+"Landlord" means an owner and any Person, acting as principal or through an
+agent,who has the right to offer Residential Real Property for rent, and includes
+a predecessor in interest to the Landlord.
+"Lease" means any lease, sublease, or agreement, written or oral, for the use
+and occupancy of Residential Rental Property.
+"Nonpublic Competitor Data" means information that is not available to the
+general public, whether the information is attributable to a specific competitor
+or anonymized or whether the information is derived from or otherwise provided
+by another Person. Nonpublic Competitor Data includes information about
+actual rental rates, rental rate changes, Residential Rental Property supply
+levels, occupancy levels, or Lease start and end dates.
+"Person" means any natural person, firm, joint venture, joint stock company,
+partnership, association, club, company, corporation, business trust,
+organization, or the manager, lessee, agent, servant, officer or employee of any
+of them or any other entity which is recognized by law as the subject of rights
+or duties.
+"Residential Rental Property" means any dwelling or unit that is intended for
+human habitation, including any dwelling or unit in a mobile home park.
+"Tenant" means a tenant, subtenant, lessee, sublessee, or any other natural
+person entitled to Lease any Residential Real Property.
+Section 8-3702 — Use and Sale of Algorithmic Devices Prohibited
+(a) It is unlawful for a person to sell, license, or otherwise provide an Algorithmic
+Device to a Landlord.
+Ordinance No. NS-3090
+Page 3of5
+
+(b) It is unlawful for a Landlord to use an Algorithmic Device to set rental rates or
+occupancy levels for Residential Real Property. For each month a violation of
+Section 8-3702(b)exists or continues, and for each Residential Rental Property
+a Landlord uses an Algorithmic Device, it shall constitute a separate and distinct
+violation.
+Section 8-3703 — Remedies
+(a) A Tenant may seek injunctive relief, damages, or civil penalties of up to $1,000
+per violation of this Article, in a civil action against a Landlord. In an action
+brought under this Article, a prevailing Tenant shall recover costs and
+reasonable attorney's fees. A prevailing Tenant includes a Tenant granted an
+order for injunctive relief. A Lease provision that limits a Tenant from recovering
+attorney's fees shall not be enforceable against a Tenant's claim for attorney's
+fees that arise under this Article.
+(b) The remedies under Section 8-3703 are cumulative and are in addition to any
+other remedies in this Article or at law, statute, or ordinance.
+Section 4. The City Council finds and determines that this Ordinance is not subject
+to the California Environmental Quality Act (CEQA) pursuant to sections 15060(c)(2) and
+15060(c)(3) of the State CEQA Guidelines because it will not result in a direct or reasonably
+foreseeable indirect physical change to the environment, as there is no possibility it will have
+a significant effect on the environment and it is not a "project" as defined in section 15378 of
+the State CEQA Guidelines. Furthermore, the proposed Ordinance falls within the "common
+sense" CEQA exemption set forth in CEQA Guidelines section 15061(b)(3), excluding
+projects where "it can be seen with certainty that there is no possibility that the activity in
+question may have a significant effect on the environment."
+Section 5. If any section, subsection, sentence, clause, phrase or portion of this
+ordinance is for any reason held to be invalid or unconstitutional by the decision of any court
+of competent jurisdiction, such decision shall not affect the validity of the remaining portions
+of this ordinance. The City Council of the City of Santa Ana hereby declares that it would
+have adopted this ordinance and each section, subsection, sentence, clause, phrase or
+portion thereof irrespective of the fact that any one or more sections, subsections, sentences,
+clauses, phrases, or portions be declared invalid or unconstitutional.
+Section 6. This ordinance shall become effective thirty (30) days after its adoption.
+Section 7. The City Clerk shall certify the adoption of this ordinance and shall cause
+the same to be published as required by law.
+ADOPTED this 3rd day of March, 2026.
+Ordinance No, NS-3090
+Page 4 of 5
+
+AYES: Agency Members Amezcua, Bacerra, Hernandez, Lopez
+Penaloza, Phan, Vazquez (7)
+NOES: Agency Members None (0)
+ABSTAIN: Agency Members None 0
+ABSENT: Agency Members None 0
+CERTIFICATE OF ATTESTATION AND ORIGINALITY
+I, JENNIFER L. HALL, City Clerk, do hereby attest to and certify the attached Ordinance
+No. NS-3090 to be the original resolution adopted by the City Council of the City of Santa
+Ana on March 3, 2026.
+Ordinance No. NS-3090
+Page 5 of 5

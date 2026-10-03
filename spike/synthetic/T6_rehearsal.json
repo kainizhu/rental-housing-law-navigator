@@ -1,0 +1,4 @@
+[{"test_id": "T6", "title": "Fictional Cambridge tenant stability ordinance (rehearsal)", "type": "as_of",
+  "rule_ids": ["CAMB-JC-01", "CAMB-RENT-01"], "as_of_before": "2026-10-01", "as_of_after": "2027-03-02",
+  "states": ["MA"], "conflict_with": ["MA-RENT-01"],
+  "expected_behavior": "not_yet_effective on 2026-10-01, applies on 2027-03-02 for Cambridge buildings with 6+ units; rent cap conflicts with G.L. c. 40P."}]

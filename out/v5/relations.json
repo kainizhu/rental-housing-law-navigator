@@ -1,0 +1,238 @@
+[
+ {
+  "state_rule": "CA-ALG-01",
+  "local_rule": "BER-ALG-01",
+  "type": "cumulative",
+  "evidence_rule": "CA-ALG-01",
+  "evidence_quote": "(c) Nothing in this section shall impair or limit the applicability of antitrust laws.",
+  "note": "Both laws can be obeyed at once: the Berkeley ordinance specifically bans coordinated pricing algorithms for residential rents/occupancy in Berkeley, while the California statute bans use/distribution of common pricing algorithms when part of a Cartwright Act restraint of trade or used coercively. The state text does not say it preempts local ordinances, and the requirements are not incompatible; the local rule is narrower by subject matter but stricter for covered residential units.",
+  "city": "Berkeley, CA",
+  "category": "algorithmic_rent_setting"
+ },
+ {
+  "state_rule": "CA-FEE-01",
+  "local_rule": "BER-FEE-01",
+  "type": "cumulative",
+  "from_date": null,
+  "evidence_rule": "BER-FEE-01",
+  "evidence_quote": "There are limits on the amount of and uses for tenant screening and application fees under state and local law.",
+  "note": "The state rule caps and regulates application screening fees, while the Berkeley rule adds disclosure requirements and bans certain nonrefundable fees for existing tenants. The records do not say the state rule displaces Berkeley's rule, and both can be obeyed together, so they are cumulative.",
+  "city": "Berkeley, CA",
+  "category": "application_screening_fees"
+ },
+ {
+  "state_rule": "CA-JC-01",
+  "local_rule": "BER-JC-01",
+  "type": "local_governs_where_covered",
+  "from_date": null,
+  "evidence_rule": "CA-JC-01",
+  "evidence_quote": "(i) (1) This section does not apply to the following residential real property:\n(A) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted on or before September 1, 2019, in which case the local ordinance shall apply.\n(B) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply.\n(2) A residential real property shall not be subject to both a local ordinance requiring just cause for termination of a residential tenancy and this section.\n(3) A local ordinance adopted\nafter September 1, 2019, that is less protective than this section shall not be enforced unless this section is repealed.",
+  "note": "Berkeley has a local just-cause ordinance covering fully and partially covered units. The state statute expressly yields where a qualifying local just-cause ordinance applies and says a property cannot be subject to both. Based on the records, the relation is that the local rule governs where covered.",
+  "city": "Berkeley, CA",
+  "category": "just_cause_eviction"
+ },
+ {
+  "state_rule": "CA-RENT-01",
+  "local_rule": "BER-RENT-02",
+  "type": "local_governs_where_covered",
+  "from_date": "2024-04-01",
+  "evidence_rule": "CA-RENT-01",
+  "evidence_quote": "(d) This section shall not apply to the following residential real properties:\n(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).",
+  "note": "The state rent cap expressly does not apply to units covered by a stricter local rent-control rule. Berkeley's rule identifies units that are fully covered by local rent control, so for those covered units the local rule governs instead of the state cap.",
+  "city": "Berkeley, CA",
+  "category": "rent_increase_limits"
+ },
+ {
+  "state_rule": "CA-SCR-03",
+  "local_rule": "BER-SCR-01",
+  "type": "cumulative",
+  "evidence_rule": "BER-SCR-01",
+  "evidence_quote": "The Fair Chance Access to Housing Ordinance prohibits rental housing providers in Berkeley from asking about and using criminal history and/or criminal background checks in their rental housing advertising, applications, tenant selection process, or decision-making.",
+  "note": "Both rules concern criminal-history screening. The state rule allows some criminal-history consideration with limitations, while Berkeley imposes a stricter local prohibition with procedures for adverse action in exceptions. The provided records do not say the state preempts local law or that the local law displaces state law, so treat them as cumulative because a landlord can comply with both by following the stricter Berkeley rule and the state baseline.",
+  "city": "Berkeley, CA",
+  "category": "screening_restrictions"
+ },
+ {
+  "state_rule": "MA-SCR-01",
+  "local_rule": "BOS-SCR-01",
+  "type": "cumulative",
+  "from_date": null,
+  "evidence_rule": "BOS-SCR-01",
+  "evidence_quote": "Where federal or state law imposes a criminal history requirement that conflicts with a requirement of this guidance, the federal or state law preempts this policy.",
+  "note": "The state rule prohibits source-of-income discrimination against public-assistance and housing-subsidy recipients, while the Boston rule regulates criminal-record and credit screening for certain city-supported housing providers. These address different screening topics and can both be obeyed. The Boston text only acknowledges preemption if a conflicting state criminal-history requirement exists; no such conflicting requirement appears in the provided state rule.",
+  "city": "Boston, MA",
+  "category": "screening_restrictions"
+ },
+ {
+  "state_rule": "NJ-ALG-01",
+  "local_rule": "HOB-ALG-01",
+  "type": "possible_conflict",
+  "from_date": "2027-07-01",
+  "evidence_rule": "NJ-ALG-01",
+  "evidence_quote": "A municipality shall be prohibited from enacting an ordinance that conflicts with this act. This subsection shall not be construed to prohibit the enactment of ordinances explicitly authorized or required by any other law.",
+  "note": "The state FAIR Act expressly limits conflicting municipal ordinances starting on its effective date. Hoboken's ordinance appears to regulate the same subject and may coexist if not conflicting, but the state text creates potential preemption/conflict for any inconsistent local requirements.",
+  "city": "Hoboken, NJ",
+  "category": "algorithmic_rent_setting"
+ },
+ {
+  "state_rule": "NJ-ALG-01",
+  "local_rule": "JC-ALG-01",
+  "type": "possible_conflict",
+  "from_date": "2027-07-01",
+  "evidence_rule": "NJ-ALG-01",
+  "evidence_quote": "A municipality shall be prohibited from enacting\nan ordinance that conflicts with this act.  This subsection shall not be\nconstrued to prohibit the enactment of ordinances explicitly authorized or\nrequired by any other law.",
+  "note": "The state FAIR Act expressly bars conflicting municipal ordinances starting on its effective date. The Jersey City ordinance appears to regulate the same subject and may conflict if any provisions are inconsistent, but the provided records do not establish an outright conflict or express authorization preserving the local rule.",
+  "city": "Jersey City, NJ",
+  "category": "algorithmic_rent_setting"
+ },
+ {
+  "state_rule": "NJ-RENT-02",
+  "local_rule": "JC-RENT-01",
+  "type": "possible_conflict",
+  "from_date": null,
+  "evidence_rule": "NJ-RENT-02",
+  "evidence_quote": "Under the Newly Constructed Multiple Dwellings Law ( N.J.S.A. 2A:42 -84.5), newly \nconstructed multiple dwellings shall be exempt from any local rent control ordinances for a period \nof 30 years following completion of construction of the building.",
+  "note": "The state rule expressly exempts newly constructed multiple dwellings from any local rent control ordinance for 30 years, so Jersey City's rent control ordinance cannot apply to those covered units during that period. Because the city rule is a general rent control ordinance and the record does not specify its own carveout text here, this creates a state-law override/preemption for that subset of units rather than cumulative operation.",
+  "city": "Jersey City, NJ",
+  "category": "rent_increase_limits"
+ },
+ {
+  "state_rule": "CA-JC-01",
+  "local_rule": "LA-JC-02",
+  "type": "local_governs_where_covered",
+  "from_date": "2024-04-01",
+  "evidence_rule": "CA-JC-01",
+  "evidence_quote": "(i) (1) This section does not apply to the following residential real property:\n(A) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted on or before September 1, 2019, in which case the local ordinance shall apply.\n(B) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply.\n(2) A residential real property shall not be subject to both a local ordinance requiring just cause for termination of a residential tenancy and this section.",
+  "note": "Los Angeles JCO is a local just-cause ordinance; the state statute expressly yields where a covered local ordinance applies, and says a property cannot be subject to both at once.",
+  "city": "Los Angeles, CA",
+  "category": "just_cause_eviction"
+ },
+ {
+  "state_rule": "CA-JC-01",
+  "local_rule": "LA-JC-03",
+  "type": "cumulative",
+  "evidence_rule": "LA-JC-03",
+  "evidence_quote": "Pay relocation assistance to tenants in compliance with the State law’s Housing Crisis Act (California Government Code Section 66300 et seq.) or the City laws, whichever is higher.",
+  "note": "This city rule adds demolition/new-construction occupant protections and expressly contemplates compliance with state law or city law, whichever provides higher relocation assistance. The provided state just-cause record does not expressly address this ordinance, so based on the records these protections can operate alongside applicable state requirements.",
+  "city": "Los Angeles, CA",
+  "category": "just_cause_eviction"
+ },
+ {
+  "state_rule": "CA-JC-01",
+  "local_rule": "LA-JC-01",
+  "type": "local_governs_where_covered",
+  "from_date": "2024-04-01",
+  "evidence_rule": "CA-JC-01",
+  "evidence_quote": "(i) (1) This section does not apply to the following residential real property:\n(A) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted on or before September 1, 2019, in which case the local ordinance shall apply.\n(B) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply.\n(2) A residential real property shall not be subject to both a local ordinance requiring just cause for termination of a residential tenancy and this section.",
+  "note": "Los Angeles RSO contains local just-cause eviction provisions for covered units; the state statute expressly says local just-cause ordinances apply instead for covered properties and that both do not apply simultaneously.",
+  "city": "Los Angeles, CA",
+  "category": "just_cause_eviction"
+ },
+ {
+  "state_rule": "CA-RENT-01",
+  "local_rule": "LA-RENT-01",
+  "type": "local_governs_where_covered",
+  "from_date": "2025-07-01",
+  "evidence_rule": "CA-RENT-01",
+  "evidence_quote": "(d) This section shall not apply to the following residential real properties:\n(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).",
+  "note": "Los Angeles RSO units are subject to a local rent-control rule allowing a 3% annual increase, which is less than the statewide cap. The state statute expressly says it does not apply to housing covered by a stricter local rent-control rule, so the local rule governs for covered RSO units.",
+  "city": "Los Angeles, CA",
+  "category": "rent_increase_limits"
+ },
+ {
+  "state_rule": "CA-ALG-01",
+  "local_rule": "SD-ALG-01",
+  "type": "cumulative",
+  "from_date": null,
+  "evidence_rule": "SD-ALG-01",
+  "evidence_quote": "(b) The remedies under section 98.1104 are cumulative and are in addition to\nany other remedies in this Division or at law, statute, or ordinance.",
+  "note": "Both laws can be obeyed at the same time: San Diego broadly bans sale/use of algorithmic rent-setting devices for residential rentals, while the California statute separately bans use/distribution of common pricing algorithms in anticompetitive conspiracies or coercive conduct. The city text expressly says its remedies are cumulative and in addition to other remedies. No quoted text indicates state preemption or that the state rule displaces stricter local regulation.",
+  "city": "San Diego, CA",
+  "category": "algorithmic_rent_setting"
+ },
+ {
+  "state_rule": "CA-JC-01",
+  "local_rule": "SD-JC-01",
+  "type": "local_governs_where_covered",
+  "evidence_rule": "CA-JC-01",
+  "evidence_quote": "(i) (1) This section does not apply to the following residential real property:\n(A) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted on or before September 1, 2019, in which case the local ordinance shall apply.\n(B) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply.\n(2) A residential real property shall not be subject to both a local ordinance requiring just cause for termination of a residential tenancy and this section.\n(3) A local ordinance adopted\nafter September 1, 2019, that is less protective than this section shall not be enforced unless this section is repealed.",
+  "note": "San Diego's just-cause ordinance was adopted after September 1, 2019 (effective 2023-06-24). The state statute says local ordinances adopted or amended after that date apply instead of the state law if they are more protective, and that a property cannot be subject to both. The city rule also states its rights are in addition to state rights, but because the state statute expressly yields where a qualifying more-protective local just-cause ordinance covers the property, the best relation is local_governs_where_covered.",
+  "city": "San Diego, CA",
+  "category": "just_cause_eviction"
+ },
+ {
+  "state_rule": "CA-ALG-01",
+  "local_rule": "SF-ALG-01",
+  "type": "cumulative",
+  "evidence_rule": "CA-ALG-01",
+  "evidence_quote": "(c) Nothing in this section shall impair or limit the applicability of antitrust laws.",
+  "note": "The state rule targets use/distribution of common pricing algorithms in antitrust restraints or coercive conduct, while the San Francisco rule broadly prohibits sale or use of algorithmic devices to set rents or manage occupancy for residential units in San Francisco. The records do not say the state law preempts or displaces local regulation, and the two rules can both be obeyed by not using prohibited rent-setting algorithms in San Francisco. Therefore treat as cumulative.",
+  "city": "San Francisco, CA",
+  "category": "algorithmic_rent_setting"
+ },
+ {
+  "state_rule": "CA-JC-01",
+  "local_rule": "SF-JC-01",
+  "type": "local_governs_where_covered",
+  "from_date": "2024-04-01",
+  "evidence_rule": "CA-JC-01",
+  "evidence_quote": "(i) (1) This section does not apply to the following residential real property:\n(A) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted on or before September 1, 2019, in which case the local ordinance shall apply.\n(B) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply.\n(2) A residential real property shall not be subject to both a local ordinance requiring just cause for termination of a residential tenancy and this section.",
+  "note": "San Francisco has a local just-cause ordinance, so for units covered by that ordinance, the state statute expressly yields and says the local ordinance applies; the same unit cannot be subject to both.",
+  "city": "San Francisco, CA",
+  "category": "just_cause_eviction"
+ },
+ {
+  "state_rule": "CA-RENT-01",
+  "local_rule": "SF-RENT-01",
+  "type": "local_governs_where_covered",
+  "from_date": "2024-04-01",
+  "evidence_rule": "CA-RENT-01",
+  "evidence_quote": "(d) This section shall not apply to the following residential real properties:\n(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).",
+  "note": "San Francisco's rent-controlled units are subject to a local annual allowable increase (1.6%), which is less than the statewide cap. The state rule expressly says it does not apply to housing covered by stricter local rent control, so the local rule governs for those covered units.",
+  "city": "San Francisco, CA",
+  "category": "rent_increase_limits"
+ },
+ {
+  "state_rule": "CA-SCR-03",
+  "local_rule": "SF-SCR-01",
+  "type": "cumulative",
+  "from_date": null,
+  "evidence_rule": "CA-SCR-03",
+  "evidence_quote": "Housing providers cannot consider some types of criminal history including arrests that did not lead to a conviction, records that are sealed or expunged, or records or matters processed in the juvenile justice system. Housing providers are also prohibited from having “blank...",
+  "note": "Both rules regulate criminal-history screening and can be obeyed together on this record. The state rule sets baseline limits on criminal-history use generally, while the city rule adds protections in affordable housing decisions. The provided records do not say the state preempts or yields to the city, so cumulative is the default.",
+  "city": "San Francisco, CA",
+  "category": "screening_restrictions"
+ },
+ {
+  "state_rule": "CA-ALG-01",
+  "local_rule": "SA-ALG-01",
+  "type": "cumulative",
+  "evidence_rule": "SA-ALG-01",
+  "evidence_quote": "(b) The remedies under Section 8-3703 are cumulative and are in addition to any other remedies in this Article or at law, statute, or ordinance.",
+  "note": "Both laws can be obeyed at once: the state law bans certain anticompetitive or coercive uses/distribution of common pricing algorithms, while Santa Ana more broadly bans landlord use and provision of algorithmic devices for residential rental property in the city. The city text expressly says its remedies are cumulative and in addition to remedies under other law, and the state text does not say it preempts local ordinances.",
+  "city": "Santa Ana, CA",
+  "category": "algorithmic_rent_setting"
+ },
+ {
+  "state_rule": "CA-JC-01",
+  "local_rule": "SA-JC-01",
+  "type": "local_governs_where_covered",
+  "from_date": "2021-11-19",
+  "evidence_rule": "CA-JC-01",
+  "evidence_quote": "This section does not apply to ... residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply. ... A residential real property shall not be subject to both a local ordinance requiring just cause for termination of a residential tenancy and this section.",
+  "note": "Santa Ana's ordinance was adopted after September 1, 2019 and appears more protective because it applies after 30 days, versus the state rule after 12 months. Therefore, for units covered by the Santa Ana ordinance, the local rule governs and the state rule does not apply.",
+  "city": "Santa Ana, CA",
+  "category": "just_cause_eviction"
+ },
+ {
+  "state_rule": "CA-RENT-01",
+  "local_rule": "SA-RENT-01",
+  "type": "local_governs_where_covered",
+  "from_date": "2024-04-01",
+  "evidence_rule": "CA-RENT-01",
+  "evidence_quote": "(d) This section shall not apply to the following residential real properties:\n(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).",
+  "note": "Santa Ana's ordinance caps increases at the lower of 3% or 80% of CPI, which is less than the statewide cap of 5% plus CPI or 10%. The state rule expressly does not apply to housing covered by a stricter local rent-control rule, so the local rule governs where it covers the unit.",
+  "city": "Santa Ana, CA",
+  "category": "rent_increase_limits"
+ }
+]

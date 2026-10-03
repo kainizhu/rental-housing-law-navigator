@@ -1,0 +1,130 @@
+SOURCE: https://docs.sandiego.gov/municode/municodechapter09/ch09art08division11.pdf
+RETRIEVED: 2026-10-03 23:40 UTC
+CAPTURE: direct download (pdftotext -layout) of official City of San Diego municipal code PDF, same publisher/path as corpus D073 (supplemental; Division 11 anti-competitive automated rent price-fixing)
+
+San Diego Municipal Code                                 Chapter 9: Building, Housing and Sign Regulations
+(6-2025)
+
+
+
+                                          Article 8: Housing
+
+           Division 11: Prohibition of Anti-Competitive Automated Rent Price-Fixing
+                  (“Prohibition of Anti-Competitive Automated Rent Price-Fixing”
+                      added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+
+§98.1101       Purpose and Intent
+
+               The purpose and intent of this Division is to protect San Diegans from artificially
+               inflated rental rates and unfair rent increases by prohibiting the sale, licensing, and
+               use of algorithmic devices. This Division also provides tenants with remedies for
+               violations of this Division.
+               (“Purpose and Intent” added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+§98.1102       Definitions
+
+               For purposes of this Division, defined terms appear in italics. The following
+               definitions apply in this Division:
+
+               Algorithmic device means a software or product that uses or incorporates one or more
+               algorithms to perform calculations of nonpublic competitor data of two or more
+               landlords to advise a landlord on, or recommend to a landlord, rental rates or
+               occupancy levels that may be achieved for a residential rental property in the City of
+               San Diego. Algorithmic device does not include the following:
+
+               (a)    A software or product used by a person to publish reports regarding rental
+                      rates or occupancy levels from aggregated historical nonpublic competitor
+                      data that is more than 90 days old, or from information available to the
+                      general public, and does not recommend rental rates or occupancy levels for
+                      future residential rental property leases or renewals.
+
+               (b)    A software or product used by a person to establish rental rates or income
+                      limits in accordance with local, state, or federal affordable housing program
+                      guidelines.
+
+               (c)    A software or product used by a person conducting an appraisal that does not
+                      recommend rental rates during the runtime operation of the software or
+                      product.
+
+               Landlord has the same meaning as in San Diego Municipal Code section 98.0702, as
+               may be amended.
+
+
+
+
+                                                                                       Ch.   Art.   Div.
+                                                                                         9     8     11    1
+San Diego Municipal Code                                      Chapter 9: Building, Housing and Sign Regulations
+(6-2025)
+
+
+
+                     Lease has the same meaning as in San Diego Municipal Code section 98.0702, as
+                     may be amended.
+
+                     Nonpublic competitor data means information that is not available to the general
+                     public, whether the information is attributable to a specific competitor or anonymized
+                     or whether the information is derived from or otherwise provided by another person.
+                     Nonpublic competitor data includes information about actual rental rates, rental rate
+                     changes, residential rental property supply levels, occupancy levels, or lease start
+                     and end dates.
+
+                     Person has the same meaning as in San Diego Municipal Code section 11.0210, as
+                     may be amended.
+
+                     Residential rental property has the same meaning as in San Diego Municipal Code
+                     section 98.0702, as may be amended.
+
+                     Tenant has the same meaning as in San Diego Municipal Code section 98.0702, as
+                     may be amended.
+                     (“Definitions” added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+§98.1103             Use and Sale of Algorithmic Devices Prohibited
+
+                     (a)    It is unlawful for a person to sell, license, or otherwise provide an algorithmic
+                            device to a landlord.
+
+                     (b)    It is unlawful for a landlord to use an algorithmic device to set rental rates or
+                            occupancy levels for residential rental property.
+
+                            For each month a violation of section 98.1103(b) exists or continues, and for
+                            each residential rental property a landlord uses an algorithmic device, it shall
+                            constitute a separate and distinct violation.
+                     (“Use and Sale of Algorithmic Devices Prohibited” added 5-22-2025 by
+                     O-21955 N.S.; effective 6-21-2025.)
+
+
+
+
+ Ch.   Art.   Div.
+  9     8      1     2
+San Diego Municipal Code                                Chapter 9: Building, Housing and Sign Regulations
+(6-2025)
+
+
+
+§98.1104       Remedies
+
+               (a)    A tenant may seek injunctive relief, damages, or civil penalties of up to
+                      $1,000 per violation of this Division, in a civil action against a landlord. In an
+                      action brought under this Division, a prevailing landlord or tenant shall
+                      recover costs and reasonable attorney’s fees. A prevailing tenant includes a
+                      tenant granted an order for injunctive relief. A lease provision that limits a
+                      landlord or tenant from recovering attorney’s fees shall not be enforceable
+                      against a landlord’s or tenant’s claim for attorney’s fees that arise under this
+                      Division.
+
+               (b)    The remedies under section 98.1104 are cumulative and are in addition to any
+                      other remedies in this Division or at law, statute, or ordinance.
+
+               (c)    The City may enforce this Division under Chapter 1, Article 2 of this Code,
+                      including civil and criminal remedies.
+               (“Remedies” added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+
+
+
+                                                                                      Ch.   Art.   Div.
+                                                                                        9     8     11    3
+

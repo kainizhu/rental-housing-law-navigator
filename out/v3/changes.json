@@ -1,0 +1,1440 @@
+{
+ "T1": {
+  "affected_address_ids": [],
+  "conflict_flag_address_ids": [],
+  "notes": "as_of: rules ['CA-ALG-01']",
+  "mapped_rules": [
+   "CA-ALG-01"
+  ],
+  "mapped_conflict_rules": []
+ },
+ "T2": {
+  "affected_address_ids": [
+   "A0002",
+   "A0008",
+   "A0012",
+   "A0017",
+   "A0026",
+   "A0032",
+   "A0040",
+   "A0042",
+   "A0047",
+   "A0049",
+   "A0051",
+   "A0078",
+   "A0087",
+   "A0089",
+   "A0099",
+   "A0101",
+   "A0102",
+   "A0108",
+   "A0116",
+   "A0119",
+   "A0125",
+   "A0131",
+   "A0136",
+   "A0139",
+   "A0160",
+   "A0161",
+   "A0163",
+   "A0168",
+   "A0171",
+   "A0177",
+   "A0181",
+   "A0182",
+   "A0185",
+   "A0186",
+   "A0187",
+   "A0208",
+   "A0223",
+   "A0227",
+   "A0241",
+   "A0243",
+   "A0244",
+   "A0250",
+   "A0254",
+   "A0256",
+   "A0261",
+   "A0265",
+   "A0266",
+   "A0269",
+   "A0270",
+   "A0279",
+   "A0287",
+   "A0288",
+   "A0299",
+   "A0308",
+   "A0320",
+   "A0321",
+   "A0325",
+   "A0344",
+   "A0348",
+   "A0350",
+   "A0359",
+   "A0360",
+   "A0372",
+   "A0377",
+   "A0388",
+   "A0389",
+   "A0393",
+   "A0394",
+   "A0399",
+   "A0404",
+   "A0410",
+   "A0415",
+   "A0416",
+   "A0418",
+   "A0424",
+   "A0435",
+   "A0436",
+   "A0438",
+   "A0447",
+   "A0450",
+   "A0455",
+   "A0459",
+   "A0462",
+   "A0471",
+   "A0472",
+   "A0475",
+   "A0482",
+   "A0489",
+   "A0490",
+   "A0495"
+  ],
+  "conflict_flag_address_ids": [],
+  "notes": "boundary: rules ['HOB-ALG-01', 'JC-ALG-01']",
+  "mapped_rules": [
+   "HOB-ALG-01",
+   "JC-ALG-01"
+  ],
+  "mapped_conflict_rules": []
+ },
+ "T3": {
+  "affected_address_ids": [
+   "A0002",
+   "A0003",
+   "A0008",
+   "A0011",
+   "A0012",
+   "A0013",
+   "A0017",
+   "A0020",
+   "A0026",
+   "A0028",
+   "A0029",
+   "A0032",
+   "A0040",
+   "A0042",
+   "A0044",
+   "A0047",
+   "A0049",
+   "A0051",
+   "A0057",
+   "A0059",
+   "A0076",
+   "A0078",
+   "A0087",
+   "A0089",
+   "A0090",
+   "A0099",
+   "A0101",
+   "A0102",
+   "A0104",
+   "A0108",
+   "A0110",
+   "A0116",
+   "A0119",
+   "A0120",
+   "A0125",
+   "A0129",
+   "A0130",
+   "A0131",
+   "A0132",
+   "A0136",
+   "A0137",
+   "A0139",
+   "A0146",
+   "A0148",
+   "A0159",
+   "A0160",
+   "A0161",
+   "A0163",
+   "A0168",
+   "A0171",
+   "A0177",
+   "A0181",
+   "A0182",
+   "A0185",
+   "A0186",
+   "A0187",
+   "A0190",
+   "A0204",
+   "A0208",
+   "A0223",
+   "A0227",
+   "A0241",
+   "A0243",
+   "A0244",
+   "A0249",
+   "A0250",
+   "A0254",
+   "A0256",
+   "A0261",
+   "A0264",
+   "A0265",
+   "A0266",
+   "A0269",
+   "A0270",
+   "A0279",
+   "A0287",
+   "A0288",
+   "A0296",
+   "A0297",
+   "A0299",
+   "A0307",
+   "A0308",
+   "A0311",
+   "A0313",
+   "A0320",
+   "A0321",
+   "A0325",
+   "A0326",
+   "A0329",
+   "A0331",
+   "A0337",
+   "A0338",
+   "A0343",
+   "A0344",
+   "A0348",
+   "A0350",
+   "A0352",
+   "A0358",
+   "A0359",
+   "A0360",
+   "A0371",
+   "A0372",
+   "A0377",
+   "A0381",
+   "A0388",
+   "A0389",
+   "A0390",
+   "A0393",
+   "A0394",
+   "A0399",
+   "A0400",
+   "A0404",
+   "A0410",
+   "A0412",
+   "A0415",
+   "A0416",
+   "A0418",
+   "A0424",
+   "A0428",
+   "A0435",
+   "A0436",
+   "A0438",
+   "A0447",
+   "A0448",
+   "A0449",
+   "A0450",
+   "A0455",
+   "A0459",
+   "A0460",
+   "A0462",
+   "A0471",
+   "A0472",
+   "A0475",
+   "A0476",
+   "A0482",
+   "A0489",
+   "A0490",
+   "A0491",
+   "A0495",
+   "A0498"
+  ],
+  "conflict_flag_address_ids": [
+   "A0002",
+   "A0008",
+   "A0012",
+   "A0017",
+   "A0026",
+   "A0032",
+   "A0040",
+   "A0042",
+   "A0047",
+   "A0049",
+   "A0051",
+   "A0078",
+   "A0087",
+   "A0089",
+   "A0099",
+   "A0101",
+   "A0102",
+   "A0108",
+   "A0116",
+   "A0119",
+   "A0125",
+   "A0131",
+   "A0136",
+   "A0139",
+   "A0160",
+   "A0161",
+   "A0163",
+   "A0168",
+   "A0171",
+   "A0177",
+   "A0181",
+   "A0182",
+   "A0185",
+   "A0186",
+   "A0187",
+   "A0208",
+   "A0223",
+   "A0227",
+   "A0241",
+   "A0243",
+   "A0244",
+   "A0250",
+   "A0254",
+   "A0256",
+   "A0261",
+   "A0265",
+   "A0266",
+   "A0269",
+   "A0270",
+   "A0279",
+   "A0287",
+   "A0288",
+   "A0299",
+   "A0308",
+   "A0320",
+   "A0321",
+   "A0325",
+   "A0344",
+   "A0348",
+   "A0350",
+   "A0359",
+   "A0360",
+   "A0372",
+   "A0377",
+   "A0388",
+   "A0389",
+   "A0393",
+   "A0394",
+   "A0399",
+   "A0404",
+   "A0410",
+   "A0415",
+   "A0416",
+   "A0418",
+   "A0424",
+   "A0435",
+   "A0436",
+   "A0438",
+   "A0447",
+   "A0450",
+   "A0455",
+   "A0459",
+   "A0462",
+   "A0471",
+   "A0472",
+   "A0475",
+   "A0482",
+   "A0489",
+   "A0490",
+   "A0495"
+  ],
+  "notes": "as_of: rules ['NJ-ALG-01']; conflicts with ['HOB-ALG-01', 'JC-ALG-01']",
+  "mapped_rules": [
+   "NJ-ALG-01"
+  ],
+  "mapped_conflict_rules": [
+   "HOB-ALG-01",
+   "JC-ALG-01"
+  ],
+  "before_after": {
+   "A0002": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0003": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0008": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0011": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0012": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0013": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0017": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0020": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0026": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0028": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0029": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0032": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0040": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0042": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0044": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0047": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0049": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0051": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0057": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0059": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0076": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0078": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0087": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0089": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0090": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0099": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0101": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0102": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0104": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0108": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0110": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0116": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0119": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0120": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0125": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0129": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0130": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0131": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0132": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0136": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0137": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0139": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0146": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0148": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0159": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0160": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0161": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0163": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0168": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0171": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0177": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0181": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0182": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0185": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0186": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0187": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0190": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0204": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0208": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0223": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0227": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0241": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0243": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0244": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0249": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0250": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0254": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0256": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0261": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0264": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0265": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0266": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0269": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0270": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0279": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0287": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0288": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0296": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0297": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0299": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0307": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0308": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0311": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0313": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0320": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0321": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0325": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0326": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0329": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0331": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0337": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0338": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0343": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0344": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0348": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0350": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0352": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0358": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0359": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0360": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0371": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0372": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0377": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0381": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0388": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0389": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0390": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0393": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0394": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0399": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0400": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0404": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0410": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0412": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0415": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0416": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0418": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0424": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0428": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0435": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0436": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0438": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0447": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0448": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0449": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0450": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0455": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0459": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0460": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0462": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0471": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0472": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0475": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0476": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0482": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0489": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0490": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0491": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0495": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   },
+   "A0498": {
+    "NJ-ALG-01": [
+     "not_yet_effective",
+     "applies"
+    ]
+   }
+  }
+ },
+ "T4": {
+  "affected_address_ids": [
+   "A0006",
+   "A0009",
+   "A0010",
+   "A0015",
+   "A0024",
+   "A0034",
+   "A0036",
+   "A0039",
+   "A0043",
+   "A0046",
+   "A0048",
+   "A0052",
+   "A0053",
+   "A0054",
+   "A0056",
+   "A0063",
+   "A0064",
+   "A0065",
+   "A0068",
+   "A0070",
+   "A0071",
+   "A0073",
+   "A0075",
+   "A0077",
+   "A0082",
+   "A0083",
+   "A0086",
+   "A0093",
+   "A0095",
+   "A0096",
+   "A0098",
+   "A0118",
+   "A0123",
+   "A0124",
+   "A0128",
+   "A0134",
+   "A0140",
+   "A0143",
+   "A0144",
+   "A0149",
+   "A0151",
+   "A0155",
+   "A0166",
+   "A0169",
+   "A0174",
+   "A0175",
+   "A0176",
+   "A0191",
+   "A0194",
+   "A0195",
+   "A0198",
+   "A0199",
+   "A0203",
+   "A0209",
+   "A0211",
+   "A0214",
+   "A0217",
+   "A0218",
+   "A0220",
+   "A0221",
+   "A0226",
+   "A0230",
+   "A0232",
+   "A0233",
+   "A0242",
+   "A0245",
+   "A0258",
+   "A0272",
+   "A0284",
+   "A0286",
+   "A0290",
+   "A0291",
+   "A0292",
+   "A0294",
+   "A0295",
+   "A0298",
+   "A0300",
+   "A0301",
+   "A0302",
+   "A0306",
+   "A0310",
+   "A0312",
+   "A0332",
+   "A0336",
+   "A0339",
+   "A0342",
+   "A0354",
+   "A0356",
+   "A0361",
+   "A0362",
+   "A0366",
+   "A0376",
+   "A0380",
+   "A0403",
+   "A0406",
+   "A0422",
+   "A0423",
+   "A0429",
+   "A0444",
+   "A0446",
+   "A0453",
+   "A0463",
+   "A0464",
+   "A0465",
+   "A0466",
+   "A0467",
+   "A0468",
+   "A0473",
+   "A0485",
+   "A0488"
+  ],
+  "conflict_flag_address_ids": [],
+  "notes": "pending: rules ['MA-ALG-P01', 'MA-ALG-P02']",
+  "mapped_rules": [
+   "MA-ALG-P01",
+   "MA-ALG-P02"
+  ],
+  "mapped_conflict_rules": []
+ },
+ "T5": {
+  "affected_address_ids": [
+   "A0006",
+   "A0009",
+   "A0010",
+   "A0015",
+   "A0024",
+   "A0034",
+   "A0036",
+   "A0039",
+   "A0043",
+   "A0046",
+   "A0048",
+   "A0052",
+   "A0053",
+   "A0054",
+   "A0056",
+   "A0063",
+   "A0064",
+   "A0065",
+   "A0068",
+   "A0070",
+   "A0071",
+   "A0073",
+   "A0075",
+   "A0077",
+   "A0082",
+   "A0083",
+   "A0086",
+   "A0093",
+   "A0095",
+   "A0096",
+   "A0098",
+   "A0118",
+   "A0123",
+   "A0124",
+   "A0128",
+   "A0134",
+   "A0140",
+   "A0143",
+   "A0144",
+   "A0149",
+   "A0151",
+   "A0155",
+   "A0166",
+   "A0169",
+   "A0174",
+   "A0175",
+   "A0176",
+   "A0191",
+   "A0194",
+   "A0195",
+   "A0198",
+   "A0199",
+   "A0203",
+   "A0209",
+   "A0211",
+   "A0214",
+   "A0217",
+   "A0218",
+   "A0220",
+   "A0221",
+   "A0226",
+   "A0230",
+   "A0232",
+   "A0233",
+   "A0242",
+   "A0245",
+   "A0258",
+   "A0272",
+   "A0284",
+   "A0286",
+   "A0290",
+   "A0291",
+   "A0292",
+   "A0294",
+   "A0295",
+   "A0298",
+   "A0300",
+   "A0301",
+   "A0302",
+   "A0306",
+   "A0310",
+   "A0312",
+   "A0332",
+   "A0336",
+   "A0339",
+   "A0342",
+   "A0354",
+   "A0356",
+   "A0361",
+   "A0362",
+   "A0366",
+   "A0376",
+   "A0380",
+   "A0403",
+   "A0406",
+   "A0422",
+   "A0423",
+   "A0429",
+   "A0444",
+   "A0446",
+   "A0453",
+   "A0463",
+   "A0464",
+   "A0465",
+   "A0466",
+   "A0467",
+   "A0468",
+   "A0473",
+   "A0485",
+   "A0488"
+  ],
+  "conflict_flag_address_ids": [],
+  "notes": "negative: rules ['MA-RENT-P02', 'MA-RENT-P03']",
+  "mapped_rules": [
+   "MA-RENT-P02",
+   "MA-RENT-P03"
+  ],
+  "mapped_conflict_rules": []
+ }
+}

@@ -1,0 +1,114 @@
+[
+ {
+  "id": "BER-RENT-02",
+  "citation": "Berkeley Rent Stabilization and Eviction for Just Cause Ordinance",
+  "decision": "drop_duplicate",
+  "duplicate_of": "BER-RENT-01",
+  "reason": "Same rent-control law/category as BER-RENT-01. This record mainly describes coverage/exemptions for Berkeley’s rent ordinance, while BER-RENT-01 better states the main operative rent-increase requirement. Coverage/exemption provisions are part of the same law and should be merged into one kept record per law per category.",
+  "votes": "2/3 drop"
+ },
+ {
+  "id": "BER-JC-02",
+  "citation": "Berkeley Rent Stabilization and Good Cause for Eviction Ordinance; Ellis Implementation Ordinance",
+  "decision": "drop_duplicate",
+  "duplicate_of": "BER-JC-01",
+  "reason": "Relocation assistance for owner move-in and Ellis evictions is part of Berkeley's just-cause eviction regime and annual adjustment of payment amounts. Under the duplicate rule, relocation/implementation provisions of the same law should be merged into the main just-cause record.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "BOS-JC-01",
+  "citation": "City of Boston Ordinances Sec. 10-11.7",
+  "decision": "drop_not_operative",
+  "duplicate_of": null,
+  "reason": "This ordinance requires a tenant-rights/resources notice and city filing when serving a notice to quit or non-renewal, but it expressly does not limit the grounds for eviction or non-renewal. In just_cause_eviction, notice provisions are operative only when part of a just-cause regime; here it is a procedural notice tied to eviction, not a cause limitation.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "CA-DEP-02",
+  "citation": "Cal. Civ. Code § 1950.6",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This record mainly states that application screening fees are not security deposits and are governed by the separate application-screening-fee statute; it does not itself impose an operative security-deposit rule.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "CA-SCR-01",
+  "citation": "Cal. Civ. Code § 1950.6",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "Main operative subject is application screening fee caps and procedures, not screening restrictions such as criminal-history or source-of-income limits. Timing/availability conditions here are part of the fee statute and are better kept in application_screening_fees.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "HOB-JC-01",
+  "citation": "Hoboken City Code § 155-1",
+  "decision": "drop_not_operative",
+  "duplicate_of": null,
+  "reason": "This record only defines 'just cause for eviction' by cross-reference to New Jersey state law and does not itself provide operative local causes, notice, coverage, or relocation rules in this category.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "LA-RENT-P02",
+  "citation": "Los Angeles City Council Motion 24-1031",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This motion concerns possible regulation of algorithm-based rent-setting software, not an operative rent increase limit or rent-control/preemption rule in this category.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "LA-JC-03",
+  "citation": "Ordinances #188481 and #188482",
+  "decision": "drop_duplicate",
+  "duplicate_of": "LA-JC-02",
+  "reason": "These occupant protections govern a specific no-fault demolition/new-construction eviction scenario under the same city just-cause/resident-protection law framework; keep the broader record covering the main operative just-cause rule.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "LA-ALG-P01",
+  "citation": "Los Angeles City Council Motion 24-1031",
+  "decision": "drop_not_a_rule",
+  "duplicate_of": null,
+  "reason": "The motion only orders a study/report on possible future restrictions and does not itself create an operative algorithmic rent-setting rule, prohibition, definition, penalty, or effective date.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "MA-RENT-P04",
+  "citation": "S.2983",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This pending bill's subject is algorithmic rent setting, not rent increase limits, and the record itself says no substantive rent-cap rule can be extracted.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "MA-RENT-P03",
+  "citation": "H.5222",
+  "decision": "drop_wrong_category",
+  "duplicate_of": null,
+  "reason": "This pending bill concerns algorithmic rent fixing rather than rent increase limits, and no operative rent-cap or local rent-control rule is provided here.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "SD-ALG-01",
+  "citation": "O-2025-107",
+  "decision": "drop_duplicate",
+  "duplicate_of": "SD-ALG-02",
+  "reason": "Same law as the enacted municipal code provisions on algorithmic rent-setting; this ordinance record is another citation/version of the same enacted measure, and the code record better states the operative rule.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "SF-JC-02",
+  "citation": "Rent Ordinance Section 37.9C",
+  "decision": "drop_duplicate",
+  "duplicate_of": "SF-JC-01",
+  "reason": "Relocation payment amounts for specified no-fault evictions are part of the same just-cause eviction law and are ancillary to the main operative just-cause rule already captured in SF-JC-01.",
+  "votes": "3/3 drop"
+ },
+ {
+  "id": "SF-DEP-01",
+  "citation": "San Francisco Rent Board Current Rates, including Rent Increase, Relocation, Sec. Deposit",
+  "decision": "drop_not_operative",
+  "duplicate_of": null,
+  "reason": "This record gives only the annual interest rate on security deposits and expressly lacks any maximum deposit amount; it does not state an operative security-deposit cap or comparable rule for this category.",
+  "votes": "3/3 drop"
+ }
+]

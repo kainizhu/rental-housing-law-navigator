@@ -1,0 +1,157 @@
+done Hoboken, NJ | rent_increase_limits
+done Cambridge, MA | rent_increase_limits
+done Hoboken, NJ | just_cause_eviction
+done Cambridge, MA | just_cause_eviction
+done Boston, MA | rent_increase_limits
+done Hoboken, NJ | security_deposits
+done Cambridge, MA | security_deposits
+done Hoboken, NJ | application_screening_fees
+done Cambridge, MA | application_screening_fees
+done Hoboken, NJ | screening_restrictions
+done Cambridge, MA | screening_restrictions
+done Boston, MA | just_cause_eviction
+done Cambridge, MA | algorithmic_rent_setting
+done Boston, MA | security_deposits
+done Jersey City, NJ | rent_increase_limits
+done Hoboken, NJ | algorithmic_rent_setting
+done Boston, MA | application_screening_fees
+done Jersey City, NJ | just_cause_eviction
+done Berkeley, CA | rent_increase_limits
+done Jersey City, NJ | security_deposits
+done CA | rent_increase_limits
+done Jersey City, NJ | application_screening_fees
+done Jersey City, NJ | screening_restrictions
+done Boston, MA | screening_restrictions
+done Boston, MA | algorithmic_rent_setting
+done Jersey City, NJ | algorithmic_rent_setting
+done Los Angeles, CA | rent_increase_limits
+done Berkeley, CA | just_cause_eviction
+done MA | rent_increase_limits
+done Berkeley, CA | security_deposits
+done NJ | rent_increase_limits
+done MA | just_cause_eviction
+done CA | just_cause_eviction
+done MA | security_deposits
+done Berkeley, CA | application_screening_fees
+done CA | security_deposits
+done NJ | just_cause_eviction
+done Los Angeles, CA | just_cause_eviction
+done NJ | security_deposits
+done Berkeley, CA | screening_restrictions
+done CA | application_screening_fees
+done Los Angeles, CA | security_deposits
+done MA | application_screening_fees
+done Los Angeles, CA | application_screening_fees
+done Los Angeles, CA | screening_restrictions
+done NJ | application_screening_fees
+done MA | screening_restrictions
+done Los Angeles, CA | algorithmic_rent_setting
+done Newark, NJ | rent_increase_limits
+done Newark, NJ | just_cause_eviction
+done Newark, NJ | security_deposits
+done Newark, NJ | application_screening_fees
+done Newark, NJ | screening_restrictions
+done Newark, NJ | algorithmic_rent_setting
+done Berkeley, CA | algorithmic_rent_setting
+done San Diego, CA | rent_increase_limits
+done MA | algorithmic_rent_setting
+done NJ | screening_restrictions
+done CA | screening_restrictions
+done Santa Ana, CA | rent_increase_limits
+done San Francisco, CA | rent_increase_limits
+done CA | algorithmic_rent_setting
+done NJ | algorithmic_rent_setting
+done Santa Ana, CA | just_cause_eviction
+done San Diego, CA | just_cause_eviction
+done Santa Ana, CA | security_deposits
+done San Diego, CA | security_deposits
+done Santa Ana, CA | application_screening_fees
+done San Diego, CA | application_screening_fees
+done Santa Ana, CA | screening_restrictions
+done San Francisco, CA | just_cause_eviction
+done San Diego, CA | screening_restrictions
+done San Francisco, CA | security_deposits
+done San Francisco, CA | application_screening_fees
+done San Francisco, CA | screening_restrictions
+done San Diego, CA | algorithmic_rent_setting
+done Santa Ana, CA | algorithmic_rent_setting
+done San Francisco, CA | algorithmic_rent_setting
+Berkeley, CA         rent_increase_limits         docs= 9 rules=2 finding=rules_found tok={'input_tokens': 13233, 'output_tokens': 2034, 'cache_read_input_tokens': 0}
+Berkeley, CA         just_cause_eviction          docs= 9 rules=1 finding=rules_found tok={'input_tokens': 13212, 'output_tokens': 1679, 'cache_read_input_tokens': 12800}
+Berkeley, CA         security_deposits            docs= 9 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 13206, 'output_tokens': 114, 'cache_read_input_tokens': 12800}
+Berkeley, CA         application_screening_fees   docs= 9 rules=3 finding=rules_found tok={'input_tokens': 13222, 'output_tokens': 1189, 'cache_read_input_tokens': 12800}
+Berkeley, CA         screening_restrictions       docs= 9 rules=1 finding=rules_found tok={'input_tokens': 13210, 'output_tokens': 904, 'cache_read_input_tokens': 12800}
+Berkeley, CA         algorithmic_rent_setting     docs= 9 rules=1 finding=rules_found tok={'input_tokens': 13215, 'output_tokens': 1181, 'cache_read_input_tokens': 12800}
+Boston, MA           rent_increase_limits         docs= 5 rules=1 finding=rules_found tok={'input_tokens': 8248, 'output_tokens': 367, 'cache_read_input_tokens': 0}
+Boston, MA           just_cause_eviction          docs= 5 rules=2 finding=rules_found tok={'input_tokens': 8227, 'output_tokens': 878, 'cache_read_input_tokens': 7680}
+Boston, MA           security_deposits            docs= 5 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 8221, 'output_tokens': 93, 'cache_read_input_tokens': 7680}
+Boston, MA           application_screening_fees   docs= 5 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 8237, 'output_tokens': 112, 'cache_read_input_tokens': 7680}
+Boston, MA           screening_restrictions       docs= 5 rules=2 finding=rules_found tok={'input_tokens': 8225, 'output_tokens': 879, 'cache_read_input_tokens': 7680}
+Boston, MA           algorithmic_rent_setting     docs= 5 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 8230, 'output_tokens': 92, 'cache_read_input_tokens': 7680}
+CA                   rent_increase_limits         docs= 7 rules=1 finding=rules_found tok={'input_tokens': 27956, 'output_tokens': 2397, 'cache_read_input_tokens': 0}
+CA                   just_cause_eviction          docs= 7 rules=1 finding=rules_found tok={'input_tokens': 27935, 'output_tokens': 2725, 'cache_read_input_tokens': 27136}
+CA                   security_deposits            docs= 7 rules=1 finding=rules_found tok={'input_tokens': 27929, 'output_tokens': 1160, 'cache_read_input_tokens': 27136}
+CA                   application_screening_fees   docs= 7 rules=1 finding=rules_found tok={'input_tokens': 27945, 'output_tokens': 783, 'cache_read_input_tokens': 27136}
+CA                   screening_restrictions       docs= 7 rules=2 finding=rules_found tok={'input_tokens': 27933, 'output_tokens': 1607, 'cache_read_input_tokens': 27136}
+CA                   algorithmic_rent_setting     docs= 7 rules=1 finding=rules_found tok={'input_tokens': 27938, 'output_tokens': 481, 'cache_read_input_tokens': 27136}
+Cambridge, MA        rent_increase_limits         docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5744, 'output_tokens': 96, 'cache_read_input_tokens': 0}
+Cambridge, MA        just_cause_eviction          docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5723, 'output_tokens': 96, 'cache_read_input_tokens': 4608}
+Cambridge, MA        security_deposits            docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5717, 'output_tokens': 112, 'cache_read_input_tokens': 4608}
+Cambridge, MA        application_screening_fees   docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5733, 'output_tokens': 114, 'cache_read_input_tokens': 4608}
+Cambridge, MA        screening_restrictions       docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5721, 'output_tokens': 120, 'cache_read_input_tokens': 4608}
+Cambridge, MA        algorithmic_rent_setting     docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5726, 'output_tokens': 108, 'cache_read_input_tokens': 4608}
+Hoboken, NJ          rent_increase_limits         docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 4282, 'output_tokens': 87, 'cache_read_input_tokens': 0}
+Hoboken, NJ          just_cause_eviction          docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 4261, 'output_tokens': 91, 'cache_read_input_tokens': 3584}
+Hoboken, NJ          security_deposits            docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 4255, 'output_tokens': 90, 'cache_read_input_tokens': 3584}
+Hoboken, NJ          application_screening_fees   docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 4271, 'output_tokens': 79, 'cache_read_input_tokens': 3584}
+Hoboken, NJ          screening_restrictions       docs= 2 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 4259, 'output_tokens': 70, 'cache_read_input_tokens': 3584}
+Hoboken, NJ          algorithmic_rent_setting     docs= 2 rules=1 finding=rules_found tok={'input_tokens': 4264, 'output_tokens': 649, 'cache_read_input_tokens': 3584}
+Jersey City, NJ      rent_increase_limits         docs= 3 rules=0 finding=insufficient_text tok={'input_tokens': 5482, 'output_tokens': 119, 'cache_read_input_tokens': 0}
+Jersey City, NJ      just_cause_eviction          docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5461, 'output_tokens': 94, 'cache_read_input_tokens': 4608}
+Jersey City, NJ      security_deposits            docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5455, 'output_tokens': 92, 'cache_read_input_tokens': 4608}
+Jersey City, NJ      application_screening_fees   docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5471, 'output_tokens': 80, 'cache_read_input_tokens': 4608}
+Jersey City, NJ      screening_restrictions       docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 5459, 'output_tokens': 89, 'cache_read_input_tokens': 4608}
+Jersey City, NJ      algorithmic_rent_setting     docs= 3 rules=1 finding=insufficient_text tok={'input_tokens': 5464, 'output_tokens': 457, 'cache_read_input_tokens': 4608}
+Los Angeles, CA      rent_increase_limits         docs= 5 rules=2 finding=rules_found tok={'input_tokens': 16624, 'output_tokens': 1694, 'cache_read_input_tokens': 0}
+Los Angeles, CA      just_cause_eviction          docs= 5 rules=3 finding=rules_found tok={'input_tokens': 16603, 'output_tokens': 3188, 'cache_read_input_tokens': 15872}
+Los Angeles, CA      security_deposits            docs= 5 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 16597, 'output_tokens': 136, 'cache_read_input_tokens': 15872}
+Los Angeles, CA      application_screening_fees   docs= 5 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 16613, 'output_tokens': 97, 'cache_read_input_tokens': 15872}
+Los Angeles, CA      screening_restrictions       docs= 5 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 16601, 'output_tokens': 79, 'cache_read_input_tokens': 15872}
+Los Angeles, CA      algorithmic_rent_setting     docs= 5 rules=1 finding=rules_found tok={'input_tokens': 16606, 'output_tokens': 378, 'cache_read_input_tokens': 15872}
+MA                   rent_increase_limits         docs=12 rules=3 finding=rules_found tok={'input_tokens': 25327, 'output_tokens': 773, 'cache_read_input_tokens': 0}
+MA                   just_cause_eviction          docs=12 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 25306, 'output_tokens': 105, 'cache_read_input_tokens': 25088}
+MA                   security_deposits            docs=12 rules=1 finding=rules_found tok={'input_tokens': 25300, 'output_tokens': 907, 'cache_read_input_tokens': 25088}
+MA                   application_screening_fees   docs=12 rules=2 finding=rules_found tok={'input_tokens': 25316, 'output_tokens': 1391, 'cache_read_input_tokens': 25088}
+MA                   screening_restrictions       docs=12 rules=2 finding=rules_found tok={'input_tokens': 25304, 'output_tokens': 685, 'cache_read_input_tokens': 25088}
+MA                   algorithmic_rent_setting     docs=12 rules=2 finding=insufficient_text tok={'input_tokens': 25309, 'output_tokens': 514, 'cache_read_input_tokens': 25088}
+NJ                   rent_increase_limits         docs= 5 rules=2 finding=rules_found tok={'input_tokens': 48441, 'output_tokens': 863, 'cache_read_input_tokens': 0}
+NJ                   just_cause_eviction          docs= 5 rules=2 finding=rules_found tok={'input_tokens': 48420, 'output_tokens': 1372, 'cache_read_input_tokens': 47616}
+NJ                   security_deposits            docs= 5 rules=1 finding=rules_found tok={'input_tokens': 48414, 'output_tokens': 403, 'cache_read_input_tokens': 47616}
+NJ                   application_screening_fees   docs= 5 rules=1 finding=rules_found tok={'input_tokens': 48430, 'output_tokens': 869, 'cache_read_input_tokens': 47616}
+NJ                   screening_restrictions       docs= 5 rules=1 finding=rules_found tok={'input_tokens': 48418, 'output_tokens': 1004, 'cache_read_input_tokens': 47616}
+NJ                   algorithmic_rent_setting     docs= 5 rules=1 finding=rules_found tok={'input_tokens': 48423, 'output_tokens': 1155, 'cache_read_input_tokens': 47616}
+Newark, NJ           rent_increase_limits         docs= 0 rules=0 finding=insufficient_text tok={}
+Newark, NJ           just_cause_eviction          docs= 0 rules=0 finding=insufficient_text tok={}
+Newark, NJ           security_deposits            docs= 0 rules=0 finding=insufficient_text tok={}
+Newark, NJ           application_screening_fees   docs= 0 rules=0 finding=insufficient_text tok={}
+Newark, NJ           screening_restrictions       docs= 0 rules=0 finding=insufficient_text tok={}
+Newark, NJ           algorithmic_rent_setting     docs= 0 rules=0 finding=insufficient_text tok={}
+San Diego, CA        rent_increase_limits         docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 17843, 'output_tokens': 124, 'cache_read_input_tokens': 0}
+San Diego, CA        just_cause_eviction          docs= 3 rules=1 finding=rules_found tok={'input_tokens': 17822, 'output_tokens': 1872, 'cache_read_input_tokens': 16896}
+San Diego, CA        security_deposits            docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 17816, 'output_tokens': 81, 'cache_read_input_tokens': 16896}
+San Diego, CA        application_screening_fees   docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 17832, 'output_tokens': 98, 'cache_read_input_tokens': 16896}
+San Diego, CA        screening_restrictions       docs= 3 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 17820, 'output_tokens': 93, 'cache_read_input_tokens': 16896}
+San Diego, CA        algorithmic_rent_setting     docs= 3 rules=1 finding=rules_found tok={'input_tokens': 17825, 'output_tokens': 898, 'cache_read_input_tokens': 16896}
+San Francisco, CA    rent_increase_limits         docs= 7 rules=2 finding=rules_found tok={'input_tokens': 10019, 'output_tokens': 1174, 'cache_read_input_tokens': 0}
+San Francisco, CA    just_cause_eviction          docs= 7 rules=3 finding=rules_found tok={'input_tokens': 9998, 'output_tokens': 1762, 'cache_read_input_tokens': 9728}
+San Francisco, CA    security_deposits            docs= 7 rules=0 finding=insufficient_text tok={'input_tokens': 9992, 'output_tokens': 117, 'cache_read_input_tokens': 9728}
+San Francisco, CA    application_screening_fees   docs= 7 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 10008, 'output_tokens': 97, 'cache_read_input_tokens': 9728}
+San Francisco, CA    screening_restrictions       docs= 7 rules=0 finding=insufficient_text tok={'input_tokens': 9996, 'output_tokens': 71, 'cache_read_input_tokens': 9728}
+San Francisco, CA    algorithmic_rent_setting     docs= 7 rules=1 finding=rules_found tok={'input_tokens': 10001, 'output_tokens': 421, 'cache_read_input_tokens': 9728}
+Santa Ana, CA        rent_increase_limits         docs= 4 rules=1 finding=rules_found tok={'input_tokens': 8147, 'output_tokens': 609, 'cache_read_input_tokens': 0}
+Santa Ana, CA        just_cause_eviction          docs= 4 rules=1 finding=rules_found tok={'input_tokens': 8126, 'output_tokens': 927, 'cache_read_input_tokens': 7680}
+Santa Ana, CA        security_deposits            docs= 4 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 8120, 'output_tokens': 69, 'cache_read_input_tokens': 7680}
+Santa Ana, CA        application_screening_fees   docs= 4 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 8136, 'output_tokens': 84, 'cache_read_input_tokens': 7680}
+Santa Ana, CA        screening_restrictions       docs= 4 rules=0 finding=no_rule_at_this_level tok={'input_tokens': 8124, 'output_tokens': 81, 'cache_read_input_tokens': 7680}
+Santa Ana, CA        algorithmic_rent_setting     docs= 4 rules=1 finding=rules_found tok={'input_tokens': 8129, 'output_tokens': 909, 'cache_read_input_tokens': 7680}
+cells=78 total_input_tokens~1146876

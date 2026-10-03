@@ -1,0 +1,449 @@
+[
+ {
+  "id": "BER-RENT-01",
+  "citation": [
+   "Berkeley Municipal Code § 13.76.110A",
+   "Berkeley Municipal Code section 13.76.110A"
+  ],
+  "key_value": [
+   "AGA capped at 5%; 2026 AGA = 1.0%",
+   "5% cap; 2026 AGA 1.0%"
+  ]
+ },
+ {
+  "id": "BER-RENT-02",
+  "key_value": [
+   "Fully covered units are rent-controlled; partially covered and exempt units are not",
+   "Fully covered units rent-controlled"
+  ]
+ },
+ {
+  "id": "BER-JC-02",
+  "key_value": [
+   "2026 relocation assistance: $19,413 standard + $6,471 additional for qualifying households",
+   "$19,413 + $6,471"
+  ]
+ },
+ {
+  "id": "BER-JC-01",
+  "key_value": [
+   "Just cause required; nonpayment debt must be >= 1 month FMR; notice/lawsuit copies due within 3 business days",
+   "Debt >= 1 month FMR"
+  ]
+ },
+ {
+  "id": "BER-FEE-01",
+  "citation": [
+   "Berkeley Mun. Code ch. 13.78 (including BMC 13.78.010, 13.78.016, 13.78.018)",
+   "Berkeley Municipal Code 13.78"
+  ],
+  "key_value": [
+   "Disclosure required before receiving screening fee; non-refundable existing-tenancy application fees prohibited",
+   "Disclosure; no nonrefundable renewal fee"
+  ]
+ },
+ {
+  "id": "BER-SCR-01",
+  "citation": [
+   "Berkeley Municipal Code ch. 13.106",
+   "BMC 13.106"
+  ],
+  "key_value": [
+   "Criminal-history screening prohibited for rental housing decisions, subject to listed exemptions",
+   "No criminal-history screening"
+  ]
+ },
+ {
+  "id": "BER-ALG-01",
+  "citation": [
+   "Berkeley Mun. Code ch. 13.63",
+   "Berkeley Municipal Code ch. 13.63"
+  ],
+  "key_value": [
+   "Sale/provision and landlord use of coordinated pricing algorithms for Berkeley residential units prohibited; up to $1,000 per violation, with separate violations by unit and month",
+   "Ban on pricing algorithms"
+  ]
+ },
+ {
+  "id": "BOS-JC-01",
+  "citation": [
+   "Housing Stability Notification Act (Sec. 10-11.7)",
+   "City of Boston Ordinances Sec. 10-11.7"
+  ],
+  "key_value": [
+   "Notice of Tenants’ Rights and Resources must be delivered at the same time as the Notice to Quit or Notice of non-renewal of lease",
+   "same-time tenant-rights notice"
+  ]
+ },
+ {
+  "id": "BOS-SCR-01",
+  "key_value": [
+   "No blanket criminal-history denial; no convictions older than 5 years; no use of applicant credit score to approve or deny",
+   "case-by-case; 5-year limit"
+  ]
+ },
+ {
+  "id": "CA-RENT-01",
+  "key_value": [
+   "lesser of 5% + cost of living or 10% in any 12-month period; no more than 2 increases in 12 months",
+   "5% + CPI, max 10%"
+  ]
+ },
+ {
+  "id": "CA-JC-01",
+  "key_value": [
+   "Just cause required after 12 months occupancy; no-fault terminations require 1 month rent relocation assistance or rent waiver",
+   "Just cause + 1 month aid"
+  ]
+ },
+ {
+  "id": "CA-DEP-01",
+  "key_value": [
+   "1 month's rent generally; 2 months' rent for qualifying small landlords; service members capped at 1 month",
+   "1 month; 2 for small landlords"
+  ]
+ },
+ {
+  "id": "CA-DEP-02",
+  "key_value": [
+   "Application screening fee is not 'security' under Cal. Civ. Code § 1950.5",
+   "Screening fee not security"
+  ]
+ },
+ {
+  "id": "CA-FEE-01",
+  "key_value": [
+   "Actual out-of-pocket costs and reasonable time, capped at $30 per applicant, adjusted annually by CPI",
+   "Actual cost, max $30 + CPI"
+  ]
+ },
+ {
+  "id": "CA-SCR-02",
+  "key_value": [
+   "No source-of-income discrimination; with government rent subsidy, income standard must be based on tenant portion of rent and credit-history screening must allow alternative evidence",
+   "No SOI bias; subsidy screening limits"
+  ]
+ },
+ {
+  "id": "CA-SCR-01",
+  "key_value": [
+   "Actual out-of-pocket costs, capped at $30 per applicant plus annual CPI adjustment; fee barred if no unit available; timing/refund rules apply",
+   "Actual cost, max $30 + CPI"
+  ]
+ },
+ {
+  "id": "CA-SCR-03",
+  "key_value": [
+   "No blanket bans; certain records cannot be considered; conviction-based denial must be directly related and individualized",
+   "No blanket criminal-history bans"
+  ]
+ },
+ {
+  "id": "CA-ALG-01",
+  "key_value": [
+   "Use/distribution of a common pricing algorithm is unlawful in covered antitrust conduct; coercive use/distribution is also unlawful",
+   "Algorithm use/distribution unlawful"
+  ]
+ },
+ {
+  "id": "HOB-RENT-01",
+  "citation": [
+   "Hoboken City Code ch. 155, §§ 155-2, 155-4, 155-5, 155-2.1",
+   "Hoboken City Code §§ 155-2, 155-4, 155-5, 155-2.1"
+  ],
+  "key_value": [
+   "lesser of 5% or applicable CPI percentage; no more than one such increase in any 12-month period",
+   "lesser of 5% or CPI"
+  ]
+ },
+ {
+  "id": "HOB-JC-01",
+  "citation": [
+   "Hoboken Code § 155-1",
+   "Hoboken City Code § 155-1"
+  ],
+  "key_value": [
+   "Causes are those in N.J.S.A. 2A:18-53, as amended",
+   "N.J.S.A. 2A:18-53 causes"
+  ]
+ },
+ {
+  "id": "HOB-ALG-01",
+  "key_value": [
+   "Algorithmic pricing using nonpublic competitor information is prohibited; fine up to $2,000",
+   "ban; fine up to $2,000"
+  ]
+ },
+ {
+  "id": "JC-ALG-01",
+  "key_value": [
+   "Prohibits landlord use of algorithmic rent coordination services; fines up to $2,000 per day",
+   "$2,000 per day"
+  ]
+ },
+ {
+  "id": "LA-RENT-01",
+  "key_value": [
+   "3% annually (July 1, 2025–June 30, 2026); once every 12 months; no additional utility percentage beginning February 2, 2026",
+   "3% annually"
+  ]
+ },
+ {
+  "id": "LA-RENT-P02",
+  "key_value": [
+   "Study/report on feasibility of ban on algorithm-based rent-setting software",
+   "study feasibility of ban"
+  ]
+ },
+ {
+  "id": "LA-JC-02",
+  "key_value": [
+   "Eviction only for enumerated just causes; relocation assistance required for no-fault evictions",
+   "just cause + relocation"
+  ]
+ },
+ {
+  "id": "LA-JC-03",
+  "key_value": [
+   "For demolition of Protected Units for new construction: relocation plus 6-month notice/right to remain and other occupant protections",
+   "relocation + 6-month notice"
+  ]
+ },
+ {
+  "id": "LA-JC-01",
+  "key_value": [
+   "Eviction only for enumerated just causes in covered RSO units; relocation assistance required for no-fault evictions",
+   "just cause + relocation"
+  ]
+ },
+ {
+  "id": "LA-ALG-P01",
+  "key_value": [
+   null,
+   "study/report only"
+  ]
+ },
+ {
+  "id": "MA-RENT-01",
+  "key_value": [
+   "No city or town may enact, maintain or enforce rent control of any kind, except under G.L. c. 40P acceptance with strict limits",
+   "Local rent control prohibited"
+  ]
+ },
+ {
+  "id": "MA-RENT-02",
+  "key_value": [
+   "failed/struck statewide rent control ballot question",
+   "struck ballot question"
+  ]
+ },
+ {
+  "id": "MA-DEP-01",
+  "key_value": [
+   "Security deposit capped at 1 month's rent; total upfront charges limited to first month, last month, 1 month security deposit, and key/lock cost; optional fee in lieu capped at 1 month's rent if authorized by regulation",
+   "1 month's rent"
+  ]
+ },
+ {
+  "id": "MA-FEE-01",
+  "key_value": [
+   "Broker/finder fee payable only by the party who originally engaged the broker",
+   "engaging party pays fee"
+  ]
+ },
+ {
+  "id": "MA-FEE-02",
+  "key_value": [
+   "No more than first month's rent + last month's rent + security deposit equal to first month's rent + key/lock cost; optional fee in lieu of security deposit capped at 1 month's rent",
+   "1 month's rent"
+  ]
+ },
+ {
+  "id": "MA-SCR-01",
+  "key_value": [
+   "Income-source discrimination in rental accommodations prohibited",
+   "income-source discrimination prohibited"
+  ]
+ },
+ {
+  "id": "NJ-RENT-01",
+  "key_value": [
+   "No statewide cap; increase must not be unconscionable and must comply with local rent control",
+   "No statewide cap"
+  ]
+ },
+ {
+  "id": "NJ-RENT-02",
+  "key_value": [
+   "30-year exemption from local rent control",
+   "30-year exemption"
+  ]
+ },
+ {
+  "id": "NJ-JC-01",
+  "key_value": [
+   "Eviction only for statutory good cause; notice ranges from none for nonpayment to 3 days, 1 month, 3 months, 18 months, or 3 years depending on cause",
+   "Good cause only"
+  ]
+ },
+ {
+  "id": "NJ-JC-02",
+  "key_value": [
+   "Court order required; notice generally 3 months for at-will/year-to-year, 1 month for month-to-month, and 3 days for disorderly/destructive/rule or lease violations; no further notice for nonpayment",
+   "Court order; notice varies"
+  ]
+ },
+ {
+  "id": "NJ-DEP-01",
+  "key_value": [
+   "Maximum 1.5 months' rent; annual increase cap 10% of current security deposit",
+   "1.5 months' rent"
+  ]
+ },
+ {
+  "id": "NJ-FEE-01",
+  "key_value": [
+   "$50 maximum application fee, annually CPI-adjusted",
+   "$50 max, CPI-adjusted"
+  ]
+ },
+ {
+  "id": "NJ-SCR-02",
+  "citation": [
+   "N.J.S.A. 46:8-52",
+   "N.J.S.A. 46:8-55"
+  ],
+  "key_value": [
+   "No criminal-record inquiry before a conditional offer; post-offer review limited to specified convictions and lookback periods of 1, 4, or 6 years, with certain serious offenses allowed without those shorter limits.",
+   "No pre-offer inquiry"
+  ]
+ },
+ {
+  "id": "NJ-SCR-01",
+  "key_value": [
+   "Cannot deny housing based solely on source of lawful income or lawful rent or mortgage payment.",
+   "No income-source discrimination"
+  ]
+ },
+ {
+  "id": "NJ-ALG-01",
+  "key_value": [
+   "Use of a coordinator or performance of a coordinating function for residential rent pricing is unlawful; effective first day of the twelfth month next following enactment",
+   "Algorithmic coordination banned"
+  ]
+ },
+ {
+  "id": "NEW-RENT-01",
+  "citation": [
+   "Newark Code § 19:2-3.1; § 19:2-3.2; § 19:2-3.4",
+   "Newark Code § 19:2-3.1"
+  ],
+  "key_value": [
+   "lesser of CPI increase or 4% once per 12 months",
+   "CPI increase, max 4%"
+  ]
+ },
+ {
+  "id": "NEW-SCR-01",
+  "key_value": [
+   "Criminal-history inquiry only after formal application; indictable convictions lookback 8 years, disorderly persons/municipal violations 5 years; certain serious offenses may be considered regardless of age",
+   "Post-application inquiry only"
+  ]
+ },
+ {
+  "id": "SD-JC-01",
+  "key_value": [
+   "Just cause required; no-fault relocation assistance = 2 months' actual rent, or 3 months' actual rent if tenant is a senior or disabled",
+   "2 or 3 months' rent"
+  ]
+ },
+ {
+  "id": "SD-SCR-01",
+  "key_value": [
+   "Must account for tenant's entire source of income; may not discriminate based on source of income",
+   "Count all source of income"
+  ]
+ },
+ {
+  "id": "SD-ALG-02",
+  "key_value": [
+   "Use or sale of covered algorithmic devices prohibited; tenant may recover up to $1,000 per violation; each month and each residential rental property can be a separate violation",
+   "Ban; up to $1,000/violation"
+  ]
+ },
+ {
+  "id": "SD-ALG-01",
+  "key_value": [
+   "Proposed ban on use or sale of covered algorithmic devices; proposed tenant remedy up to $1,000 per violation",
+   "30 days after final passage"
+  ]
+ },
+ {
+  "id": "SF-RENT-01",
+  "key_value": [
+   "1.6% for March 1, 2026 – February 28, 2027",
+   "1.6%"
+  ]
+ },
+ {
+  "id": "SF-JC-01",
+  "citation": [
+   "San Francisco Rent Ordinance § 37.9(a)",
+   "Ordinance Section 37.9(a)"
+  ],
+  "key_value": [
+   "17 just-cause reasons required for covered units",
+   "17 just-cause reasons"
+  ]
+ },
+ {
+  "id": "SF-JC-02",
+  "citation": [
+   "San Francisco Rent Ordinance § 37.9C",
+   "Rent Ordinance Section 37.9C"
+  ],
+  "key_value": [
+   "3/01/26–2/28/27: $8,245 per tenant; $24,733 max per unit; +$5,497 protected-household add-on",
+   "$8,245/$24,733/+ $5,497"
+  ]
+ },
+ {
+  "id": "SF-DEP-01",
+  "key_value": [
+   "4.2% for March 1, 2026 – February 28, 2027",
+   "4.2%"
+  ]
+ },
+ {
+  "id": "SF-ALG-01",
+  "citation": [
+   "S.F. Admin. Code § 37.10C",
+   "Section 37.10C"
+  ],
+  "key_value": [
+   "Prohibits sale or use of algorithmic devices to set rents or manage occupancy levels for residential units",
+   "Ban on sale/use"
+  ]
+ },
+ {
+  "id": "SA-RENT-01",
+  "key_value": [
+   "lower of 3% per year or 80% of CPI change; if CPI is negative, 0%",
+   "lower of 3% or 80% CPI"
+  ]
+ },
+ {
+  "id": "SA-JC-01",
+  "key_value": [
+   "Just cause required after 30 days; 3 months relocation assistance or final 3 months rent waiver for no-fault terminations",
+   "just cause after 30 days"
+  ]
+ },
+ {
+  "id": "SA-ALG-01",
+  "key_value": [
+   "Use/sale prohibited; up to $1,000 per violation; each month and each residential rental property is a separate violation",
+   "use/sale banned; $1,000 max"
+  ]
+ }
+]

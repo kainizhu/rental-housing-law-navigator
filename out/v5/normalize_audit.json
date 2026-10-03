@@ -1,0 +1,53 @@
+[
+ {
+  "action": "drop_wrong_level",
+  "cell": [
+   "Boston, MA",
+   "rent_increase_limits"
+  ],
+  "citation": "H.3744",
+  "why": {
+   "flag": "state_citation_at_city_level",
+   "normalized": "H.3744"
+  }
+ },
+ {
+  "action": "drop_wrong_level",
+  "cell": [
+   "Boston, MA",
+   "just_cause_eviction"
+  ],
+  "citation": "Bill H.3744",
+  "why": {
+   "flag": "state_citation_at_city_level",
+   "normalized": "H.3744"
+  }
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "MA",
+   "screening_restrictions"
+  ],
+  "into": "G.L. c. 151B § 4",
+  "from": "G.L. c. 151B § 4"
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "MA",
+   "screening_restrictions"
+  ],
+  "into": "G.L. c. 151B § 4",
+  "from": "G.L. c. 151B § 4"
+ },
+ {
+  "action": "merge_same_root",
+  "cell": [
+   "San Francisco, CA",
+   "just_cause_eviction"
+  ],
+  "into": "San Francisco Rent Ordinance § 37.9(a)",
+  "from": "San Francisco Rent Ordinance § 37.9A"
+ }
+]
