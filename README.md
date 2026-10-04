@@ -1,128 +1,124 @@
-# Rental Housing Law Navigator — Participant Guide
+# Rental Housing Law Navigator
 
-MIT AI Hackathon · 24 hours · public data only · Realpage discussion draft, October 2026
+**We don't search housing law. We compile it, diff it, and prove every answer.**
 
-> This guide and the starter pack are everything you need to build. Read sections 1–4 before you start coding.
+RealPage × Hack-Nation, challenge 02. Solo build, 24 hours.
+
+- **Live demo:** https://kainizhu.github.io/rental-housing-law-navigator/
+- **Submission files:** [`submission/rules.json`](submission/rules.json), [`submission/lookups.json`](submission/lookups.json), [`submission/changes.json`](submission/changes.json)
+
+> **Not legal advice.** This is a research prototype built on a fixed document corpus and public sample property data. Results can be wrong or incomplete. Read the linked source text and consult a lawyer before acting on anything here.
 
 ---
 
-## 1. The task in one paragraph
+## What it does
 
-For any apartment address in the sample, your system must answer: **which housing rules apply here on the query date, and how do the supplied change cases affect the answer?** It reads a corpus of real state and city law, turns each rule into a structured record (Module A), resolves each address to its state and city and tests each rule's coverage conditions (Module B), and reports which addresses each supplied law-change case affects (Module C). Every answer must cite the source text.
+For any of the 500 sample apartment addresses and any date, the system answers: *which rental-housing rules apply here, and why?*
 
-**Default query date: 2026-10-01.** Some tests ask for other dates.
+- **Compile.** An LLM reads each jurisdiction × category of the corpus and fills a fixed rule schema. Every field that matters (citation, coverage conditions, exemptions, effective date) is tied to a verbatim quote that must occur in the source text.
+- **Diff.** A deterministic evaluator replays the same rules at any two dates. Change reports (T1–T5, and the hour-16 ordinance) are computed this way, never written by hand.
+- **Prove.** Each answer comes with a proof chain: the jurisdiction that reaches the address, the in-force check on the as-of date, each coverage condition compared with the building's facts (and where each fact came from), any interaction with other rules, and the quoted source span with document ID, URL and retrieval date.
 
-## 2. Minimum viable submission
+The language model reads documents. **It never decides whether a rule applies to an address.** That step is plain, testable code.
 
-If you run short on time, this is what counts:
+## Results on this build
 
-1. **Modules A and B** on the supplied sample addresses. If you run short on time, prioritize accurate extraction, jurisdiction resolution and citations.
-2. Module C (change tracking) and the plain-language view come next.
-3. Stretch goals (Spanish view, confidence indicators, a new jurisdiction) only after that.
-
-## 3. Rules of the event
-
-- **Extraction must be automated.** Rules must come from your system reading the supplied corpus, not hand-coded. You should show the extraction pipeline in the demo.
-- **Use the starter pack.** You may consult the public sources in section 6, but do not bulk-scrape sites whose terms forbid it.
-- **No non-public data.** No customer, resident or pricing data.
-- **"Unknown" is a valid answer** when coverage depends on a fact the data doesn't have. Say unknown rather than guessing when the supplied data is insufficient.
-- **Not legal advice.** Every interface you build must say so.
-- **Logistics (TBD by organizers):** event dates and location · team size · model / API access and credits · submission method and deadline · code and data licensing · contact. These will be confirmed at registration.
-
-## 4. What's in the starter pack
-
-| Path | What it is |
+| | |
 |---|---|
-| `corpus/corpus_manifest.csv` | 87 source documents: `doc_id`, jurisdiction, URL, source type, capture status |
-| `corpus/text/` | Plain-text copies of official documents, each headed with its source URL and retrieval date |
-| `corpus/links_only.csv` | Sources without supplied text, including publisher pages awaiting terms review and official pages that blocked capture |
-| `data/sample_addresses.csv` | ~500 multifamily properties from public assessor data (see 4.1) |
-| `schema/rule_record.schema.json` | Required format for every rule record |
-| `schema/sample_rule_record.json` | One worked example |
-| `dev/change_tests.json` | The five deterministic change-tracking tests (T1-T5) |
-| `submission_templates/` | Example `rules.json`, `lookups.json`, `changes.json` |
+| Rules extracted | 49 (23 state, 26 city) across 13 jurisdictions and 6 categories |
+| Jurisdiction × category cells | 78 read: 45 with rules, 31 "no rule at this level", 2 "corpus text insufficient" |
+| Address results | 4,979: 3,316 applies · 890 unknown · 413 superseded by local law · 220 pending · 140 not yet effective |
+| Conflict flags | 180 address-level flags (NJ FAIR Act vs. Hoboken / Jersey City ordinances) |
+| Quotes | 100% verbatim in the source document |
+| Change tests | T1 = 250, T2 = 90, T3 = 140 (90 conflict-flagged), T4 = 110, T5 = 0, each equal to the expected set |
+| Regression suite | 19 / 19 checks pass (`python3 -m navigator.check out/v8 --golden out/golden`) |
+| Unit tests | 25 / 25 pass |
+| Hour-16 rehearsal | Synthetic Cambridge ordinance in two variants: 45 and 21 addresses affected, conflict with G.L. c. 40P flagged, **0 addresses changed outside Cambridge** |
 
-### 4.1 Sample addresses
+## How it works
 
-Columns: `address_id, street_address, postal_city, state, zip, year_built, units, use_code, use_description, source_dataset, retrieved_at`.
+```
+corpus ──► route cells ──► extract (LLM, forced tool call) ──► ground quotes verbatim
+       ──► normalize citations / dates / facts (with provenance)
+       ──► review: 3-vote majority (duplicates, wrong category, non-operative text)
+       ──► relations: state ↔ city (conflict needs verbatim evidence)
+       ──► condition roles: scope / exemption / expansion / variant / not a condition
+       ──► evaluate (deterministic three-valued logic) ──► lookups, changes
+       ──► regression checks + golden snapshot
+```
 
-- **The jurisdiction is not given.** `postal_city` is the mailing city, which is not always the legal city. In Los Angeles, "Van Nuys" is inside the City of Los Angeles, and Boston rows may say "Dorchester". Resolving the real jurisdiction (e.g. with the Census Geocoder) is part of Module B.
-- **Coverage by city:** Los Angeles 80 · San Francisco 80 · San Diego 50 · Berkeley 40 · Jersey City 50 · Hoboken 40 · Newark 50 · Boston 60 · Cambridge 50.
-- **Known gaps in the public records (handle them explicitly):**
-  - San Diego and Berkeley have no year built; Berkeley also has no unit count.
-  - Boston apartment rows (`use_code` starting `A/`) have no unit count in this sample.
-  - Jersey City and Newark have no unit counts in this sample; 39 of 40 Hoboken rows also lack them. New Jersey construction years are often missing.
-- **Santa Ana** laws are in the corpus but there are **no Santa Ana addresses**: no open parcel data with addresses was found. Santa Ana rules count for extraction only.
-- **No owner names.** They are deliberately excluded, so owner-type tests (e.g. California's small-landlord deposit exception) can't be resolved from the data. Answer "unknown" or explain why the exception can't apply.
-- **Year built ≠ certificate of occupancy.** Several cutoffs use the certificate date (San Francisco: on or before 1979-06-13; Los Angeles: on or before 1978-10-01). A building in the cutoff year should be "unknown".
-
-## 5. Submission format
-
-Submit three JSON files (templates in `submission_templates/`):
-
-1. **`rules.json`**: a list of rule records matching `schema/rule_record.schema.json`.
-2. **`lookups.json`**: `{"as_of": "2026-10-01", "lookups": {address_id: [{team_rule_id, result, explanation, conflict_flag}]}}`, covering **all 500 addresses**.
-3. **`changes.json`**: `{test_id: {affected_address_ids: [...], conflict_flag_address_ids: [...], notes}}`, covering all 500 addresses.
-
-Use the supplied schemas and templates, keep every answer tied to a source document and retrieval date, and make the system reproducible for the live demo. Organizers will provide submission logistics separately.
-
-**`result` values**
-
-| Value | Meaning |
-|---|---|
-| `applies` | The rule is in force and covers this address |
-| `unknown` | Coverage depends on facts not in the data |
-| `superseded` | Covered, but a stricter rule at another level governs (e.g. California's statewide cap where local rent control applies) |
-| `not_yet_effective` | Enacted, but its effective date is after the query date |
-| `pending` | A bill or proposal, not law |
-
-Leave out rules that don't apply.
-
-## 6. Public sources you may use
-
-| Source | Use it for | Access |
+| Step | Module | What it guarantees |
 |---|---|---|
-| Census Geocoder (`geocoding.geo.census.gov`) | Address → state, county, incorporated place | No key; batch up to 10,000 rows |
-| Census TIGER/Line | City boundaries | Free download |
-| LegiScan API | Bill status and text | Free key; 10,000 queries/month; CC BY 4.0 |
-| Open States API v3 | Bill status | Free key |
-| State code sites (CA, NJ, MA legislatures) | Statute text | Free; California's site blocks scripts, so use the corpus copy |
-| City code sites and publishers (ecode360, American Legal, Municode) | Ordinance text | Read freely; respect terms, no bulk scraping |
-| LSC Eviction Laws Database | Methods reference only | Laws as of 1/1/2021, out of date |
+| Route | `extract.py` | Each jurisdiction × category is its own unit of work and may return 0..k rules. "No rule" is recorded as a finding. |
+| Extract | `extract.py`, `llm.py` | Fixed JSON schema through a forced tool call. Every call is content-hashed, cached and logged (`logs/audit.jsonl`), so rebuilds are reproducible. |
+| Ground | `ground.py` | Quotes must match the document exactly (raw, or after whitespace/typography normalization only). No fuzzy matching. A failed quote is retried once, then dropped. |
+| Normalize | `normalize.py`, `dates.py`, `facts.py` | Citations keep both raw and normalized forms. Every effective date carries its provenance: `explicit_quote`, `computed_from_quote`, `default_rule` (e.g. CA January 1, MA 90 days) or `missing`. Every building fact is `observed`, `inferred_hint` or `unknown`. |
+| Review | `review.py` | A 3-vote majority keeps or drops each record; the reason and vote count are kept for human review. |
+| Relations | `review.py` | State ↔ city relations: cumulative, local governs where it covers, possible conflict. A conflict without verbatim evidence is downgraded. |
+| Roles | `roles.py` | Separates conditions that narrow coverage (scope, exemption) from ones that never should (an "also includes" expansion, a variant that only picks an amount). A deterministic guard keeps any state law that limits local law (e.g. G.L. c. 40P). |
+| Evaluate | `evaluate.py` | Kleene three-valued logic. A coverage fact that is not in the data gives **unknown**, never a guess. An exemption that depends on a fact the data never has (owner type, occupancy) is treated as not exempt, and the note says so. |
+| Diff | `pipeline.py` | One generic change engine handles `as_of`, `boundary`, `pending` and `negative` tests. |
+| Prove | `check.py` | 19 invariants: schema, grounding, provenance, level guard, identity, date provenance, status, relation evidence, T1–T5, plus golden checks so untouched jurisdictions cannot drift. |
 
-## 7. Change-tracking tests
+### A new law (hour 16)
 
-| Test | What it checks |
+```bash
+python3 -m navigator.hour16 --manifest NEW/manifest.csv --tests NEW/tests.json --out out/h16
+```
+
+There is no law-specific code. The command re-extracts only the jurisdictions the new documents touch, reuses the frozen baseline everywhere else, rebuilds lookups and changes, and reports every address whose result changed outside the touched jurisdictions. In both rehearsals that number was 0.
+
+## Responsible design
+
+- **Unknown is an answer.** 890 results are unknown, and each one says why: year built missing, unit count only guessed from an uncalibrated assessor code, coverage turning on a fact the data never has (subsidy, owner type), or a state rule that yields to a local rule whose coverage is unknown.
+- **Inferred facts are not observed facts.** A unit count guessed from an assessor code is used only when that code pattern agrees with observed counts in the same dataset (≥ 95% on ≥ 10 rows). Trusting every guess would flip 517 results; the UI shows this sensitivity.
+- **Legal and factual uncertainty are reported separately.** Conflicts between levels, pending measures and dates that sources disagree on are legal uncertainty. Missing building facts are factual uncertainty.
+- **Conflicts are flagged, never silently resolved.** A human review queue lists conflicts, records dropped by vote, split votes, low-confidence extractions and dates taken from statutory defaults.
+- **Pending and failed measures are shown, never applied.** The struck MA ballot question (T5) produces no rent cap anywhere.
+- **Every interface says "not legal advice".** The UI has English and Spanish interface text; legal text stays in its source language.
+
+## Scalability
+
+- Work is split into independent jurisdiction × category cells, so adding a city means adding documents and an alias entry in `config/jurisdictions.json`.
+- Extraction is cached by content hash: a rebuild with unchanged documents makes no model calls, and a new document re-runs only its cells.
+- The evaluator is pure code over a fact table, so 500 or 500,000 addresses is a batch job, not more model calls.
+- The frozen-baseline mode plus golden checks makes each new law a reviewable diff instead of a re-run of everything.
+
+## Run it
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env                        # OPENAI_API_KEY=..., NAV_MODEL=gpt-5.4
+
+# full extraction (paid; cached afterwards)
+python3 -m navigator.extract --cells all --workers 4 --out out/extract.jsonl
+# build: gap pass, normalize, refine, review, relations, roles, evaluate, changes
+NAV_VOTES=3 python3 -m navigator.pipeline --extractions out/extract.jsonl --out out/run --review --refine
+# prove
+python3 -m navigator.check out/run --golden out/golden
+python3 -m pytest -q tests
+# UI data + GitHub Pages copy
+python3 -m navigator.ui_data --run out/run --out web/data.js && web/build_pages.sh
+```
+
+Checks and tests need no API key: `out/v8` (this build) and `out/golden` are committed.
+
+## Repository map
+
+| Path | Contents |
 |---|---|
-| **T1** | California AB 325 / SB 763: as of 2025-12-31 vs 2026-01-02 |
-| **T2** | Hoboken vs Jersey City local algorithmic bans: get the boundary right |
-| **T3** | New Jersey FAIR Act: enacted 2026-07-20, effective 2027-07-01. Report `not_yet_effective` now, `applies` on 2027-07-02. Flag a possible conflict with the Jersey City and Hoboken ordinances. |
-| **T4** | Massachusetts S.2983 and H.5222: pending bills. Which addresses would be affected if they passed? |
-| **T5** | Massachusetts rent-control ballot question (struck 2026-06-23): affected set must be empty. Never report a rent cap in Boston or Cambridge. |
+| `navigator/` | Pipeline code (extract, ground, normalize, dates, facts, review, roles, refine, evaluate, pipeline, hour16, check, ui_data) |
+| `submission/` | The three graded files |
+| `out/v8/` | Current build with every intermediate: review decisions, dropped records, relations, roles, refine log |
+| `corpus/supplemental/` | 12 public supplemental documents with source URLs and retrieval dates |
+| `spike/synthetic/` | Synthetic hour-16 ordinance used for rehearsal (fictional, labeled as such) |
+| `web/`, `docs/` | Static UI; `docs/` is served by GitHub Pages |
+| `logs/audit.jsonl` | Every model call: tag, model, token usage, latency |
 
-## 8. Responsible design
+## Known limits and open questions
 
-**Do**
-
-- Cite the source text and retrieval date for every rule.
-- Show an "as of" date on every answer.
-- Separate enacted law from pending law.
-- Say "unknown" instead of guessing.
-- Flag conflicts for human review.
-- Keep an audit log.
-
-**Don't**
-
-- Present output as legal advice or a compliance certification.
-- Suggest ways to avoid a rule.
-- Invent rules or citations.
-- Use non-public data.
-
-## 9. Known open questions in the law (bonus if your system surfaces them)
-
-- **Berkeley's algorithmic ban** (ch. 13.63) has two published effective dates: March 1, 2026 in the ordinance text, January 2026 per an August 2026 law-firm alert.
-- **New Jersey's FAIR Act** may preempt the Jersey City and Hoboken ordinances once it takes effect.
-- **Los Angeles's new RSO formula** has two published effective dates: 2026-02-02 per LAHD, 2026-01-24 per a landlord association.
-- **California's screening-fee cap** has no single official 2026 dollar figure.
-
-*Not legal advice. Summaries of law in this pack are for building a prototype.*
+- Jurisdiction is resolved from postal city through an alias table, not a geocoder. Mailing cities that straddle a city line could be misassigned.
+- Year built is not the certificate-of-occupancy date. Buildings in a cutoff year are reported as unknown.
+- 23 rules have no effective date in the corpus (mostly long-standing statutes); they are treated as in force and marked `missing`.
+- New Jersey, Boston and Berkeley unit counts are mostly guesses from assessor codes that do not calibrate, so many NJ results are unknown by design.
+- Relation types come from a model vote with verbatim evidence. They are inputs for a reviewer, not legal conclusions.
