@@ -1,0 +1,1499 @@
+{
+ "BER-RENT-02": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "year_built",
+    "op": "lt",
+    "value": 1980
+   },
+   "1": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "single-family home"
+   },
+   "2": {
+    "role": "scope",
+    "fact": "tenancy_start_date",
+    "op": "lt",
+    "value": "1996-01-01"
+   },
+   "3": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "rooming house in single-family home with five or more rooms rented individually with separate leases"
+   },
+   "4": {
+    "role": "scope",
+    "fact": "units",
+    "op": "ge",
+    "value": 5
+   },
+   "5": {
+    "role": "variant",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "certain listed subsidies may still be fully covered depending on unit type"
+   },
+   "6": {
+    "role": "exemption",
+    "fact": "certificate_of_occupancy_date",
+    "op": "gt",
+    "value": "1980-06-30"
+   },
+   "7": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "single-family home"
+   },
+   "8": {
+    "role": "exemption",
+    "fact": "tenancy_start_date",
+    "op": "ge",
+    "value": "1996-01-01"
+   },
+   "9": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "condominium"
+   },
+   "10": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "Section 202 or Section 811"
+   },
+   "11": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "Rental Supplement Program, Section 8 Loan Management Set Aside, or Project-based Section 8 in project with HUD-insured or HUD-held mortgage"
+   },
+   "12": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "golden duplex"
+   },
+   "13": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "14": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "15": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "owner shares kitchen or bath with tenant and lived on property at tenancy start"
+   },
+   "16": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "ADU property with owner occupancy"
+   },
+   "17": {
+    "role": "exemption",
+    "fact": "tenancy_start_date",
+    "op": "gt",
+    "value": "2018-11-07"
+   },
+   "18": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "19": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "university rental units such as dormitories"
+   },
+   "20": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "nonprofit cooperative"
+   },
+   "21": {
+    "role": "variant",
+    "fact": "tenancy_start_date",
+    "op": "ge",
+    "value": "2025-01-01"
+   }
+  }
+ },
+ "BER-JC-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "other",
+    "op": "describes",
+    "value": "fully or partially covered units"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "eq",
+    "value": "ADU/owner-occupied property tenancy started after 2018-11-07"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "eq",
+    "value": "university rental units such as dormitories"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "eq",
+    "value": "nonprofit cooperative"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "eq",
+    "value": "golden duplex"
+   }
+  }
+ },
+ "BER-FEE-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential rental property"
+   },
+   "1": {
+    "role": "variant",
+    "fact": "other",
+    "op": "describes",
+    "value": "existing tenant"
+   }
+  }
+ },
+ "BER-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "rental housing"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": null
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": null
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": null
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": null
+   }
+  }
+ },
+ "BER-ALG-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential dwelling units in the City of Berkeley"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "aggregated anonymous reports without recommendations"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "affordable housing guideline products"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "market research appraisal or software development research/testing/training"
+   }
+  }
+ },
+ "BOS-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "Housing providers receiving Department of Neighborhood Development funding and/or land"
+   },
+   "1": {
+    "role": "expansion",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "Housing providers with income restricted units created under the BPDA Inclusionary Development Policy"
+   }
+  }
+ },
+ "CA-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential real property dwelling or unit"
+   },
+   "1": {
+    "role": "not_condition"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "is_true",
+    "value": null
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "dormitories owned and operated by specified schools"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "housing subject to stricter public-entity rent or price control"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "building_age_years",
+    "op": "le",
+    "value": 15
+   },
+   "6": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "separately alienable residential real property, including a mobilehome"
+   },
+   "7": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "ne",
+    "value": "real estate investment trust"
+   },
+   "8": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "ne",
+    "value": "corporation"
+   },
+   "9": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "describes",
+    "value": "not LLC with at least one corporate member"
+   },
+   "10": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "ne",
+    "value": "mobilehome park management"
+   },
+   "11": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "tenant received statutory written exemption notice"
+   },
+   "12": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "eq",
+    "value": 2
+   }
+  }
+ },
+ "CA-JC-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "transient and tourist hotel occupancy"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "housing accommodations in nonprofit hospitals, religious facilities, extended care facilities, licensed residential care facilities for the elderly, or adult residential facilities"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "dormitories owned and operated by certain schools"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "6": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "mobilehome under the single-family owner-occupied residences exemption"
+   },
+   "7": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "eq",
+    "value": 2
+   },
+   "8": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "9": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "neither unit is an ADU or JADU"
+   },
+   "10": {
+    "role": "exemption",
+    "fact": "building_age_years",
+    "op": "le",
+    "value": 15
+   },
+   "11": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential real property, including a mobilehome, alienable separate from title to any other dwelling unit"
+   },
+   "12": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "ne",
+    "value": "real estate investment trust"
+   },
+   "13": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "ne",
+    "value": "corporation"
+   },
+   "14": {
+    "role": "exemption"
+   },
+   "15": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "describes",
+    "value": "not management of a mobilehome park"
+   },
+   "16": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "tenants were provided the statutory written exemption notice"
+   },
+   "17": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "is_true",
+    "value": null
+   },
+   "18": {
+    "role": "exemption"
+   },
+   "19": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "homeowner of a mobilehome, as defined in Section 798.9"
+   }
+  }
+ },
+ "CA-DEP-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential property used as tenant dwelling"
+   },
+   "1": {
+    "role": "variant",
+    "fact": "owner_type",
+    "op": "in",
+    "value": "natural person or limited liability company in which all members are natural persons"
+   },
+   "2": {
+    "role": "variant",
+    "fact": "properties_owned_by_landlord",
+    "op": "le",
+    "value": 2
+   },
+   "3": {
+    "role": "variant",
+    "fact": "units",
+    "op": "le",
+    "value": 4
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "advance payment of at least six months' rent for lease term of six months or longer"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "mutual agreement for specified alterations requested by tenant"
+   },
+   "6": {
+    "role": "scope",
+    "fact": "other",
+    "op": "describes",
+    "value": "security collected or demanded on or after 2024-07-01"
+   },
+   "7": {
+    "role": "variant",
+    "fact": "other",
+    "op": "describes",
+    "value": "prospective tenant is not a service member"
+   }
+  }
+ },
+ "CA-FEE-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential property"
+   }
+  }
+ },
+ "CA-SCR-02": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "CA-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "CA-SCR-03": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "CA-ALG-01": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "CAM-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "eq",
+    "value": 2
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   }
+  }
+ },
+ "HOB-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "dwelling units"
+   },
+   "1": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "lease expiration or termination; periodic tenancies also covered"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "motels and hotels"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "newly constructed dwellings first rented for the first time; initial rent/lease only if registered before first rental"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "industrial property"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "nonresidential and commercial property; mixed-use commercial portions only"
+   },
+   "6": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "student housing owned or controlled by school/college/institution"
+   },
+   "7": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "describes",
+    "value": "state or federal government housing"
+   },
+   "8": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "building completely vacant on or before and since 1984-01-01 and not vacant through unlawful means; initial rent/lease only if registered before renting"
+   },
+   "9": {
+    "role": "exemption",
+    "fact": "certificate_of_occupancy_date",
+    "op": "gt",
+    "value": "1987-06-25"
+   },
+   "10": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "governmental agency contract preempts city regulation during contract period"
+   }
+  }
+ },
+ "HOB-ALG-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential dwelling unit used as a primary residence"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "medical/long-term care or detention facilities excluded"
+   }
+  }
+ },
+ "JC-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "le",
+    "value": 4
+   }
+  }
+ },
+ "JC-ALG-01": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "LA-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "certificate_of_occupancy_date",
+    "op": "le",
+    "value": "1978-10-01"
+   },
+   "1": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "in",
+    "value": "apartment, condominium, townhome, duplex, two or more single-family dwelling units on the same parcel, rooms in a hotel/motel/rooming house/boarding house occupied by the same tenant for more than 30 consecutive days, residential unit(s) attached to a commercial building, ADU, JADU, mobile homes and recreational vehicles in mobile home parks"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "tenancy_start_date",
+    "op": "gt",
+    "value": "1995-12-31"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "tenancy_start_date",
+    "op": "gt",
+    "value": "1995-12-31"
+   }
+  }
+ },
+ "LA-JC-02": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "other",
+    "op": "describes",
+    "value": "most residential properties in the City of Los Angeles that are not regulated by the City’s Rent Stabilization Ordinance"
+   },
+   "1": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "tenant has lived in the same unit for at least six months or original lease expired, whichever comes first"
+   },
+   "2": {
+    "role": "expansion",
+    "fact": "certificate_of_occupancy_date",
+    "op": "gt",
+    "value": "1978-10-01"
+   },
+   "3": {
+    "role": "expansion",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "single-family dwelling"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "transient hotels"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "licensed care facilities"
+   },
+   "6": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "fraternity or sorority houses"
+   },
+   "7": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "8": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "cooperatives under certain circumstances"
+   },
+   "9": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "some non-profit facilities for the homeless or short-term treatment centers for substance abuse"
+   },
+   "10": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "describes",
+    "value": "some properties owned by HACLA or the government"
+   }
+  }
+ },
+ "LA-JC-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "certificate_of_occupancy_date",
+    "op": "le",
+    "value": "1978-10-01"
+   },
+   "1": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "in",
+    "value": "apartment, condominium, townhome, duplex, two or more single-family dwelling units on the same parcel, long-term hotel/motel/rooming/boarding rooms, residential units attached to commercial buildings, ADUs, JADUs, mobile homes and recreational vehicles in mobile home parks"
+   }
+  }
+ },
+ "MA-RENT-01": {
+  "only_exempts_another_law": true,
+  "conditions": {
+   "0": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": null
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "properties_owned_by_landlord",
+    "op": "lt",
+    "value": 10
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "fair market rent above $400"
+   }
+  }
+ },
+ "MA-RENT-02": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "units operated solely for religious purposes"
+   }
+  }
+ },
+ "MA-DEP-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential real property"
+   },
+   "1": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "at or prior to commencement of tenancy"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "vacation or recreational lease of 100 days or less"
+   }
+  }
+ },
+ "MA-FEE-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "person finding dwelling accommodations for prospective tenants for a fee"
+   },
+   "1": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "rental residential real property"
+   }
+  }
+ },
+ "MA-FEE-02": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential real property"
+   },
+   "1": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "at or prior to commencement of tenancy"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "vacation or recreational lease of 100 days or less"
+   }
+  }
+ },
+ "MA-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "MA-ALG-P02": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "MA-ALG-P01": {
+  "only_exempts_another_law": false,
+  "conditions": {}
+ },
+ "NJ-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "eviction for nonpayment of increased rent"
+   }
+  }
+ },
+ "NJ-JC-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "most residential rental properties including single-family homes, mobile homes and land in a mobile home park, apartment buildings, and complexes; also rooming and boarding homes"
+   },
+   "1": {
+    "role": "scope",
+    "fact": "units",
+    "op": "ge",
+    "value": 2
+   },
+   "2": {
+    "role": "scope",
+    "fact": "units",
+    "op": "le",
+    "value": 3
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "hotel, motel, or guest house transient or seasonal occupancy"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "unit held in trust for developmentally disabled immediate family member permanently occupying unit"
+   }
+  }
+ },
+ "NJ-DEP-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential rental properties"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "ge",
+    "value": 2
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "le",
+    "value": 3
+   }
+  }
+ },
+ "NJ-FEE-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential rental property for dwelling purposes"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "le",
+    "value": 2
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "describes",
+    "value": "licensee of the New Jersey Real Estate Commission, unless the licensee is the landlord"
+   }
+  }
+ },
+ "NJ-SCR-02": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "rental dwelling unit"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "le",
+    "value": 4
+   }
+  }
+ },
+ "NJ-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "sale or rental of all property including open land, whether for business or residential purposes"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "eq",
+    "value": 2
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "room or rooms in owner-occupied one-family dwelling"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "religious organization preference"
+   },
+   "6": {
+    "role": "not_condition",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "housing for older persons familial-status exception"
+   }
+  }
+ },
+ "NJ-ALG-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential dwelling unit"
+   },
+   "1": {
+    "role": "scope",
+    "fact": "owner_type",
+    "op": "describes",
+    "value": "rental property owner"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "not residential dwelling unit"
+   },
+   "3": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "excluded algorithmic tools"
+   },
+   "4": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "excluded coordinating functions"
+   }
+  }
+ },
+ "NEW-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "multiple dwellings / housing spaces subject to Chapter 19:2"
+   },
+   "1": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "lease expiration or periodic tenancy increase"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "public housing"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "hotel or motel transient occupancy"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "commercial use"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "newly constructed multiple dwellings and vacant dwellings as set forth in § 19:2-18.1 and § 19:2-18.2"
+   },
+   "6": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "federally/state rehabilitated units receiving Section 8 or federal vouchers during subsidy/program tenure"
+   },
+   "7": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "government-regulated rent contract that supersedes Newark authority"
+   }
+  }
+ },
+ "NEW-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "rental, lease, or sublease of real property"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "federal or state law requires or permits criminal-history consideration"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "property designated for government program encouraging housing for individuals with criminal histories"
+   }
+  }
+ },
+ "SD-JC-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential rental property"
+   },
+   "1": {
+    "role": "scope",
+    "fact": "tenancy_start_date",
+    "op": "describes",
+    "value": "more than 30 days"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "transient and tourist hotel occupancy"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "short-term residential occupancy"
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "deed-restricted affordable housing"
+   },
+   "5": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "housing subject to an affordable-housing subsidy agreement, except Section 8"
+   },
+   "6": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "mobilehomes subject to the Mobilehome Residency Law"
+   },
+   "7": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "specified institutional and nonprofit transitional housing"
+   },
+   "8": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "dormitories owned and operated by educational institutions"
+   },
+   "9": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "10": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "11": {
+    "role": "exemption",
+    "fact": "units",
+    "op": "eq",
+    "value": 2
+   },
+   "12": {
+    "role": "exemption",
+    "fact": "building_age_years",
+    "op": "le",
+    "value": 15
+   },
+   "13": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "separately alienable residential rental property"
+   },
+   "14": {
+    "role": "exemption",
+    "fact": "owner_type",
+    "op": "describes",
+    "value": "landlord is not a REIT, corporation, LLC with a corporate member, or mobilehome park management"
+   },
+   "15": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "tenant receives required written exemption notice"
+   }
+  }
+ },
+ "SD-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null
+   }
+  }
+ },
+ "SD-ALG-02": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential rental property"
+   },
+   "1": {
+    "role": "scope",
+    "fact": "other",
+    "op": "describes",
+    "value": "algorithmic device using nonpublic competitor data of two or more landlords"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "historical aggregated reporting tool"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "is_true",
+    "value": null
+   },
+   "4": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "appraisal software without runtime rent recommendations"
+   }
+  }
+ },
+ "SF-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "other",
+    "op": "describes",
+    "value": "rent-controlled units"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "certificate_of_occupancy_date",
+    "op": "gt",
+    "value": "1979-06-13"
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "Costa-Hawkins eligible tenancies"
+   },
+   "3": {
+    "role": "exemption",
+    "fact": "other",
+    "op": "describes",
+    "value": "rent regulated by another government agency"
+   }
+  }
+ },
+ "SF-JC-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "other",
+    "op": "describes",
+    "value": "covered by the Rent Ordinance"
+   },
+   "1": {
+    "role": "expansion",
+    "fact": "certificate_of_occupancy_date",
+    "op": "gt",
+    "value": "1979-06-13"
+   },
+   "2": {
+    "role": "expansion",
+    "fact": "other",
+    "op": "describes",
+    "value": "Costa-Hawkins eligible tenancies"
+   },
+   "3": {
+    "role": "expansion",
+    "fact": "other",
+    "op": "describes",
+    "value": "rent regulated by another government agency"
+   }
+  }
+ },
+ "SF-SCR-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "affordable housing"
+   }
+  }
+ },
+ "SF-ALG-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "residential units"
+   }
+  }
+ },
+ "SA-RENT-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "exemption",
+    "fact": "certificate_of_occupancy_date",
+    "op": "gt",
+    "value": "1995-02-01"
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "tenancy_start_date",
+    "op": "gt",
+    "value": "1990-01-01"
+   }
+  }
+ },
+ "SA-JC-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "exemption",
+    "fact": "building_age_years",
+    "op": "le",
+    "value": 15
+   },
+   "1": {
+    "role": "exemption",
+    "fact": "subsidized_or_affordable",
+    "op": "is_true",
+    "value": null
+   },
+   "2": {
+    "role": "exemption",
+    "fact": "building_type",
+    "op": "in",
+    "value": "hotel; transient occupancy; hospital and care facilities; dormitories; other shared living quarters"
+   }
+  }
+ },
+ "SA-ALG-01": {
+  "only_exempts_another_law": false,
+  "conditions": {
+   "0": {
+    "role": "scope",
+    "fact": "building_type",
+    "op": "describes",
+    "value": "Residential Rental Property in the City of Santa Ana, including any dwelling or unit in a mobile home park"
+   },
+   "1": {
+    "role": "not_condition",
+    "fact": "other",
+    "op": "describes",
+    "value": "Software/reporting products using aggregated historical nonpublic competitor data more than 90 days old or public information, without recommending future rents or occupancy"
+   },
+   "2": {
+    "role": "not_condition",
+    "fact": "subsidized_or_affordable",
+    "op": "is_true",
+    "value": null
+   }
+  }
+ }
+}

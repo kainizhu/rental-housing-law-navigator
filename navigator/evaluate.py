@@ -82,6 +82,11 @@ def _usable(fact, policy: Policy):
 
 def eval_condition(cond, facts, as_of: dt.date, policy: Policy, notes: list, in_exemption: bool):
     f, op, val = cond.get("fact"), cond.get("op"), cond.get("value")
+    if (not in_exemption and f in UNOBSERVABLE and op == "describes" and cond.get("role") == "scope"):
+        # a classified SCOPE condition on an unobservable fact (e.g. 'housing providers receiving city
+        # funding') restricts coverage to a population the data cannot identify -> unknown, never applies
+        notes.append(f"coverage limited to '{cond.get('text', f)}' ({f}), which is not in the data")
+        return None
     if f in IGNORED or op == "describes":
         # descriptive conditions ("residential rental units") are not decidable from address data and
         # every sample address is a multifamily rental: non-decisive in both directions
@@ -158,9 +163,15 @@ def _groups(conds):
 
 def coverage(rule, facts, as_of, policy):
     notes = []
-    cov = k_and(eval_condition(c, facts, as_of, policy, notes, False) for c in rule.get("coverage_conditions") or [])
+    # roles (navigator/roles.py): only 'scope' coverage conditions and 'exemption' exemptions decide coverage
+    for c in (rule.get("coverage_conditions") or []) + (rule.get("exemptions") or []):
+        if c.get("role") in ("expansion", "variant", "not_condition"):
+            notes.append(f"not a coverage test ({c['role']}): {c.get('text') or c.get('fact')}")
+    covs = [c for c in rule.get("coverage_conditions") or [] if c.get("role") in (None, "scope")]
+    exms = [c for c in rule.get("exemptions") or [] if c.get("role") in (None, "exemption")]
+    cov = k_and(eval_condition(c, facts, as_of, policy, notes, False) for c in covs)
     ex = k_or(k_and(eval_condition(c, facts, as_of, policy, notes, True) for c in grp)
-              for grp in _groups(rule.get("exemptions")))
+              for grp in _groups(exms))
     return k_and([cov, None if ex is None else (not ex)]), notes
 
 
@@ -192,6 +203,9 @@ def evaluate(addresses: dict, rules: list, relations: list, as_of: str, policy: 
                 result = "not_yet_effective"
             else:
                 result = "applies" if cov else "unknown"
+                if result == "applies" and r.get("effective_relative_unresolved"):
+                    result = "unknown"
+                    notes.append("effective date is relative to an event whose date is not stated; may not be in force yet")
             res[r["team_rule_id"]] = {"team_rule_id": r["team_rule_id"], "result": result, "notes": notes,
                                       "conflict_flag": False, "conflict_notes": []}
         # relations

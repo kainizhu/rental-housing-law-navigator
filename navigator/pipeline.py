@@ -186,6 +186,19 @@ def build(extractions, out_dir, as_of=DEFAULT_AS_OF, relations_path=None, tests_
             decisions = review_categories_voted(rules, n) if n > 1 else review_categories(rules)
             rules, dropped = apply_category_review(rules, decisions)
             relations = validate_relations(extract_relations_voted(rules, n) if n > 1 else extract_relations(rules), rules)
+        # condition roles (scope / expansion / variant / exemption) - majority vote; frozen outside touched
+        from navigator.roles import classify, apply_roles
+        n_votes = max(3, int(os.environ.get("NAV_VOTES", "3")))
+        if frozen_from and (pathlib.Path(frozen_from) / "roles.json").exists():
+            roles = json.load(open(pathlib.Path(frozen_from) / "roles.json"))
+            roles.update(classify(rules, n_votes, only=set(touched or [])))
+        else:
+            roles = classify(rules, n_votes)
+        json.dump(roles, open(out_dir / "roles.json", "w"), indent=1, ensure_ascii=False)
+        before = {r["team_rule_id"] for r in rules}
+        rules, role_dropped = apply_roles(rules, roles)
+        dropped += role_dropped
+        relations = [x for x in relations if x["state_rule"] in {r["team_rule_id"] for r in rules} and x["local_rule"] in {r["team_rule_id"] for r in rules}]
         json.dump(decisions, open(out_dir / "review_decisions.json", "w"), indent=1, ensure_ascii=False)
         json.dump(dropped, open(out_dir / "review_dropped.json", "w"), indent=1, ensure_ascii=False)
         json.dump(relations, open(out_dir / "relations.json", "w"), indent=1, ensure_ascii=False)

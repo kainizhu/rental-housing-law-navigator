@@ -54,14 +54,7 @@ def _norm_conditions(conds, exemptions=False):
     for c in conds or []:
         out.extend(_norm_condition(c))
     if exemptions:
-        # 1) ungrouped conditions copied from the same sentence belong together
-        by_quote = {}
-        for c in out:
-            if c.get("group") is None and c.get("quote"):
-                by_quote.setdefault(c["quote"].strip(), []).append(c)
-        for i, grp in enumerate(v for v in by_quote.values() if len(v) > 1):
-            for c in grp:
-                c["group"] = f"q{i}"
+        # (removed: grouping by shared quote wrongly ANDed independent exemptions listed in one sentence)
         # 2) small-building owner-occupancy pattern: an ungrouped small unit-count exemption is only
         #    meaningful together with owner occupancy -> group it with the owner-occupied condition
         small = [c for c in out if c.get("group") is None and c.get("fact") == "units"
@@ -108,6 +101,7 @@ def normalize(cells: list, corpus=None, as_of: str = DEFAULT_AS_OF):
                 "exemptions": _summary(r.get("exemptions")),
                 "overrides": [], "interaction": r.get("interaction_text"),
                 "effective_date": eff["date"], "effective_date_provenance": eff["provenance"],
+                "effective_relative_unresolved": eff["date"] is None and (r.get("effective") or {}).get("kind") in ("offset_after_anchor", "first_of_month_after_anchor"),
                 "effective_date_note": eff.get("note"), "sunset_date": sunset,
                 "citation": norm, "raw_citation": raw, "citation_kind": kind,
                 "source_doc_id": r.get("source_doc_id"),

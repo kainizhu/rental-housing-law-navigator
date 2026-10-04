@@ -133,12 +133,27 @@ def validate_relations(rels, rules):
 
 def apply_category_review(rules, decisions):
     kept, dropped = [], []
+    by_id = {r["team_rule_id"]: r for r in rules}
     for r in rules:
         d = decisions.get(r["team_rule_id"])
         if d and d["decision"] != "keep":
             dropped.append({"id": r["team_rule_id"], "citation": r["citation"], **d})
         else:
             kept.append(r)
+    # a duplicate is the same law: carry its coverage/exemption conditions into the kept record
+    for d in dropped:
+        if d.get("decision") == "drop_duplicate" and d.get("duplicate_of") in by_id and by_id[d["duplicate_of"]] in kept:
+            src, dst = by_id[d["id"]], by_id[d["duplicate_of"]]
+            have = {(c.get("fact"), c.get("op"), str(c.get("value"))) for c in dst["coverage_conditions_ir"] + dst["exemptions_ir"]}
+            for key in ("coverage_conditions_ir", "exemptions_ir"):
+                for c in src.get(key, []):
+                    sig = (c.get("fact"), c.get("op"), str(c.get("value")))
+                    if sig not in have and c.get("fact") not in ("other", "building_type"):
+                        cc = dict(c)
+                        if cc.get("group") is not None:
+                            cc["group"] = f"m{d['id']}-{cc['group']}"
+                        dst[key].append(cc); have.add(sig)
+                        dst.setdefault("merged_conditions_from", []).append(d["id"])
     return kept, dropped
 
 

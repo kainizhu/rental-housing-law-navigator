@@ -1,22 +1,22 @@
 {
  "BER-RENT-01": {
   "id": "BER-RENT-01",
-  "decision": "keep",
-  "reason": "1/3 runs proposed a drop",
-  "votes": "1/3 drop"
+  "decision": "drop_duplicate",
+  "duplicate_of": "BER-RENT-02",
+  "reason": "This is an annual adjustment order implementing Berkeley's rent-control law for fully covered units. The underlying operative rent-increase-limit law and its coverage are better captured by the ordinance coverage record; annual board orders are duplicates of the same law for this category.",
+  "votes": "2/3 drop"
  },
  "BER-RENT-02": {
   "id": "BER-RENT-02",
-  "decision": "drop_duplicate",
-  "duplicate_of": "BER-RENT-01",
-  "reason": "Same rent-control law/category as BER-RENT-01. This record mainly describes coverage/exemptions for Berkeley’s rent ordinance, while BER-RENT-01 better states the main operative rent-increase requirement. Coverage/exemption provisions are part of the same law and should be merged into one kept record per law per category.",
-  "votes": "2/3 drop"
+  "decision": "keep",
+  "reason": "0/3 runs proposed a drop",
+  "votes": "0/3 drop"
  },
  "BER-JC-02": {
   "id": "BER-JC-02",
   "decision": "drop_duplicate",
   "duplicate_of": "BER-JC-01",
-  "reason": "Relocation assistance for owner move-in and Ellis evictions is part of Berkeley's just-cause eviction regime and annual adjustment of payment amounts. Under the duplicate rule, relocation/implementation provisions of the same law should be merged into the main just-cause record.",
+  "reason": "Relocation assistance for owner move-in and Ellis Act evictions is part of Berkeley's just-cause eviction law and related implementation ordinances. It is a subsidiary provision of the same law family; keep the broader just-cause record as the main record for this category.",
   "votes": "3/3 drop"
  },
  "BER-JC-01": {
@@ -47,7 +47,7 @@
   "id": "BOS-JC-01",
   "decision": "drop_not_operative",
   "duplicate_of": null,
-  "reason": "This ordinance requires a tenant-rights/resources notice and city filing when serving a notice to quit or non-renewal, but it expressly does not limit the grounds for eviction or non-renewal. In just_cause_eviction, notice provisions are operative only when part of a just-cause regime; here it is a procedural notice tied to eviction, not a cause limitation.",
+  "reason": "This ordinance requires delivery of a tenant-rights/resources notice and city filing when ending a tenancy or non-renewing, but it expressly does not limit the grounds for eviction or nonrenewal. In just-cause eviction, notice provisions are keepable when part of a just-cause regime; here the record is only a procedural notice tied to eviction and non-renewal, not an operative just-cause rule.",
   "votes": "3/3 drop"
  },
  "BOS-SCR-01": {
@@ -78,7 +78,7 @@
   "id": "CA-DEP-02",
   "decision": "drop_wrong_category",
   "duplicate_of": null,
-  "reason": "This record mainly states that application screening fees are not security deposits and are governed by the separate application-screening-fee statute; it does not itself impose an operative security-deposit rule.",
+  "reason": "This record mainly states that application screening fees are excluded from the definition of security under the deposit statute and are governed by the separate application-screening-fee law; it does not itself impose an operative security-deposit rule.",
   "votes": "3/3 drop"
  },
  "CA-FEE-01": {
@@ -95,10 +95,9 @@
  },
  "CA-SCR-01": {
   "id": "CA-SCR-01",
-  "decision": "drop_wrong_category",
-  "duplicate_of": null,
-  "reason": "Main operative subject is application screening fee caps and procedures, not screening restrictions such as criminal-history or source-of-income limits. Timing/availability conditions here are part of the fee statute and are better kept in application_screening_fees.",
-  "votes": "3/3 drop"
+  "decision": "keep",
+  "reason": "1/3 runs proposed a drop",
+  "votes": "1/3 drop"
  },
  "CA-SCR-03": {
   "id": "CA-SCR-03",
@@ -108,6 +107,12 @@
  },
  "CA-ALG-01": {
   "id": "CA-ALG-01",
+  "decision": "keep",
+  "reason": "0/3 runs proposed a drop",
+  "votes": "0/3 drop"
+ },
+ "CAM-SCR-01": {
+  "id": "CAM-SCR-01",
   "decision": "keep",
   "reason": "0/3 runs proposed a drop",
   "votes": "0/3 drop"
@@ -153,7 +158,7 @@
   "id": "LA-RENT-P02",
   "decision": "drop_wrong_category",
   "duplicate_of": null,
-  "reason": "This motion concerns possible regulation of algorithm-based rent-setting software, not an operative rent increase limit or rent-control/preemption rule in this category.",
+  "reason": "This motion concerns possible regulation of algorithm-based rent-setting software, not an operative rent increase limit or rent-control/preemption rule.",
   "votes": "3/3 drop"
  },
  "LA-JC-02": {
@@ -166,8 +171,8 @@
   "id": "LA-JC-03",
   "decision": "drop_duplicate",
   "duplicate_of": "LA-JC-02",
-  "reason": "These occupant protections govern a specific no-fault demolition/new-construction eviction scenario under the same city just-cause/resident-protection law framework; keep the broader record covering the main operative just-cause rule.",
-  "votes": "3/3 drop"
+  "reason": "These demolition/new-construction occupant protections function as a subset of no-fault eviction protections and procedures within Los Angeles just-cause eviction regulation. Keep the broader city just-cause rule record; drop this narrower implementing/procedural protection as part of the same law area for one-record-per-law purposes.",
+  "votes": "2/3 drop"
  },
  "LA-JC-01": {
   "id": "LA-JC-01",
@@ -179,7 +184,7 @@
   "id": "LA-ALG-P01",
   "decision": "drop_not_a_rule",
   "duplicate_of": null,
-  "reason": "The motion only orders a study/report on possible future restrictions and does not itself create an operative algorithmic rent-setting rule, prohibition, definition, penalty, or effective date.",
+  "reason": "A motion directing a report/study creates no operative prohibition or substantive algorithmic rent-setting rule; it is a procedural study item only.",
   "votes": "3/3 drop"
  },
  "MA-RENT-01": {
@@ -198,14 +203,14 @@
   "id": "MA-RENT-P04",
   "decision": "drop_wrong_category",
   "duplicate_of": null,
-  "reason": "This pending bill's subject is algorithmic rent setting, not rent increase limits, and the record itself says no substantive rent-cap rule can be extracted.",
+  "reason": "This pending bill concerns algorithmic rent setting, not rent increase limits, and the provided materials contain no operative rent-cap or local rent-control rule in this category.",
   "votes": "3/3 drop"
  },
  "MA-RENT-P03": {
   "id": "MA-RENT-P03",
   "decision": "drop_wrong_category",
   "duplicate_of": null,
-  "reason": "This pending bill concerns algorithmic rent fixing rather than rent increase limits, and no operative rent-cap or local rent-control rule is provided here.",
+  "reason": "This pending bill concerns algorithmic rent fixing/algorithmic rent setting rather than rent increase limits, and no substantive rent-cap rule is provided.",
   "votes": "3/3 drop"
  },
  "MA-DEP-01": {
@@ -235,14 +240,14 @@
  "MA-ALG-P02": {
   "id": "MA-ALG-P02",
   "decision": "keep",
-  "reason": "0/3 runs proposed a drop",
-  "votes": "0/3 drop"
+  "reason": "1/3 runs proposed a drop",
+  "votes": "1/3 drop"
  },
  "MA-ALG-P01": {
   "id": "MA-ALG-P01",
   "decision": "keep",
-  "reason": "0/3 runs proposed a drop",
-  "votes": "0/3 drop"
+  "reason": "1/3 runs proposed a drop",
+  "votes": "1/3 drop"
  },
  "NJ-RENT-01": {
   "id": "NJ-RENT-01",
@@ -252,9 +257,10 @@
  },
  "NJ-RENT-02": {
   "id": "NJ-RENT-02",
-  "decision": "keep",
-  "reason": "0/3 runs proposed a drop",
-  "votes": "0/3 drop"
+  "decision": "drop_duplicate",
+  "duplicate_of": "NJ-RENT-01",
+  "reason": "Same state-law rent-control framework as NJ-RENT-01; this record is an exemption from local rent control for newly constructed multiple dwellings, while NJ-RENT-01 better states the main operative statewide rule for this category. Exemption/coverage provisions of the same law framework should be deduplicated.",
+  "votes": "2/3 drop"
  },
  "NJ-JC-01": {
   "id": "NJ-JC-01",
@@ -264,9 +270,10 @@
  },
  "NJ-JC-02": {
   "id": "NJ-JC-02",
-  "decision": "keep",
-  "reason": "1/3 runs proposed a drop",
-  "votes": "1/3 drop"
+  "decision": "drop_duplicate",
+  "duplicate_of": "NJ-JC-01",
+  "reason": "This record addresses owner-occupied two- and three-family dwelling coverage/exception rules under the same Anti-Eviction Act framework and is best treated as part of the same law/category entry rather than a separate law record. Keep the broader main just-cause record.",
+  "votes": "3/3 drop"
  },
  "NJ-DEP-01": {
   "id": "NJ-DEP-01",
@@ -332,7 +339,7 @@
   "id": "SD-ALG-01",
   "decision": "drop_duplicate",
   "duplicate_of": "SD-ALG-02",
-  "reason": "Same law as the enacted municipal code provisions on algorithmic rent-setting; this ordinance record is another citation/version of the same enacted measure, and the code record better states the operative rule.",
+  "reason": "Same enacted law as SD-ALG-02, cited by ordinance number rather than codified municipal code sections. Keep the codified record as the best statement of the operative rule.",
   "votes": "3/3 drop"
  },
  "SF-RENT-01": {
@@ -351,14 +358,14 @@
   "id": "SF-JC-02",
   "decision": "drop_duplicate",
   "duplicate_of": "SF-JC-01",
-  "reason": "Relocation payment amounts for specified no-fault evictions are part of the same just-cause eviction law and are ancillary to the main operative just-cause rule already captured in SF-JC-01.",
+  "reason": "Relocation-payment amounts for specified no-fault evictions are part of the same just-cause eviction law and are ancillary to the main operative just-cause rule already captured in SF-JC-01.",
   "votes": "3/3 drop"
  },
  "SF-DEP-01": {
   "id": "SF-DEP-01",
   "decision": "drop_not_operative",
   "duplicate_of": null,
-  "reason": "This record gives only the annual interest rate on security deposits and expressly lacks any maximum deposit amount; it does not state an operative security-deposit cap or comparable rule for this category.",
+  "reason": "This record gives only the annual interest rate on security deposits and expressly lacks any maximum deposit amount; it does not state an operative security-deposit rule for this category as defined.",
   "votes": "3/3 drop"
  },
  "SF-SCR-01": {

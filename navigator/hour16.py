@@ -1,6 +1,6 @@
 """One command for a new document (hour-16 ordinance or any new law):
 
-  python -m navigator.hour16 --manifest NEW/manifest.csv [--tests NEW/tests.json] --base out/extract_x4c_full.jsonl --out out/h16
+  python -m navigator.hour16 --manifest NEW/manifest.csv [--tests NEW/tests.json] --base out/extract_x4d_full.jsonl --out out/h16
 
 1. load the new manifest (docs + jurisdictions); 2. re-extract ONLY the jurisdictions it touches
 (all 6 categories, same prompt, same code); 3. merge with the base extraction; 4. gap pass, stage check,
@@ -16,11 +16,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--tests", help="extra change tests JSON (list), e.g. the T6 spec")
-    ap.add_argument("--base", default=str(ROOT / "out/extract_x4c_full.jsonl"))
+    ap.add_argument("--addresses", help="extra addresses CSV (same columns as data/sample_addresses.csv)")
+    ap.add_argument("--base", default=str(ROOT / "out/extract_x4d_full.jsonl"))
     ap.add_argument("--baseline-lookups", default=str(ROOT / "out/baseline/lookups.json"))
     ap.add_argument("--out", default=str(ROOT / "out/h16"))
     ap.add_argument("--frozen", default=str(ROOT / "out/baseline"), help="baseline pipeline output dir to reuse outside touched jurisdictions")
     a = ap.parse_args()
+    if a.addresses:
+        os.environ["NAV_EXTRA_ADDRESSES"] = a.addresses
     os.environ["NAV_EXTRA_MANIFESTS"] = ",".join(filter(None, [os.environ.get("NAV_EXTRA_MANIFESTS", ""), a.manifest]))
 
     from navigator.ground import load_corpus

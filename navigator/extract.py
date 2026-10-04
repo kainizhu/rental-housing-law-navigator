@@ -14,7 +14,7 @@ CATEGORIES = {  # from the challenge brief, "What to capture"
     "just_cause_eviction": "Just-cause eviction: allowed causes, notice, relocation assistance, coverage.",
     "security_deposits": "Security deposits: maximum amount, exceptions, effective date.",
     "application_screening_fees": "Application & screening fees: fee caps, allowed upfront charges, receipts and refunds, broker/finder fee rules charged to tenants.",
-    "screening_restrictions": "Screening restrictions: limits on criminal-history and income-source screening; timing rules.",
+    "screening_restrictions": "Screening restrictions: limits on criminal-history and income-source screening; timing rules. Includes fair-housing / anti-discrimination laws that make source of income (e.g. Section 8 vouchers, public benefits) or criminal history a protected basis in rental decisions.",
     "algorithmic_rent_setting": "Algorithmic rent-setting: definition of covered software, prohibited conduct, penalties, effective date.",
 }
 

@@ -4,84 +4,255 @@
   "level": "city",
   "category": "rent_increase_limits",
   "status": "in_force",
-  "status_certainty": "certain",
+  "status_certainty": "date_unknown",
   "legal_stage": "enacted",
-  "title": "Annual General Adjustment cap and formula for fully covered units",
-  "requirement": "Berkeley’s Rent Ordinance allows eligible landlords of fully covered units to raise permanent rent ceilings annually by the Annual General Adjustment, which for 2026 is 1.0%; Measure BB also caps the AGA at 5%. The documents state the formula is tied to CPI and that the 2026 AGA may not adjust rents for certain Costa-Hawkins tenancies that began on or after January 1, 2025.",
-  "key_value": "5% cap; 2026 AGA 1.0%",
+  "title": "Coverage and exemptions determining whether Berkeley rent increase limits apply",
+  "requirement": "Berkeley’s rent increase limits apply only to fully covered units; partially covered units are registered and subject to just-cause eviction and security-deposit-interest rules, but not rent control. The documents identify which unit types are fully covered, partially covered, or exempt, including Measure BB changes for some subsidized units and shared kitchen/bath units.",
+  "key_value": "Fully covered units rent-controlled",
   "coverage_conditions_ir": [
    {
-    "fact": "other",
+    "fact": "year_built",
+    "op": "lt",
+    "value": 1980,
+    "text": "Most units in multifamily properties built before 1980 are fully covered.",
+    "quote": "Most units in multifamily properties built before 1980** Fully Covered Yes Yes Yes Yes",
+    "group": 1,
+    "role": "scope"
+   },
+   {
+    "fact": "building_type",
     "op": "describes",
-    "value": "fully covered rental units",
-    "text": "Applies to eligible landlords increasing rents for fully covered rental units under Berkeley’s Rent Ordinance.",
-    "quote": "The AGA is the amount by which the landlord of a fully-covered rental unit may raise the rent each year.",
-    "group": 1
+    "value": "single-family home",
+    "text": "Single-family homes with current tenancies that began before 1996 are fully covered.",
+    "quote": "Single family homes with current tenancies that began before 1996** Fully Covered Yes Yes Yes Yes",
+    "group": 2,
+    "role": "scope"
+   },
+   {
+    "fact": "tenancy_start_date",
+    "op": "lt",
+    "value": "1996-01-01",
+    "text": "Single-family homes are fully covered if the current tenancy began before 1996.",
+    "quote": "Single family homes with current tenancies that began before 1996** Fully Covered Yes Yes Yes Yes",
+    "group": 2,
+    "role": "scope"
+   },
+   {
+    "fact": "building_type",
+    "op": "describes",
+    "value": "rooming house in single-family home with five or more rooms rented individually with separate leases",
+    "text": "Single-family homes with five or more rooms rented out individually with separate leases are fully covered.",
+    "quote": "Rooming house: single-family homes with five or more rooms rented \nout individually with separate leases** \nFully Covered Yes Yes Yes Yes",
+    "group": 3,
+    "role": "scope"
+   },
+   {
+    "fact": "units",
+    "op": "ge",
+    "value": 5,
+    "text": "Rooming-house coverage applies where five or more rooms are rented individually with separate leases.",
+    "quote": "Rooming house: single-family homes with five or more rooms rented \nout individually with separate leases** \nFully Covered Yes Yes Yes Yes",
+    "group": 3,
+    "role": "scope"
+   },
+   {
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "certain listed subsidies may still be fully covered depending on unit type",
+    "text": "Some government-subsidized units are fully or partially covered depending on unit type.",
+    "quote": "Units with the following subsidies will be fully or partially covered by the Rent Ordinance depending on unit type",
+    "group": 4,
+    "role": "variant"
    }
   ],
   "exemptions_ir": [
+   {
+    "fact": "certificate_of_occupancy_date",
+    "op": "gt",
+    "value": "1980-06-30",
+    "text": "New construction units with a certificate of occupancy issued after June 1980 are partially covered, not rent-controlled.",
+    "quote": "New construction: units that were built and received a Certificate of \nOccupancy after June 1980** \nPartially Covered Yes No Yes Yes",
+    "group": 1,
+    "role": "exemption"
+   },
+   {
+    "fact": "building_type",
+    "op": "describes",
+    "value": "single-family home",
+    "text": "Single-family homes with a tenancy that began on or after January 1, 1996 are partially covered, not rent-controlled.",
+    "quote": "Single-family home with a tenancy that began on or after January 1, \n1996** \nPartially Covered Yes No Yes Yes",
+    "group": 2,
+    "role": "exemption"
+   },
+   {
+    "fact": "tenancy_start_date",
+    "op": "ge",
+    "value": "1996-01-01",
+    "text": "Single-family homes with tenancies beginning on or after January 1, 1996 are partially covered, not rent-controlled.",
+    "quote": "Single-family home with a tenancy that began on or after January 1, \n1996** \nPartially Covered Yes No Yes Yes",
+    "group": 2,
+    "role": "exemption"
+   },
+   {
+    "fact": "building_type",
+    "op": "describes",
+    "value": "condominium",
+    "text": "Most condominiums are partially covered, not rent-controlled.",
+    "quote": "Most condominiums** Partially Covered Yes No Yes Yes",
+    "group": 3,
+    "role": "exemption"
+   },
+   {
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "Section 202 or Section 811",
+    "text": "Units with Section 202 or Section 811 subsidies are partially covered regardless of unit type because rent control is prohibited by other law.",
+    "quote": "Units with the following government subsidies regardless of unit type: \nSection 202 Supportive Housing for the Elderly, Section 811 \nSupportive Housing for Persons with Disabilities \nPartially Covered Yes No Yes Yes",
+    "group": 4,
+    "role": "exemption"
+   },
+   {
+    "fact": "subsidized_or_affordable",
+    "op": "describes",
+    "value": "Rental Supplement Program, Section 8 Loan Management Set Aside, or Project-based Section 8 in project with HUD-insured or HUD-held mortgage",
+    "text": "These subsidized units are partially covered regardless of unit type if the project has a HUD-insured or HUD-held mortgage.",
+    "quote": "Regardless of unit type, units with Rental Supplement Program, \nSection 8 Loan Management Set Aside, Project-based Section 8 \nsubsidies AND in a project with a mortgage insured or held by HUD. \nPartially Covered Yes No Yes Yes",
+    "group": 5,
+    "role": "exemption"
+   },
+   {
+    "fact": "building_type",
+    "op": "describes",
+    "value": "golden duplex",
+    "text": "Golden duplexes are exempt.",
+    "quote": "“Golden Duplex”: duplex that was owner-occupied on December 31, \n1979, and currently has an owner living in one of the units \nExempt No No No No",
+    "group": 6,
+    "role": "exemption"
+   },
+   {
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null,
+    "text": "Golden duplex exemption requires owner occupancy.",
+    "quote": "“Golden Duplex”: duplex that was owner-occupied on December 31, \n1979, and currently has an owner living in one of the units \nExempt No No No No",
+    "group": 6,
+    "role": "exemption"
+   },
+   {
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null,
+    "text": "A unit where the owner shares a kitchen or bath with the tenant is exempt if the owner lived on the property at the time the tenancy started.",
+    "quote": "Unit where the owner shares a kitchen or bath with the tenant if the \nowner lived on the property at the time the tenancy started \nExempt No No No No",
+    "group": 7,
+    "role": "exemption"
+   },
+   {
+    "fact": "other",
+    "op": "describes",
+    "value": "owner shares kitchen or bath with tenant and lived on property at tenancy start",
+    "text": "Shared kitchen/bath units are exempt only if the owner lived on the property at the start of the tenancy.",
+    "quote": "Where the tenant shares a kitchen or bath facilities with the landlord, the unit will be exempt from the Rent Ordinance only if the landlord lived in a unit on the same property at the start of the tenancy.",
+    "group": 7,
+    "role": "exemption"
+   },
+   {
+    "fact": "building_type",
+    "op": "describes",
+    "value": "ADU property with owner occupancy",
+    "text": "Tenancies started after Nov 7, 2018, on properties where one unit is an ADU and either unit is owner-occupied are exempt.",
+    "quote": "Tenancies started after Nov 7, 2018, on properties where one unit is \nan ADU and either unit is owner-occupied. \nExempt No No No No",
+    "group": 8,
+    "role": "exemption"
+   },
+   {
+    "fact": "tenancy_start_date",
+    "op": "gt",
+    "value": "2018-11-07",
+    "text": "ADU exemption applies to tenancies started after Nov 7, 2018.",
+    "quote": "Tenancies started after Nov 7, 2018, on properties where one unit is \nan ADU and either unit is owner-occupied. \nExempt No No No No",
+    "group": 8,
+    "role": "exemption"
+   },
+   {
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null,
+    "text": "ADU exemption requires owner occupancy in either unit.",
+    "quote": "Tenancies started after Nov 7, 2018, on properties where one unit is \nan ADU and either unit is owner-occupied. \nExempt No No No No",
+    "group": 8,
+    "role": "exemption"
+   },
+   {
+    "fact": "building_type",
+    "op": "describes",
+    "value": "university rental units such as dormitories",
+    "text": "University rental units such as dormitories are exempt.",
+    "quote": "University rental units such as dormitories. Exempt No No No No",
+    "group": 9,
+    "role": "exemption"
+   },
+   {
+    "fact": "building_type",
+    "op": "describes",
+    "value": "nonprofit cooperative",
+    "text": "Nonprofit cooperatives are exempt.",
+    "quote": "Nonprofit Cooperative Exempt No No No No",
+    "group": 10,
+    "role": "exemption"
+   },
    {
     "fact": "tenancy_start_date",
     "op": "ge",
     "value": "2025-01-01",
     "text": "The 2026 AGA may not adjust rents for tenants whose tenancy began on or after January 1, 2025 and whose rents were set pursuant to Costa-Hawkins.",
     "quote": "The 2026 AGA may not adjust tenants’ rents when their tenancy began on or after January 1, 2025, and who had their rents set pursuant to the Costa-Hawkins Rental Housing Act.",
-    "group": 1
+    "group": "mBER-RENT-01-1",
+    "role": "variant"
    }
   ],
-  "coverage_conditions": "Applies to eligible landlords increasing rents for fully covered rental units under Berkeley’s Rent Ordinance.",
-  "exemptions": "The 2026 AGA may not adjust rents for tenants whose tenancy began on or after January 1, 2025 and whose rents were set pursuant to Costa-Hawkins.",
+  "coverage_conditions": "Most units in multifamily properties built before 1980 are fully covered.; Single-family homes with current tenancies that began before 1996 are fully covered.; Single-family homes are fully covered if the current tenancy began before 1996.; Single-family homes with five or more rooms rented out individually with separate leases are fully covered.; Rooming-house coverage applies where five or more rooms are rented individually with separate leases.; Some government-subsidized units are fully or partially covered depending on unit type.",
+  "exemptions": "New construction units with a certificate of occupancy issued after June 1980 are partially covered, not rent-controlled.; Single-family homes with a tenancy that began on or after January 1, 1996 are partially covered, not rent-controlled.; Single-family homes with tenancies beginning on or after January 1, 1996 are partially covered, not rent-controlled.; Most condominiums are partially covered, not rent-controlled.; Units with Section 202 or Section 811 subsidies are partially covered regardless of unit type because rent control is prohibited by other law.; These subsidized units are partially covered regardless of unit type if the project has a HUD-insured or HUD-held mortgage.; Golden duplexes are exempt.; Golden duplex exemption requires owner occupancy.; A unit where the owner shares a kitchen or bath with the tenant is exempt if the owner lived on the property at the time the tenancy started.; Shared kitchen/bath units are exempt only if the owner lived on the property at the start of the tenancy.; Tenancies started after Nov 7, 2018, on properties where one unit is an ADU and either unit is owner-occupied are exempt.; ADU exemption applies to tenancies started after Nov 7, 2018.; ADU exemption requires owner occupancy in either unit.; University rental units such as dormitories are exempt.; Nonprofit cooperatives are exempt.",
   "overrides": [
    "CA-RENT-01"
   ],
   "interaction": "supersedes CA-RENT-01 where it covers the unit",
-  "effective_date": "2026-01-01",
-  "effective_date_provenance": "explicit_quote",
-  "effective_date_note": null,
+  "effective_date": null,
+  "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
+  "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
-  "citation": "Berkeley Municipal Code § 13.76.110A",
-  "raw_citation": "Berkeley Municipal Code § 13.76.110A",
+  "citation": "Berkeley Rent Stabilization and Eviction for Just Cause Ordinance",
+  "raw_citation": "Berkeley Rent Stabilization and Eviction for Just Cause Ordinance",
   "citation_kind": "raw",
-  "source_doc_id": "D008",
-  "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/AGA%20Public%20Notice.pdf",
+  "source_doc_id": "D009",
+  "source_url": "https://rentboard.berkeleyca.gov/sites/default/files/documents/Rent%20Ordinance%20Coverage%20by%20Unit%20Type.pdf",
   "retrieved_at": "2026-10-01T22:35Z",
   "source_origin": "official_corpus",
-  "quoted_span": "At its regular meeting on October 16, 2025, the Berkeley Rent Stabilization Board \nadopted the Annual General Adjustment (AGA) Order for Year 2026 which will allow \neligible landlords to increase the 2025 permanent rent ceilings by 1.0% no earlier than \nJanuary 1, 2026. The 2026 AGA of 1.0% represents 65% of the increase in the Consumer \nPrice Index (CPI) for All Urban Consumers in the Bay Area during the period from July 1, \n2024 - June 30, 2025, which was 1.5% as posted by the Bureau of Labor Statistics.",
-  "quoted_span_single_line": "Price Index (CPI) for All Urban Consumers in the Bay Area during the period from July 1,",
-  "quote_match": "ws_normalized",
+  "quoted_span": "Unit/ Tenancy Type Coverage Registration Rent Control Just Cause for \nEviction \nSecurity Deposit \nInterest \nMost units in multifamily properties built before 1980** Fully Covered Yes Yes Yes Yes",
+  "quoted_span_single_line": "Most units in multifamily properties built before 1980** Fully Covered Yes Yes Yes Yes",
+  "quote_match": "raw_exact",
   "penalty": null,
-  "confidence": 0.84,
-  "other_dates": [
-   {
-    "date": "2024-12-20",
-    "meaning": "Measure BB changes effective for rent ordinance changes page",
-    "quote": "For tenancies started on or after December 20, 2024, landlords must, within fifteen days of the start of the tenancy, give the tenant written notice containing the following information: The existence of and scope of the Rent Ordinance; the tenant’s right to petition against certain rent increases, if applicable; whether the unit is exempt from rent control; and any other partial exemptions which may exist.",
-    "doc_id": "D006"
-   }
-  ],
-  "conflict_flag": true,
-  "conflict_note": "Other published dates: 2024-12-20 (Measure BB changes effective for rent ordinance changes page, D006)",
+  "confidence": 0.8,
+  "other_dates": [],
+  "conflict_flag": false,
+  "conflict_note": null,
   "_extraction": {
    "llm_key": "bf6cdd84db9198754cc5ca81",
    "model": "gpt-5.4",
    "prompt_version": "x4"
   },
-  "team_rule_id": "BER-RENT-01",
-  "citation_aliases_extra": [
-   "Berkeley Municipal Code § 13.76.110A"
-  ],
-  "key_value_long": "AGA capped at 5%; 2026 AGA = 1.0%",
+  "team_rule_id": "BER-RENT-02",
+  "key_value_long": "Fully covered units are rent-controlled; partially covered and exempt units are not",
   "refined": {
-   "citation": [
-    "Berkeley Municipal Code § 13.76.110A",
-    "Berkeley Municipal Code section 13.76.110A"
-   ],
    "key_value": [
-    "AGA capped at 5%; 2026 AGA = 1.0%",
-    "5% cap; 2026 AGA 1.0%"
-   ],
-   "citation_reverted": true
-  }
+    "Fully covered units are rent-controlled; partially covered and exempt units are not",
+    "Fully covered units rent-controlled"
+   ]
+  },
+  "merged_conditions_from": [
+   "BER-RENT-01"
+  ]
  },
  {
   "jurisdiction": "Berkeley, CA",
@@ -100,7 +271,8 @@
     "value": "fully or partially covered units",
     "text": "Applies to tenants in units fully or partially covered by the Rent Ordinance.",
     "quote": "In Berkeley, tenants in units that are fully or partially covered by the Rent Ordinance cannot be evicted unless there is \"just cause” (previously called “good cause”).",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -110,7 +282,8 @@
     "value": "ADU/owner-occupied property tenancy started after 2018-11-07",
     "text": "Tenancies started after Nov. 7, 2018 on properties where one unit is an ADU and either unit is owner-occupied are exempt.",
     "quote": "Tenancies started after Nov 7, 2018, on properties where one unit is an ADU and either unit is owner-occupied.\nExempt No No No No",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -118,7 +291,8 @@
     "value": "university rental units such as dormitories",
     "text": "University rental units such as dormitories are exempt.",
     "quote": "University rental units such as dormitories. Exempt No No No No",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -126,7 +300,8 @@
     "value": "nonprofit cooperative",
     "text": "Nonprofit cooperatives are exempt.",
     "quote": "Nonprofit Cooperative Exempt No No No No",
-    "group": 3
+    "group": 3,
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
@@ -134,7 +309,8 @@
     "value": null,
     "text": "Owner shares a kitchen or bath with the tenant and lived on the property at the time the tenancy started.",
     "quote": "Unit where the owner shares a kitchen or bath with the tenant if the owner lived on the property at the time the tenancy started\nExempt No No No No",
-    "group": 4
+    "group": 4,
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -142,7 +318,8 @@
     "value": "golden duplex",
     "text": "Golden duplexes are exempt.",
     "quote": "“Golden Duplex”: duplex that was owner-occupied on December 31, 1979, and currently has an owner living in one of the units\nExempt No No No No",
-    "group": 5
+    "group": 5,
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to tenants in units fully or partially covered by the Rent Ordinance.",
@@ -153,6 +330,7 @@
   "interaction": "supersedes CA-JC-01 where it covers the unit",
   "effective_date": "2024-12-20",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Berkeley Rent Stabilization and Eviction for Just Cause Ordinance",
@@ -208,7 +386,8 @@
     "value": "residential rental property",
     "text": "Applies to owners or agents of residential rental property in Berkeley who charge an application/screening fee.",
     "quote": "When an owner or the owner’s agent gets a request to rent residential property in Berkeley from an applicant and the owner charges a fee to purchase a consumer credit report and to validate, review, or otherwise process an application, the owner must provide, either in the rental application or in a separate disclosure before receiving the fee, a clear and conspicuous tenant screening fee rights statement and a statement of the maximum fee cap permitted under California Civil Code Section 1950.6(b).",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    },
    {
     "fact": "other",
@@ -216,7 +395,8 @@
     "value": "existing tenant",
     "text": "The non-refundable fee prohibition applies to fees charged to existing tenants for renewal or roommate-change requests in a pre-existing household.",
     "quote": "An owner of residential rental property (or the owner’s agent) cannot charge a non-refundable fee to any existing tenant for the purpose of renewing a tenancy, in whole or in part, including any fee associated with the departure of a roommate or to request to add or replace a roommate in a pre-existing household.",
-    "group": 2
+    "group": 2,
+    "role": "variant"
    }
   ],
   "exemptions_ir": [],
@@ -226,6 +406,7 @@
   "interaction": "There are limits on the amount of and uses for tenant screening and application fees under state and local law.\n\nApplicability to Existing Rental Agreements (BMC 13.78.018)\nChapter 13.78 applies to all residential rental agreements regardless of any contractual language in any rental agreement or lease to the contrary. Any provision of an existing rental agreement or lease that violates the provisions of this chapter are unenforceable.",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Berkeley Mun. Code ch. 13.78 (including BMC 13.78.010, 13.78.016, 13.78.018)",
@@ -281,7 +462,8 @@
     "op": "describes",
     "value": "rental housing",
     "text": "Applies to rental housing providers in Berkeley and current or prospective tenants.",
-    "quote": "The Fair Chance Access to Housing Ordinance prohibits rental housing providers in Berkeley from asking about and using criminal history and/or criminal background checks in their rental housing advertising, applications, tenant selection process, or decision-making."
+    "quote": "The Fair Chance Access to Housing Ordinance prohibits rental housing providers in Berkeley from asking about and using criminal history and/or criminal background checks in their rental housing advertising, applications, tenant selection process, or decision-making.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -289,32 +471,37 @@
     "fact": "other",
     "op": "describes",
     "text": "Lifetime sex offenders.",
-    "quote": "Lifetime sex offenders"
+    "quote": "Lifetime sex offenders",
+    "role": "exemption"
    },
    {
     "fact": "subsidized_or_affordable",
     "op": "describes",
     "text": "Public housing/Section 8 properties have limited exemptions.",
-    "quote": "Public housing/Section 8 properties limited exemptions"
+    "quote": "Public housing/Section 8 properties limited exemptions",
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
     "op": "is_true",
     "value": null,
     "text": "Owner-occupied properties between 1 and 3 units where an owner of record resides in one unit as a primary residence.",
-    "quote": "Owner-occupied properties (between 1-3 units) in which an owner of record resides in one of the units as their primary residence"
+    "quote": "Owner-occupied properties (between 1-3 units) in which an owner of record resides in one of the units as their primary residence",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Units under a rental agreement allowing owners to move back to their home in accordance with BMC 13.76.130 A.9.",
-    "quote": "Units under a rental agreement allowing owners to move back to their home in accordance with BMC 13.76.130 A.9"
+    "quote": "Units under a rental agreement allowing owners to move back to their home in accordance with BMC 13.76.130 A.9",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Units occupied by existing tenants seeking to sublet or add/replace roommates.",
-    "quote": "Units occupied by existing tenant(s) seeking to sublet or add/replace roommates"
+    "quote": "Units occupied by existing tenant(s) seeking to sublet or add/replace roommates",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to rental housing providers in Berkeley and current or prospective tenants.",
@@ -323,6 +510,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Berkeley Municipal Code ch. 13.106",
@@ -378,7 +566,8 @@
     "op": "describes",
     "value": "residential dwelling units in the City of Berkeley",
     "text": "Applies to residential dwelling units in the City of Berkeley.",
-    "quote": "It shall be unlawful to sell, license, or otherwise provide to City of Berkeley \nlandlords any coordinated pricing algorithm that sets or recommends rents or occupancy \nlevels that may be achieved for residential dwelling units in the City of Berkeley."
+    "quote": "It shall be unlawful to sell, license, or otherwise provide to City of Berkeley \nlandlords any coordinated pricing algorithm that sets or recommends rents or occupancy \nlevels that may be achieved for residential dwelling units in the City of Berkeley.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -387,21 +576,24 @@
     "op": "describes",
     "value": "aggregated anonymous reports without recommendations",
     "text": "Excluded are aggregated and anonymous reports, studies, or presentations that do not recommend future rent prices, fees, occupancy rates, or other rental contract terms.",
-    "quote": "A “coordinated pricing algorithm” includes a product that incorporates a \ncoordinated pricing algorithm, but does not include (a) a product or process that \ngenerates or presents any report, study, or presentation that publishes rental data in an \naggregated and anonymous manner but does not recommend rent prices, fees, or \noccupancy rates or other rental contract terms for future leases;"
+    "quote": "A “coordinated pricing algorithm” includes a product that incorporates a \ncoordinated pricing algorithm, but does not include (a) a product or process that \ngenerates or presents any report, study, or presentation that publishes rental data in an \naggregated and anonymous manner but does not recommend rent prices, fees, or \noccupancy rates or other rental contract terms for future leases;",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "affordable housing guideline products",
     "text": "Excluded are products used to establish rent or income limits under affordable housing guidelines of a government or political subdivision.",
-    "quote": "but does not include ... (b) a product used for \nthe purpose of establishing rent or income limits in accordance with the affordable \nhousing guidelines of a local government, the state, the federal government, or other \npolitical subdivision;"
+    "quote": "but does not include ... (b) a product used for \nthe purpose of establishing rent or income limits in accordance with the affordable \nhousing guidelines of a local government, the state, the federal government, or other \npolitical subdivision;",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "market research appraisal or software development research/testing/training",
     "text": "Excluded are products or processes used for project-financing market research, appraisals, or research, testing, or training for software development, including model development/training/testing so long as competitor data is not used as an input when a recommendation is calculated for publication or provision to a Berkeley landlord.",
-    "quote": "or (c) a product or process that provides or uses, or the provision or \nuse of, information for the purpose of (i) conducting market research for project financing, \n(ii) conducting an appraisal, or (iii) conducting research, testing, or training for software \ndevelopment. For clarity, “research, testing, or training for software development” \nincludes without limitation the use or processing of Competitor Data in the development, \ntraining, or testing of predictive or machine learning models so long as any such data is \nnot used as an input in the operation of the model at the time a recommendation is \ncalculated for publication or provision to a City of Berkeley landlord."
+    "quote": "or (c) a product or process that provides or uses, or the provision or \nuse of, information for the purpose of (i) conducting market research for project financing, \n(ii) conducting an appraisal, or (iii) conducting research, testing, or training for software \ndevelopment. For clarity, “research, testing, or training for software development” \nincludes without limitation the use or processing of Competitor Data in the development, \ntraining, or testing of predictive or machine learning models so long as any such data is \nnot used as an input in the operation of the model at the time a recommendation is \ncalculated for publication or provision to a City of Berkeley landlord.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to residential dwelling units in the City of Berkeley.",
@@ -410,6 +602,7 @@
   "interaction": "F. This Chapter is not intended to prevent the development or sale of software to help \nlandlords manage their units generally or through the use of public data. Nor does this \nChapter regulate the amount of rent that a landlord may charge. This Chapter solely \nregulates the use and sale of the coordinated pricing algorithms, to prevent the harms \ndescribed above.",
   "effective_date": "2026-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Berkeley Mun. Code ch. 13.63",
@@ -461,20 +654,32 @@
   "key_value": "case-by-case; 5-year limit",
   "coverage_conditions_ir": [
    {
-    "fact": "other",
+    "fact": "subsidized_or_affordable",
     "op": "describes",
     "value": "Housing providers receiving Department of Neighborhood Development funding and/or land",
     "text": "Applies to housing providers receiving DND funding and/or land.",
     "quote": "Housing providers receiving Department of Neighborhood Development (DND) funding and/or \nland",
-    "group": 1
+    "group": 1,
+    "role": "scope",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": "Housing providers receiving Department of Neighborhood Development funding and/or land"
+    }
    },
    {
-    "fact": "other",
+    "fact": "subsidized_or_affordable",
     "op": "describes",
     "value": "Housing providers with income restricted units created under the BPDA Inclusionary Development Policy",
     "text": "Also applies to housing providers with income-restricted units created under the BPDA Inclusionary Development Policy.",
     "quote": "or that have income restricted units created under the Boston Planning and Development \nAgency (BPDA) Inclusionary Development Policy",
-    "group": 2
+    "group": 2,
+    "role": "expansion",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": "Housing providers with income restricted units created under the BPDA Inclusionary Development Policy"
+    }
    }
   ],
   "exemptions_ir": [],
@@ -484,6 +689,7 @@
   "interaction": "Where federal or state law imposes a criminal history requirement that conflicts with a \nrequirement of this guidance, the federal or state law preempts this policy.",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Boston Fair Chance Tenant Selection Policy",
@@ -527,18 +733,26 @@
   "key_value": "5% + CPI, max 10%",
   "coverage_conditions_ir": [
    {
-    "fact": "other",
+    "fact": "building_type",
     "op": "describes",
     "text": "Applies to owners of residential real property increasing the gross rental rate for a dwelling or unit over a 12-month period.",
     "quote": "(a) (1)   Subject to subdivision (b), an owner of residential real property shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower, of the lowest gross rental rate charged for that dwelling or unit at any time during the 12 months prior to the effective date of the increase.",
-    "group": 1
+    "group": 1,
+    "role": "scope",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": null
+    },
+    "value": "residential real property dwelling or unit"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Applies only after the initial rental rate for a new tenancy has been established.",
     "quote": "(b) For a new tenancy in which no tenant from the prior tenancy remains in lawful possession of the residential real property, the owner may establish the initial rental rate not subject to subdivision (a). Subdivision (a) is only applicable to subsequent increases after that initial rental rate has been established.",
-    "group": 1
+    "group": 1,
+    "role": "not_condition"
    }
   ],
   "exemptions_ir": [
@@ -547,33 +761,38 @@
     "op": "is_true",
     "value": null,
     "text": "Affordable or subsidized housing restricted by deed, regulatory restriction, recorded document, or subsidy agreement is exempt.",
-    "quote": "(d) This section shall not apply to the following residential real properties:\n(1) Housing restricted by deed, regulatory restriction contained in an agreement with a government agency, or other recorded document as affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code, or subject to an agreement that provides housing subsidies for affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code or comparable federal statutes."
+    "quote": "(d) This section shall not apply to the following residential real properties:\n(1) Housing restricted by deed, regulatory restriction contained in an agreement with a government agency, or other recorded document as affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code, or subject to an agreement that provides housing subsidies for affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code or comparable federal statutes.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Dormitories owned and operated by specified schools are exempt.",
-    "quote": "(2) Dormitories owned and operated by an institution of higher education or a kindergarten\nand grades 1 to 12, inclusive, school."
+    "quote": "(2) Dormitories owned and operated by an institution of higher education or a kindergarten\nand grades 1 to 12, inclusive, school.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Housing subject to stricter public-entity rent or price control is exempt from this state cap.",
-    "quote": "(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a)."
+    "quote": "(3) Housing subject to rent or price control through a public entity’s valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).",
+    "role": "exemption"
    },
    {
     "fact": "certificate_of_occupancy_date",
     "op": "ge",
     "value": "2011-10-01",
     "text": "Housing issued a certificate of occupancy within the previous 15 years is exempt, unless it is a mobilehome.",
-    "quote": "(4) Housing that has been issued a certificate of occupancy within the previous 15 years, unless the housing is a mobilehome."
+    "quote": "(4) Housing that has been issued a certificate of occupancy within the previous 15 years, unless the housing is a mobilehome.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Separately alienable residential real property, including a mobilehome, is exempt if ownership and notice conditions are met.",
     "quote": "(5) Residential real property that is alienable separate from the title to any other dwelling unit, including a mobilehome, provided that both of the following apply:",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
@@ -581,7 +800,8 @@
     "value": "real estate investment trust",
     "text": "For the separately alienable-property exemption, the owner cannot be a REIT.",
     "quote": "(A) The owner is not any of the following:\n(i) A real estate investment trust, as defined in Section 856 of the Internal Revenue Code.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
@@ -589,14 +809,16 @@
     "value": "corporation",
     "text": "For the separately alienable-property exemption, the owner cannot be a corporation.",
     "quote": "(ii) A corporation.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
     "op": "describes",
     "text": "For the separately alienable-property exemption, the owner cannot be an LLC with at least one corporate member.",
     "quote": "(iii) A limited liability company in which at least one member is a corporation.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
@@ -604,27 +826,30 @@
     "value": "mobilehome park management",
     "text": "For the separately alienable-property exemption, the owner cannot be management of a mobilehome park.",
     "quote": "(iv) Management of a mobilehome park, as defined in Section 798.2.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "For the separately alienable-property exemption, tenants must receive the statutory written exemption notice.",
     "quote": "(B) (i) The tenants have been provided written notice that the residential real property is exempt from this section using the following statement:\n“This property is not subject to the rent limits imposed by Section 1947.12 of the Civil Code and is not subject to the just cause requirements of Section 1946.2 of the Civil Code. This property meets the requirements of Sections 1947.12 (d)(5) and 1946.2 (e)(8) of the Civil Code and the owner is not any of the following: (1) a real estate investment trust, as defined by Section 856 of the Internal Revenue Code; (2) a corporation; or (3) a limited liability company\nin which at least one member is a corporation.”",
-    "group": 1
+    "group": 1,
+    "role": "not_condition"
    },
    {
     "fact": "units",
     "op": "eq",
     "value": 2,
     "text": "A two-unit single structure with owner occupancy at the beginning of the tenancy is exempt if the owner continues in occupancy and neither unit is an ADU or JADU.",
-    "quote": "(6) A property containing two separate dwelling units within a single\nstructure in which the owner occupied one of the units as the owner’s principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit."
+    "quote": "(6) A property containing two separate dwelling units within a single\nstructure in which the owner occupied one of the units as the owner’s principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to owners of residential real property increasing the gross rental rate for a dwelling or unit over a 12-month period.; Applies only after the initial rental rate for a new tenancy has been established.",
   "exemptions": "Affordable or subsidized housing restricted by deed, regulatory restriction, recorded document, or subsidy agreement is exempt.; Dormitories owned and operated by specified schools are exempt.; Housing subject to stricter public-entity rent or price control is exempt from this state cap.; Housing issued a certificate of occupancy within the previous 15 years is exempt, unless it is a mobilehome.; Separately alienable residential real property, including a mobilehome, is exempt if ownership and notice conditions are met.; For the separately alienable-property exemption, the owner cannot be a REIT.; For the separately alienable-property exemption, the owner cannot be a corporation.; For the separately alienable-property exemption, the owner cannot be an LLC with at least one corporate member.; For the separately alienable-property exemption, the owner cannot be management of a mobilehome park.; For the separately alienable-property exemption, tenants must receive the statutory written exemption notice.; A two-unit single structure with owner occupancy at the beginning of the tenancy is exempt if the owner continues in occupancy and neither unit is an ADU or JADU.",
   "overrides": [
-   "BER-RENT-01",
+   "BER-RENT-02",
    "LA-RENT-01",
    "SF-RENT-01",
    "SA-RENT-01"
@@ -632,6 +857,7 @@
   "interaction": "yields to SA-RENT-01 where that rule covers the unit",
   "effective_date": "2024-04-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": "2030-01-01",
   "citation": "Cal. Civ. Code § 1947.12",
@@ -691,7 +917,8 @@
     "fact": "tenancy_start_date",
     "op": "describes",
     "text": "Tenant must have continuously and lawfully occupied the property for 12 months, or in some multi-adult tenancies all tenants for 12 months or one tenant for 24 months.",
-    "quote": "(a) Notwithstanding any other law, after a tenant has continuously and lawfully occupied a residential real property for 12 months, the owner of the residential real property shall not terminate a tenancy without just cause, which shall be stated in the written notice to terminate tenancy. If any additional adult tenants are added to the lease before an existing tenant has continuously and lawfully occupied the residential real property for 24 months, then this subdivision shall only apply if either of the following are satisfied:\n(1) All of the tenants have continuously and lawfully occupied the residential real property for 12 months or more.\n(2) One or more tenants have continuously and lawfully\noccupied the residential real property for 24 months or more."
+    "quote": "(a) Notwithstanding any other law, after a tenant has continuously and lawfully occupied a residential real property for 12 months, the owner of the residential real property shall not terminate a tenancy without just cause, which shall be stated in the written notice to terminate tenancy. If any additional adult tenants are added to the lease before an existing tenant has continuously and lawfully occupied the residential real property for 24 months, then this subdivision shall only apply if either of the following are satisfied:\n(1) All of the tenants have continuously and lawfully occupied the residential real property for 12 months or more.\n(2) One or more tenants have continuously and lawfully\noccupied the residential real property for 24 months or more.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -699,38 +926,44 @@
     "fact": "building_type",
     "op": "describes",
     "text": "Transient and tourist hotel occupancy.",
-    "quote": "(1) Transient and tourist hotel occupancy as defined in subdivision (b) of Section 1940."
+    "quote": "(1) Transient and tourist hotel occupancy as defined in subdivision (b) of Section 1940.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Housing accommodations in nonprofit hospitals, religious facilities, extended care facilities, licensed residential care facilities for the elderly, or adult residential facilities.",
-    "quote": "(2) Housing accommodations in a nonprofit hospital, religious facility, extended care facility, licensed residential care facility for the elderly, as defined in Section 1569.2 of the Health and Safety Code, or an adult residential facility, as defined in Chapter 6 of Division 6 of Title 22 of the Manual of Policies and Procedures published by the State Department of Social Services."
+    "quote": "(2) Housing accommodations in a nonprofit hospital, religious facility, extended care facility, licensed residential care facility for the elderly, as defined in Section 1569.2 of the Health and Safety Code, or an adult residential facility, as defined in Chapter 6 of Division 6 of Title 22 of the Manual of Policies and Procedures published by the State Department of Social Services.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Dormitories owned and operated by certain schools.",
-    "quote": "(3) Dormitories owned and operated by an institution of higher education or a kindergarten and grades 1 to 12, inclusive, school."
+    "quote": "(3) Dormitories owned and operated by an institution of higher education or a kindergarten and grades 1 to 12, inclusive, school.",
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
     "op": "is_true",
     "text": "Tenant shares bathroom or kitchen facilities with owner who maintains principal residence at the property.",
     "quote": "(4) Housing accommodations in which the tenant shares bathroom or kitchen facilities with the owner who maintains their principal residence at the residential real property.",
-    "group": "owner_small"
+    "group": "owner_small",
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
     "op": "is_true",
     "text": "Single-family owner-occupied residences where owner-occupant rents or leases no more than two units or bedrooms, including an ADU or JADU.",
-    "quote": "(5) Single-family owner-occupied residences, including both of the following:\n(A) A residence in which the owner-occupant rents or leases no more than two units or bedrooms, including, but not limited to, an accessory dwelling unit or a junior accessory dwelling unit."
+    "quote": "(5) Single-family owner-occupied residences, including both of the following:\n(A) A residence in which the owner-occupant rents or leases no more than two units or bedrooms, including, but not limited to, an accessory dwelling unit or a junior accessory dwelling unit.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "A mobilehome under the single-family owner-occupied residences exemption.",
-    "quote": "(5) Single-family owner-occupied residences, including both of the following:\n(B) A mobilehome."
+    "quote": "(5) Single-family owner-occupied residences, including both of the following:\n(B) A mobilehome.",
+    "role": "exemption"
    },
    {
     "fact": "units",
@@ -738,34 +971,45 @@
     "value": 2,
     "text": "Property containing two separate dwelling units within a single structure where owner occupied one unit as principal residence at beginning of tenancy, continues in occupancy, and neither unit is an ADU or JADU.",
     "quote": "(6) A property containing two separate dwelling units within a single structure in which the owner occupied one of the units as the owner’s principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit.",
-    "group": "owner_small"
+    "group": "owner_small",
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
     "op": "is_true",
     "text": "Property containing two separate dwelling units within a single structure where owner occupied one unit as principal residence at beginning of tenancy and continues in occupancy.",
     "quote": "(6) A property containing two separate dwelling units within a single structure in which the owner occupied one of the units as the owner’s principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
-    "fact": "other",
+    "fact": "building_type",
     "op": "describes",
     "text": "Neither unit is an accessory dwelling unit or a junior accessory dwelling unit.",
     "quote": "(6) A property containing two separate dwelling units within a single structure in which the owner occupied one of the units as the owner’s principal place of residence at the beginning of the tenancy, so long as the owner continues in occupancy, and neither unit is an accessory dwelling unit or a junior accessory dwelling unit.",
-    "group": 1
+    "group": 1,
+    "role": "exemption",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": null
+    },
+    "value": "neither unit is an ADU or JADU"
    },
    {
     "fact": "building_age_years",
     "op": "le",
     "value": 15,
     "text": "Housing issued a certificate of occupancy within the previous 15 years, unless the housing is a mobilehome.",
-    "quote": "(7) Housing that has been issued a certificate of occupancy within the previous 15\nyears, unless the housing is a mobilehome."
+    "quote": "(7) Housing that has been issued a certificate of occupancy within the previous 15\nyears, unless the housing is a mobilehome.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Residential real property, including a mobilehome, alienable separate from title to any other dwelling unit, if owner-type and notice conditions are met.",
-    "quote": "(8) Residential real property, including a mobilehome, that is alienable separate from the title to any other dwelling unit, provided that both of the following apply:"
+    "quote": "(8) Residential real property, including a mobilehome, that is alienable separate from the title to any other dwelling unit, provided that both of the following apply:",
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
@@ -773,7 +1017,8 @@
     "value": "real estate investment trust",
     "text": "Owner is not a real estate investment trust.",
     "quote": "(A) The owner is not any of the following:\n(i) A real estate investment trust, as defined in Section 856 of the Internal Revenue Code.",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
@@ -781,46 +1026,53 @@
     "value": "corporation",
     "text": "Owner is not a corporation.",
     "quote": "(A) The owner is not any of the following:\n(ii) A corporation.",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
     "op": "describes",
     "text": "Owner is not a limited liability company in which at least one member is a corporation.",
     "quote": "(A) The owner is not any of the following:\n(iii) A limited liability company in which at least one member is a corporation.",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
     "op": "describes",
     "text": "Owner is not management of a mobilehome park.",
     "quote": "(A) The owner is not any of the following:\n(iv) Management of a mobilehome park, as defined in Section 798.2.",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Tenants were provided the statutory written exemption notice.",
     "quote": "(B) (i) The tenants have been\nprovided written notice that the residential property is exempt from this section using the following statement:\n“This property is not subject to the rent limits imposed by Section 1947.12 of the Civil Code and is not subject to the just cause requirements of Section 1946.2 of the Civil Code. This property meets the requirements of Sections 1947.12 (d)(5) and 1946.2 (e)(8) of the Civil Code and the owner is not any of the following: (1) a real estate investment trust, as defined by Section 856 of the Internal Revenue Code; (2) a corporation; or (3) a limited liability company in which at least one member is a corporation.”",
-    "group": 2
+    "group": 2,
+    "role": "not_condition"
    },
    {
     "fact": "subsidized_or_affordable",
     "op": "is_true",
     "text": "Housing restricted or subsidized as affordable housing for very low, low, or moderate income persons and families.",
-    "quote": "(9) Housing restricted by deed, regulatory restriction contained in an agreement with a government agency, or other recorded document as affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code, or subject to an agreement that provides housing subsidies for affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code or comparable federal statutes."
+    "quote": "(9) Housing restricted by deed, regulatory restriction contained in an agreement with a government agency, or other recorded document as affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code, or subject to an agreement that provides housing subsidies for affordable housing for persons and families of very low, low, or moderate income, as defined in Section 50093 of the Health and Safety Code or comparable federal statutes.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Residential real property subject to a qualifying local just-cause ordinance instead of this section.",
-    "quote": "(i) (1) This section does not apply to the following residential real property:\n(A) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted on or before September 1, 2019, in which case the local ordinance shall apply.\n(B) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply."
+    "quote": "(i) (1) This section does not apply to the following residential real property:\n(A) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted on or before September 1, 2019, in which case the local ordinance shall apply.\n(B) Residential real property subject to a local ordinance requiring just cause for termination of a residential tenancy adopted or amended after September 1, 2019, that is more protective than this section, in which case the local ordinance shall apply.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Homeowner of a mobilehome, as defined in Section 798.9.",
-    "quote": "(l) This section shall not apply to a homeowner of a mobilehome, as defined in Section 798.9."
+    "quote": "(l) This section shall not apply to a homeowner of a mobilehome, as defined in Section 798.9.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Tenant must have continuously and lawfully occupied the property for 12 months, or in some multi-adult tenancies all tenants for 12 months or one tenant for 24 months.",
@@ -836,6 +1088,7 @@
   "interaction": "yields to SA-JC-01 where that rule covers the unit",
   "effective_date": "2024-04-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": "2030-01-01",
   "citation": "Cal. Civ. Code § 1946.2",
@@ -890,7 +1143,8 @@
     "op": "describes",
     "value": "residential property used as tenant dwelling",
     "text": "Applies to security for a rental agreement for residential property used as the tenant's dwelling.",
-    "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant."
+    "quote": "This section applies to security for a rental agreement for residential property that is used as the dwelling of the tenant.",
+    "role": "scope"
    },
    {
     "fact": "owner_type",
@@ -898,7 +1152,8 @@
     "value": "natural person or limited liability company in which all members are natural persons",
     "text": "Small-landlord higher cap applies only if the landlord is a natural person or an LLC whose members are all natural persons.",
     "quote": "The landlord is a natural person or a limited liability company in which all members are natural persons.",
-    "group": 1
+    "group": 1,
+    "role": "variant"
    },
    {
     "fact": "properties_owned_by_landlord",
@@ -906,7 +1161,8 @@
     "value": 2,
     "text": "Small-landlord higher cap applies only if the landlord owns no more than two residential rental properties.",
     "quote": "The landlord owns no more than two residential rental properties that collectively include no more than four dwelling units offered for rent.",
-    "group": 1
+    "group": 1,
+    "role": "variant"
    },
    {
     "fact": "units",
@@ -914,7 +1170,8 @@
     "value": 4,
     "text": "Small-landlord higher cap applies only if those properties collectively include no more than four dwelling units offered for rent.",
     "quote": "The landlord owns no more than two residential rental properties that collectively include no more than four dwelling units offered for rent.",
-    "group": 1
+    "group": 1,
+    "role": "variant"
    }
   ],
   "exemptions_ir": [
@@ -923,28 +1180,32 @@
     "op": "describes",
     "value": "advance payment of at least six months' rent for lease term of six months or longer",
     "text": "The cap does not prohibit an advance payment of at least six months' rent for a lease term of six months or longer.",
-    "quote": "This subdivision does not prohibit an advance payment of not less than six months’ rent if the term of the lease is six months or longer."
+    "quote": "This subdivision does not prohibit an advance payment of not less than six months’ rent if the term of the lease is six months or longer.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "mutual agreement for specified alterations requested by tenant",
     "text": "The cap does not preclude a mutual agreement for specified tenant-requested structural, decorative, furnishing, or similar alterations.",
-    "quote": "This subdivision does not preclude a landlord and a tenant from entering into a mutual agreement for the landlord, at the request of the tenant and for a specified fee or charge, to make structural,\ndecorative, furnishing, or other similar alterations, if the alterations are other than cleaning or repairing for which the landlord may charge the previous tenant as provided by subdivision (e)."
+    "quote": "This subdivision does not preclude a landlord and a tenant from entering into a mutual agreement for the landlord, at the request of the tenant and for a specified fee or charge, to make structural,\ndecorative, furnishing, or other similar alterations, if the alterations are other than cleaning or repairing for which the landlord may charge the previous tenant as provided by subdivision (e).",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "security collected or demanded before July 1, 2024",
     "text": "The amended subdivision does not apply to security collected or demanded before July 1, 2024.",
-    "quote": "This subdivision shall not apply to a security collected or demanded by the landlord before July 1, 2024."
+    "quote": "This subdivision shall not apply to a security collected or demanded by the landlord before July 1, 2024.",
+    "role": "scope"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "prospective tenant is a service member",
     "text": "The two-month small-landlord exception does not apply if the prospective tenant is a service member.",
-    "quote": "Subparagraph (A) shall not apply if the prospective tenant is a service member."
+    "quote": "Subparagraph (A) shall not apply if the prospective tenant is a service member.",
+    "role": "variant"
    }
   ],
   "coverage_conditions": "Applies to security for a rental agreement for residential property used as the tenant's dwelling.; Small-landlord higher cap applies only if the landlord is a natural person or an LLC whose members are all natural persons.; Small-landlord higher cap applies only if the landlord owns no more than two residential rental properties.; Small-landlord higher cap applies only if those properties collectively include no more than four dwelling units offered for rent.",
@@ -953,6 +1214,7 @@
   "interaction": null,
   "effective_date": "2026-01-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Cal. Civ. Code § 1950.5",
@@ -1009,10 +1271,17 @@
   "key_value": "Actual cost, max $30 + CPI",
   "coverage_conditions_ir": [
    {
-    "fact": "other",
+    "fact": "building_type",
     "op": "describes",
     "text": "Applies when a landlord or agent receives a request to rent residential property from an applicant.",
-    "quote": "(a) Notwithstanding Section 1950.5, when a landlord or their agent receives a request to rent a residential property from an applicant, the landlord or their agent may charge, pursuant to subdivision (c), that applicant an application screening fee to cover the costs of obtaining information about the applicant."
+    "quote": "(a) Notwithstanding Section 1950.5, when a landlord or their agent receives a request to rent a residential property from an applicant, the landlord or their agent may charge, pursuant to subdivision (c), that applicant an application screening fee to cover the costs of obtaining information about the applicant.",
+    "role": "scope",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": null
+    },
+    "value": "residential property"
    }
   ],
   "exemptions_ir": [],
@@ -1022,6 +1291,7 @@
   "interaction": "(k) The application screening fee shall not be considered an “advance fee” as that term is used in Section 10026 of the Business and Professions Code, and shall not be considered “security” as that term is used in Section 1950.5.\n(l) This section is not intended to preempt any provisions or regulations that govern the collection of deposits and fees under federal or state housing assistance programs.",
   "effective_date": "2026-01-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Cal. Civ. Code § 1950.6",
@@ -1071,6 +1341,7 @@
   "interaction": null,
   "effective_date": "2024-01-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Cal. Gov. Code § 12955",
@@ -1114,6 +1385,56 @@
   "level": "state",
   "category": "screening_restrictions",
   "status": "in_force",
+  "status_certainty": "certain",
+  "legal_stage": "enacted",
+  "title": "Application screening fee limits and timing rules",
+  "requirement": "A landlord may charge an application screening fee only up to actual out-of-pocket costs and no more than $30 per applicant, adjusted annually by CPI. A landlord may not charge the fee when no unit is or will be available within a reasonable time, and may charge it only under specified processing/refund procedures, including not charging unless the application is actually considered or refunding unselected applicants under an alternative process.",
+  "key_value": "Actual cost, max $30 + CPI",
+  "coverage_conditions_ir": [],
+  "exemptions_ir": [],
+  "coverage_conditions": null,
+  "exemptions": null,
+  "overrides": [],
+  "interaction": "(l) This section is not intended\nto preempt any provisions or regulations that govern the collection of deposits and fees under federal or state housing assistance programs.",
+  "effective_date": "2026-01-01",
+  "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
+  "effective_date_note": null,
+  "sunset_date": null,
+  "citation": "Cal. Civ. Code § 1950.6",
+  "raw_citation": "Cal. Civ. Code § 1950.6",
+  "citation_kind": "state_code",
+  "source_doc_id": "D026",
+  "source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.6",
+  "retrieved_at": "2026-10-01T22:35Z",
+  "source_origin": "official_corpus",
+  "quoted_span": "(b) The amount of the application screening fee shall not be greater than the actual\nout-of-pocket costs of gathering information concerning the applicant, including, but not limited to, the cost of using a tenant screening service or a consumer credit reporting service, and the reasonable value of time spent by the landlord or their agent in obtaining information on the applicant. In no case shall the amount of the application screening fee charged by the landlord or their agent be greater than thirty dollars ($30) per applicant. The thirty dollar ($30) application screening fee may be adjusted annually by the landlord or their agent commensurate with an increase in the Consumer Price Index, beginning on January 1, 1998.\n(c) (1) A landlord or their agent shall not charge an applicant an application screening fee when they know or should have known that no rental unit is available at that time or will be available within a reasonable period of time.",
+  "quoted_span_single_line": "out-of-pocket costs of gathering information concerning the applicant, including, but not limited to, the cost of using a tenant screening service or a consumer credit reporting service, and the reasonable value of time spent by the landlord or their agent in obtaining information on the applicant. In no case shall the amount of the application screening fee charged by the landlord or their agent be greater than thirty dollars ($30) per applicant. The thirty dollar ($30) application screening fee may be adjusted annually by the landlord or their agent commensurate with an increase in the Consumer Price Index, beginning on January 1, 1998.",
+  "quote_match": "ws_normalized",
+  "penalty": null,
+  "confidence": 0.94,
+  "other_dates": [],
+  "conflict_flag": false,
+  "conflict_note": null,
+  "_extraction": {
+   "llm_key": "83a8a2f2a5a370df9acfac06",
+   "model": "gpt-5.4",
+   "prompt_version": "x4"
+  },
+  "team_rule_id": "CA-SCR-01",
+  "key_value_long": "Actual out-of-pocket costs, capped at $30 per applicant plus annual CPI adjustment; fee barred if no unit available; timing/refund rules apply",
+  "refined": {
+   "key_value": [
+    "Actual out-of-pocket costs, capped at $30 per applicant plus annual CPI adjustment; fee barred if no unit available; timing/refund rules apply",
+    "Actual cost, max $30 + CPI"
+   ]
+  }
+ },
+ {
+  "jurisdiction": "CA",
+  "level": "state",
+  "category": "screening_restrictions",
+  "status": "in_force",
   "status_certainty": "date_unknown",
   "legal_stage": "enacted",
   "title": "Fair housing law restricts criminal-history screening",
@@ -1127,6 +1448,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "California Fair Employment and Housing Act (housing discrimination provisions)",
@@ -1176,6 +1498,7 @@
   "interaction": "(c) Nothing in this section shall impair or limit the applicability of antitrust laws.",
   "effective_date": "2026-01-01",
   "effective_date_provenance": "default_rule",
+  "effective_relative_unresolved": false,
   "effective_date_note": "Cal. Const. art. IV, § 8(c)(1) (regular-session statutes take effect January 1 of the year following enactment)",
   "sunset_date": null,
   "citation": "Cal. Bus. & Prof. Code § 16729",
@@ -1208,6 +1531,68 @@
   }
  },
  {
+  "jurisdiction": "Cambridge, MA",
+  "level": "city",
+  "category": "screening_restrictions",
+  "status": "in_force",
+  "status_certainty": "date_unknown",
+  "legal_stage": "enacted",
+  "title": "Cambridge Fair Housing Ordinance prohibits housing discrimination based on source of income",
+  "requirement": "In Cambridge housing transactions, landlords, sellers, and rental agents may not discriminate based on source of income, which includes Section 8 and public benefits. The ordinance covers rental decisions and tenancy terms, while allowing reasonable selection standards if applied equally and uniformly to all applicants.",
+  "key_value": "Source of income is a protected category in housing discrimination law",
+  "coverage_conditions_ir": [],
+  "exemptions_ir": [
+   {
+    "fact": "units",
+    "op": "eq",
+    "value": 2,
+    "text": "Owner-occupied two-family dwellings are exempt.",
+    "quote": "NOTE: there is an exemption for 2-family dwellings, when the owner lives there",
+    "group": 1,
+    "role": "exemption"
+   },
+   {
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null,
+    "text": "Owner lives in the two-family dwelling.",
+    "quote": "NOTE: there is an exemption for 2-family dwellings, when the owner lives there",
+    "group": 1,
+    "role": "exemption"
+   }
+  ],
+  "coverage_conditions": null,
+  "exemptions": "Owner-occupied two-family dwellings are exempt.; Owner lives in the two-family dwelling.",
+  "overrides": [],
+  "interaction": null,
+  "effective_date": null,
+  "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
+  "effective_date_note": "effective date not stated in the documents",
+  "sunset_date": null,
+  "citation": "Cambridge Fair Housing Ordinance, chapter 14.04",
+  "raw_citation": "Cambridge Fair Housing Ordinance, chapter 14.04",
+  "citation_kind": "raw",
+  "source_doc_id": "D029",
+  "source_url": "https://www.cambridgema.gov/departments/humanrightscommission",
+  "retrieved_at": "2026-10-01T22:36Z",
+  "source_origin": "official_corpus",
+  "quoted_span": "The protected categories under the Cambridge Human Rights Ordinance and the Cambridge Fair Housing Ordinance are the following:\nDisability – Defined consistent with the Americans with Disabilities Act (ADA) – a physical or mental impairment which substantially limits one or more major life activities\nRace\nColor\nNational Origin or Ancestry\nFamily Status\nSource of Income, includes Section 8 and public benefits",
+  "quoted_span_single_line": "Disability – Defined consistent with the Americans with Disabilities Act (ADA) – a physical or mental impairment which substantially limits one or more major life activities",
+  "quote_match": "raw_exact",
+  "penalty": "The Commission has the authority to provide various remedies after hearing, including filing a criminal complaint in District Court, levying civil fines of up to $300 for each violation, filing a civil complaint in Superior Court seeking injunctive relief, and seeking an award of damages, expenses and other relief.",
+  "confidence": 0.84,
+  "other_dates": [],
+  "conflict_flag": false,
+  "conflict_note": null,
+  "_extraction": {
+   "llm_key": "7b209305a463cc66286ac016",
+   "model": "gpt-5.4",
+   "prompt_version": "x5"
+  },
+  "team_rule_id": "CAM-SCR-01"
+ },
+ {
   "jurisdiction": "Hoboken, NJ",
   "level": "city",
   "category": "rent_increase_limits",
@@ -1223,14 +1608,16 @@
     "op": "describes",
     "value": "dwelling units",
     "text": "Applies to dwelling units as defined in the chapter.",
-    "quote": "This chapter shall apply to all dwelling units as defined in § 155-1 above, except that the following shall be exempt:"
+    "quote": "This chapter shall apply to all dwelling units as defined in § 155-1 above, except that the following shall be exempt:",
+    "role": "scope"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "lease expiration or termination; periodic tenancies also covered",
     "text": "Ordinary capped increases apply at lease expiration or termination, including periodic tenants and leases under one year.",
-    "quote": "At the expiration of a lease or at the termination of a lease of a periodic tenant, no landlord may request or receive a percentage increase in rent which is greater than 5% or the percentage difference between the consumer price index three months prior to the expiration or termination of the lease and three months prior to the commencement of the lease term, whichever is less. For a periodic tenant or for a tenant whose lease terms shall be less than one year, said tenant shall not suffer or be caused to pay more than one rent increase in any twelve-month period which exceeds 5% or the consumer price index percentage differential for the twelve-month period commencing 15 months prior to and ending three months prior to the effective date of the proposed increase, whichever is less."
+    "quote": "At the expiration of a lease or at the termination of a lease of a periodic tenant, no landlord may request or receive a percentage increase in rent which is greater than 5% or the percentage difference between the consumer price index three months prior to the expiration or termination of the lease and three months prior to the commencement of the lease term, whichever is less. For a periodic tenant or for a tenant whose lease terms shall be less than one year, said tenant shall not suffer or be caused to pay more than one rent increase in any twelve-month period which exceeds 5% or the consumer price index percentage differential for the twelve-month period commencing 15 months prior to and ending three months prior to the effective date of the proposed increase, whichever is less.",
+    "role": "not_condition"
    }
   ],
   "exemptions_ir": [
@@ -1239,63 +1626,72 @@
     "op": "describes",
     "value": "motels and hotels",
     "text": "Motels and hotels are exempt.",
-    "quote": "A. Motels and hotels."
+    "quote": "A. Motels and hotels.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "newly constructed dwellings first rented for the first time; initial rent/lease only if registered before first rental",
     "text": "Newly constructed dwellings are exempt for the initial rent or lease agreement if registered before first rental; later rents are covered.",
-    "quote": "Newly constructed dwellings which are rented for the first time. After the first rental, such dwellings shall be exempt for this initial rent or lease agreement, but all subsequent rents shall be subject to the provisions of this chapter. In order to qualify for the exemption, the newly constructed dwelling must be registered by an applicant, on forms provided by the Rent Regulation Officer, with said Officer before the first rental for said dwelling."
+    "quote": "Newly constructed dwellings which are rented for the first time. After the first rental, such dwellings shall be exempt for this initial rent or lease agreement, but all subsequent rents shall be subject to the provisions of this chapter. In order to qualify for the exemption, the newly constructed dwelling must be registered by an applicant, on forms provided by the Rent Regulation Officer, with said Officer before the first rental for said dwelling.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "industrial property",
     "text": "Industrial property is exempt.",
-    "quote": "C. Industrial property."
+    "quote": "C. Industrial property.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "nonresidential and commercial property; mixed-use commercial portions only",
     "text": "Nonresidential and commercial property is exempt, though apartment units in mixed-use buildings remain covered.",
-    "quote": "Nonresidential and commercial property. If the dwelling has an apartment unit(s), plus a commercial unit(s), the apartment unit(s) is covered by this chapter, but the commercial unit(s) is exempt."
+    "quote": "Nonresidential and commercial property. If the dwelling has an apartment unit(s), plus a commercial unit(s), the apartment unit(s) is covered by this chapter, but the commercial unit(s) is exempt.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "student housing owned or controlled by school/college/institution",
     "text": "Student housing owned or controlled by an educational institution is exempt.",
-    "quote": "Housing provided for students by a school, college or similar institution which owns or controls that housing."
+    "quote": "Housing provided for students by a school, college or similar institution which owns or controls that housing.",
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
     "op": "describes",
     "value": "state or federal government housing",
     "text": "Housing owned and operated by other government agencies is exempt.",
-    "quote": "Housing owned and operated by other government agencies, such as the state or federal government."
+    "quote": "Housing owned and operated by other government agencies, such as the state or federal government.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "building completely vacant on or before and since 1984-01-01 and not vacant through unlawful means; initial rent/lease only if registered before renting",
     "text": "A building completely vacant on or before and since January 1, 1984 may qualify for an initial-rent exemption if not made vacant through unlawful means and registered before renting; later rents are covered.",
-    "quote": "A building completely vacant on or before and since January 1, 1984, provided that said building did not become vacant through unlawful means which can be attributed to the applicant for this exemption. In order to qualify for this exemption, the building vacant since January 1, 1984, must be registered by an applicant with the Rent Regulation Officer, on forms provided by said Officer, before the renting of dwelling units within the vacant building. After the first rental, such dwelling units shall be exempt from initial rent or lease agreement, but all subsequent rents shall be subject to the provisions of this chapter."
+    "quote": "A building completely vacant on or before and since January 1, 1984, provided that said building did not become vacant through unlawful means which can be attributed to the applicant for this exemption. In order to qualify for this exemption, the building vacant since January 1, 1984, must be registered by an applicant with the Rent Regulation Officer, on forms provided by said Officer, before the renting of dwelling units within the vacant building. After the first rental, such dwelling units shall be exempt from initial rent or lease agreement, but all subsequent rents shall be subject to the provisions of this chapter.",
+    "role": "exemption"
    },
    {
     "fact": "certificate_of_occupancy_date",
     "op": "gt",
     "value": "1987-06-25",
     "text": "Certain multiple dwellings constructed after June 25, 1987 are exempt for the amortization period of the initial mortgage or 30 years after completion, whichever is less, if statutory notice requirements are met.",
-    "quote": "In accordance with N.J.S.A. 2A:42-84.1 et seq., the provisions of this chapter shall not apply to multiple dwellings, as defined in the statute, constructed after June 25, 1987, for a period not to exceed the period of amortization of any initial mortgage loan obtained for the multiple dwelling or for 30 years following completion of construction, whichever is less. In the event that there is no initial mortgage financing, the period of exemption from this chapter shall be 30 years. This exemption only applies where a landlord complied with all requirements contained in N.J.S.A. 2A:42-84.1 et seq., including but not limited to notice to the Construction Code Official at least 30 days before a certificate of occupancy is issued and notification to tenants by way of a provision in their lease."
+    "quote": "In accordance with N.J.S.A. 2A:42-84.1 et seq., the provisions of this chapter shall not apply to multiple dwellings, as defined in the statute, constructed after June 25, 1987, for a period not to exceed the period of amortization of any initial mortgage loan obtained for the multiple dwelling or for 30 years following completion of construction, whichever is less. In the event that there is no initial mortgage financing, the period of exemption from this chapter shall be 30 years. This exemption only applies where a landlord complied with all requirements contained in N.J.S.A. 2A:42-84.1 et seq., including but not limited to notice to the Construction Code Official at least 30 days before a certificate of occupancy is issued and notification to tenants by way of a provision in their lease.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "governmental agency contract preempts city regulation during contract period",
     "text": "Where a governmental agency contract supersedes Hoboken's authority to regulate rents, the chapter is preempted during that contract period.",
-    "quote": "If a contract between a landlord and a governmental agency duly provides for that governmental agency to regulate the amount of rent received by that landlord, and if the authority of that governmental agency supersedes the authority of the City of Hoboken to regulate such rents, then the application of this chapter shall be preempted during the period of governmental agency regulation specified in the contract."
+    "quote": "If a contract between a landlord and a governmental agency duly provides for that governmental agency to regulate the amount of rent received by that landlord, and if the authority of that governmental agency supersedes the authority of the City of Hoboken to regulate such rents, then the application of this chapter shall be preempted during the period of governmental agency regulation specified in the contract.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to dwelling units as defined in the chapter.; Ordinary capped increases apply at lease expiration or termination, including periodic tenants and leases under one year.",
@@ -1306,6 +1702,7 @@
   "interaction": "supersedes NJ-RENT-01 where it covers the unit",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Hoboken City Code ch. 155, §§ 155-2, 155-4, 155-5, 155-2.1",
@@ -1335,7 +1732,7 @@
    }
   ],
   "conflict_flag": true,
-  "conflict_note": "Other published dates: 2023-02-01 (amendment, S009); 2025-07-09 (amendment, S010) | For newly constructed multiple dwellings during the 30-year exemption period, state law bars application of Hoboken's local rent control ordinance. Outside that exempt class, this state rule does not displace the city rule.",
+  "conflict_note": "Other published dates: 2023-02-01 (amendment, S009); 2025-07-09 (amendment, S010)",
   "_extraction": {
    "llm_key": "6062ee19416545c2adbbb11b",
    "model": "gpt-5.4",
@@ -1374,7 +1771,8 @@
     "op": "describes",
     "value": "residential dwelling unit used as a primary residence",
     "text": "Applies to landlords who rent residential dwelling units used as primary residences in Hoboken.",
-    "quote": "Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing."
+    "quote": "Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -1383,7 +1781,8 @@
     "op": "describes",
     "value": "medical/long-term care or detention facilities excluded",
     "text": "Excludes medical, long-term care, and detention facilities from the definition of residential dwelling unit.",
-    "quote": "Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing."
+    "quote": "Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to landlords who rent residential dwelling units used as primary residences in Hoboken.",
@@ -1392,6 +1791,7 @@
   "interaction": null,
   "effective_date": "2025-07",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Hoboken City Code § 158-2",
@@ -1440,7 +1840,8 @@
     "op": "le",
     "value": 4,
     "text": "1-4 unit properties are exempt from rent control.",
-    "quote": "(Please Note: All 1-4 Unit Properties are exempt from rent control)"
+    "quote": "(Please Note: All 1-4 Unit Properties are exempt from rent control)",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": null,
@@ -1451,6 +1852,7 @@
   "interaction": "supersedes NJ-RENT-01 where it covers the unit",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Jersey City Municipal Code ch. 260",
@@ -1466,8 +1868,8 @@
   "penalty": null,
   "confidence": 0.56,
   "other_dates": [],
-  "conflict_flag": true,
-  "conflict_note": "For newly constructed multiple dwellings during the 30-year exemption period, state law overrides application of Jersey City's rent control ordinance. Because the city rule text provided does not specify this exemption, the pair presents a state-local conflict/preemption for that subset of units.",
+  "conflict_flag": false,
+  "conflict_note": null,
   "_extraction": {
    "llm_key": "2ebaa583a986a9fd46cad0c4",
    "model": "gpt-5.4",
@@ -1493,6 +1895,7 @@
   "interaction": null,
   "effective_date": "2025-06",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Jersey City Code § 218-12",
@@ -1540,14 +1943,16 @@
     "op": "le",
     "value": "1978-10-01",
     "text": "Generally applies to rental properties first built on or before October 1, 1978.",
-    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under\nLAMC Section 151.28"
+    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under\nLAMC Section 151.28",
+    "role": "scope"
    },
    {
     "fact": "building_type",
     "op": "in",
     "value": "apartment, condominium, townhome, duplex, two or more single-family dwelling units on the same parcel, rooms in a hotel/motel/rooming house/boarding house occupied by the same tenant for more than 30 consecutive days, residential unit(s) attached to a commercial building, ADU, JADU, mobile homes and recreational vehicles in mobile home parks",
     "text": "Covered property types include the listed residential unit types.",
-    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under\nLAMC Section 151.28\nand if any of the following:\nApartment\nCondominium (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nTownhome (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nDuplex\nTwo or more single-family dwelling units on the same parcel\nRooms in a hotel, motel, rooming house, or boarding house occupied by the same tenant for more than 30 consecutive days\nResidential unit(s) attached to a commercial building\nAccessory Dwelling Unit (ADU)\nJunior Accessory Dwelling Unit (JADU)\nMobile homes\nand recreational vehicles in mobile home parks are also covered under the RSO."
+    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under\nLAMC Section 151.28\nand if any of the following:\nApartment\nCondominium (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nTownhome (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nDuplex\nTwo or more single-family dwelling units on the same parcel\nRooms in a hotel, motel, rooming house, or boarding house occupied by the same tenant for more than 30 consecutive days\nResidential unit(s) attached to a commercial building\nAccessory Dwelling Unit (ADU)\nJunior Accessory Dwelling Unit (JADU)\nMobile homes\nand recreational vehicles in mobile home parks are also covered under the RSO.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -1556,14 +1961,16 @@
     "op": "gt",
     "value": "1995-12-31",
     "text": "For condominiums, rent amount is not regulated for tenancies that commenced after December 31, 1995.",
-    "quote": "Condominium (Rent amount is not regulated for tenancies that commenced after December 31, 1995)"
+    "quote": "Condominium (Rent amount is not regulated for tenancies that commenced after December 31, 1995)",
+    "role": "exemption"
    },
    {
     "fact": "tenancy_start_date",
     "op": "gt",
     "value": "1995-12-31",
     "text": "For townhomes, rent amount is not regulated for tenancies that commenced after December 31, 1995.",
-    "quote": "Townhome (Rent amount is not regulated for tenancies that commenced after December 31, 1995)"
+    "quote": "Townhome (Rent amount is not regulated for tenancies that commenced after December 31, 1995)",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Generally applies to rental properties first built on or before October 1, 1978.; Covered property types include the listed residential unit types.",
@@ -1574,6 +1981,7 @@
   "interaction": "supersedes CA-RENT-01 where it covers the unit",
   "effective_date": "2025-07-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Los Angeles Rent Stabilization Ordinance",
@@ -1646,28 +2054,32 @@
     "op": "describes",
     "value": "most residential properties in the City of Los Angeles that are not regulated by the City’s Rent Stabilization Ordinance",
     "text": "Covers most residential properties in Los Angeles not regulated by the RSO.",
-    "quote": "The JCO covers most residential properties in the City of Los Angeles that are not regulated by the City’s Rent Stabilization Ordinance."
+    "quote": "The JCO covers most residential properties in the City of Los Angeles that are not regulated by the City’s Rent Stabilization Ordinance.",
+    "role": "scope"
    },
    {
     "fact": "tenancy_start_date",
     "op": "describes",
     "value": "tenant has lived in the same unit for at least six months or original lease expired, whichever comes first",
     "text": "Applies to a tenancy once the tenant has lived in the unit at least six months or the original lease has expired, whichever comes first.",
-    "quote": "In order to apply to a tenancy, it requires that the tenant either has lived in the same unit for at least six months or that their original lease expired, whichever comes first."
+    "quote": "In order to apply to a tenancy, it requires that the tenant either has lived in the same unit for at least six months or that their original lease expired, whichever comes first.",
+    "role": "not_condition"
    },
    {
     "fact": "certificate_of_occupancy_date",
     "op": "gt",
     "value": "1978-10-01",
     "text": "Can apply to buildings newer than October 1, 1978.",
-    "quote": "The JCO can apply to buildings that are newer than October 1, 1978."
+    "quote": "The JCO can apply to buildings that are newer than October 1, 1978.",
+    "role": "expansion"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "single-family dwelling",
     "text": "Can apply to a property containing only one single-family dwelling.",
-    "quote": "The JCO can apply to a property that contains only one single-family dwelling."
+    "quote": "The JCO can apply to a property that contains only one single-family dwelling.",
+    "role": "expansion"
    }
   ],
   "exemptions_ir": [
@@ -1677,7 +2089,7 @@
     "value": "transient hotels",
     "text": "Transient hotels are excepted from the JCO.",
     "quote": "There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -1685,7 +2097,7 @@
     "value": "licensed care facilities",
     "text": "Licensed care facilities are excepted from the JCO.",
     "quote": "There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -1693,7 +2105,7 @@
     "value": "fraternity or sorority houses",
     "text": "Fraternity or sorority houses are excepted from the JCO.",
     "quote": "There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
@@ -1701,7 +2113,7 @@
     "value": null,
     "text": "Owner’s roommate situations are excepted from the JCO.",
     "quote": "There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -1709,7 +2121,7 @@
     "value": "cooperatives under certain circumstances",
     "text": "Some cooperatives are excepted from the JCO.",
     "quote": "There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "subsidized_or_affordable",
@@ -1717,7 +2129,7 @@
     "value": "some non-profit facilities for the homeless or short-term treatment centers for substance abuse",
     "text": "Some nonprofit homeless facilities or short-term substance-abuse treatment centers are excepted.",
     "quote": "There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
@@ -1725,7 +2137,7 @@
     "value": "some properties owned by HACLA or the government",
     "text": "Some HACLA-owned or government-owned properties are excepted.",
     "quote": "There are other specific exceptions to the JCO including, but not limited to, transient hotels, licensed care facilities, fraternity or sorority houses, owner’s roommate, cooperatives under certain circumstances, some non-profit facilities for the homeless or short-term treatment centers for substance abuse, and some properties owned by HACLA or the government.",
-    "group": "q0"
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Covers most residential properties in Los Angeles not regulated by the RSO.; Applies to a tenancy once the tenant has lived in the unit at least six months or the original lease has expired, whichever comes first.; Can apply to buildings newer than October 1, 1978.; Can apply to a property containing only one single-family dwelling.",
@@ -1736,6 +2148,7 @@
   "interaction": "supersedes CA-JC-01 where it covers the unit",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Los Angeles Municipal Code §§ 165.03, 165.06",
@@ -1796,14 +2209,16 @@
     "op": "le",
     "value": "1978-10-01",
     "text": "Generally applies to rental properties first built on or before October 1, 1978.",
-    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under LAMC Section 151.28"
+    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under LAMC Section 151.28",
+    "role": "scope"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "apartment, condominium, townhome, duplex, two or more single-family dwelling units on the same parcel, long-term hotel/motel/rooming/boarding rooms, residential units attached to commercial buildings, ADUs, JADUs, mobile homes and recreational vehicles in mobile home parks",
     "text": "Applies to listed housing types if otherwise covered.",
-    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under LAMC Section 151.28 and if any of the following:\nApartment\nCondominium (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nTownhome (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nDuplex\nTwo or more single-family dwelling units on the same parcel\nRooms in a hotel, motel, rooming house, or boarding house occupied by the same tenant for more than 30 consecutive days\nResidential unit(s) attached to a commercial building\nAccessory Dwelling Unit (ADU)\nJunior Accessory Dwelling Unit (JADU)\nMobile homes\nand recreational vehicles in mobile home parks are also covered under the RSO."
+    "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under LAMC Section 151.28 and if any of the following:\nApartment\nCondominium (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nTownhome (Rent amount is not regulated for tenancies that commenced after December 31, 1995)\nDuplex\nTwo or more single-family dwelling units on the same parcel\nRooms in a hotel, motel, rooming house, or boarding house occupied by the same tenant for more than 30 consecutive days\nResidential unit(s) attached to a commercial building\nAccessory Dwelling Unit (ADU)\nJunior Accessory Dwelling Unit (JADU)\nMobile homes\nand recreational vehicles in mobile home parks are also covered under the RSO.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [],
@@ -1815,6 +2230,7 @@
   "interaction": "supersedes CA-JC-01 where it covers the unit",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Los Angeles Municipal Code § 151.09",
@@ -1870,7 +2286,8 @@
     "op": "describes",
     "text": "Municipalities that accept Chapter 40P may adopt rent control only if the regulation becomes entirely voluntary after six months for property owners.",
     "quote": "(a) after six months from the date of the initial adoption of rent control regulation by a particular city or town, compliance on the part of property owners as to the rent control regulation or any subsequently adopted rent control regulation shall be entirely voluntary and uncoerced, and the property of a person or entity declining to have his or its property subjected to such regulation shall be wholly unaffected by any aspect of the rent control regulation or any subsequently adopted rent control regulation;",
-    "group": 1
+    "group": 1,
+    "role": "not_condition"
    },
    {
     "fact": "properties_owned_by_landlord",
@@ -1878,14 +2295,16 @@
     "value": 10,
     "text": "Any local rent control regulation may not apply to units owned by a person or entity owning fewer than 10 rental units.",
     "quote": "(b) such regulation may not include the regulation of occupancy, services, evictions, condominium conversion or the removal of properties from such regulation, nor may such regulation apply to any rental unit that is owned by a person or entity owning less than ten rental units or that has a fair market rent exceeding $400;",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Any local rent control regulation may not apply to units with fair market rent above $400.",
     "quote": "(b) such regulation may not include the regulation of occupancy, services, evictions, condominium conversion or the removal of properties from such regulation, nor may such regulation apply to any rental unit that is owned by a person or entity owning less than ten rental units or that has a fair market rent exceeding $400;",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    }
   ],
   "coverage_conditions": null,
@@ -1894,6 +2313,7 @@
   "interaction": "Section 4. No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "G.L. c. 40P § 4",
@@ -1938,10 +2358,17 @@
   "coverage_conditions_ir": [],
   "exemptions_ir": [
    {
-    "fact": "other",
+    "fact": "building_type",
     "op": "describes",
     "text": "The struck proposal included exemptions for several types of units, including units operated solely for religious purposes.",
-    "quote": "The proposal limits annual rent increases for residences, but it carved out exemptions for several types of units, including ones “operated solely for … religious … purposes.\""
+    "quote": "The proposal limits annual rent increases for residences, but it carved out exemptions for several types of units, including ones “operated solely for … religious … purposes.\"",
+    "role": "exemption",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": null
+    },
+    "value": "units operated solely for religious purposes"
    }
   ],
   "coverage_conditions": null,
@@ -1950,6 +2377,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "2026 statewide rent control ballot question",
@@ -1998,7 +2426,8 @@
     "value": "residential real property",
     "text": "Applies to leases relating to residential real property and to any tenancy at or prior to commencement.",
     "quote": "No lease relating to residential real property shall contain a provision",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    },
    {
     "fact": "other",
@@ -2006,7 +2435,8 @@
     "value": "at or prior to commencement of tenancy",
     "text": "Applies to amounts required at or prior to the commencement of any tenancy.",
     "quote": "At or prior to the commencement of any tenancy, no lessor or agent of the lessor may require a tenant or prospective tenant to pay, to the lessor or to an agent of the lessor, any amount in excess of the following:",
-    "group": 1
+    "group": 1,
+    "role": "not_condition"
    }
   ],
   "exemptions_ir": [
@@ -2015,7 +2445,8 @@
     "op": "describes",
     "value": "vacation or recreational lease of 100 days or less",
     "text": "Does not apply to a lease, rental, occupancy or tenancy of 100 days or less for a vacation or recreational purpose.",
-    "quote": "The provisions of this section shall not apply to any lease, rental, occupancy or tenancy of one hundred days or less in duration which lease or rental is for a vacation or recreational purpose."
+    "quote": "The provisions of this section shall not apply to any lease, rental, occupancy or tenancy of one hundred days or less in duration which lease or rental is for a vacation or recreational purpose.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to leases relating to residential real property and to any tenancy at or prior to commencement.; Applies to amounts required at or prior to the commencement of any tenancy.",
@@ -2024,6 +2455,7 @@
   "interaction": null,
   "effective_date": "2025-08-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "G.L. c. 186 § 15B",
@@ -2071,14 +2503,16 @@
     "op": "describes",
     "value": "person finding dwelling accommodations for prospective tenants for a fee",
     "text": "Applies to charging a fee for finding dwelling accommodations for prospective tenants.",
-    "quote": "No person shall engage in the business of finding dwelling accommodations for prospective tenants for a fee unless such person is a licensed broker or salesman as defined in section eighty-seven PP of chapter one hundred and twelve."
+    "quote": "No person shall engage in the business of finding dwelling accommodations for prospective tenants for a fee unless such person is a licensed broker or salesman as defined in section eighty-seven PP of chapter one hundred and twelve.",
+    "role": "not_condition"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "rental residential real property",
     "text": "Applies to contracts to find rental residential real property for a tenant or to find a tenant for a property.",
-    "quote": "A licensed broker or salesperson may solely contract with a prospective tenant to find rental residential real property for a tenant and present an offer to lease to the landlord or landlord's agent and negotiate on behalf of the tenant or may solely contract with a landlord or landlord's agent to find a tenant for a property."
+    "quote": "A licensed broker or salesperson may solely contract with a prospective tenant to find rental residential real property for a tenant and present an offer to lease to the landlord or landlord's agent and negotiate on behalf of the tenant or may solely contract with a landlord or landlord's agent to find a tenant for a property.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [],
@@ -2088,6 +2522,7 @@
   "interaction": null,
   "effective_date": "2025-08-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "G.L. c. 112 § 87DDD½",
@@ -2136,7 +2571,8 @@
     "value": "residential real property",
     "text": "Applies to residential tenancies.",
     "quote": "No lease relating to residential real property shall contain a provision",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    },
    {
     "fact": "other",
@@ -2144,7 +2580,8 @@
     "value": "at or prior to commencement of tenancy",
     "text": "Applies to amounts required at or before tenancy commencement.",
     "quote": "At or prior to the commencement of any tenancy, no lessor or agent of the lessor may require a tenant or prospective tenant to pay, to the lessor or to an agent of the lessor, any amount in excess of the following:",
-    "group": 1
+    "group": 1,
+    "role": "not_condition"
    }
   ],
   "exemptions_ir": [
@@ -2153,7 +2590,8 @@
     "op": "describes",
     "value": "vacation or recreational lease of 100 days or less",
     "text": "Does not apply to vacation or recreational occupancies of 100 days or less.",
-    "quote": "The provisions of this section shall not apply to any lease, rental, occupancy or tenancy of one hundred days or less in duration which lease or rental is for a vacation or recreational purpose."
+    "quote": "The provisions of this section shall not apply to any lease, rental, occupancy or tenancy of one hundred days or less in duration which lease or rental is for a vacation or recreational purpose.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to residential tenancies.; Applies to amounts required at or before tenancy commencement.",
@@ -2162,6 +2600,7 @@
   "interaction": null,
   "effective_date": "2025-08-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "G.L. c. 186 § 15B",
@@ -2211,6 +2650,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "G.L. c. 151B § 4",
@@ -2270,6 +2710,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "S.2983",
@@ -2319,6 +2760,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "H.5222",
@@ -2366,7 +2808,8 @@
     "op": "describes",
     "value": "eviction for nonpayment of increased rent",
     "text": "Applies when a landlord seeks eviction based on a tenant's failure to pay an increased rent.",
-    "quote": "If a tenant fails to pay rent after being given notice of a rent increase and a Notice to Quit, the landlord may file a suit for eviction."
+    "quote": "If a tenant fails to pay rent after being given notice of a rent increase and a Notice to Quit, the landlord may file a suit for eviction.",
+    "role": "not_condition"
    }
   ],
   "exemptions_ir": [],
@@ -2380,6 +2823,7 @@
   "interaction": "yields to NEW-RENT-01 where that rule covers the unit",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "N.J.S.A. 2A:18-61.1",
@@ -2414,71 +2858,6 @@
  {
   "jurisdiction": "NJ",
   "level": "state",
-  "category": "rent_increase_limits",
-  "status": "in_force",
-  "status_certainty": "date_unknown",
-  "legal_stage": "enacted",
-  "title": "Newly Constructed Multiple Dwellings Law exempts new multifamily buildings from local rent control for 30 years",
-  "requirement": "Newly constructed multiple dwellings are exempt from any local rent control ordinance for 30 years after construction is completed. New Jersey otherwise has no statewide rent-control cap in these documents; local rent control may exist by municipal ordinance.",
-  "key_value": "30-year exemption",
-  "coverage_conditions_ir": [
-   {
-    "fact": "building_type",
-    "op": "describes",
-    "value": "multiple dwelling",
-    "text": "Applies to newly constructed multiple dwellings.",
-    "quote": "Under the Newly Constructed Multiple Dwellings Law ( N.J.S.A. 2A:42 -84.5), newly constructed multiple dwellings shall be exempt from any local rent control ordinances for a period of 30 years following completion of construction of the building."
-   }
-  ],
-  "exemptions_ir": [
-   {
-    "fact": "other",
-    "op": "describes",
-    "value": "government-subsidized rents",
-    "text": "Government-subsidized rents may also be exempt from local rent control ordinances.",
-    "quote": "Rent s that are subsidized by governmental funding may also be exempt from local rent control ordinances."
-   }
-  ],
-  "coverage_conditions": "Applies to newly constructed multiple dwellings.",
-  "exemptions": "Government-subsidized rents may also be exempt from local rent control ordinances.",
-  "overrides": [],
-  "interaction": "The State of New Jersey has no laws that establish, govern or control rents. Municipalities may pass an ordinance establishing rent control or rent leveling.",
-  "effective_date": null,
-  "effective_date_provenance": "missing",
-  "effective_date_note": "effective date not stated in the documents",
-  "sunset_date": null,
-  "citation": "N.J.S.A. 2A:42-84.5",
-  "raw_citation": "N.J.S.A. 2A:42-84.5",
-  "citation_kind": "state_code",
-  "source_doc_id": "D067",
-  "source_url": "https://www.nj.gov/dca/codes/publications/pdf_lti/t_i_r.pdf",
-  "retrieved_at": "2026-10-01T22:37Z",
-  "source_origin": "official_corpus",
-  "quoted_span": "Under the Newly Constructed Multiple Dwellings Law ( N.J.S.A. 2A:42 -84.5), newly \nconstructed multiple dwellings shall be exempt from any local rent control ordinances for a period \nof 30 years following completion of construction of the building.",
-  "quoted_span_single_line": "constructed multiple dwellings shall be exempt from any local rent control ordinances for a period",
-  "quote_match": "ws_normalized",
-  "penalty": null,
-  "confidence": 0.72,
-  "other_dates": [],
-  "conflict_flag": true,
-  "conflict_note": "For newly constructed multiple dwellings during the 30-year exemption period, state law bars application of Hoboken's local rent control ordinance. Outside that exempt class, this state rule does not displace the city rule. | For newly constructed multiple dwellings during the 30-year exemption period, state law overrides application of Jersey City's rent control ordinance. Because the city rule text provided does not specify this exemption, the pair presents a state-local conflict/preemption for that subset of units. | For newly constructed multiple dwellings during the 30-year exemption, state law displaces Newark rent control; for other units, Newark's ordinance can apply. Marked possible_conflict because the state creates a coverage-based exemption from the local rule, but no effective date is provided in the record.",
-  "_extraction": {
-   "llm_key": "479c5d2ddd954fab5756909c",
-   "model": "gpt-5.4",
-   "prompt_version": "x4"
-  },
-  "team_rule_id": "NJ-RENT-02",
-  "key_value_long": "30-year exemption from local rent control",
-  "refined": {
-   "key_value": [
-    "30-year exemption from local rent control",
-    "30-year exemption"
-   ]
-  }
- },
- {
-  "jurisdiction": "NJ",
-  "level": "state",
   "category": "just_cause_eviction",
   "status": "in_force",
   "status_certainty": "date_unknown",
@@ -2492,7 +2871,26 @@
     "op": "describes",
     "value": "most residential rental properties including single-family homes, mobile homes and land in a mobile home park, apartment buildings, and complexes; also rooming and boarding homes",
     "text": "Applies to most residential rental properties, including single-family homes, mobile homes and land in a mobile home park, apartment buildings and complexes, and rooming and boarding homes.",
-    "quote": "The Anti-Eviction Act applies to most residential rental properties including single-family homes, mobile homes and land in a mobile home park, apartment buildings, and complexes. This law also applies to rooming and boarding homes (N.J.S.A. 2A:18-53 to -84)."
+    "quote": "The Anti-Eviction Act applies to most residential rental properties including single-family homes, mobile homes and land in a mobile home park, apartment buildings, and complexes. This law also applies to rooming and boarding homes (N.J.S.A. 2A:18-53 to -84).",
+    "role": "scope"
+   },
+   {
+    "fact": "units",
+    "op": "ge",
+    "value": -3.0,
+    "text": "Applies to two- and three-family dwellings.",
+    "quote": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when a court issues an order for eviction.",
+    "group": "mNJ-JC-02-in_139794490346880",
+    "role": "scope"
+   },
+   {
+    "fact": "units",
+    "op": "le",
+    "value": 2.0,
+    "text": "Applies to two- and three-family dwellings.",
+    "quote": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when a court issues an order for eviction.",
+    "group": "mNJ-JC-02-in_139794490346880",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -2501,21 +2899,24 @@
     "op": "is_true",
     "value": null,
     "text": "May not apply to owner-occupied premises with two or three units and two or fewer rental units.",
-    "quote": "This law may not apply to two- or three-unit owner-occupied premises with two (2) or fewer rental units."
+    "quote": "This law may not apply to two- or three-unit owner-occupied premises with two (2) or fewer rental units.",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "value": "hotel, motel, or guest house transient or seasonal occupancy",
     "text": "Does not apply to hotel guests, motel guests, or guest houses rented to transient guests or seasonal tenants, except some continual hotel/motel occupants.",
-    "quote": "It does not apply to hotel guests, motel guests, or guest houses rented to a transient guest or seasonal tenant. However, hotel and motel guests are covered under this law if, the occupant has no alternate residence and resides at the hotel or motel on a continual basis."
+    "quote": "It does not apply to hotel guests, motel guests, or guest houses rented to a transient guest or seasonal tenant. However, hotel and motel guests are covered under this law if, the occupant has no alternate residence and resides at the hotel or motel on a continual basis.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "unit held in trust for developmentally disabled immediate family member permanently occupying unit",
     "text": "Does not apply to a unit held in trust on behalf of an immediate family member who is developmentally disabled and permanently occupies the unit.",
-    "quote": "Additionally, this law does not apply to a unit held in trust on behalf of a member of the immediate family, if that family member is developmentally disabled, and permanently occupies the dwelling unit."
+    "quote": "Additionally, this law does not apply to a unit held in trust on behalf of a member of the immediate family, if that family member is developmentally disabled, and permanently occupies the dwelling unit.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to most residential rental properties, including single-family homes, mobile homes and land in a mobile home park, apartment buildings and complexes, and rooming and boarding homes.",
@@ -2524,6 +2925,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "N.J.S.A. 2A:18-61.1",
@@ -2553,80 +2955,11 @@
     "Eviction only for statutory good cause; notice ranges from none for nonpayment to 3 days, 1 month, 3 months, 18 months, or 3 years depending on cause",
     "Good cause only"
    ]
-  }
- },
- {
-  "jurisdiction": "NJ",
-  "level": "state",
-  "category": "just_cause_eviction",
-  "status": "in_force",
-  "status_certainty": "date_unknown",
-  "legal_stage": "enacted",
-  "title": "Owner-occupied two- and three-family dwelling eviction rules",
-  "requirement": "For landlord-occupied two- and three-family dwellings, tenants can be removed only by court order, but the Anti-Eviction Act's broader protections may not apply; the landlord must prove specified grounds such as lease expiration, nonpayment, disorderly conduct, damage, repeated rule violations, or lease violations. Notice periods differ by tenancy type and cause.",
-  "key_value": "Court order; notice varies",
-  "coverage_conditions_ir": [
-   {
-    "fact": "owner_occupied",
-    "op": "is_true",
-    "value": null,
-    "text": "Applies to landlord-occupied two- and three-family dwellings.",
-    "quote": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when a court issues an order for eviction."
-   },
-   {
-    "fact": "units",
-    "op": "ge",
-    "value": -3.0,
-    "text": "Applies to two- and three-family dwellings.",
-    "quote": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when a court issues an order for eviction.",
-    "group": "in_140521527704960"
-   },
-   {
-    "fact": "units",
-    "op": "le",
-    "value": 2.0,
-    "text": "Applies to two- and three-family dwellings.",
-    "quote": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when a court issues an order for eviction.",
-    "group": "in_140521527704960"
-   }
-  ],
-  "exemptions_ir": [],
-  "coverage_conditions": "Applies to landlord-occupied two- and three-family dwellings.; Applies to two- and three-family dwellings.",
-  "exemptions": null,
-  "overrides": [],
-  "interaction": "This law may not apply to two- or three-unit owner-occupied premises with two (2) or fewer rental units.",
-  "effective_date": null,
-  "effective_date_provenance": "missing",
-  "effective_date_note": "effective date not stated in the documents",
-  "sunset_date": null,
-  "citation": "N.J.S.A. 2A:18-61.2",
-  "raw_citation": "N.J.S.A. 2A:18-61.2(a)",
-  "citation_kind": "state_code",
-  "source_doc_id": "D067",
-  "source_url": "https://www.nj.gov/dca/codes/publications/pdf_lti/t_i_r.pdf",
-  "retrieved_at": "2026-10-01T22:37Z",
-  "source_origin": "official_corpus",
-  "quoted_span": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when \na court issues an order for eviction.",
-  "quoted_span_single_line": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when",
-  "quote_match": "ws_normalized",
-  "penalty": null,
-  "confidence": 0.82,
-  "other_dates": [],
-  "conflict_flag": false,
-  "conflict_note": null,
-  "_extraction": {
-   "llm_key": "71121b872e272cc7b3e683c6",
-   "model": "gpt-5.4",
-   "prompt_version": "x4"
   },
-  "team_rule_id": "NJ-JC-02",
-  "key_value_long": "Court order required; notice generally 3 months for at-will/year-to-year, 1 month for month-to-month, and 3 days for disorderly/destructive/rule or lease violations; no further notice for nonpayment",
-  "refined": {
-   "key_value": [
-    "Court order required; notice generally 3 months for at-will/year-to-year, 1 month for month-to-month, and 3 days for disorderly/destructive/rule or lease violations; no further notice for nonpayment",
-    "Court order; notice varies"
-   ]
-  }
+  "merged_conditions_from": [
+   "NJ-JC-02",
+   "NJ-JC-02"
+  ]
  },
  {
   "jurisdiction": "NJ",
@@ -2644,7 +2977,8 @@
     "op": "describes",
     "value": "residential rental properties",
     "text": "Applies to most residential rental properties, including mobile homes.",
-    "quote": "The Security Deposit Law applies to most residential rental properties, including mobile homes."
+    "quote": "The Security Deposit Law applies to most residential rental properties, including mobile homes.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -2654,7 +2988,8 @@
     "value": null,
     "text": "Owner-occupied dwelling.",
     "quote": "The exception is an owner-occupied two-, or three-family dwelling.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "units",
@@ -2662,7 +2997,8 @@
     "value": 2.0,
     "text": "Owner-occupied two- or three-family dwelling.",
     "quote": "The exception is an owner-occupied two-, or three-family dwelling.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "units",
@@ -2670,7 +3006,8 @@
     "value": 3.0,
     "text": "Owner-occupied two- or three-family dwelling.",
     "quote": "The exception is an owner-occupied two-, or three-family dwelling.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to most residential rental properties, including mobile homes.",
@@ -2679,6 +3016,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "N.J.S.A. 46:8-21.2",
@@ -2726,23 +3064,31 @@
     "op": "describes",
     "value": "residential rental property for dwelling purposes",
     "text": "Applies to applications to lease or sublease residential rental property for dwelling purposes.",
-    "quote": "A landlord, or agent thereof, shall not require an application or other similar fee to apply to lease or sublease a residential rental property for dwelling purposes, which exceeds $50."
+    "quote": "A landlord, or agent thereof, shall not require an application or other similar fee to apply to lease or sublease a residential rental property for dwelling purposes, which exceeds $50.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
    {
-    "fact": "building_type",
-    "op": "describes",
-    "value": "dwelling unit in a one-family or two-family dwelling offered for rent",
+    "fact": "units",
+    "op": "le",
+    "value": 2,
     "text": "Does not apply to a dwelling unit in a one-family or two-family dwelling offered for rent.",
-    "quote": "The requirements of subsection a. of this section shall not apply to:\n(1) a dwelling unit\nlocated in a one-family or two-family dwelling that is offered for rent;"
+    "quote": "The requirements of subsection a. of this section shall not apply to:\n(1) a dwelling unit\nlocated in a one-family or two-family dwelling that is offered for rent;",
+    "role": "exemption",
+    "original": {
+     "fact": "building_type",
+     "op": "describes",
+     "value": "dwelling unit in a one-family or two-family dwelling offered for rent"
+    }
    },
    {
     "fact": "owner_type",
     "op": "describes",
     "value": "licensee of the New Jersey Real Estate Commission, unless the licensee is the landlord",
     "text": "Does not apply to a New Jersey Real Estate Commission licensee unless the licensee is the landlord.",
-    "quote": "The requirements of subsection a. of this section shall not apply to:\n(2)  a licensee of the New Jersey Real Estate\nCommission, unless the licensee is the landlord of the residential rental\nproperty."
+    "quote": "The requirements of subsection a. of this section shall not apply to:\n(2)  a licensee of the New Jersey Real Estate\nCommission, unless the licensee is the landlord of the residential rental\nproperty.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to applications to lease or sublease residential rental property for dwelling purposes.",
@@ -2751,6 +3097,7 @@
   "interaction": null,
   "effective_date": "2026-05-01",
   "effective_date_provenance": "computed_from_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": "first day of month 4 following enactment 2026-01-20",
   "sunset_date": null,
   "citation": "N.J.S.A. 46:8-18.1",
@@ -2805,7 +3152,8 @@
     "op": "describes",
     "value": "rental dwelling unit",
     "text": "Applies to rental dwelling units offered for rent for residential purposes.",
-    "quote": "“Rental dwelling unit” means a dwelling unit offered\nfor rent by a housing provider for residential purposes,\nother than a dwelling unit in an\nowner-occupied premises of not more than four dwelling units."
+    "quote": "“Rental dwelling unit” means a dwelling unit offered\nfor rent by a housing provider for residential purposes,\nother than a dwelling unit in an\nowner-occupied premises of not more than four dwelling units.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -2815,7 +3163,8 @@
     "value": null,
     "text": "Owner-occupied premises are excluded when they have not more than four dwelling units.",
     "quote": "“Rental dwelling unit” means a dwelling unit offered\nfor rent by a housing provider for residential purposes,\nother than a dwelling unit in an\nowner-occupied premises of not more than four dwelling units.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "units",
@@ -2823,7 +3172,8 @@
     "value": 4,
     "text": "Owner-occupied premises with not more than four dwelling units are excluded.",
     "quote": "“Rental dwelling unit” means a dwelling unit offered\nfor rent by a housing provider for residential purposes,\nother than a dwelling unit in an\nowner-occupied premises of not more than four dwelling units.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to rental dwelling units offered for rent for residential purposes.",
@@ -2832,6 +3182,7 @@
   "interaction": "e.     Nothing herein contained shall bar, exclude or\notherwise affect any right or action which may exist independently of any right\nor action created herein, including but not limited to any right or action\nunder P.L.1945, c.169 (C.10:5-1 et seq.).",
   "effective_date": "2022-01-01",
   "effective_date_provenance": "computed_from_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": "first day of month 7 following enactment 2021-06-18",
   "sunset_date": null,
   "citation": "N.J.S.A. 46:8-52",
@@ -2894,7 +3245,8 @@
     "op": "describes",
     "value": "sale or rental of all property including open land, whether for business or residential purposes",
     "text": "Applies broadly to sale or rental of property, including residential rentals, subject to stated exceptions.",
-    "quote": "The provisions of the LAD apply to the sale or rental of all\nproperty including open land, whether for business or\nresidential purposes, with the following exceptions:"
+    "quote": "The provisions of the LAD apply to the sale or rental of all\nproperty including open land, whether for business or\nresidential purposes, with the following exceptions:",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -2903,7 +3255,8 @@
     "op": "is_true",
     "value": null,
     "text": "Exception for rental of a single apartment or flat in an owner-occupied two-family dwelling.",
-    "quote": "• The rental of a single apartment or flat in a two-family\ndwelling, the other occupancy unit of which is occupied\nby the owner as his/her residence at the time of such\nrentals;"
+    "quote": "• The rental of a single apartment or flat in a two-family\ndwelling, the other occupancy unit of which is occupied\nby the owner as his/her residence at the time of such\nrentals;",
+    "role": "exemption"
    },
    {
     "fact": "units",
@@ -2911,14 +3264,16 @@
     "value": 2,
     "text": "Exception for a single apartment or flat in a two-family dwelling occupied by the owner in the other unit.",
     "quote": "• The rental of a single apartment or flat in a two-family\ndwelling, the other occupancy unit of which is occupied\nby the owner as his/her residence at the time of such\nrentals;",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
     "op": "is_true",
     "value": null,
     "text": "Exception for rental of room or rooms in an owner-occupied one-family dwelling.",
-    "quote": "• The rental of a room or rooms to another person or\npersons by the owner or occupant of a one-family\ndwelling occupied by him/her as his/her residence at\nthe time of such rental;"
+    "quote": "• The rental of a room or rooms to another person or\npersons by the owner or occupant of a one-family\ndwelling occupied by him/her as his/her residence at\nthe time of such rental;",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -2926,21 +3281,29 @@
     "value": "room or rooms in owner-occupied one-family dwelling",
     "text": "Exception for room rentals in an owner-occupied one-family dwelling.",
     "quote": "• The rental of a room or rooms to another person or\npersons by the owner or occupant of a one-family\ndwelling occupied by him/her as his/her residence at\nthe time of such rental;",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "religious organization preference",
     "text": "Exception for preference given to persons of the same religion by a religious organization in sale, lease, or rental of real property.",
-    "quote": "• In the sale, lease or rental of real property, preference\ngiven to persons of the same religion by a religious\norganization;"
+    "quote": "• In the sale, lease or rental of real property, preference\ngiven to persons of the same religion by a religious\norganization;",
+    "role": "exemption"
    },
    {
-    "fact": "other",
+    "fact": "subsidized_or_affordable",
     "op": "describes",
     "value": "housing for older persons familial-status exception",
     "text": "Familial-status prohibition does not apply to housing for older persons.",
-    "quote": "• The prohibition against discrimination on the basis of\nfamilial status does not apply to housing for older\npersons (as defined in the LAD at N.J.S.A. 10:5-5mm)."
+    "quote": "• The prohibition against discrimination on the basis of\nfamilial status does not apply to housing for older\npersons (as defined in the LAD at N.J.S.A. 10:5-5mm).",
+    "role": "not_condition",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": "housing for older persons familial-status exception"
+    }
    }
   ],
   "coverage_conditions": "Applies broadly to sale or rental of property, including residential rentals, subject to stated exceptions.",
@@ -2949,6 +3312,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "N.J.S.A. 10:5-12",
@@ -2997,15 +3361,22 @@
     "value": "residential dwelling unit",
     "text": "Applies to houses, apartments, accessory units, or other units intended to be used as a primary residence in New Jersey.",
     "quote": "“Residential dwelling unit” means any house, apartment,\naccessory unit, or other unit intended to be used as a primary residence in the\nState.",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    },
    {
-    "fact": "other",
+    "fact": "owner_type",
     "op": "describes",
     "value": "rental property owner",
     "text": "Applies to rental property owners that own, directly or indirectly, one or more rental residential dwelling units.",
     "quote": "“Rental\nproperty owner” means a person that owns, directly or indirectly, one or more\nrental residential dwelling units.",
-    "group": 1
+    "group": 1,
+    "role": "scope",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": "rental property owner"
+    }
    }
   ],
   "exemptions_ir": [
@@ -3014,21 +3385,24 @@
     "op": "describes",
     "value": "not residential dwelling unit",
     "text": "Does not cover inpatient medical care, licensed long-term care, or detention or correctional facilities.",
-    "quote": "“Residential dwelling unit” shall not include inpatient medical care,\nlicensed long-term care, or detention or correctional facilities."
+    "quote": "“Residential dwelling unit” shall not include inpatient medical care,\nlicensed long-term care, or detention or correctional facilities.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "excluded algorithmic tools",
     "text": "Does not include certain spreadsheets without AI that require human analysis, or databases that only query unprocessed stored data.",
-    "quote": "An algorithmic\ndevice does not include: (1) a spreadsheet that (a) operates without artificial\nintelligence and (b) requires human analysis to process or otherwise perform\ncalculations of data; or (2) a database that only uses an algorithm to query\nunprocessed data stored on or within that database\n."
+    "quote": "An algorithmic\ndevice does not include: (1) a spreadsheet that (a) operates without artificial\nintelligence and (b) requires human analysis to process or otherwise perform\ncalculations of data; or (2) a database that only uses an algorithm to query\nunprocessed data stored on or within that database\n.",
+    "role": "not_condition"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "excluded coordinating functions",
     "text": "Certain research, public rent estimates, equal-access listing databases, and government affordability controls are excluded from the definition of coordinating function.",
-    "quote": "“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law."
+    "quote": "“Coordinating function” shall not include the following:\n(1)\nproviding, using, or collecting competitively sensitive\ninformation solely for the purpose of conducting\nresearch, statistical analysis, or testing, where the competitively\nsensitive information is not used in setting or recommending rental prices,\nmaterial lease terms, fees, occupancy rates or levels, or other contract terms\nfor current or future leases;\n(2)\ndeveloping an estimated amount of rent that is\nmade available to the public at no cost;\n(3)\nthe use of a real estate brokerage database that is available on\nequal terms to subscribers that lists properties for rent or sale but does not:\n(a) set or recommend rental prices, material lease\nterms, or occupancy rates or levels; or\n(b) collect competitively sensitive information to set or\nrecommend rental prices, material lease terms, or occupancy rates or levels; or\n(4)   a government entity setting or limiting rents or\nsale prices of residential property through affordability controls in\naccordance with the law.",
+    "role": "not_condition"
    }
   ],
   "coverage_conditions": "Applies to houses, apartments, accessory units, or other units intended to be used as a primary residence in New Jersey.; Applies to rental property owners that own, directly or indirectly, one or more rental residential dwelling units.",
@@ -3037,6 +3411,7 @@
   "interaction": "6.    a.  This act shall not authorize or permit any\nconduct already unlawful pursuant to the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.), or any other law, and shall be construed as in\naddition to that act.\nb.    A municipality shall be prohibited from enacting\nan ordinance that conflicts with this act.  This subsection shall not be\nconstrued to prohibit the enactment of ordinances explicitly authorized or\nrequired by any other law.",
   "effective_date": "2027-07-01",
   "effective_date_provenance": "computed_from_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": "first day of month 12 following approved 2026-07-20",
   "sunset_date": null,
   "citation": "N.J.S.A. 56:9-20",
@@ -3085,7 +3460,8 @@
     "value": "multiple dwellings / housing spaces subject to Chapter 19:2",
     "text": "Applies to housing spaces in multiple dwellings subject to Newark rent control.",
     "quote": "All multiple dwellings, as defined in subsection 19:2-2, are subject to Rent Control pursuant to this Title XIX Rent Control,",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    },
    {
     "fact": "other",
@@ -3093,7 +3469,8 @@
     "value": "lease expiration or periodic tenancy increase",
     "text": "Applies when a landlord seeks an increase at lease expiration or for a periodic tenant.",
     "quote": "At the expiration of a lease or at the termination of the lease of a periodic tenant, no landlord may request or receive an increase greater than the percentage increase in the Consumer Price Index (CPI) from the CPI 15 months prior to the month of the proposed rent increase to the CPI three months prior to the month of the proposed rent increase.",
-    "group": 1
+    "group": 1,
+    "role": "not_condition"
    }
   ],
   "exemptions_ir": [
@@ -3103,7 +3480,8 @@
     "value": "public housing",
     "text": "Public housing is exempt.",
     "quote": "Exempt dwellings include:All public housing;",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -3111,7 +3489,8 @@
     "value": "hotel or motel transient occupancy",
     "text": "Hotel or motel space rented day-to-day to transients is exempt.",
     "quote": "Any motel or hotel space rented on a day-to-day basis to transients;",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -3119,7 +3498,8 @@
     "value": "commercial use",
     "text": "Commercially rented space is exempt.",
     "quote": "Any dwelling, building or structure, or portion thereof, rented for commercial use;",
-    "group": 3
+    "group": 3,
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -3127,7 +3507,8 @@
     "value": "newly constructed multiple dwellings and vacant dwellings as set forth in § 19:2-18.1 and § 19:2-18.2",
     "text": "Newly constructed multiple dwellings and vacant dwellings described in Chapter 19:2 are exempt.",
     "quote": "Newly constructed multiple dwellings and vacant dwellings as set forth in this chapter at Subsections 19:2-18.1 and 19:2-18.2, respectively;",
-    "group": 4
+    "group": 4,
+    "role": "exemption"
    },
    {
     "fact": "subsidized_or_affordable",
@@ -3135,7 +3516,8 @@
     "value": "federally/state rehabilitated units receiving Section 8 or federal vouchers during subsidy/program tenure",
     "text": "Certain federally or state rehabilitated units receiving Section 8 subsidies or federal vouchers are exempt during the subsidy/program tenure.",
     "quote": "Those units which have been rehabilitated by the Federal and State Rental Rehabilitation Programs as administered by the U.S. Department of Housing and Urban Development, the New Jersey Department of Community Affairs or the New Jersey Housing Mortgage Finance Agency and will be receiving Section 8 rent subsidies or Federal housing vouchers. In these units, rents will be allowed to be raised, but will not exceed the fair market rents as established by the United States Department of Housing and Urban Development. These units will be exempt only during the unit's tenure in the Section 8 subsidy or Rental Rehabilitation Program",
-    "group": 5
+    "group": 5,
+    "role": "exemption"
    },
    {
     "fact": "other",
@@ -3143,7 +3525,8 @@
     "value": "government-regulated rent contract that supersedes Newark authority",
     "text": "Units under a governmental rent-regulation contract are exempt while that governmental agency's authority supersedes Newark's authority.",
     "quote": "A contract between a landlord and a governmental agency duly providing for that governmental agency to regulate the amount of rent received by that landlord provided that, if the authority of that governmental agency supersedes the authority of the City of Newark to regulate such rents, then the application of this chapter shall be preempted during the period of governmental agency regulation specified in the contract.",
-    "group": 6
+    "group": 6,
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to housing spaces in multiple dwellings subject to Newark rent control.; Applies when a landlord seeks an increase at lease expiration or for a periodic tenant.",
@@ -3154,6 +3537,7 @@
   "interaction": "supersedes NJ-RENT-01 where it covers the unit",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Newark Code § 19:2-3.1; § 19:2-3.2; § 19:2-3.4",
@@ -3177,7 +3561,7 @@
    }
   ],
   "conflict_flag": true,
-  "conflict_note": "Other published dates: 2017-09-05 (prior enactment/version date, S006) | For newly constructed multiple dwellings during the 30-year exemption, state law displaces Newark rent control; for other units, Newark's ordinance can apply. Marked possible_conflict because the state creates a coverage-based exemption from the local rule, but no effective date is provided in the record.",
+  "conflict_note": "Other published dates: 2017-09-05 (prior enactment/version date, S006)",
   "_extraction": {
    "llm_key": "1d94301bc078bc53a05ed678",
    "model": "gpt-5.4",
@@ -3212,30 +3596,48 @@
   "key_value": "Post-application inquiry only",
   "coverage_conditions_ir": [
    {
-    "fact": "other",
+    "fact": "building_type",
     "op": "describes",
     "value": "rental, lease, or sublease of real property",
     "text": "Applies to rentals, leases, and subleases of real property in Newark.",
     "quote": "In connection with any rental, lease, or sublease of real property,",
-    "group": 1
+    "group": 1,
+    "role": "scope",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": "rental, lease, or sublease of real property"
+    }
    }
   ],
   "exemptions_ir": [
    {
-    "fact": "building_type",
-    "op": "describes",
-    "value": "single apartment or flat in owner-occupied two-family dwelling",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null,
     "text": "Does not apply to rental of a single apartment or flat in an owner-occupied two-family dwelling.",
     "quote": "the provisions of this Article shall not apply to the rental:1. of a single apartment or flat in a two family dwelling, the other occupancy unit of which is occupied by the owner as his/her residence or the household of his/her family at the time of such rental;",
-    "group": 1
+    "group": 1,
+    "role": "exemption",
+    "original": {
+     "fact": "building_type",
+     "op": "describes",
+     "value": "single apartment or flat in owner-occupied two-family dwelling"
+    }
    },
    {
-    "fact": "building_type",
-    "op": "describes",
-    "value": "room or rooms in owner-occupied one-family dwelling",
+    "fact": "owner_occupied",
+    "op": "is_true",
+    "value": null,
     "text": "Does not apply to rental of room or rooms in an owner-occupied one-family dwelling.",
     "quote": "2. of a room or rooms to another person or persons by the owner or occupant of one-family dwelling occupied by him/her as his/her residence or the household of his/her family at the time of such rental.",
-    "group": 2
+    "group": 2,
+    "role": "exemption",
+    "original": {
+     "fact": "building_type",
+     "op": "describes",
+     "value": "room or rooms in owner-occupied one-family dwelling"
+    }
    },
    {
     "fact": "other",
@@ -3243,7 +3645,8 @@
     "value": "federal or state law requires or permits criminal-history consideration",
     "text": "Exempt where federal or state law, regulation, or rule requires or permits criminal-history consideration, limited to those offenses and time periods.",
     "quote": "Where any federal or state law, regulation, or rule requires or permits the consideration of an applicant's criminal history in the rental, lease, or sublease of real property, provided the exemption is limited to those offenses or types of offenses and time periods that federal or state law, regulation, or rule requires or permits the landlord or real estate broker to consider.",
-    "group": 3
+    "group": 3,
+    "role": "exemption"
    },
    {
     "fact": "other",
@@ -3251,7 +3654,8 @@
     "value": "property designated for government program encouraging housing for individuals with criminal histories",
     "text": "Exempt for property designated to participate in a government program designed to encourage housing for individuals with criminal histories.",
     "quote": "To any real property designated by the landlord or real estate broker to participate in a federal, state, or local government program or obligation that is designed to encourage the provision of housing for individuals with criminal histories.",
-    "group": 4
+    "group": 4,
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to rentals, leases, and subleases of real property in Newark.",
@@ -3260,6 +3664,7 @@
   "interaction": "Where any federal or state law, regulation, or rule requires or permits the consideration of an applicant's criminal history in the rental, lease, or sublease of real property, provided the exemption is limited to those offenses or types of offenses and time periods that federal or state law, regulation, or rule requires or permits the landlord or real estate broker to consider.",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "Newark Code ch. 2:31, art. 1 (§§ 2:31-2 through 2:31-9)",
@@ -3308,7 +3713,8 @@
     "value": "residential rental property",
     "text": "Applies to residential rental property and tenancies lasting more than 30 days.",
     "quote": "Residential rental property means any dwelling or unit that is intended for human habitation, including any dwelling or unit in a mobilehome park.",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    },
    {
     "fact": "tenancy_start_date",
@@ -3316,7 +3722,8 @@
     "value": "more than 30 days",
     "text": "Applies to a tenancy, meaning the lawful right to occupy for more than 30 days.",
     "quote": "Tenancy means the lawful right or entitlement of a tenant to continuously use or occupy a residential rental property for more than 30 days.",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -3324,44 +3731,51 @@
     "fact": "building_type",
     "op": "describes",
     "text": "Transient and tourist hotel occupancy is exempt.",
-    "quote": "(a) transient and tourist hotel occupancy as defined in California Civil Code \nsection 1940(b), as may be amended;"
+    "quote": "(a) transient and tourist hotel occupancy as defined in California Civil Code \nsection 1940(b), as may be amended;",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Short-term residential occupancy is exempt.",
-    "quote": "(b) short-term residential occupancy, as defined in and subject to Chapter 5, \nArticle 10, Division 1 of this Code, as may be amended;"
+    "quote": "(b) short-term residential occupancy, as defined in and subject to Chapter 5, \nArticle 10, Division 1 of this Code, as may be amended;",
+    "role": "exemption"
    },
    {
     "fact": "subsidized_or_affordable",
     "op": "is_true",
     "value": null,
     "text": "Deed-restricted affordable housing is exempt.",
-    "quote": "(c) housing restricted by deed, regulatory restriction contained in an agreement \nwith a government agency, or other document as affordable housing for \npersons and families of very low, low, or moderate income, as defined in \nCalifornia Health and Safety Code section 50093, as may be amended;"
+    "quote": "(c) housing restricted by deed, regulatory restriction contained in an agreement \nwith a government agency, or other document as affordable housing for \npersons and families of very low, low, or moderate income, as defined in \nCalifornia Health and Safety Code section 50093, as may be amended;",
+    "role": "exemption"
    },
    {
     "fact": "subsidized_or_affordable",
     "op": "describes",
     "text": "Housing subject to an affordable-housing subsidy agreement is exempt, except Section 8.",
-    "quote": "(d)  housing subject to an agreement that provides housing subsidies for affordable \nhousing for persons and families of very low, low, or moderate income, as \ndefined in California Health and Safety Code section 50093, as may be \namended, or comparable federal statutes. This exemption shall not include \nSection 8;"
+    "quote": "(d)  housing subject to an agreement that provides housing subsidies for affordable \nhousing for persons and families of very low, low, or moderate income, as \ndefined in California Health and Safety Code section 50093, as may be \namended, or comparable federal statutes. This exemption shall not include \nSection 8;",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Mobilehomes subject to the Mobilehome Residency Law are exempt.",
-    "quote": "(e) mobilehomes subject to the Mobilehome Residency Law (California Civil \nCode sections 798-799.11), as may be amended;"
+    "quote": "(e) mobilehomes subject to the Mobilehome Residency Law (California Civil \nCode sections 798-799.11), as may be amended;",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Specified institutional and nonprofit transitional housing is exempt.",
-    "quote": "(f) housing accommodations in a nonprofit hospital, religious facility, extended \ncare facility, licensed residential care facility for the elderly, as defined in \nCalifornia Health and Safety Code section 1569.2, as may be amended, an \nadult residential facility, as defined in Title 22, Division 6, Chapter 6 of the \nManual of Policies and Procedures published by the California Department of \nSocial Services, as may be amended, or non- profit transitional housing;"
+    "quote": "(f) housing accommodations in a nonprofit hospital, religious facility, extended \ncare facility, licensed residential care facility for the elderly, as defined in \nCalifornia Health and Safety Code section 1569.2, as may be amended, an \nadult residential facility, as defined in Title 22, Division 6, Chapter 6 of the \nManual of Policies and Procedures published by the California Department of \nSocial Services, as may be amended, or non- profit transitional housing;",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Dormitories owned and operated by educational institutions are exempt.",
-    "quote": "(g) dormitories owned and operated by an institution of higher education or an \ninstitution offering instruction to any grade from kindergarten through 12;"
+    "quote": "(g) dormitories owned and operated by an institution of higher education or an \ninstitution offering instruction to any grade from kindergarten through 12;",
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
@@ -3369,14 +3783,16 @@
     "value": null,
     "text": "Property where tenant shares bathroom or kitchen with landlord who lives there is exempt.",
     "quote": "(h) residential rental property in which the tenant shares bathroom or kitchen \nfacilities with the landlord who maintains their principal residence at the \nresidential rental property;",
-    "group": "owner_small"
+    "group": "owner_small",
+    "role": "exemption"
    },
    {
     "fact": "owner_occupied",
     "op": "is_true",
     "value": null,
     "text": "Owner-occupied single-family residence with limited rented bedrooms/ADUs/JADUs or a mobilehome is exempt.",
-    "quote": "(i) single-family residence occupied by the landlord as the landlord’s principal \nplace of residence, including both of the following:  \n\n(1) a residence in which the landlord-occupant rents or leases no more \nthan two bedrooms, two accessory dwelling units, or two junior \naccessory dwelling units, as defined in section 113.0103; and  \n\n(2) a mobilehome."
+    "quote": "(i) single-family residence occupied by the landlord as the landlord’s principal \nplace of residence, including both of the following:  \n\n(1) a residence in which the landlord-occupant rents or leases no more \nthan two bedrooms, two accessory dwelling units, or two junior \naccessory dwelling units, as defined in section 113.0103; and  \n\n(2) a mobilehome.",
+    "role": "exemption"
    },
    {
     "fact": "units",
@@ -3384,34 +3800,39 @@
     "value": 2,
     "text": "A two-unit single structure where landlord occupies one unit as principal residence at the beginning of tenancy and continues in occupancy is exempt.",
     "quote": "(j) a property containing two separate dwelling units within a single structure in \nwhich the landlord occupies one of the dwelling units as the landlord’s \nprincipal place of residence at the beginning of the tenancy, so long as the \nlandlord continues in occupancy;",
-    "group": "owner_small"
+    "group": "owner_small",
+    "role": "exemption"
    },
    {
     "fact": "certificate_of_occupancy_date",
     "op": "describes",
     "text": "Housing issued a certificate of occupancy within the previous 15 years is exempt unless it is a mobilehome.",
-    "quote": "(k) housing that has been issued a certificate of occupancy within the previous \n15 years, unless the housing is a mobilehome;"
+    "quote": "(k) housing that has been issued a certificate of occupancy within the previous \n15 years, unless the housing is a mobilehome;",
+    "role": "exemption"
    },
    {
     "fact": "building_type",
     "op": "describes",
     "text": "Separately alienable residential rental property is exempt if the landlord is not a REIT, corporation, certain LLC, or mobilehome park management and the tenant receives the required written notice of exemption.",
     "quote": "(l) residential rental property, including a mobilehome, that is alienable separate \nfrom the title to any other dwelling unit, provided that both of the following \napply:",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "owner_type",
     "op": "describes",
     "text": "For the separately alienable property exemption, the landlord must not be a REIT, corporation, LLC with a corporate member, or mobilehome park management.",
     "quote": "(1) The landlord is not any of the following:\n(A) a real estate investment trust, as defined in California Internal \nRevenue Code section 856, as may be amended;\n(B) a corporation;\n(C) a limited liability company in which at least one member is a \ncorporation; or  \n\n(D) management of a mobilehome park, as defined in California \nCivil Code section 798.2, as may be amended.",
-    "group": 2
+    "group": 2,
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "For the separately alienable property exemption, tenants must receive the required written exemption notice.",
     "quote": "(2) The tenants have been provided written notice that the residential \nrental property is exempt from this Division using the following \nstatement:",
-    "group": 2
+    "group": 2,
+    "role": "not_condition"
    }
   ],
   "coverage_conditions": "Applies to residential rental property and tenancies lasting more than 30 days.; Applies to a tenancy, meaning the lawful right to occupy for more than 30 days.",
@@ -3422,6 +3843,7 @@
   "interaction": "supersedes CA-JC-01 where it covers the unit",
   "effective_date": "2023-06-24",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "San Diego Municipal Code §§ 98.0703-98.0710",
@@ -3478,14 +3900,22 @@
     "value": null,
     "text": "Owner or family member resides in the same residential building as the tenant",
     "quote": "Nothing in this Division shall apply to any tenancy in which the owner or any\n               member of his or her family resides within the same residential building as the\n               tenant and the owner or family member share a bathroom or a kitchen facility with\n               the tenant or prospective tenant.",
-    "group": 1
+    "group": 1,
+    "role": "exemption"
    },
    {
-    "fact": "other",
-    "op": "describes",
+    "fact": "owner_occupied",
+    "op": "is_true",
     "text": "Owner or family member shares a bathroom or kitchen facility with the tenant or prospective tenant",
     "quote": "Nothing in this Division shall apply to any tenancy in which the owner or any\n               member of his or her family resides within the same residential building as the\n               tenant and the owner or family member share a bathroom or a kitchen facility with\n               the tenant or prospective tenant.",
-    "group": 1
+    "group": 1,
+    "role": "exemption",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": null
+    },
+    "value": null
    }
   ],
   "coverage_conditions": null,
@@ -3494,6 +3924,7 @@
   "interaction": "Nothing in this Division shall be deemed to permit a transaction in real property\n               that is otherwise prohibited by any applicable law.",
   "effective_date": "2018-10-18",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "San Diego Municipal Code §§ 98.0801-98.0806",
@@ -3549,7 +3980,8 @@
     "value": "residential rental property",
     "text": "Applies to residential rental property in the City of San Diego.",
     "quote": "Residential rental property has the same meaning as in San Diego Municipal Code section 98.0702, as may be amended.",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    },
    {
     "fact": "other",
@@ -3557,7 +3989,8 @@
     "value": "algorithmic device using nonpublic competitor data of two or more landlords",
     "text": "Covered software must use or incorporate algorithms to perform calculations of nonpublic competitor data of two or more landlords to advise or recommend rental rates or occupancy levels.",
     "quote": "Algorithmic device means a software or product that uses or incorporates one or more\n               algorithms to perform calculations of nonpublic competitor data of two or more\n               landlords to advise a landlord on, or recommend to a landlord, rental rates or\n               occupancy levels that may be achieved for a residential rental property in the City of\n               San Diego.",
-    "group": 1
+    "group": 1,
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -3566,21 +3999,24 @@
     "op": "describes",
     "value": "historical aggregated reporting tool",
     "text": "Excluded are tools that publish reports from aggregated historical nonpublic competitor data more than 90 days old or public information and do not recommend future rental rates or occupancy levels.",
-    "quote": "(a)    A software or product used by a person to publish reports regarding rental\n                      rates or occupancy levels from aggregated historical nonpublic competitor\n                      data that is more than 90 days old, or from information available to the\n                      general public, and does not recommend rental rates or occupancy levels for\n                      future residential rental property leases or renewals."
+    "quote": "(a)    A software or product used by a person to publish reports regarding rental\n                      rates or occupancy levels from aggregated historical nonpublic competitor\n                      data that is more than 90 days old, or from information available to the\n                      general public, and does not recommend rental rates or occupancy levels for\n                      future residential rental property leases or renewals.",
+    "role": "exemption"
    },
    {
     "fact": "subsidized_or_affordable",
     "op": "is_true",
     "value": null,
     "text": "Excluded are tools used to establish rental rates or income limits under local, state, or federal affordable housing program guidelines.",
-    "quote": "(b)    A software or product used by a person to establish rental rates or income\n                      limits in accordance with local, state, or federal affordable housing program\n                      guidelines."
+    "quote": "(b)    A software or product used by a person to establish rental rates or income\n                      limits in accordance with local, state, or federal affordable housing program\n                      guidelines.",
+    "role": "exemption"
    },
    {
     "fact": "other",
     "op": "describes",
     "value": "appraisal software without runtime rent recommendations",
     "text": "Excluded are appraisal tools that do not recommend rental rates during runtime operation.",
-    "quote": "(c)    A software or product used by a person conducting an appraisal that does not\n                      recommend rental rates during the runtime operation of the software or\n                      product."
+    "quote": "(c)    A software or product used by a person conducting an appraisal that does not\n                      recommend rental rates during the runtime operation of the software or\n                      product.",
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to residential rental property in the City of San Diego.; Covered software must use or incorporate algorithms to perform calculations of nonpublic competitor data of two or more landlords to advise or recommend rental rates or occupancy levels.",
@@ -3589,6 +4025,7 @@
   "interaction": "(b)    The remedies under section 98.1104 are cumulative and are in addition to any\n                      other remedies in this Division or at law, statute, or ordinance.",
   "effective_date": "2025-06-21",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "San Diego Municipal Code §§ 98.1101–98.1104",
@@ -3649,7 +4086,8 @@
     "op": "describes",
     "value": "rent-controlled units",
     "text": "Applies to rent-controlled units.",
-    "quote": "For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%."
+    "quote": "For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -3659,7 +4097,7 @@
     "value": "1979-06-13",
     "text": "Newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979 are exempt from the Ordinance's rent increase limitations.",
     "quote": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "other",
@@ -3667,7 +4105,7 @@
     "value": "Costa-Hawkins eligible tenancies",
     "text": "Tenancies eligible for a rent increase under the Costa-Hawkins Rental Housing Act are exempt from the Ordinance's rent increase limitations.",
     "quote": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "other",
@@ -3675,7 +4113,7 @@
     "value": "rent regulated by another government agency",
     "text": "Some tenancies where the rent is regulated by another government agency are exempt from the Ordinance's rent increase limitations.",
     "quote": "Some tenancies that are exempt from the rent increase limitations of the Ordinance are still subject to the eviction provisions of the Ordinance, and tenants in these categories can only be evicted for one of the “just cause” reasons listed in the Ordinance. This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
-    "group": "q0"
+    "role": "exemption"
    }
   ],
   "coverage_conditions": "Applies to rent-controlled units.",
@@ -3686,6 +4124,7 @@
   "interaction": "supersedes CA-RENT-01 where it covers the unit",
   "effective_date": "2026-03-01",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "San Francisco Rent Ordinance",
@@ -3745,26 +4184,30 @@
     "fact": "other",
     "op": "describes",
     "text": "Rental unit is covered by the Rent Ordinance.",
-    "quote": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction."
+    "quote": "In order to evict a tenant from a rental unit covered by the Rent Ordinance, a landlord must have a \"just cause\" reason that is the dominant motive for pursuing the eviction.",
+    "role": "scope"
    },
    {
     "fact": "certificate_of_occupancy_date",
     "op": "gt",
     "value": "1979-06-13",
     "text": "Includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979.",
-    "quote": "This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency."
+    "quote": "This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
+    "role": "expansion"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Includes tenancies eligible for a rent increase under the Costa-Hawkins Rental Housing Act.",
-    "quote": "This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency."
+    "quote": "This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
+    "role": "expansion"
    },
    {
     "fact": "other",
     "op": "describes",
     "text": "Includes some tenancies where the rent is regulated by another government agency.",
-    "quote": "This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency."
+    "quote": "This includes tenancies in newly constructed rental units that first obtained a Certificate of Occupancy after June 13, 1979, tenancies that are eligible for a rent increase under the\nCosta-Hawkins Rental Housing Act,\nand some tenancies where the rent is regulated by another government agency.",
+    "role": "expansion"
    }
   ],
   "exemptions_ir": [],
@@ -3776,6 +4219,7 @@
   "interaction": "supersedes CA-JC-01 where it covers the unit",
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "San Francisco Rent Ordinance § 37.9(a)",
@@ -3828,7 +4272,7 @@
   "status": "in_force",
   "status_certainty": "date_unknown",
   "legal_stage": "enacted",
-  "title": "San Francisco Fair Chance Ordinance affordable housing criminal-history screening protections",
+  "title": "San Francisco Fair Chance Ordinance affordable-housing criminal-history protections",
   "requirement": "San Francisco's Fair Chance Ordinance protects residents with arrest or conviction history in affordable housing decisions.",
   "key_value": null,
   "coverage_conditions_ir": [
@@ -3837,7 +4281,8 @@
     "op": "describes",
     "value": "affordable housing",
     "text": "Applies to affordable housing decisions.",
-    "quote": "San Francisco's Fair Chance Ordinance protects residents with arrest or conviction history in affordable housing decisions."
+    "quote": "San Francisco's Fair Chance Ordinance protects residents with arrest or conviction history in affordable housing decisions.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [],
@@ -3847,6 +4292,7 @@
   "interaction": null,
   "effective_date": null,
   "effective_date_provenance": "missing",
+  "effective_relative_unresolved": false,
   "effective_date_note": "effective date not stated in the documents",
   "sunset_date": null,
   "citation": "San Francisco Fair Chance Ordinance",
@@ -3880,14 +4326,15 @@
   "legal_stage": "enacted",
   "title": "San Francisco ban on algorithmic devices used to set rents or manage occupancy",
   "requirement": "San Francisco added Section 37.10C to its Rent Ordinance to prohibit the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco. The law defines an algorithmic device as software that uses algorithms to analyze nonpublic competitor rental data to recommend rents for vacant units, and it allows tenant or City Attorney civil enforcement.",
-  "key_value": "Ban on sale/use",
+  "key_value": "Ban on algorithmic devices",
   "coverage_conditions_ir": [
    {
     "fact": "building_type",
     "op": "describes",
     "value": "residential units",
     "text": "Applies to residential units in San Francisco.",
-    "quote": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco."
+    "quote": "The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [],
@@ -3897,6 +4344,7 @@
   "interaction": null,
   "effective_date": "2024-10-14",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "S.F. Admin. Code § 37.10C",
@@ -3931,7 +4379,7 @@
    ],
    "key_value": [
     "Prohibits sale or use of algorithmic devices to set rents or manage occupancy levels for residential units",
-    "Ban on sale/use"
+    "Ban on algorithmic devices"
    ],
    "citation_reverted": true
   }
@@ -3954,15 +4402,20 @@
     "value": "1995-02-01",
     "text": "Residential buildings constructed after February 1, 1995 are exempt from the rent cap.",
     "quote": "The rent cap does not apply to residential buildings constructed after February 1, 1995, or to mobile home spaces offered for rent after January 1, 1990.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
-    "fact": "other",
-    "op": "describes",
-    "value": "mobile home spaces offered for rent after January 1, 1990",
+    "fact": "tenancy_start_date",
+    "op": "gt",
+    "value": "1990-01-01",
     "text": "Mobile home spaces offered for rent after January 1, 1990 are exempt from the rent cap.",
     "quote": "The rent cap does not apply to residential buildings constructed after February 1, 1995, or to mobile home spaces offered for rent after January 1, 1990.",
-    "group": "q0"
+    "role": "exemption",
+    "original": {
+     "fact": "other",
+     "op": "describes",
+     "value": "mobile home spaces offered for rent after January 1, 1990"
+    }
    }
   ],
   "coverage_conditions": null,
@@ -3973,6 +4426,7 @@
   "interaction": "supersedes CA-RENT-01 where it covers the unit",
   "effective_date": "2021-11-19",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Santa Ana Rent Stabilization Ordinance",
@@ -4029,7 +4483,7 @@
     "value": 15,
     "text": "Housing produced in the last 15 years is excluded.",
     "quote": "The Just Cause Ordinance shall not apply to certain types of residential property, including housing produced in the last 15 years; deed-restricted affordable housing; hotel and transient occupancy; hospital and care facilities; dormitories; and other shared living quarters.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "subsidized_or_affordable",
@@ -4037,7 +4491,7 @@
     "value": null,
     "text": "Deed-restricted affordable housing is excluded.",
     "quote": "The Just Cause Ordinance shall not apply to certain types of residential property, including housing produced in the last 15 years; deed-restricted affordable housing; hotel and transient occupancy; hospital and care facilities; dormitories; and other shared living quarters.",
-    "group": "q0"
+    "role": "exemption"
    },
    {
     "fact": "building_type",
@@ -4045,7 +4499,7 @@
     "value": "hotel; transient occupancy; hospital and care facilities; dormitories; other shared living quarters",
     "text": "Hotels, transient occupancy, hospital and care facilities, dormitories, and other shared living quarters are excluded.",
     "quote": "The Just Cause Ordinance shall not apply to certain types of residential property, including housing produced in the last 15 years; deed-restricted affordable housing; hotel and transient occupancy; hospital and care facilities; dormitories; and other shared living quarters.",
-    "group": "q0"
+    "role": "exemption"
    }
   ],
   "coverage_conditions": null,
@@ -4056,6 +4510,7 @@
   "interaction": "supersedes CA-JC-01 where it covers the unit",
   "effective_date": "2021-11-19",
   "effective_date_provenance": "explicit_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": null,
   "sunset_date": null,
   "citation": "Santa Ana Just Cause Eviction Ordinance",
@@ -4110,7 +4565,8 @@
     "op": "describes",
     "value": "Residential Rental Property in the City of Santa Ana, including any dwelling or unit in a mobile home park",
     "text": "Applies to residential rental property in Santa Ana, including dwellings or units in mobile home parks.",
-    "quote": "\"Residential Rental Property\" means any dwelling or unit that is intended for human habitation, including any dwelling or unit in a mobile home park."
+    "quote": "\"Residential Rental Property\" means any dwelling or unit that is intended for human habitation, including any dwelling or unit in a mobile home park.",
+    "role": "scope"
    }
   ],
   "exemptions_ir": [
@@ -4119,14 +4575,16 @@
     "op": "describes",
     "value": "Software/reporting products using aggregated historical nonpublic competitor data more than 90 days old or public information, without recommending future rents or occupancy",
     "text": "Excluded from the definition of algorithmic device are reporting products based on aggregated historical nonpublic competitor data more than 90 days old or public information that do not recommend future rents or occupancy levels.",
-    "quote": "Algorithmic Device does not include either of the following:\n1) A software or product used by a Person to publish reports regarding\nrental rates or occupancy levels from aggregated historical Nonpublic\nCompetitor Data that is more than 90 days old, or from information available to\nthe general public, and does not recommend rental rates or occupancy levels\nfor future Residential Rental Property Leases or renewals."
+    "quote": "Algorithmic Device does not include either of the following:\n1) A software or product used by a Person to publish reports regarding\nrental rates or occupancy levels from aggregated historical Nonpublic\nCompetitor Data that is more than 90 days old, or from information available to\nthe general public, and does not recommend rental rates or occupancy levels\nfor future Residential Rental Property Leases or renewals.",
+    "role": "not_condition"
    },
    {
     "fact": "subsidized_or_affordable",
     "op": "is_true",
     "value": null,
     "text": "Excluded from the definition of algorithmic device are products used to establish rental rates or income limits under affordable housing program guidelines.",
-    "quote": "2) A software or product used by a Person to establish rental rates or\nincome limits in accordance with local, state, or federal affordable housing\nprogram guidelines."
+    "quote": "2) A software or product used by a Person to establish rental rates or\nincome limits in accordance with local, state, or federal affordable housing\nprogram guidelines.",
+    "role": "not_condition"
    }
   ],
   "coverage_conditions": "Applies to residential rental property in Santa Ana, including dwellings or units in mobile home parks.",
@@ -4135,6 +4593,7 @@
   "interaction": "Section 8-3703 — Remedies\n(a) A Tenant may seek injunctive relief, damages, or civil penalties of up to $1,000\nper violation of this Article, in a civil action against a Landlord. In an action\nbrought under this Article, a prevailing Tenant shall recover costs and\nreasonable attorney's fees. A prevailing Tenant includes a Tenant granted an\norder for injunctive relief. A Lease provision that limits a Tenant from recovering\nattorney's fees shall not be enforceable against a Tenant's claim for attorney's\nfees that arise under this Article.\n(b) The remedies under Section 8-3703 are cumulative and are in addition to any\nother remedies in this Article or at law, statute, or ordinance.",
   "effective_date": "2026-04-02",
   "effective_date_provenance": "computed_from_quote",
+  "effective_relative_unresolved": false,
   "effective_date_note": "30 days after adoption 2026-03-03",
   "sunset_date": null,
   "citation": "Santa Ana Mun. Code art. XXIV, §§ 8-3701 to 8-3703 (added by Ordinance No. NS-3090)",

@@ -80,8 +80,11 @@ def resolve_city(postal_city: str, state: str, cfg=None):
 
 
 def build_fact_table(path=None, min_calibration_rows: int = 10, min_agreement: float = 0.95):
+    import os
     path = path or ROOT / "data/sample_addresses.csv"
     rows = list(csv.DictReader(open(path)))
+    for extra in filter(None, os.environ.get("NAV_EXTRA_ADDRESSES", "").split(",")):
+        rows += [{**{k: "" for k in rows[0]}, **x} for x in csv.DictReader(open(extra))]
     cfg = load_jurisdictions()
 
     # calibrate hint families against observed units
