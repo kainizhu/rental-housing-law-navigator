@@ -27,8 +27,8 @@ Recorded automatically from the live site at 1080p; Kaini records the voice-over
 |---|---|---|
 | 0–5 | Lookup tab, Hoboken address A0002 already open | "Here's an apartment building in Hoboken, as of October 1st, 2026." |
 | 5–17 | Summary pills; hover the facts row (observed vs. inferred vs. not in data) | "Six categories of law, state and city. Each building fact is labeled: observed, inferred, or simply not in the data." |
-| 17–32 | Click the Hoboken algorithmic-pricing rule → proof chain opens; scroll steps 1→6, stop on the quoted source | "Open any rule and you get the proof: which law reaches this address, whether it's in force today, each coverage test against this building, and the exact sentence from the source." |
-| 32–43 | Drag the as-of slider to 2027-07-01; NJ FAIR Act flips to Applies, red Conflict flag appears | "Move the date. When New Jersey's FAIR Act takes effect, it starts applying, and the system flags the conflict with Hoboken's own ordinance for a human instead of guessing a winner." |
+| 17–32 | Click New Jersey's FAIR Act (algorithmic pricing) → proof chain opens; walk steps: jurisdiction, in-force check, coverage tests, conflict with Hoboken, quoted statute | "Open any rule and you get the proof: which law reaches this address, whether it's in force, each coverage test against this building, and the exact sentence from the statute. Today it's enacted but not yet in force." |
+| 32–43 | Drag the as-of slider to 2027-07-01; FAIR Act flips to Applies, effective date shown as computed from the quoted text; Hoboken's own ban carries a Conflict flag | "Move the date. On July 1st, 2027, a date the system computed from the bill's own text, it starts applying, and the overlap with Hoboken's ordinance is flagged for a human instead of guessed." |
 | 43–53 | Uncertainty tab: unknown-reason bars, then the "517 results change" card | "When the data can't answer, we say unknown and say why. Trusting guessed unit counts would flip 517 results, so we don't." |
 | 53–60 | Coverage map, slow pan; end card | "Every jurisdiction, every category, every answer, proven." |
 

@@ -38,8 +38,8 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
   await to('.fact:nth-child(2)', 700); await sleep(1500);
   await to('.fact:nth-child(4)', 700); await sleep(2000);
   // 17–32 open the Hoboken algorithmic-pricing rule and walk the proof chain
-  mark('proof'); await scrollTo('.rrow[data-r="HOB-ALG-01"]', 'start'); await wheel(-90, 300);
-  await click('.rrow[data-r="HOB-ALG-01"]', 900); await sleep(1300);
+  mark('proof'); await scrollTo('.rrow[data-r="NJ-ALG-01"]', 'start'); await wheel(-90, 300);
+  await click('.rrow[data-r="NJ-ALG-01"]', 900); await sleep(1300);
   for (const n of [2, 3, 4, 6]) { await scrollTo(`.proof ol>li:nth-child(${n})`, n === 6 ? 'center' : 'center'); await to(`.proof ol>li:nth-child(${n}) h4`, 350); await sleep(n === 6 ? 2400 : 800); }
   // 32–43 drag the as-of slider to 2027-07-01; NJ FAIR Act applies + conflict flag
   mark('slider'); await p.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' })); await sleep(400);
@@ -53,9 +53,9 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
     await p.evaluate(v => { const r = document.getElementById('asof'); r.value = v; r.dispatchEvent(new Event('input', { bubbles: true })); }, i);
   }
   await p.mouse.up(); await sleep(700);
-  await p.evaluate(() => { document.querySelectorAll('.rrow[aria-expanded="true"]').forEach(b => b.click()); });
-  await scrollTo('.rrow[data-r="NJ-ALG-01"]'); await to('.rrow[data-r="NJ-ALG-01"] .rs', 700); await sleep(2200);
-  await to('.rrow[data-r="HOB-ALG-01"] .rs', 600); await sleep(1800);
+  await scrollTo('.rrow[data-r="NJ-ALG-01"]', 'start'); await wheel(-60, 200); await to('.rrow[data-r="NJ-ALG-01"] .rs', 700); await sleep(1600);
+  await to('.proof ol>li:nth-child(2) h4', 600); await sleep(1500);
+  await to('.rrow[data-r="HOB-ALG-01"] .rs', 600); await sleep(1400);
   // 43–53 uncertainty
   mark('uncertainty'); await p.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' })); await sleep(300); await click('nav.tabs button[data-tab="uncertainty"]', 800); await sleep(1500);
   await to('.hbar', 600); await sleep(1500);
