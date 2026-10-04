@@ -1,0 +1,662 @@
+<title>Rental Housing Law Navigator</title>
+<meta name="description" content="Compiled housing-law rules per address and date, with a verbatim proof for every answer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a statute-desk tool. Sticky control bar (as-of date is global), tabbed views,
+   lookup = address list | address dossier with per-category rule rows that open into a proof chain. */
+:root{
+  --bg:#F2F4F3; --surface:#FFFFFF; --sunk:#E8ECEB; --fg:#142321; --muted:#55625E; --line:#D2D9D7;
+  --accent:#0E5A63; --accent-soft:#DCEBEC; --on-accent:#FFFFFF;
+  --ok:#1D7440; --ok-soft:#DCEFE2; --warn:#8F5A00; --warn-soft:#F6EAD0; --sup:#64706C; --sup-soft:#E5E9E8;
+  --pend:#653C9C; --pend-soft:#ECE4F6; --nye:#1D5BA3; --nye-soft:#DFE9F6; --bad:#AD241C; --bad-soft:#F8E0DD;
+  --f-display:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Public Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1615; --surface:#162120; --sunk:#1C2928; --fg:#E3EBE9; --muted:#9AA8A4; --line:#2B3A38;
+  --accent:#6FC3CC; --accent-soft:#17383B; --on-accent:#0B1514;
+  --ok:#6DD192; --ok-soft:#173826; --warn:#EFB557; --warn-soft:#3A2D13; --sup:#9AA5A1; --sup-soft:#252F2E;
+  --pend:#B89DEB; --pend-soft:#2B2340; --nye:#8DB7EF; --nye-soft:#192A41; --bad:#F28B82; --bad-soft:#3D1E1C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1615; --surface:#162120; --sunk:#1C2928; --fg:#E3EBE9; --muted:#9AA8A4; --line:#2B3A38;
+  --accent:#6FC3CC; --accent-soft:#17383B; --on-accent:#0B1514;
+  --ok:#6DD192; --ok-soft:#173826; --warn:#EFB557; --warn-soft:#3A2D13; --sup:#9AA5A1; --sup-soft:#252F2E;
+  --pend:#B89DEB; --pend-soft:#2B2340; --nye:#8DB7EF; --nye-soft:#192A41; --bad:#F28B82; --bad-soft:#3D1E1C; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.5}
+a{color:var(--accent)}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+.mono{font-family:var(--f-mono);font-size:.86em}
+.muted{color:var(--muted)}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:20px}
+header.top{padding-block:22px 14px;border-bottom:1px solid var(--line);background:var(--surface)}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.brand h1{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:-.01em}
+.thesis{font-size:15px;color:var(--muted);max-width:68ch}
+.thesis b{color:var(--fg);font-weight:600}
+.disclaimer{margin-top:10px;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:flex-start;max-width:110ch}
+.disclaimer .tag{flex:none;font-weight:600;color:var(--warn);background:var(--warn-soft);padding:1px 7px;border-radius:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding-block:10px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:4px}
+nav.tabs button{background:none;border:1px solid transparent;border-radius:var(--r);padding:6px 11px;cursor:pointer;color:var(--muted);font-weight:500}
+nav.tabs button[aria-selected="true"]{background:var(--surface);border-color:var(--line);color:var(--fg)}
+nav.tabs button:hover{color:var(--fg)}
+.asof{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;flex:1 1 360px;min-width:0}
+.asof label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap}
+.asof input[type=range]{flex:1;min-width:120px;accent-color:var(--accent)}
+.asof .date{font-family:var(--f-mono);font-size:14px;font-weight:500;background:var(--surface);border:1px solid var(--line);padding:3px 8px;border-radius:4px;white-space:nowrap}
+.asof .why{flex-basis:100%;font-size:12px;color:var(--muted);line-height:1.3}
+.tools{display:flex;gap:6px;margin-left:auto}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.seg button{border:0;background:var(--surface);padding:4px 9px;cursor:pointer;font-size:13px}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+main{padding-block:22px 60px}
+section.view[hidden]{display:none}
+.lead{max-width:75ch;color:var(--muted);margin:6px 0 18px}
+.h2row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:4px}
+.h2row h2{font-size:22px}
+
+/* pills */
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.r-applies{color:var(--ok);background:var(--ok-soft)}
+.r-unknown{color:var(--warn);background:var(--warn-soft);border-style:dashed;border-color:var(--warn)}
+.r-superseded{color:var(--sup);background:var(--sup-soft)}
+.r-superseded::before{border-radius:1px;height:2px;width:9px}
+.r-pending{color:var(--pend);background:var(--pend-soft)}
+.r-not_yet_effective{color:var(--nye);background:transparent;border-color:var(--nye)}
+.r-none{color:var(--muted);background:transparent;border-color:var(--line);font-weight:500}
+.r-none::before{background:transparent;border:1px solid currentColor}
+.flag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--bad);background:var(--bad-soft);padding:2px 7px;border-radius:4px}
+.chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:4px;background:var(--sunk);color:var(--muted);font-weight:500;white-space:nowrap}
+.chip.obs{background:var(--ok-soft);color:var(--ok)}
+.chip.hint{background:var(--warn-soft);color:var(--warn)}
+.chip.unk{background:var(--sunk);color:var(--muted)}
+.chip.bad{background:var(--bad-soft);color:var(--bad)}
+
+/* lookup */
+.lookup{display:grid;grid-template-columns:300px minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:860px){.lookup{grid-template-columns:minmax(0,1fr)}}
+.finder{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px;position:sticky;top:72px}
+@media (max-width:860px){.finder{position:static}}
+.finder input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.finder .filters{display:flex;flex-wrap:wrap;gap:4px;margin:8px 0}
+.finder .filters button{font-size:12px;border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:2px 9px;cursor:pointer}
+.finder .filters button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.alist{list-style:none;margin:0;padding:0;max-height:62vh;overflow:auto;border-top:1px solid var(--line)}
+.alist li button{display:grid;grid-template-columns:auto 1fr;gap:0 8px;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:none;padding:7px 4px;cursor:pointer}
+.alist li button:hover{background:var(--sunk)}
+.alist li button[aria-current="true"]{background:var(--accent-soft)}
+.alist .id{font-family:var(--f-mono);font-size:12px;color:var(--muted);grid-row:span 2}
+.alist .st{font-size:13px;font-weight:500}
+.alist .ct{font-size:12px;color:var(--muted)}
+.alist .ex{font-size:11px;color:var(--accent);font-weight:600}
+.dossier{min-width:0}
+.addr-head{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;justify-content:space-between;margin-bottom:14px}
+.addr-head h2{font-size:26px}
+.addr-head .sub{color:var(--muted);font-size:14px}
+.summary{display:flex;flex-wrap:wrap;gap:6px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:22px}
+.fact{background:var(--surface);padding:9px 12px;min-width:0}
+.fact .k{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fact .v{font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;margin:2px 0}
+.fact .n{font-size:12px;color:var(--muted);line-height:1.35}
+.cat{border-top:1px solid var(--line);padding-block:12px}
+.cat:last-child{border-bottom:1px solid var(--line)}
+.cat>h3{font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-family:var(--f-body);font-weight:600;margin-bottom:8px}
+.rrow{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:4px 14px;align-items:center;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:9px 12px;cursor:pointer;margin-bottom:6px}
+.rrow:hover{border-color:var(--accent)}
+.rrow[aria-expanded="true"]{border-color:var(--accent);border-bottom-left-radius:0;border-bottom-right-radius:0;margin-bottom:0}
+.rrow .lvl{font-size:12px;color:var(--muted)}
+.rrow .lvl b{display:block;color:var(--fg);font-family:var(--f-mono);font-size:12px;font-weight:500}
+.rrow .ttl{min-width:0}
+.rrow .ttl .t{font-weight:600;font-size:14px}
+.rrow .ttl .c{font-family:var(--f-mono);font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.rrow .rs{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.rrow .kv{font-size:12px;color:var(--fg);background:var(--sunk);padding:1px 7px;border-radius:4px}
+.delta{font-size:11px;color:var(--accent);font-weight:600}
+@media (max-width:560px){.rrow{grid-template-columns:minmax(0,1fr) auto}.rrow .lvl{grid-column:1/-1}}
+.norule{font-size:13px;color:var(--muted);padding:4px 2px}
+.proof{border:1px solid var(--accent);border-top:0;border-radius:0 0 var(--r) var(--r);background:var(--surface);padding:6px 14px 14px;margin-bottom:8px}
+.proof ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.proof ol>li{counter-increment:s;display:grid;grid-template-columns:28px minmax(0,1fr);gap:0 10px;padding-block:10px;border-bottom:1px dashed var(--line)}
+.proof ol>li:last-child{border-bottom:0}
+.proof ol>li::before{content:counter(s);font-family:var(--f-mono);font-size:12px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.proof h4{margin:1px 0 4px;font-size:14px;font-family:var(--f-display)}
+.proof p{margin:2px 0}
+blockquote.src{margin:6px 0;padding:8px 12px;border-left:3px solid var(--accent);background:var(--sunk);font-family:Georgia,"Times New Roman",serif;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:220px;overflow:auto}
+.ctab{width:100%;border-collapse:collapse;font-size:13px}
+.ctab td,.ctab th{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}
+.ctab th{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.scroll{overflow-x:auto}
+.trace{margin:4px 0 0;padding-left:18px;font-size:13px}
+.trace li{margin:2px 0}
+.kvline{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+.kvline span b{font-weight:600}
+
+/* generic */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;min-width:0}
+.card h3{font-size:16px;margin-bottom:4px}
+.big{font-family:var(--f-display);font-size:30px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.stat{display:flex;gap:18px;flex-wrap:wrap;margin:10px 0}
+.stat div span{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.idlist{display:flex;flex-wrap:wrap;gap:4px;max-height:120px;overflow:auto;margin-top:6px}
+.idlist button{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);background:var(--bg);border-radius:4px;padding:1px 5px;cursor:pointer}
+.idlist button.cf{border-color:var(--bad);color:var(--bad)}
+.grid-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table.grid{border-collapse:collapse;width:100%;min-width:900px;font-size:12.5px}
+table.grid th,table.grid td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:7px 8px;vertical-align:top;text-align:left}
+table.grid thead th{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--sunk);position:sticky;top:0}
+table.grid tbody th{white-space:nowrap;font-weight:600}
+table.grid tbody th small{display:block;font-weight:400;color:var(--muted)}
+table.grid tr.state th,table.grid tr.state td{background:var(--sunk)}
+.gcell .rid{display:flex;align-items:center;gap:6px;margin-bottom:3px;font-family:var(--f-mono);font-size:11.5px;cursor:pointer;background:none;border:0;padding:0;color:var(--fg);text-align:left}
+.gcell .rid:hover{color:var(--accent)}
+.gcell .cnt{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.gcell .nr{color:var(--muted);font-style:italic}
+.gcell .ins{color:var(--warn);font-style:italic}
+.sw{width:8px;height:8px;border-radius:2px;flex:none}
+.hbar{display:grid;grid-template-columns:minmax(150px,240px) minmax(0,1fr) 54px;gap:6px 10px;align-items:center;font-size:13px;margin:6px 0}
+.hbar .track{height:14px;background:var(--sunk);border-radius:3px;overflow:hidden}
+.hbar .fill{height:100%;background:var(--warn)}
+.hbar .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+@media (max-width:860px){.split{grid-template-columns:minmax(0,1fr)}}
+.queue{display:flex;flex-direction:column;gap:8px}
+.qitem{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px}
+.sev{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px;align-self:start}
+.sev.high{background:var(--bad-soft);color:var(--bad)}
+.sev.med{background:var(--warn-soft);color:var(--warn)}
+.sev.low{background:var(--sunk);color:var(--muted)}
+.qitem .q{font-weight:600;font-size:14px}
+.qitem .d{font-size:13px;color:var(--muted)}
+.linkbtn{background:none;border:0;padding:0;color:var(--accent);cursor:pointer;font:inherit;text-decoration:underline;text-underline-offset:2px}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;counter-reset:st}
+.steps li{counter-increment:st;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;font-size:13px}
+.steps li b{display:block;font-family:var(--f-display);font-size:15px;margin-bottom:2px}
+.steps li b::before{content:counter(st) " · ";color:var(--accent);font-family:var(--f-mono);font-size:12px}
+.checks{list-style:none;padding:0;margin:0;columns:2 320px;column-gap:24px;font-size:13px}
+.checks li{break-inside:avoid;padding:3px 0;display:flex;gap:8px}
+.checks .ok{color:var(--ok);font-weight:700}
+.checks .no{color:var(--bad);font-weight:700}
+.diffpick{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:10px 0}
+.diffpick select{padding:5px 8px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+footer{border-top:1px solid var(--line);padding-block:18px;color:var(--muted);font-size:12.5px}
+@media (prefers-reduced-motion:no-preference){.proof{animation:open .18s ease-out}@keyframes open{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>Rental Housing Law Navigator</h1>
+      <p class="thesis" data-i18n-html="thesis"></p>
+    </div>
+    <p class="disclaimer"><span class="tag" data-i18n="notadvice_tag"></span><span data-i18n="notadvice"></span></p>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <nav class="tabs" role="tablist" aria-label="Views">
+      <button role="tab" data-tab="lookup" data-i18n="tab_lookup"></button>
+      <button role="tab" data-tab="changes" data-i18n="tab_changes"></button>
+      <button role="tab" data-tab="coverage" data-i18n="tab_coverage"></button>
+      <button role="tab" data-tab="uncertainty" data-i18n="tab_uncertainty"></button>
+      <button role="tab" data-tab="review" data-i18n="tab_review"></button>
+      <button role="tab" data-tab="method" data-i18n="tab_method"></button>
+    </nav>
+    <div class="asof">
+      <label for="asof" data-i18n="asof"></label>
+      <input type="range" id="asof" min="0" max="0" step="1">
+      <span class="date" id="asofText"></span>
+      <span class="why" id="asofWhy"></span>
+    </div>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Language">
+        <button id="lang-en" aria-pressed="true">EN</button><button id="lang-es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="view" id="v-lookup">
+    <div class="lookup">
+      <aside class="finder">
+        <input id="q" type="search" autocomplete="off" data-i18n-ph="search_ph">
+        <div class="filters" id="stateFilters"></div>
+        <ul class="alist" id="alist"></ul>
+      </aside>
+      <div class="dossier" id="dossier"></div>
+    </div>
+  </section>
+
+  <section class="view" id="v-changes" hidden></section>
+  <section class="view" id="v-coverage" hidden></section>
+  <section class="view" id="v-uncertainty" hidden></section>
+  <section class="view" id="v-review" hidden></section>
+  <section class="view" id="v-method" hidden></section>
+</main>
+
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script src="data.js"></script>
+<script>
+(function(){
+const D = window.NAV;
+const RES = D.res;
+const CATS = ["rent_increase_limits","just_cause_eviction","security_deposits","application_screening_fees","screening_restrictions","algorithmic_rent_setting"];
+const JUR_ORDER = ["CA","Los Angeles, CA","San Francisco, CA","San Diego, CA","Berkeley, CA","Santa Ana, CA","NJ","Newark, NJ","Jersey City, NJ","Hoboken, NJ","MA","Boston, MA","Cambridge, MA"];
+const RULE = Object.fromEntries(D.rules.map(r=>[r.id,r]));
+const ADDR = D.addresses;
+const AIDS = Object.keys(ADDR).sort();
+const GRID = {}; D.grid.forEach(g=>{GRID[g.j+"|"+g.cat]=g});
+
+/* ---------- i18n (interface text; legal text stays in the source language) ---------- */
+const I = {
+en:{
+ thesis:"We don't search housing law. We <b>compile</b> it into rules, <b>diff</b> it across dates, and <b>prove</b> every answer with a verbatim quote from the source.",
+ notadvice_tag:"Not legal advice", notadvice:"Research tool for a hackathon. Results come from a fixed document corpus and sample property data and can be wrong or incomplete. Check the linked source text and talk to a lawyer before acting on anything here.",
+ tab_lookup:"Address lookup", tab_changes:"Changes", tab_coverage:"Coverage map", tab_uncertainty:"Uncertainty", tab_review:"Review queue", tab_method:"Method & checks",
+ asof:"As of", asof_why:"Law changes only on these dates, so the slider snaps to them.", search_ph:"Search address, ID or city",
+ all:"All", applies:"Applies", unknown:"Unknown", superseded:"Superseded by local law", pending:"Pending (not enacted)", not_yet_effective:"Enacted, not yet effective", none:"No rule",
+ conflict:"Conflict", cat_rent_increase_limits:"Rent increase limits", cat_just_cause_eviction:"Just-cause eviction", cat_security_deposits:"Security deposits", cat_application_screening_fees:"Application & screening fees", cat_screening_restrictions:"Screening restrictions", cat_algorithmic_rent_setting:"Algorithmic rent setting",
+ state:"State", city:"City", jurisdiction:"Jurisdiction", postal_city:"Postal city", year_built:"Year built", units:"Units", owner_type:"Owner type", owner_occupied:"Owner-occupied", use:"Assessor use",
+ observed:"observed", inferred_hint:"inferred hint", unknown_p:"not in data", calibrated:"calibrated", uncalibrated:"uncalibrated", contradicted:"contradicted",
+ no_rule_level:"No rule at this level in the corpus", insufficient:"Corpus text insufficient to decide", no_cell:"Not covered by the corpus",
+ p_jur:"Which law reaches this address", p_status:"Is it in force on the as-of date?", p_cov:"Does it cover this building?", p_trace:"Evaluator trace", p_rel:"How it interacts with other rules here", p_src:"Source and verbatim quote",
+ p_jur_t:(a,r)=>`Postal city “${a.postal}” resolves to <b>${a.city||"(unresolved)"}</b>. The address sits under ${a.state}${a.city?" and "+a.city:""}; this rule is ${r.level} law of <b>${r.j}</b>.`,
+ stage:"Legal stage", eff:"Effective", eff_prov:"Date provenance", sunset:"Sunset", cond:"Condition", role:"Role", fact_here:"This address", none_conds:"No coverage conditions: the rule covers every rental in the jurisdiction.",
+ scope:"scope", exemption:"exemption", expansion:"expansion (never narrows)", variant:"variant (picks an amount)", not_condition:"not a coverage test",
+ cov:"coverage", ex:"exemption", citation:"Citation", raw_cit:"As written", aliases:"Also matches", doc:"Document", retrieved:"Retrieved", match:"Quote match", open_src:"Open source", origin:"Origin",
+ official_corpus:"official corpus", supplemental:"supplemental source",
+ rel_none:"No recorded interaction with another rule at this address.", votes:"votes", evidence:"Evidence",
+ cumulative:"Cumulative: both apply", local_governs_where_covered:"Local rule governs where it covers the building", possible_conflict:"Possible conflict", preempts_local:"State preempts local",
+ delta_was:(d,r)=>`changed on ${d} (was ${r})`, results_n:n=>`${n} rule results`,
+ ch_title:"What changes, and when", ch_lead:"Each test below is computed by re-running the same evaluator at two dates and listing every address whose result moved. Conflicts are flagged, not resolved.",
+ ch_affected:"Addresses affected", ch_conflicts:"Conflict flags", ch_mapped:"Rules", ch_expected:"Expected", ch_rehearsal:"Hour-16 rehearsal (synthetic Cambridge ordinance)", ch_reh_lead:"A fictional ordinance written in the brief's style was dropped into the corpus. The same code re-extracted only Cambridge; no address outside Cambridge changed.",
+ diff_title:"Diff any two dates", diff_from:"From", diff_to:"To", diff_rule:"Rule", diff_moves:"Transitions", diff_none:"No result changes between these dates.", diff_n:"Changed",
+ cov_title:"Coverage map", cov_lead:"Every jurisdiction × category cell was read separately. A cell with no rule is a finding too: the corpus has nothing at that level. Counts are addresses at the as-of date.",
+ cov_addr:n=>`${n} addresses`,
+ un_title:"Two kinds of uncertainty", un_lead:"Legal uncertainty is about the law itself: conflicts, pending bills, dates that sources disagree on. Factual uncertainty is about the building: a fact the law depends on is missing from the property data. We report them separately and never guess either one.",
+ un_fact:"Factual: why results are unknown", un_legal:"Legal: what the sources leave open", un_sens:"What if we trusted more data?", un_sens_lead:"Unit counts guessed from assessor codes are only used where they agree with observed counts in the same dataset. Trusting every guess would flip this many results:",
+ reason_units_hint_not_used:"Unit count only guessed from an uncalibrated assessor code", reason_year_built_missing:"Year built missing", reason_unobservable_coverage:"Coverage turns on a fact the data never has (subsidy, owner type)", reason_local_coverage_unknown:"State rule yields to a local rule whose coverage is unknown", reason_units_missing:"Unit count missing", reason_relative_date:"Effective date relative to an unstated event", reason_other:"Other",
+ pol_none:"Trust no inferred facts", pol_all:"Trust every inferred fact", flips:"results change",
+ lg_conflicts:"Possible conflicts between levels", lg_pending:"Pending measures (shown, never applied)", lg_dates:"Sources disagree on a date", lg_default:"Effective date from a default rule, not a quote",
+ rv_title:"Human review queue", rv_lead:"Everything the pipeline decided with less than full certainty, ranked. A reviewer can confirm or overturn each item; nothing here was silently resolved.",
+ rv_conflict:"Conflict between levels", rv_drop:"Record dropped by the review vote", rv_split:"Split vote", rv_lowconf:"Low extraction confidence", rv_ws:"Quote matched after whitespace normalization", rv_default:"Effective date from a statutory default", high:"high", med:"medium", low:"low",
+ me_title:"How an answer is built", me_lead:"Every answer is compiled ahead of time from the documents, then checked. The language model reads documents; it never decides whether a rule applies to an address. That step is plain deterministic code.",
+ me_checks:"Regression checks on this build", me_stats:"Build facts", me_principles:"Design rules we hold to",
+ open_lookup:"Open in lookup", show_rule:"Show rule",
+ footer:"Rental Housing Law Navigator · RealPage × Hack-Nation challenge 02 · Build generated "
+},
+es:{
+ thesis:"No buscamos en la ley de vivienda. La <b>compilamos</b> en reglas, la <b>comparamos</b> entre fechas y <b>probamos</b> cada respuesta con una cita textual de la fuente.",
+ notadvice_tag:"No es asesoría legal", notadvice:"Herramienta de investigación para un hackathon. Los resultados provienen de un corpus fijo de documentos y datos de muestra, y pueden ser erróneos o incompletos. Revise el texto fuente enlazado y consulte a un abogado antes de actuar.",
+ tab_lookup:"Buscar dirección", tab_changes:"Cambios", tab_coverage:"Mapa de cobertura", tab_uncertainty:"Incertidumbre", tab_review:"Revisión humana", tab_method:"Método y pruebas",
+ asof:"Fecha", asof_why:"La ley solo cambia en estas fechas; el control se ajusta a ellas.", search_ph:"Buscar dirección, ID o ciudad",
+ all:"Todas", applies:"Aplica", unknown:"Desconocido", superseded:"Desplazada por ley local", pending:"Pendiente (no aprobada)", not_yet_effective:"Aprobada, aún no vigente", none:"Sin regla",
+ conflict:"Conflicto", cat_rent_increase_limits:"Límites de aumento de renta", cat_just_cause_eviction:"Desalojo con causa justa", cat_security_deposits:"Depósitos de garantía", cat_application_screening_fees:"Cuotas de solicitud y evaluación", cat_screening_restrictions:"Restricciones de evaluación", cat_algorithmic_rent_setting:"Fijación algorítmica de rentas",
+ state:"Estado", city:"Ciudad", jurisdiction:"Jurisdicción", postal_city:"Ciudad postal", year_built:"Año de construcción", units:"Unidades", owner_type:"Tipo de propietario", owner_occupied:"Ocupado por el dueño", use:"Uso catastral",
+ observed:"observado", inferred_hint:"indicio inferido", unknown_p:"sin dato", calibrated:"calibrado", uncalibrated:"sin calibrar", contradicted:"contradicho",
+ no_rule_level:"No hay regla en este nivel en el corpus", insufficient:"El texto del corpus no basta para decidir", no_cell:"Fuera del corpus",
+ p_jur:"Qué ley alcanza esta dirección", p_status:"¿Está vigente en la fecha?", p_cov:"¿Cubre este edificio?", p_trace:"Traza del evaluador", p_rel:"Interacción con otras reglas aquí", p_src:"Fuente y cita textual",
+ p_jur_t:(a,r)=>`La ciudad postal “${a.postal}” corresponde a <b>${a.city||"(sin resolver)"}</b>. La dirección está bajo ${a.state}${a.city?" y "+a.city:""}; esta regla es ley ${r.level==="state"?"estatal":"municipal"} de <b>${r.j}</b>.`,
+ stage:"Etapa legal", eff:"Vigencia", eff_prov:"Origen de la fecha", sunset:"Caducidad", cond:"Condición", role:"Función", fact_here:"Esta dirección", none_conds:"Sin condiciones de cobertura: la regla cubre todo alquiler de la jurisdicción.",
+ scope:"alcance", exemption:"exención", expansion:"ampliación (nunca restringe)", variant:"variante (elige un monto)", not_condition:"no es prueba de cobertura",
+ cov:"cobertura", ex:"exención", citation:"Cita", raw_cit:"Como aparece", aliases:"También coincide", doc:"Documento", retrieved:"Obtenido", match:"Coincidencia de cita", open_src:"Abrir fuente", origin:"Origen",
+ official_corpus:"corpus oficial", supplemental:"fuente suplementaria",
+ rel_none:"Sin interacción registrada con otra regla en esta dirección.", votes:"votos", evidence:"Evidencia",
+ cumulative:"Acumulativas: ambas aplican", local_governs_where_covered:"La regla local rige donde cubre el edificio", possible_conflict:"Posible conflicto", preempts_local:"El estado desplaza a lo local",
+ delta_was:(d,r)=>`cambió el ${d} (antes: ${r})`, results_n:n=>`${n} resultados`,
+ ch_title:"Qué cambia y cuándo", ch_lead:"Cada prueba vuelve a ejecutar el mismo evaluador en dos fechas y lista toda dirección cuyo resultado cambió. Los conflictos se señalan, no se resuelven.",
+ ch_affected:"Direcciones afectadas", ch_conflicts:"Conflictos señalados", ch_mapped:"Reglas", ch_expected:"Esperado", ch_rehearsal:"Ensayo de la hora 16 (ordenanza sintética de Cambridge)", ch_reh_lead:"Se añadió al corpus una ordenanza ficticia con el estilo del reto. El mismo código re-extrajo solo Cambridge; ninguna dirección fuera de Cambridge cambió.",
+ diff_title:"Comparar dos fechas", diff_from:"Desde", diff_to:"Hasta", diff_rule:"Regla", diff_moves:"Transiciones", diff_none:"No hay cambios entre estas fechas.", diff_n:"Cambios",
+ cov_title:"Mapa de cobertura", cov_lead:"Cada celda jurisdicción × categoría se leyó por separado. Una celda sin regla también es un hallazgo. Los conteos son direcciones en la fecha elegida.",
+ cov_addr:n=>`${n} direcciones`,
+ un_title:"Dos tipos de incertidumbre", un_lead:"La incertidumbre legal trata de la ley: conflictos, proyectos pendientes, fechas en que las fuentes discrepan. La incertidumbre de hechos trata del edificio: falta un dato del que depende la ley. Las reportamos por separado y no adivinamos ninguna.",
+ un_fact:"Hechos: por qué un resultado es desconocido", un_legal:"Ley: lo que las fuentes dejan abierto", un_sens:"¿Y si confiáramos en más datos?", un_sens_lead:"El número de unidades inferido de códigos catastrales solo se usa donde coincide con conteos observados del mismo conjunto. Confiar en todo indicio cambiaría:",
+ reason_units_hint_not_used:"Unidades solo inferidas de un código sin calibrar", reason_year_built_missing:"Falta el año de construcción", reason_unobservable_coverage:"La cobertura depende de un dato que no existe (subsidio, tipo de dueño)", reason_local_coverage_unknown:"La regla estatal cede ante una local de cobertura desconocida", reason_units_missing:"Falta el número de unidades", reason_relative_date:"Vigencia relativa a un evento sin fecha", reason_other:"Otro",
+ pol_none:"No confiar en datos inferidos", pol_all:"Confiar en todo dato inferido", flips:"resultados cambian",
+ lg_conflicts:"Posibles conflictos entre niveles", lg_pending:"Medidas pendientes (se muestran, nunca se aplican)", lg_dates:"Las fuentes discrepan en una fecha", lg_default:"Vigencia por regla supletoria, no por cita",
+ rv_title:"Cola de revisión humana", rv_lead:"Todo lo que el sistema decidió sin certeza total, ordenado por gravedad. Un revisor puede confirmar o revertir cada caso; nada se resolvió en silencio.",
+ rv_conflict:"Conflicto entre niveles", rv_drop:"Registro descartado por votación", rv_split:"Votación dividida", rv_lowconf:"Baja confianza de extracción", rv_ws:"Cita encontrada tras normalizar espacios", rv_default:"Vigencia por regla supletoria", high:"alta", med:"media", low:"baja",
+ me_title:"Cómo se construye una respuesta", me_lead:"Cada respuesta se compila de antemano a partir de los documentos y luego se verifica. El modelo de lenguaje lee documentos; nunca decide si una regla aplica a una dirección. Ese paso es código determinista.",
+ me_checks:"Pruebas de regresión de esta versión", me_stats:"Datos de la compilación", me_principles:"Reglas de diseño",
+ open_lookup:"Abrir en búsqueda", show_rule:"Ver regla",
+ footer:"Rental Housing Law Navigator · RealPage × Hack-Nation reto 02 · Compilado "
+}};
+let LANG="en";
+const t=(k,...a)=>{const v=(I[LANG][k]!==undefined?I[LANG][k]:I.en[k]);return typeof v==="function"?v(...a):(v===undefined?k:v)};
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- state ---------- */
+const st={tab:"lookup", di:D.dates.indexOf(D.as_of), aid:null, open:{}, q:"", sf:"all", diffA:null, diffB:null};
+try{const s=JSON.parse(localStorage.getItem("rhln")||"{}"); if(s.lang==="es")LANG="es";}catch(e){}
+
+function resultsAt(di,aid){return (D.snaps[D.dates[di]]||{})[aid]||[]}
+function rmap(di,aid){const m={};resultsAt(di,aid).forEach(x=>m[x[0]]=x);return m}
+function pill(code){const k=code<0?"none":RES[code];return `<span class="pill r-${k}">${esc(t(k))}</span>`}
+function pillName(k){return `<span class="pill r-${k}">${esc(t(k))}</span>`}
+
+/* ---------- static chrome ---------- */
+function applyI18n(){
+  document.documentElement.lang=LANG;
+  document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=t(e.dataset.i18n));
+  document.querySelectorAll("[data-i18n-html]").forEach(e=>e.innerHTML=t(e.dataset.i18nHtml));
+  document.querySelectorAll("[data-i18n-ph]").forEach(e=>e.placeholder=t(e.dataset.i18nPh));
+  document.getElementById("lang-en").setAttribute("aria-pressed",LANG==="en");
+  document.getElementById("lang-es").setAttribute("aria-pressed",LANG==="es");
+  document.getElementById("asofWhy").textContent=t("asof_why");
+  document.getElementById("foot").textContent=t("footer")+D.generated.replace("T"," ");
+}
+const slider=document.getElementById("asof");
+slider.max=D.dates.length-1; slider.value=st.di;
+slider.addEventListener("input",()=>{st.di=+slider.value;render()});
+document.getElementById("lang-en").onclick=()=>{LANG="en";save();applyI18n();render()};
+document.getElementById("lang-es").onclick=()=>{LANG="es";save();applyI18n();render()};
+function save(){try{localStorage.setItem("rhln",JSON.stringify({lang:LANG}))}catch(e){}}
+document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>{st.tab=b.dataset.tab;history.replaceState(null,"","#"+st.tab);render()});
+
+/* ---------- lookup ---------- */
+const exampleAids=new Set();
+(function pickExamples(){
+  const c=D.changes; if(c.T3&&c.T3.conflict_flag_address_ids[0]) exampleAids.add(c.T3.conflict_flag_address_ids[0]);
+  const base=D.snaps[D.as_of];
+  const want=[["San Francisco, CA",2],["Cambridge, MA",0],["Los Angeles, CA",2],["Berkeley, CA",1],["Boston, MA",1],["Newark, NJ",0]];
+  for(const [city,res] of want){const a=AIDS.find(id=>ADDR[id].city===city&&(base[id]||[]).some(x=>x[1]===res)); if(a)exampleAids.add(a)}
+})();
+const states=["all","CA","NJ","MA"];
+document.getElementById("stateFilters").innerHTML=states.map(s=>`<button data-s="${s}" aria-pressed="${s==="all"}">${s==="all"?"":s}</button>`).join("");
+document.querySelectorAll("#stateFilters button").forEach(b=>b.onclick=()=>{st.sf=b.dataset.s;document.querySelectorAll("#stateFilters button").forEach(x=>x.setAttribute("aria-pressed",x===b));renderList()});
+const qEl=document.getElementById("q"); qEl.addEventListener("input",()=>{st.q=qEl.value.trim().toLowerCase();renderList()});
+
+function renderList(){
+  document.querySelector('#stateFilters button[data-s="all"]').textContent=t("all");
+  let ids=AIDS.filter(id=>{const a=ADDR[id];if(st.sf!=="all"&&a.state!==st.sf)return false;
+    if(!st.q)return true;return (id+" "+a.street+" "+a.postal+" "+(a.city||"")).toLowerCase().includes(st.q)});
+  if(!st.q&&st.sf==="all") ids=[...exampleAids,...ids.filter(i=>!exampleAids.has(i))];
+  const shown=ids.slice(0,150);
+  document.getElementById("alist").innerHTML=shown.map(id=>{const a=ADDR[id];
+    return `<li><button data-a="${id}" aria-current="${id===st.aid}"><span class="id">${id}</span><span class="st">${esc(a.street)}</span><span class="ct">${esc(a.city||a.postal+", "+a.state)}${exampleAids.has(id)&&!st.q&&st.sf==="all"?' · <span class="ex">example</span>':""}</span></button></li>`}).join("")
+    +(ids.length>shown.length?`<li class="muted" style="padding:8px 4px;font-size:12px">+${ids.length-shown.length}…</li>`:"");
+  document.querySelectorAll("#alist button").forEach(b=>b.onclick=()=>{st.aid=b.dataset.a;st.open={};history.replaceState(null,"","#"+st.aid);renderList();renderDossier()});
+}
+
+function factCell(key,f,label){
+  let v="—";
+  if(f&&f.provenance!=="unknown"){v=(f.lo===f.hi)?f.lo:`${f.lo??"?"}–${f.hi??"∞"}`}
+  const p=!f||f.provenance==="unknown"?`<span class="chip unk">${t("unknown_p")}</span>`:
+    f.provenance==="observed"?`<span class="chip obs">${t("observed")}</span>${f.support==="contradicted"?` <span class="chip bad">${t("contradicted")}</span>`:""}`:
+    `<span class="chip hint">${t("inferred_hint")} · ${t(f.support||"uncalibrated")}</span>`;
+  return `<div class="fact"><div class="k">${esc(label)}</div><div class="v">${esc(v)}</div>${p}${f&&f.note?`<div class="n">${esc(f.note)}</div>`:""}</div>`;
+}
+
+function renderDossier(){
+  const el=document.getElementById("dossier"); const aid=st.aid; const a=ADDR[aid]; if(!a){el.innerHTML="";return}
+  const m=rmap(st.di,aid); const prev=st.di>0?rmap(st.di-1,aid):null;
+  const counts={}; Object.values(m).forEach(x=>counts[RES[x[1]]]=(counts[RES[x[1]]]||0)+1);
+  const nconf=Object.values(m).filter(x=>x[2]).length;
+  let h=`<div class="addr-head"><div><div class="mono muted">${aid}</div><h2>${esc(a.street)}</h2><div class="sub">${esc(a.postal)}, ${a.state} → ${esc(a.city||"(unresolved city)")}</div></div>
+   <div class="summary">${RES.filter(k=>counts[k]).map(k=>`<span class="pill r-${k}">${counts[k]} · ${esc(t(k))}</span>`).join("")}${nconf?`<span class="flag">${nconf} · ${t("conflict")}</span>`:""}</div></div>`;
+  h+=`<div class="facts">${factCell("units",a.facts.units,t("units"))}${factCell("year_built",a.facts.year_built,t("year_built"))}
+     <div class="fact"><div class="k">${t("use")}</div><div class="v mono" style="font-size:14px">${esc(a.use_code||"—")}</div><div class="n">${esc(a.use||"")}</div></div>
+     ${factCell("owner_occupied",a.facts.owner_occupied,t("owner_occupied"))}${factCell("owner_type",a.facts.owner_type,t("owner_type"))}</div>`;
+  const stack=[a.state].concat(a.city?[a.city]:[]);
+  for(const cat of CATS){
+    const rules=D.rules.filter(r=>r.cat===cat&&stack.includes(r.j)).sort((x,y)=>(x.level==="state")-(y.level==="state")||x.id.localeCompare(y.id));
+    h+=`<div class="cat"><h3>${esc(t("cat_"+cat))}</h3>`;
+    const present=rules.filter(r=>m[r.id]);
+    for(const r of present){
+      const x=m[r.id]; const open=!!st.open[r.id];
+      const was=prev&&(prev[r.id]?prev[r.id][1]:-1)!==x[1]?(prev[r.id]?t(RES[prev[r.id][1]]):t("none")):null;
+      h+=`<button class="rrow" aria-expanded="${open}" data-r="${r.id}">
+        <span class="lvl"><b>${r.id}</b>${esc(r.j)}</span>
+        <span class="ttl"><span class="t">${esc(r.title)}</span><br><span class="c">${esc(r.cit)}</span></span>
+        <span class="rs">${pill(x[1])}${x[2]?`<span class="flag">${t("conflict")}</span>`:""}${r.kv?`<span class="kv">${esc(r.kv)}</span>`:""}${was?`<span class="delta">${esc(t("delta_was",D.dates[st.di],was))}</span>`:""}</span></button>`;
+      if(open) h+=proof(r,x,a,m);
+    }
+    // rules that exist but do not reach this building today
+    if(!present.length){
+      const lines=stack.map(j=>{const g=GRID[j+"|"+cat]; const rs=rules.filter(r=>r.j===j);
+        if(rs.length) return `${esc(j)}: ${rs.map(r=>r.id).join(", ")} — ${t("none").toLowerCase()} at this address / date`;
+        if(!g) return `${esc(j)}: ${t("no_cell")}`;
+        return `${esc(j)}: ${g.finding==="insufficient_text"?t("insufficient"):t("no_rule_level")}`});
+      h+=`<div class="norule">${pillName("none")} &nbsp;${lines.join(" · ")}</div>`;
+    }
+    h+=`</div>`;
+  }
+  el.innerHTML=h;
+  el.querySelectorAll(".rrow").forEach(b=>b.onclick=()=>{const id=b.dataset.r;st.open[id]=!st.open[id];renderDossier()});
+  el.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>gotoRule(b.dataset.goto));
+}
+
+function factFor(a,f){
+  if(f==="certificate_of_occupancy_date") f="year_built";
+  const v=a.facts[f]; if(!v) return `<span class="chip unk">${t("unknown_p")}</span>`;
+  if(v.provenance==="unknown") return `<span class="chip unk">${t("unknown_p")}</span>`;
+  const val=v.lo===v.hi?v.lo:`${v.lo??"?"}–${v.hi??"∞"}`;
+  return `<b>${esc(val)}</b> <span class="chip ${v.provenance==="observed"?(v.support==="contradicted"?"bad":"obs"):"hint"}">${v.provenance==="observed"?t("observed"):t("inferred_hint")+" · "+t(v.support||"uncalibrated")}</span>`;
+}
+
+function proof(r,x,a,m){
+  const notes=x[3].map(i=>D.notes[i]); const cnotes=x[4].map(i=>D.notes[i]);
+  const conds=r.conds||[];
+  const condRows=conds.map(c=>{
+    const role=c.role||(c.k==="cov"?"scope":"exemption");
+    const decisive=(c.k==="cov"&&role==="scope")||(c.k==="ex"&&role==="exemption");
+    const test=c.fact&&c.fact!=="other"&&c.fact!=="building_type"?`<span class="mono">${esc(c.fact)} ${esc(c.op)} ${esc(c.value==null?"":c.value)}</span>`:`<span class="muted">${esc(c.fact||"")} · descriptive</span>`;
+    return `<tr${decisive?"":' class="muted"'}><td>${t(c.k)}</td><td>${esc(t(role))}</td><td>${esc(c.text||"")}<br>${test}${c.quote?`<div class="muted" style="font-size:12px;font-family:Georgia,serif">“${esc(c.quote.length>220?c.quote.slice(0,220)+"…":c.quote)}”</div>`:""}</td><td>${c.fact&&a.facts[c.fact==="certificate_of_occupancy_date"?"year_built":c.fact]?factFor(a,c.fact):(["subsidized_or_affordable","properties_owned_by_landlord"].includes(c.fact)?`<span class="chip unk">${t("unknown_p")}</span>`:"")}</td></tr>`}).join("");
+  const rels=D.relations.filter(rel=>(rel.state_rule===r.id||rel.local_rule===r.id)&&(m[rel.state_rule]&&m[rel.local_rule]));
+  const relHtml=rels.length?rels.map(rel=>{const other=rel.state_rule===r.id?rel.local_rule:rel.state_rule;
+    return `<div style="margin:6px 0"><span class="${rel.type==="possible_conflict"||rel.type==="preempts_local"?"flag":"chip"}">${esc(t(rel.type))}</span> ↔ <button class="linkbtn mono" data-goto="${other}">${other}</button> <span class="muted">(${rel.votes||""} ${t("votes")})</span>
+     <p style="font-size:13px">${esc(rel.note||"")}</p>${rel.evidence_quote?`<blockquote class="src" style="max-height:120px">${esc(rel.evidence_quote)}</blockquote>`:""}</div>`}).join(""):`<p class="muted">${t("rel_none")}</p>`;
+  return `<div class="proof"><ol>
+   <li><div><h4>${t("p_jur")}</h4><p>${t("p_jur_t",a,r)}</p></div></li>
+   <li><div><h4>${t("p_status")}</h4><div class="kvline"><span>${t("stage")}: <b>${esc(r.stage)}</b></span><span>${t("eff")}: <b class="mono">${esc(r.eff||"—")}</b></span><span>${t("eff_prov")}: <b>${esc(r.eff_prov)}</b></span>${r.sunset?`<span>${t("sunset")}: <b class="mono">${esc(r.sunset)}</b></span>`:""}<span>${t("asof")}: <b class="mono">${D.dates[st.di]}</b> → ${pill(x[1])}</span></div>${r.eff_note?`<p class="muted" style="font-size:13px">${esc(r.eff_note)}</p>`:""}${r.conflict_note?`<p style="font-size:13px"><span class="flag">date</span> ${esc(r.conflict_note)}</p>`:""}</div></li>
+   <li><div><h4>${t("p_cov")}</h4>${conds.length?`<div class="scroll"><table class="ctab"><thead><tr><th></th><th>${t("role")}</th><th>${t("cond")}</th><th>${t("fact_here")}</th></tr></thead><tbody>${condRows}</tbody></table></div>`:`<p class="muted">${t("none_conds")}</p>`}</div></li>
+   <li><div><h4>${t("p_trace")}</h4>${notes.length?`<ul class="trace">${notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:`<p class="muted">All coverage tests passed on observed facts.</p>`}${cnotes.length?`<ul class="trace">${cnotes.map(n=>`<li><span class="flag">${t("conflict")}</span> ${esc(n)}</li>`).join("")}</ul>`:""}</div></li>
+   <li><div><h4>${t("p_rel")}</h4>${relHtml}</div></li>
+   <li><div><h4>${t("p_src")}</h4><div class="kvline"><span>${t("citation")}: <b class="mono">${esc(r.cit)}</b></span>${r.raw_cit&&r.raw_cit!==r.cit?`<span>${t("raw_cit")}: <span class="mono">${esc(r.raw_cit)}</span></span>`:""}<span>${t("doc")}: <b class="mono">${esc(r.doc)}</b> (${t(r.origin)})</span><span>${t("retrieved")}: <span class="mono">${esc(r.retrieved||"")}</span></span><span>${t("match")}: <span class="mono">${esc(r.qmatch)}</span></span></div>
+     <blockquote class="src">${esc(r.quote||"")}</blockquote>${r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener">${t("open_src")} ↗</a>`:""}</div></li>
+  </ol></div>`;
+}
+
+function gotoRule(id){
+  const r=RULE[id]; if(!r)return;
+  // open the first address (current one if covered) where the rule is present
+  let aid=st.aid; if(!rmap(st.di,aid)[id]) aid=AIDS.find(x=>rmap(st.di,x)[id])||st.aid;
+  st.tab="lookup"; st.aid=aid; st.open={[id]:true}; history.replaceState(null,"","#"+aid); render();
+  setTimeout(()=>{const b=document.querySelector(`.rrow[data-r="${id}"]`); if(b) b.scrollIntoView({block:"center"})},30);
+}
+function gotoAddr(aid){st.tab="lookup";st.aid=aid;st.open={};history.replaceState(null,"","#"+aid);render();window.scrollTo(0,0)}
+
+/* ---------- changes ---------- */
+function renderChanges(){
+  const el=document.getElementById("v-changes");
+  const tests=(D.tests||[]).map(x=>[x.test_id,x]);
+  const card=(id,tst,c)=>{
+    const conf=new Set(c.conflict_flag_address_ids||[]);
+    return `<div class="card"><div class="mono muted">${esc(id)} · ${esc((tst&&tst.type)||"")}</div><h3>${esc(tst?tst.title:id)}</h3>
+     <div class="stat"><div><span>${t("ch_affected")}</span><div class="big">${c.affected_address_ids.length}</div></div><div><span>${t("ch_conflicts")}</span><div class="big" style="color:${conf.size?"var(--bad)":"inherit"}">${conf.size}</div></div></div>
+     <p style="font-size:13px"><b>${t("ch_mapped")}:</b> ${(c.mapped_rules||[]).map(r=>`<button class="linkbtn mono" data-goto="${r}">${r}</button>`).join(", ")||"—"}${(c.mapped_conflict_rules||[]).length?` · ${t("conflict")}: ${(c.mapped_conflict_rules).map(r=>`<button class="linkbtn mono" data-goto="${r}">${r}</button>`).join(", ")}`:""}</p>
+     ${tst&&tst.expected_behavior?`<p class="muted" style="font-size:13px"><b>${t("ch_expected")}:</b> ${esc(tst.expected_behavior)}</p>`:""}
+     <div class="idlist">${c.affected_address_ids.map(a=>`<button data-addr="${a}" class="${conf.has(a)?"cf":""}">${a}</button>`).join("")}</div></div>`};
+  let h=`<div class="h2row"><h2>${t("ch_title")}</h2></div><p class="lead">${t("ch_lead")}</p><div class="cards">`;
+  for(const [id,tst] of tests){ if(D.changes[id]) h+=card(id,tst,D.changes[id]); }
+  h+=`</div>`;
+  if(D.rehearsal){
+    h+=`<div class="h2row" style="margin-top:28px"><h2>${t("ch_rehearsal")}</h2></div><p class="lead">${t("ch_reh_lead")}</p><div class="cards">`;
+    for(const [id,c] of Object.entries(D.rehearsal.changes)) h+=card(id,{title:"Cambridge ordinance (synthetic)",type:"as_of"},c).replace(/data-addr=/g,"data-addr-x=");
+    h+=`<div class="card"><h3>New rules extracted</h3>${D.rehearsal.new_rules.map(r=>`<p style="font-size:13px"><b class="mono">${esc(r.id)}</b> ${pillName(r.status)} ${r.conflict?`<span class="flag">${t("conflict")}</span>`:""}<br><span class="mono muted">${esc(r.cit)} · eff ${esc(r.eff)} · ${esc(r.kv||"")}</span></p><blockquote class="src" style="max-height:110px">${esc(r.quote)}</blockquote>`).join("")}</div></div>`;
+  }
+  // free diff
+  if(st.diffA==null){st.diffA=Math.max(0,D.dates.indexOf(D.as_of));st.diffB=D.dates.length-1}
+  const opt=sel=>D.dates.map((d,i)=>`<option value="${i}" ${i===sel?"selected":""}>${d}</option>`).join("");
+  h+=`<div class="h2row" style="margin-top:28px"><h2>${t("diff_title")}</h2></div>
+    <div class="diffpick"><label>${t("diff_from")} <select id="dA">${opt(st.diffA)}</select></label><label>${t("diff_to")} <select id="dB">${opt(st.diffB)}</select></label></div><div id="diffOut"></div>`;
+  el.innerHTML=h;
+  el.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>gotoRule(b.dataset.goto));
+  el.querySelectorAll("[data-addr]").forEach(b=>b.onclick=()=>gotoAddr(b.dataset.addr));
+  el.querySelectorAll("[data-addr-x]").forEach(b=>{b.title="Synthetic rehearsal: not in this build"});
+  const upd=()=>{st.diffA=+document.getElementById("dA").value;st.diffB=+document.getElementById("dB").value;renderDiff()};
+  document.getElementById("dA").onchange=upd; document.getElementById("dB").onchange=upd; renderDiff();
+}
+function renderDiff(){
+  const A=D.snaps[D.dates[st.diffA]], B=D.snaps[D.dates[st.diffB]]; const per={};
+  for(const aid of AIDS){const a={},b={};(A[aid]||[]).forEach(x=>a[x[0]]=x[1]);(B[aid]||[]).forEach(x=>b[x[0]]=x[1]);
+    for(const rid of new Set([...Object.keys(a),...Object.keys(b)])){const fa=rid in a?a[rid]:-1, fb=rid in b?b[rid]:-1; if(fa!==fb){(per[rid]=per[rid]||{n:0,tr:{},aids:[]}).n++; const k=fa+">"+fb; per[rid].tr[k]=(per[rid].tr[k]||0)+1; per[rid].aids.push(aid)}}}
+  const rows=Object.entries(per).sort((x,y)=>y[1].n-x[1].n);
+  document.getElementById("diffOut").innerHTML=rows.length?`<div class="scroll"><table class="ctab"><thead><tr><th>${t("diff_rule")}</th><th>${t("diff_n")}</th><th>${t("diff_moves")}</th></tr></thead><tbody>${rows.map(([rid,v])=>`<tr><td><button class="linkbtn mono" data-goto="${rid}">${rid}</button><div class="muted" style="font-size:12px">${esc((RULE[rid]||{}).title||"")}</div></td><td class="mono">${v.n}</td><td>${Object.entries(v.tr).map(([k,n])=>{const [f,to]=k.split(">").map(Number);return `<div style="margin:2px 0">${pill(f)} → ${pill(to)} <span class="mono">× ${n}</span></div>`}).join("")}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">${t("diff_none")}</p>`;
+  document.querySelectorAll("#diffOut [data-goto]").forEach(b=>b.onclick=()=>gotoRule(b.dataset.goto));
+}
+
+/* ---------- coverage ---------- */
+function renderCoverage(){
+  const el=document.getElementById("v-coverage"); const snap=D.snaps[D.dates[st.di]];
+  const cnt={}; const nAddr={};
+  for(const aid of AIDS){const a=ADDR[aid]; [a.state,a.city].forEach(j=>{if(j)nAddr[j]=(nAddr[j]||0)+1});
+    (snap[aid]||[]).forEach(x=>{const c=(cnt[x[0]]=cnt[x[0]]||{}); c[x[1]]=(c[x[1]]||0)+1})}
+  const color=k=>({applies:"var(--ok)",unknown:"var(--warn)",superseded:"var(--sup)",pending:"var(--pend)",not_yet_effective:"var(--nye)"}[k]||"var(--line)");
+  let h=`<div class="h2row"><h2>${t("cov_title")}</h2><span class="mono muted">${D.dates[st.di]}</span></div><p class="lead">${t("cov_lead")}</p>
+   <div class="legend">${RES.map(k=>pillName(k)).join("")}${pillName("none")}</div><br>
+   <div class="grid-wrap"><table class="grid"><thead><tr><th>${t("jurisdiction")}</th>${CATS.map(c=>`<th>${esc(t("cat_"+c))}</th>`).join("")}</tr></thead><tbody>`;
+  for(const j of JUR_ORDER){
+    h+=`<tr class="${j.length===2?"state":""}"><th>${esc(j)}<small>${t("cov_addr",nAddr[j]||0)}</small></th>`;
+    for(const c of CATS){
+      const rs=D.rules.filter(r=>r.j===j&&r.cat===c); const g=GRID[j+"|"+c];
+      h+=`<td class="gcell">`;
+      if(rs.length){ for(const r of rs){const cc=cnt[r.id]||{}; const top=Object.entries(cc).sort((a,b)=>b[1]-a[1]);
+        const st0=top.length?RES[+top[0][0]]:(r.stage==="pending"?"pending":"none");
+        h+=`<button class="rid" data-goto="${r.id}" title="${esc(r.title)}"><span class="sw" style="background:${color(st0)}"></span>${r.id}</button><div class="cnt">${top.map(([k,n])=>`${n} ${esc(t(RES[+k]).toLowerCase())}`).join(" · ")||esc(r.status)}</div>`}}
+      else if(!g) h+=`<span class="nr">—</span>`;
+      else h+=g.finding==="insufficient_text"?`<span class="ins">${t("insufficient")}</span>`:`<span class="nr">${t("no_rule_level")}</span>`;
+      h+=`</td>`;
+    }
+    h+=`</tr>`;
+  }
+  h+=`</tbody></table></div>`;
+  el.innerHTML=h; el.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>gotoRule(b.dataset.goto));
+}
+
+/* ---------- uncertainty ---------- */
+function renderUncertainty(){
+  const el=document.getElementById("v-uncertainty");
+  const ur=Object.entries(D.unknown_reasons).sort((a,b)=>b[1]-a[1]); const mx=Math.max(...ur.map(x=>x[1]),1);
+  const conflicts=D.relations.filter(r=>r.type==="possible_conflict"||r.type==="preempts_local");
+  const pend=D.rules.filter(r=>r.stage==="pending");
+  const dates=D.rules.filter(r=>r.conflict&&r.conflict_note);
+  const dflt=D.rules.filter(r=>r.eff_prov==="default_rule");
+  const sens=pol=>{const d=D.sens[pol]; const by={}; d.forEach(([a,r,f,to])=>{const k=f+">"+to; by[k]=(by[k]||0)+1});
+    return `<div class="card"><h3>${t(pol==="none"?"pol_none":"pol_all")}</h3><div class="stat"><div><span>${t("flips")}</span><div class="big">${d.length}</div></div></div>${Object.entries(by).map(([k,n])=>{const [f,to]=k.split(">").map(Number);return `<div style="margin:2px 0;font-size:13px">${pill(f)} → ${pill(to)} <span class="mono">× ${n}</span></div>`}).join("")}</div>`};
+  let h=`<div class="h2row"><h2>${t("un_title")}</h2><span class="mono muted">${D.as_of}</span></div><p class="lead">${t("un_lead")}</p><div class="split">
+   <div><h3 style="font-size:18px;margin-bottom:8px">${t("un_fact")}</h3>
+     ${ur.map(([k,n])=>`<div class="hbar"><span>${esc(t("reason_"+k))}</span><div class="track"><div class="fill" style="width:${(n/mx*100).toFixed(1)}%"></div></div><span class="num">${n}</span></div>`).join("")}
+     <h3 style="font-size:18px;margin:22px 0 4px">${t("un_sens")}</h3><p class="muted" style="font-size:13px;margin:0 0 10px">${t("un_sens_lead")}</p>
+     <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">${sens("none")}${sens("all")}</div>
+     <p class="muted" style="font-size:13px">Calibrated hint families: ${D.stats.calibration.calibrated_families.map(x=>`<span class="mono">${esc(x)}</span>`).join(", ")||"none"}.</p>
+   </div>
+   <div><h3 style="font-size:18px;margin-bottom:8px">${t("un_legal")}</h3>
+     <h4 style="margin:10px 0 4px">${t("lg_conflicts")} · ${conflicts.length}</h4>
+     ${conflicts.map(c=>`<div class="card" style="margin-bottom:8px"><span class="flag">${t(c.type)}</span> <button class="linkbtn mono" data-goto="${c.state_rule}">${c.state_rule}</button> ↔ <button class="linkbtn mono" data-goto="${c.local_rule}">${c.local_rule}</button> <span class="muted">${esc(c.votes||"")}</span><p style="font-size:13px">${esc(c.note||"")}</p>${c.evidence_quote?`<blockquote class="src" style="max-height:110px">${esc(c.evidence_quote)}</blockquote>`:""}</div>`).join("")}
+     <h4 style="margin:14px 0 4px">${t("lg_pending")} · ${pend.length}</h4>
+     ${pend.map(r=>`<p style="font-size:13px;margin:4px 0"><button class="linkbtn mono" data-goto="${r.id}">${r.id}</button> ${esc(r.cit)} — ${esc(r.title)}</p>`).join("")}
+     <h4 style="margin:14px 0 4px">${t("lg_dates")} · ${dates.length}</h4>
+     ${dates.map(r=>`<p style="font-size:13px;margin:4px 0"><button class="linkbtn mono" data-goto="${r.id}">${r.id}</button> ${esc(r.conflict_note)}</p>`).join("")||`<p class="muted">—</p>`}
+     <h4 style="margin:14px 0 4px">${t("lg_default")} · ${dflt.length}</h4>
+     ${dflt.map(r=>`<p style="font-size:13px;margin:4px 0"><button class="linkbtn mono" data-goto="${r.id}">${r.id}</button> eff ${esc(r.eff)} — ${esc(r.eff_note||"")}</p>`).join("")||`<p class="muted">—</p>`}
+   </div></div>`;
+  el.innerHTML=h; el.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>gotoRule(b.dataset.goto));
+}
+
+/* ---------- review queue ---------- */
+function renderReview(){
+  const el=document.getElementById("v-review"); const items=[];
+  D.relations.filter(r=>r.type==="possible_conflict"||r.type==="preempts_local").forEach(r=>items.push({sev:"high",q:t("rv_conflict")+": "+r.state_rule+" ↔ "+r.local_rule,d:r.note,ids:[r.state_rule,r.local_rule]}));
+  D.review.dropped.forEach(x=>items.push({sev:"med",q:t("rv_drop")+": "+x.id+" ("+x.decision+(x.duplicate_of?" → "+x.duplicate_of:"")+")",d:(x.votes?x.votes+" · ":"")+(x.reason||"")+" — "+(x.citation||""),ids:x.duplicate_of?[x.duplicate_of]:[]}));
+  D.relations.filter(r=>r.votes&&!/^3\/3/.test(r.votes)).forEach(r=>items.push({sev:"med",q:t("rv_split")+" ("+r.votes+"): "+r.state_rule+" ↔ "+r.local_rule+" = "+t(r.type),d:r.note,ids:[r.state_rule,r.local_rule]}));
+  const dec=Array.isArray(D.review.decisions)?D.review.decisions:Object.values(D.review.decisions);
+  dec.filter(x=>x.votes&&/2\/3/.test(x.votes)&&x.decision==="keep").forEach(x=>items.push({sev:"low",q:t("rv_split")+" ("+x.votes+"): keep "+x.id,d:x.reason,ids:[x.id]}));
+  D.rules.filter(r=>r.conf!=null&&r.conf<0.65).forEach(r=>items.push({sev:"med",q:t("rv_lowconf")+" ("+r.conf+"): "+r.id,d:r.title+" — "+r.cit,ids:[r.id]}));
+  D.rules.filter(r=>r.qmatch&&r.qmatch!=="raw_exact").forEach(r=>items.push({sev:"low",q:t("rv_ws")+": "+r.id,d:r.cit,ids:[r.id]}));
+  D.rules.filter(r=>r.eff_prov==="default_rule").forEach(r=>items.push({sev:"low",q:t("rv_default")+": "+r.id,d:(r.eff||"")+" — "+(r.eff_note||""),ids:[r.id]}));
+  const ord={high:0,med:1,low:2}; items.sort((a,b)=>ord[a.sev]-ord[b.sev]);
+  el.innerHTML=`<div class="h2row"><h2>${t("rv_title")}</h2><span class="mono muted">${items.length}</span></div><p class="lead">${t("rv_lead")}</p><div class="queue">${items.map(it=>`<div class="qitem"><span class="sev ${it.sev}">${t(it.sev)}</span><div><div class="q">${esc(it.q)}</div><div class="d">${esc(it.d||"")}</div>${it.ids.filter(i=>RULE[i]).map(i=>`<button class="linkbtn mono" style="font-size:12px;margin-right:8px" data-goto="${i}">${t("show_rule")} ${i}</button>`).join("")}</div></div>`).join("")}</div>`;
+  el.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>gotoRule(b.dataset.goto));
+}
+
+/* ---------- method ---------- */
+function renderMethod(){
+  const el=document.getElementById("v-method"); const s=D.stats; const ok=D.checks.filter(c=>c.ok).length;
+  const steps=LANG==="es"?[
+    ["Enrutar celdas","Cada jurisdicción × categoría se procesa por separado; una celda puede dar 0..k reglas."],
+    ["Extraer","Un LLM lee solo los documentos de esa celda y llena un esquema fijo vía llamada de herramienta forzada."],
+    ["Anclar","Cada cita debe aparecer literalmente en el documento. Sin coincidencia difusa: si no está, se reintenta o se descarta."],
+    ["Normalizar","Citas, fechas con su origen (cita explícita, calculada, regla supletoria) y hechos con su procedencia."],
+    ["Revisar (3 votos)","Una votación por mayoría elimina duplicados, categorías erróneas y textos no operativos."],
+    ["Relaciones","Se extraen relaciones estado–ciudad; un conflicto requiere evidencia textual."],
+    ["Funciones","Cada condición se clasifica: alcance, exención, ampliación, variante o no condición."],
+    ["Evaluar","Lógica trivalente determinista sobre los hechos de cada dirección. Desconocido es una respuesta válida."],
+    ["Comparar","El mismo evaluador en dos fechas produce el informe de cambios."],
+    ["Probar","Pruebas de regresión y un conjunto dorado bloquean cada versión."]]:[
+    ["Route cells","Each jurisdiction × category is its own unit of work; a cell can yield 0..k rules."],
+    ["Extract","An LLM reads only that cell's documents and fills a fixed schema through a forced tool call."],
+    ["Ground","Every quote must occur verbatim in the document. No fuzzy matching: a missing quote is retried, then dropped."],
+    ["Normalize","Citations, dates with provenance (explicit quote, computed, statutory default), facts with provenance."],
+    ["Review (3 votes)","A majority vote removes duplicates, wrong categories and non-operative text."],
+    ["Relations","State–city relations are extracted; a conflict needs verbatim evidence or it is downgraded."],
+    ["Roles","Each condition is typed: scope, exemption, expansion, variant or not a condition."],
+    ["Evaluate","Deterministic three-valued logic over each address's facts. Unknown is a valid answer."],
+    ["Diff","The same evaluator at two dates produces the change report."],
+    ["Prove","Regression checks and a golden snapshot gate every build."]];
+  const principles=LANG==="es"?[
+    "El modelo nunca decide si una regla aplica: solo lee texto. La aplicación es código auditable.",
+    "Cada respuesta lleva cita textual, documento, URL y fecha de obtención.",
+    "Un dato inferido no es un dato observado. Solo se usa si está calibrado contra datos observados.",
+    "Los conflictos se señalan para revisión humana; no se resuelven en silencio.",
+    "Una ley nueva entra sin código específico: se re-extrae solo la jurisdicción afectada y se verifica que nada más cambie."]:[
+    "The model never decides whether a rule applies; it only reads text. Applicability is auditable code.",
+    "Every answer carries a verbatim quote, document ID, URL and retrieval date.",
+    "An inferred fact is not an observed fact. Hints are used only where they calibrate against observed data.",
+    "Conflicts are flagged for a human; they are never silently resolved.",
+    "A new law enters with no law-specific code: only the touched jurisdiction is re-extracted, and we verify nothing else moved."];
+  el.innerHTML=`<div class="h2row"><h2>${t("me_title")}</h2></div><p class="lead">${t("me_lead")}</p>
+   <ol class="steps">${steps.map(([a,b])=>`<li><b>${esc(a)}</b>${esc(b)}</li>`).join("")}</ol>
+   <div class="split" style="margin-top:26px">
+    <div><div class="h2row"><h3 style="font-size:18px">${t("me_checks")}</h3><span class="pill r-applies">${ok}/${D.checks.length}</span></div>
+      <ul class="checks" style="margin-top:8px">${D.checks.map(c=>`<li><span class="${c.ok?"ok":"no"}">${c.ok?"✓":"✗"}</span>${esc(c.name)}</li>`).join("")}</ul></div>
+    <div><h3 style="font-size:18px;margin-bottom:8px">${t("me_stats")}</h3>
+      <div class="stat"><div><span>Rules</span><div class="big">${D.rules.length}</div></div><div><span>Addresses</span><div class="big">${AIDS.length}</div></div><div><span>Documents</span><div class="big">${s.docs}</div></div><div><span>LLM calls (logged)</span><div class="big">${s.llm_calls}</div></div></div>
+      <p class="muted" style="font-size:13px">Documents by origin: ${Object.entries(s.docs_by_origin).map(([k,v])=>`${esc(t(k))} ${v}`).join(", ")}. Tokens in/out: ${s.input_tokens.toLocaleString()} / ${s.output_tokens.toLocaleString()}. Every call is content-hashed and cached, so a rebuild is reproducible.</p>
+      <h3 style="font-size:18px;margin:18px 0 6px">${t("me_principles")}</h3><ul style="padding-left:18px;font-size:14px;margin:0">${principles.map(p=>`<li style="margin:4px 0">${esc(p)}</li>`).join("")}</ul>
+    </div></div>`;
+}
+
+/* ---------- top-level ---------- */
+function render(){
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===st.tab));
+  document.querySelectorAll("section.view").forEach(s=>s.hidden=s.id!=="v-"+st.tab);
+  slider.value=st.di; document.getElementById("asofText").textContent=D.dates[st.di]+(D.dates[st.di]===D.as_of?" ★":"");
+  if(st.tab==="lookup"){renderList();renderDossier()}
+  else if(st.tab==="changes")renderChanges();
+  else if(st.tab==="coverage")renderCoverage();
+  else if(st.tab==="uncertainty")renderUncertainty();
+  else if(st.tab==="review")renderReview();
+  else renderMethod();
+}
+const h0=(location.hash||"").slice(1);
+if(/^A\d+$/.test(h0)&&ADDR[h0]) st.aid=h0;
+else if(["lookup","changes","coverage","uncertainty","review","method"].includes(h0)) st.tab=h0;
+if(!st.aid) st.aid=[...exampleAids][0]||AIDS[0];
+applyI18n(); render();
+})();
+</script>
