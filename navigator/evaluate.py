@@ -82,9 +82,10 @@ def _usable(fact, policy: Policy):
 
 def eval_condition(cond, facts, as_of: dt.date, policy: Policy, notes: list, in_exemption: bool):
     f, op, val = cond.get("fact"), cond.get("op"), cond.get("value")
-    if (not in_exemption and f in UNOBSERVABLE and op == "describes" and cond.get("role") == "scope"):
-        # a classified SCOPE condition on an unobservable fact (e.g. 'housing providers receiving city
-        # funding') restricts coverage to a population the data cannot identify -> unknown, never applies
+    if (not in_exemption and f == "subsidized_or_affordable" and op == "describes" and cond.get("role") == "scope"):
+        # a classified SCOPE condition limiting the rule to subsidized/affordable housing ('housing providers receiving
+        # city funding') restricts coverage to a population the data cannot identify -> unknown, never applies.
+        # (Generic owner descriptions such as 'owners of one or more rental units' stay non-decisive.)
         notes.append(f"coverage limited to '{cond.get('text', f)}' ({f}), which is not in the data")
         return None
     if f in IGNORED or op == "describes":
