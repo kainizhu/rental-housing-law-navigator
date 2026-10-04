@@ -1,0 +1,8 @@
+[
+ {
+  "id": "SD-ALG-02",
+  "from": "S012",
+  "to": "D076",
+  "match": "ws_normalized"
+ }
+]

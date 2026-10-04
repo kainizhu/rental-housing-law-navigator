@@ -286,7 +286,7 @@ en:{
  cumulative:"Cumulative: both apply", local_governs_where_covered:"Local rule governs where it covers the building", possible_conflict:"Possible conflict", preempts_local:"State preempts local",
  delta_was:(d,r)=>`changed on ${d} (was ${r})`, results_n:n=>`${n} rule results`,
  ch_title:"What changes, and when", ch_lead:"Each test below is computed by re-running the same evaluator at two dates and listing every address whose result moved. Conflicts are flagged, not resolved.",
- ch_affected:"Addresses affected", ch_conflicts:"Conflict flags", ch_mapped:"Rules", ch_expected:"Expected", ch_rehearsal:"Hour-16 rehearsal (synthetic Cambridge ordinance)", ch_reh_lead:"A fictional ordinance written in the brief's style was dropped into the corpus. The same code re-extracted only Cambridge; no address outside Cambridge changed.",
+ ch_affected:"Addresses affected", ch_conflicts:"Conflict flags", ch_mapped:"Rules", ch_expected:"Expected", ch_rehearsal:"New-law rehearsal (synthetic Cambridge ordinance)", ch_reh_lead:"Generalization test, not part of the graded tests: a fictional ordinance we wrote was added to a copy of the corpus. The same code re-extracted only Cambridge, and no address outside Cambridge changed.",
  diff_title:"Diff any two dates", diff_from:"From", diff_to:"To", diff_rule:"Rule", diff_moves:"Transitions", diff_none:"No result changes between these dates.", diff_n:"Changed",
  cov_title:"Coverage map", cov_lead:"Every jurisdiction × category cell was read separately. A cell with no rule is a finding too: the corpus has nothing at that level. Counts are addresses at the as-of date.",
  cov_addr:n=>`${n} addresses`,
@@ -296,7 +296,7 @@ en:{
  pol_none:"Trust no inferred facts", pol_all:"Trust every inferred fact", flips:"results change",
  lg_conflicts:"Possible conflicts between levels", lg_pending:"Pending measures (shown, never applied)", lg_dates:"Sources disagree on a date", lg_default:"Effective date from a default rule, not a quote",
  rv_title:"Human review queue", rv_lead:"Everything the pipeline decided with less than full certainty, ranked. A reviewer can confirm or overturn each item; nothing here was silently resolved.",
- rv_conflict:"Conflict between levels", rv_drop:"Record dropped by the review vote", rv_split:"Split vote", rv_lowconf:"Low extraction confidence", rv_ws:"Quote matched after whitespace normalization", rv_default:"Effective date from a statutory default", high:"high", med:"medium", low:"low",
+ rv_conflict:"Conflict between levels", rv_drop:"Record dropped by the review vote", rv_split:"Split vote", rv_lowconf:"Low extraction confidence", rv_ws:"Quote matched after whitespace normalization", rv_default:"Effective date from a statutory default", rv_supp:"Source outside the supplied corpus", rv_supp_d:"Grounded in a public page that is link-only in the starter pack; the quote is verbatim there but cannot be verified against supplied corpus text.", supp_badge:"outside supplied corpus", corrob:"Also found in", high:"high", med:"medium", low:"low",
  me_title:"How an answer is built", me_lead:"Every answer is compiled ahead of time from the documents, then checked. The language model reads documents; it never decides whether a rule applies to an address. That step is plain deterministic code.",
  me_checks:"Regression checks on this build", me_stats:"Build facts", me_principles:"Design rules we hold to",
  open_lookup:"Open in lookup", show_rule:"Show rule",
@@ -322,7 +322,7 @@ es:{
  cumulative:"Acumulativas: ambas aplican", local_governs_where_covered:"La regla local rige donde cubre el edificio", possible_conflict:"Posible conflicto", preempts_local:"El estado desplaza a lo local",
  delta_was:(d,r)=>`cambió el ${d} (antes: ${r})`, results_n:n=>`${n} resultados`,
  ch_title:"Qué cambia y cuándo", ch_lead:"Cada prueba vuelve a ejecutar el mismo evaluador en dos fechas y lista toda dirección cuyo resultado cambió. Los conflictos se señalan, no se resuelven.",
- ch_affected:"Direcciones afectadas", ch_conflicts:"Conflictos señalados", ch_mapped:"Reglas", ch_expected:"Esperado", ch_rehearsal:"Ensayo de la hora 16 (ordenanza sintética de Cambridge)", ch_reh_lead:"Se añadió al corpus una ordenanza ficticia con el estilo del reto. El mismo código re-extrajo solo Cambridge; ninguna dirección fuera de Cambridge cambió.",
+ ch_affected:"Direcciones afectadas", ch_conflicts:"Conflictos señalados", ch_mapped:"Reglas", ch_expected:"Esperado", ch_rehearsal:"Ensayo de ley nueva (ordenanza sintética de Cambridge)", ch_reh_lead:"Prueba de generalización, fuera de las pruebas evaluadas: añadimos una ordenanza ficticia a una copia del corpus. El mismo código re-extrajo solo Cambridge y ninguna dirección fuera de Cambridge cambió.",
  diff_title:"Comparar dos fechas", diff_from:"Desde", diff_to:"Hasta", diff_rule:"Regla", diff_moves:"Transiciones", diff_none:"No hay cambios entre estas fechas.", diff_n:"Cambios",
  cov_title:"Mapa de cobertura", cov_lead:"Cada celda jurisdicción × categoría se leyó por separado. Una celda sin regla también es un hallazgo. Los conteos son direcciones en la fecha elegida.",
  cov_addr:n=>`${n} direcciones`,
@@ -332,7 +332,7 @@ es:{
  pol_none:"No confiar en datos inferidos", pol_all:"Confiar en todo dato inferido", flips:"resultados cambian",
  lg_conflicts:"Posibles conflictos entre niveles", lg_pending:"Medidas pendientes (se muestran, nunca se aplican)", lg_dates:"Las fuentes discrepan en una fecha", lg_default:"Vigencia por regla supletoria, no por cita",
  rv_title:"Cola de revisión humana", rv_lead:"Todo lo que el sistema decidió sin certeza total, ordenado por gravedad. Un revisor puede confirmar o revertir cada caso; nada se resolvió en silencio.",
- rv_conflict:"Conflicto entre niveles", rv_drop:"Registro descartado por votación", rv_split:"Votación dividida", rv_lowconf:"Baja confianza de extracción", rv_ws:"Cita encontrada tras normalizar espacios", rv_default:"Vigencia por regla supletoria", high:"alta", med:"media", low:"baja",
+ rv_conflict:"Conflicto entre niveles", rv_drop:"Registro descartado por votación", rv_split:"Votación dividida", rv_lowconf:"Baja confianza de extracción", rv_ws:"Cita encontrada tras normalizar espacios", rv_default:"Vigencia por regla supletoria", rv_supp:"Fuente fuera del corpus suministrado", rv_supp_d:"Basada en una página pública que en el paquete inicial es solo un enlace; la cita es textual allí, pero no se puede verificar contra el texto del corpus suministrado.", supp_badge:"fuera del corpus suministrado", corrob:"También en", high:"alta", med:"media", low:"baja",
  me_title:"Cómo se construye una respuesta", me_lead:"Cada respuesta se compila de antemano a partir de los documentos y luego se verifica. El modelo de lenguaje lee documentos; nunca decide si una regla aplica a una dirección. Ese paso es código determinista.",
  me_checks:"Pruebas de regresión de esta versión", me_stats:"Datos de la compilación", me_principles:"Reglas de diseño",
  open_lookup:"Abrir en búsqueda", show_rule:"Ver regla",
@@ -469,7 +469,7 @@ function proof(r,x,a,m){
    <li><div><h4>${t("p_cov")}</h4>${conds.length?`<div class="scroll"><table class="ctab"><thead><tr><th></th><th>${t("role")}</th><th>${t("cond")}</th><th>${t("fact_here")}</th></tr></thead><tbody>${condRows}</tbody></table></div>`:`<p class="muted">${t("none_conds")}</p>`}</div></li>
    <li><div><h4>${t("p_trace")}</h4>${notes.length?`<ul class="trace">${notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:`<p class="muted">All coverage tests passed on observed facts.</p>`}${cnotes.length?`<ul class="trace">${cnotes.map(n=>`<li><span class="flag">${t("conflict")}</span> ${esc(n)}</li>`).join("")}</ul>`:""}</div></li>
    <li><div><h4>${t("p_rel")}</h4>${relHtml}</div></li>
-   <li><div><h4>${t("p_src")}</h4><div class="kvline"><span>${t("citation")}: <b class="mono">${esc(r.cit)}</b></span>${r.raw_cit&&r.raw_cit!==r.cit?`<span>${t("raw_cit")}: <span class="mono">${esc(r.raw_cit)}</span></span>`:""}<span>${t("doc")}: <b class="mono">${esc(r.doc)}</b> (${t(r.origin)})</span><span>${t("retrieved")}: <span class="mono">${esc(r.retrieved||"")}</span></span><span>${t("match")}: <span class="mono">${esc(r.qmatch)}</span></span></div>
+   <li><div><h4>${t("p_src")}</h4><div class="kvline"><span>${t("citation")}: <b class="mono">${esc(r.cit)}</b></span>${r.raw_cit&&r.raw_cit!==r.cit?`<span>${t("raw_cit")}: <span class="mono">${esc(r.raw_cit)}</span></span>`:""}<span>${t("doc")}: <b class="mono">${esc(r.doc)}</b> (${t(r.origin)})${r.in_corpus===false?` <span class="chip hint">${t("supp_badge")}</span>`:""}${(r.corrob||[]).length?` · ${t("corrob")} <span class="mono">${r.corrob.map(c=>esc(c.doc_id)).join(", ")}</span>`:""}</span><span>${t("retrieved")}: <span class="mono">${esc(r.retrieved||"")}</span></span><span>${t("match")}: <span class="mono">${esc(r.qmatch)}</span></span></div>
      <blockquote class="src">${esc(r.quote||"")}</blockquote>${r.url?`<a href="${esc(r.url)}" target="_blank" rel="noopener">${t("open_src")} ↗</a>`:""}</div></li>
   </ol></div>`;
 }
@@ -499,7 +499,7 @@ function renderChanges(){
   h+=`</div>`;
   if(D.rehearsal){
     h+=`<div class="h2row" style="margin-top:28px"><h2>${t("ch_rehearsal")}</h2></div><p class="lead">${t("ch_reh_lead")}</p><div class="cards">`;
-    for(const [id,c] of Object.entries(D.rehearsal.changes)) h+=card(id,{title:"Cambridge ordinance (synthetic)",type:"as_of"},c).replace(/data-addr=/g,"data-addr-x=");
+    for(const [id,c] of Object.entries(D.rehearsal.changes)) h+=card(id,{title:"Synthetic Cambridge ordinance (rehearsal only)",type:"as_of"},c).replace(/data-addr=/g,"data-addr-x=");
     h+=`<div class="card"><h3>New rules extracted</h3>${D.rehearsal.new_rules.map(r=>`<p style="font-size:13px"><b class="mono">${esc(r.id)}</b> ${pillName(r.status)} ${r.conflict?`<span class="flag">${t("conflict")}</span>`:""}<br><span class="mono muted">${esc(r.cit)} · eff ${esc(r.eff)} · ${esc(r.kv||"")}</span></p><blockquote class="src" style="max-height:110px">${esc(r.quote)}</blockquote>`).join("")}</div></div>`;
   }
   // free diff
@@ -592,6 +592,7 @@ function renderReview(){
   D.rules.filter(r=>r.conf!=null&&r.conf<0.65).forEach(r=>items.push({sev:"med",q:t("rv_lowconf")+" ("+r.conf+"): "+r.id,d:r.title+" — "+r.cit,ids:[r.id]}));
   D.rules.filter(r=>r.qmatch&&r.qmatch!=="raw_exact").forEach(r=>items.push({sev:"low",q:t("rv_ws")+": "+r.id,d:r.cit,ids:[r.id]}));
   D.rules.filter(r=>r.eff_prov==="default_rule").forEach(r=>items.push({sev:"low",q:t("rv_default")+": "+r.id,d:(r.eff||"")+" — "+(r.eff_note||""),ids:[r.id]}));
+  D.rules.filter(r=>r.in_corpus===false).forEach(r=>items.push({sev:"med",q:t("rv_supp")+": "+r.id+" ("+r.doc+")",d:r.cit+" — "+t("rv_supp_d"),ids:[r.id]}));
   const ord={high:0,med:1,low:2}; items.sort((a,b)=>ord[a.sev]-ord[b.sev]);
   el.innerHTML=`<div class="h2row"><h2>${t("rv_title")}</h2><span class="mono muted">${items.length}</span></div><p class="lead">${t("rv_lead")}</p><div class="queue">${items.map(it=>`<div class="qitem"><span class="sev ${it.sev}">${t(it.sev)}</span><div><div class="q">${esc(it.q)}</div><div class="d">${esc(it.d||"")}</div>${it.ids.filter(i=>RULE[i]).map(i=>`<button class="linkbtn mono" style="font-size:12px;margin-right:8px" data-goto="${i}">${t("show_rule")} ${i}</button>`).join("")}</div></div>`).join("")}</div>`;
   el.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>gotoRule(b.dataset.goto));

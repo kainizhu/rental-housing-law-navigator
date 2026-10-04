@@ -35,7 +35,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "BER-JC-01",
@@ -72,7 +74,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "BER-FEE-01",
@@ -107,7 +111,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "BER-SCR-01",
@@ -142,7 +148,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": "Administrative fines of at least $1,000 and up to $10,000 per violation, civil damages including actual damages or three times the amount of one month's rent, punitive damages, attorneys' fees and costs, and injunctive relief."
+   "penalty": "Administrative fines of at least $1,000 and up to $10,000 per violation, civil damages including actual damages or three times the amount of one month's rent, punitive damages, attorneys' fees and costs, and injunctive relief.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "BER-ALG-01",
@@ -177,7 +185,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "The City Attorney may seek damages, injunctive relief, restitution/return of illegal profits, and/or civil penalties of up to $1,000 per violation; aggrieved tenants may seek injunctive relief, money damages, and/or civil penalties of up to $1,000 per violation; prevailing City Attorney or tenant receives reasonable attorney’s fees and costs."
+   "penalty": "The City Attorney may seek damages, injunctive relief, restitution/return of illegal profits, and/or civil penalties of up to $1,000 per violation; aggrieved tenants may seek injunctive relief, money damages, and/or civil penalties of up to $1,000 per violation; prevailing City Attorney or tenant receives reasonable attorney’s fees and costs.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "BOS-SCR-01",
@@ -212,7 +222,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-RENT-01",
@@ -252,7 +264,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "An owner who demands, accepts, receives, or retains rent above the maximum allowed is liable for injunctive relief, excess-rent damages, attorney’s fees and costs, and potentially treble damages; the Attorney General and local government attorneys may enforce and seek injunctive relief."
+   "penalty": "An owner who demands, accepts, receives, or retains rent above the maximum allowed is liable for injunctive relief, excess-rent damages, attorney’s fees and costs, and potentially treble damages; the Attorney General and local government attorneys may enforce and seek injunctive relief.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-JC-01",
@@ -294,7 +308,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "Owner’s failure to comply can void the notice, and material violations can support actual damages, attorney’s fees and costs, punitive or treble damages, and injunctive relief."
+   "penalty": "Owner’s failure to comply can void the notice, and material violations can support actual damages, attorney’s fees and costs, punitive or treble damages, and injunctive relief.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-DEP-01",
@@ -330,7 +346,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "Bad faith claim or retention of the security in violation of this section may subject the landlord to statutory damages of up to twice the amount of the security, in addition to actual damages."
+   "penalty": "Bad faith claim or retention of the security in violation of this section may subject the landlord to statutory damages of up to twice the amount of the security, in addition to actual damages.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-FEE-01",
@@ -365,7 +383,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-SCR-02",
@@ -400,7 +420,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-SCR-01",
@@ -435,7 +457,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-SCR-03",
@@ -470,7 +494,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CA-ALG-01",
@@ -505,7 +531,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "AB 325 states that it expands conduct prohibited by the Cartwright Act, 'the violation of which is punishable as a crime.'"
+   "penalty": "AB 325 states that it expands conduct prohibited by the Cartwright Act, 'the violation of which is punishable as a crime.'",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "CAM-SCR-01",
@@ -540,7 +568,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": "The Commission has the authority to provide various remedies after hearing, including filing a criminal complaint in District Court, levying civil fines of up to $300 for each violation, filing a civil complaint in Superior Court seeking injunctive relief, and seeking an award of damages, expenses and other relief."
+   "penalty": "The Commission has the authority to provide various remedies after hearing, including filing a criminal complaint in District Court, levying civil fines of up to $300 for each violation, filing a civil complaint in Superior Court seeking injunctive relief, and seeking an award of damages, expenses and other relief.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "HOB-RENT-01",
@@ -577,7 +607,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "HOB-ALG-01",
@@ -612,7 +644,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "Upon conviction, penalties may include those prescribed under N.J.S.A. 40:49-5, a fine not exceeding $2,000, or community service not exceeding 90 days."
+   "penalty": "Upon conviction, penalties may include those prescribed under N.J.S.A. 40:49-5, a fine not exceeding $2,000, or community service not exceeding 90 days.",
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "JC-RENT-01",
@@ -649,7 +683,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "JC-ALG-01",
@@ -684,7 +720,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "fines up to $2,000 per day"
+   "penalty": "fines up to $2,000 per day",
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "LA-RENT-01",
@@ -721,7 +759,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "LA-JC-02",
@@ -758,7 +798,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": "Failure to file the Landlord Declaration with the LAHD makes the eviction a violation of the RSO or JCO."
+   "penalty": "Failure to file the Landlord Declaration with the LAHD makes the eviction a violation of the RSO or JCO.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "LA-JC-01",
@@ -795,7 +837,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-RENT-01",
@@ -831,7 +875,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-RENT-02",
@@ -866,7 +912,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "failed",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-DEP-01",
@@ -902,7 +950,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "If the lessor fails to comply with clauses (a), (d), or (e) of subsection 6, the tenant shall be awarded damages in an amount equal to three times the amount of such security deposit or balance thereof to which the tenant is entitled plus interest at the rate of five per cent from the date when such payment became due, together with court costs and reasonable attorney's fees."
+   "penalty": "If the lessor fails to comply with clauses (a), (d), or (e) of subsection 6, the tenant shall be awarded damages in an amount equal to three times the amount of such security deposit or balance thereof to which the tenant is entitled plus interest at the rate of five per cent from the date when such payment became due, together with court costs and reasonable attorney's fees.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-FEE-01",
@@ -938,7 +988,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-FEE-02",
@@ -974,7 +1026,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-SCR-01",
@@ -1010,7 +1064,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-ALG-P02",
@@ -1045,7 +1101,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "pending",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "MA-ALG-P01",
@@ -1080,7 +1138,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "pending",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NJ-RENT-01",
@@ -1120,7 +1180,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NJ-JC-01",
@@ -1156,7 +1218,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NJ-DEP-01",
@@ -1191,7 +1255,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NJ-FEE-01",
@@ -1228,7 +1294,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "Up to $500 for a first offense, up to $750 for a second offense, and up to $1,000 for each subsequent offense; the amount wrongfully charged is remitted to the applicant or prospective tenant."
+   "penalty": "Up to $500 for a first offense, up to $750 for a second offense, and up to $1,000 for each subsequent offense; the amount wrongfully charged is remitted to the applicant or prospective tenant.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NJ-SCR-02",
@@ -1265,7 +1333,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "Monetary penalties up to $1,000 for a first violation, up to $5,000 for a second violation within five years, and up to $10,000 for two or more other violations within seven years; director may also order compliance measures, possible application-fee return, and payment to applicant up to $1,000."
+   "penalty": "Monetary penalties up to $1,000 for a first violation, up to $5,000 for a second violation within five years, and up to $10,000 for two or more other violations within seven years; director may also order compliance measures, possible application-fee return, and payment to applicant up to $1,000.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NJ-SCR-01",
@@ -1301,7 +1371,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NJ-ALG-01",
@@ -1338,7 +1410,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "The act states that prohibited conduct is \"unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.)\" and that it does not limit the application of \"sections 6 through 17 of P.L.1970,\nc.73 (C.56:9-6 through 9-17) to a violation of section 4 of this act.\""
+   "penalty": "The act states that prohibited conduct is \"unlawful and a violation of the “New Jersey Antitrust Act,” P.L.1970,\nc.73 (C.56:9-1 et seq.)\" and that it does not limit the application of \"sections 6 through 17 of P.L.1970,\nc.73 (C.56:9-6 through 9-17) to a violation of section 4 of this act.\"",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NEW-RENT-01",
@@ -1375,7 +1449,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": "The landlord shall rebate to the tenant any amount of rent collected in excess of that permissible pursuant to the terms of this chapter by crediting the tenant with the amount of excess rent paid over a period not to exceed 14 months, or in the event the tenant is no longer in occupancy, by refunding within a one month period. The rebate to the tenant shall be retroactive to two years from the date of the petition."
+   "penalty": "The landlord shall rebate to the tenant any amount of rent collected in excess of that permissible pursuant to the terms of this chapter by crediting the tenant with the amount of excess rent paid over a period not to exceed 14 months, or in the event the tenant is no longer in occupancy, by refunding within a one month period. The rebate to the tenant shall be retroactive to two years from the date of the petition.",
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "NEW-SCR-01",
@@ -1410,7 +1486,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": "A first violation shall be subject to a fine of up to $500. Each subsequent violation shall be subject to a fine of up to $1,000."
+   "penalty": "A first violation shall be subject to a fine of up to $500. Each subsequent violation shall be subject to a fine of up to $1,000.",
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SD-JC-01",
@@ -1447,7 +1525,9 @@
    "quote_match": "ws_normalized",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "A tenant may seek injunctive relief, equitable relief, and money damages, including punitive damages; wrongful eviction damages are not less than three times actual economic damages; failure to provide required relocation assistance makes the landlord liable for not less than three times the required relocation assistance and actual economic damages; the City may enforce with civil and criminal remedies."
+   "penalty": "A tenant may seek injunctive relief, equitable relief, and money damages, including punitive damages; wrongful eviction damages are not less than three times actual economic damages; failure to provide required relocation assistance makes the landlord liable for not less than three times the required relocation assistance and actual economic damages; the City may enforce with civil and criminal remedies.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SD-SCR-01",
@@ -1482,7 +1562,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "Aggrieved person may seek an injunction; court may award monetary damages, including three times one month's rent for violations during or before tenancy, plus punitive damages, attorneys’ fees, and costs."
+   "penalty": "Aggrieved person may seek an injunction; court may award monetary damages, including three times one month's rent for violations during or before tenancy, plus punitive damages, attorneys’ fees, and costs.",
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SD-ALG-02",
@@ -1499,9 +1581,9 @@
    "interaction": "(b)    The remedies under section 98.1104 are cumulative and are in addition to any\n                      other remedies in this Division or at law, statute, or ordinance.",
    "effective_date": "2025-06-21",
    "citation": "San Diego Municipal Code §§ 98.1101–98.1104",
-   "source_doc_id": "S012",
-   "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division11.pdf",
-   "quoted_span": "(a)    It is unlawful for a person to sell, license, or otherwise provide an algorithmic\n                            device to a landlord.\n\n                     (b)    It is unlawful for a landlord to use an algorithmic device to set rental rates or\n                            occupancy levels for residential rental property.\n\n                            For each month a violation of section 98.1103(b) exists or continues, and for\n                            each residential rental property a landlord uses an algorithmic device, it shall\n                            constitute a separate and distinct violation.",
+   "source_doc_id": "D076",
+   "source_url": "https://sandiego.gov/sites/default/files/2025-04/automated-rent-price-fixing-prohibition-ordinance-materials.pdf",
+   "quoted_span": "(a) It is unlawful for a person to sell, license, or otherwise provide an\nalgorithmic device to a landlord.\n(b) It is unlawful for a landlord to use an algorithmic device to set rental rates\nor occupancy levels for residential rental property.\nFor each month a violation of section 98.1103(b) exists or continues, and\nfor each residential rental property a landlord uses an algorithmic device,\nit shall constitute a separate and distinct violation.",
    "confidence": 0.98,
    "conflict_flag": true,
    "conflict_note": "Other published dates: 2025-02-27 (proposal/staff report date, D076); 2025-05-22 (enactment/final passage, S012)",
@@ -1512,12 +1594,20 @@
    "effective_date_provenance": "explicit_quote",
    "effective_date_note": null,
    "sunset_date": null,
-   "retrieved_at": "2026-10-03T23:40Z",
-   "source_origin": "supplemental",
-   "quote_match": "raw_exact",
+   "retrieved_at": "2026-10-01T22:37Z",
+   "source_origin": "official_corpus",
+   "quote_match": "ws_normalized",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "A tenant may seek injunctive relief, damages, or civil penalties of up to $1,000 per violation; a prevailing landlord or tenant shall recover costs and reasonable attorney’s fees; the City may enforce the Division, including civil and criminal remedies."
+   "penalty": "A tenant may seek injunctive relief, damages, or civil penalties of up to $1,000 per violation; a prevailing landlord or tenant shall recover costs and reasonable attorney’s fees; the City may enforce the Division, including civil and criminal remedies.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": [
+    {
+     "doc_id": "S012",
+     "url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division11.pdf",
+     "retrieved_at": "2026-10-03T23:40Z"
+    }
+   ]
   },
   {
    "team_rule_id": "SF-RENT-01",
@@ -1554,7 +1644,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SF-JC-01",
@@ -1591,7 +1683,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": "If a landlord evicts or tries to evict a tenant unlawfully, the landlord may be subject to substantial civil and/or criminal liability."
+   "penalty": "If a landlord evicts or tries to evict a tenant unlawfully, the landlord may be subject to substantial civil and/or criminal liability.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SF-SCR-01",
@@ -1626,7 +1720,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "date_unknown",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SF-ALG-01",
@@ -1661,7 +1757,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "A tenant or the City Attorney may bring a civil action for violations."
+   "penalty": "A tenant or the City Attorney may bring a civil action for violations.",
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SA-RENT-01",
@@ -1698,7 +1796,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SA-JC-01",
@@ -1735,7 +1835,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": null
+   "penalty": null,
+   "source_in_supplied_corpus": true,
+   "corroborating_sources": null
   },
   {
    "team_rule_id": "SA-ALG-01",
@@ -1770,7 +1872,9 @@
    "quote_match": "raw_exact",
    "status_certainty": "certain",
    "legal_stage": "enacted",
-   "penalty": "A Tenant may seek injunctive relief, damages, or civil penalties of up to $1,000 per violation; a prevailing Tenant shall recover costs and reasonable attorney's fees."
+   "penalty": "A Tenant may seek injunctive relief, damages, or civil penalties of up to $1,000 per violation; a prevailing Tenant shall recover costs and reasonable attorney's fees.",
+   "source_in_supplied_corpus": false,
+   "corroborating_sources": null
   }
  ]
 }

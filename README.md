@@ -16,7 +16,7 @@ RealPage × Hack-Nation, challenge 02. Solo build, 24 hours.
 For any of the 500 sample apartment addresses and any date, the system answers: *which rental-housing rules apply here, and why?*
 
 - **Compile.** An LLM reads each jurisdiction × category of the corpus and fills a fixed rule schema. Every field that matters (citation, coverage conditions, exemptions, effective date) is tied to a verbatim quote that must occur in the source text.
-- **Diff.** A deterministic evaluator replays the same rules at any two dates. Change reports (T1–T5, and the hour-16 ordinance) are computed this way, never written by hand.
+- **Diff.** A deterministic evaluator replays the same rules at any two dates. Change reports (T1–T5) are computed this way, never written by hand.
 - **Prove.** Each answer comes with a proof chain: the jurisdiction that reaches the address, the in-force check on the as-of date, each coverage condition compared with the building's facts (and where each fact came from), any interaction with other rules, and the quoted source span with document ID, URL and retrieval date.
 
 The language model reads documents. **It never decides whether a rule applies to an address.** That step is plain, testable code.
@@ -33,7 +33,8 @@ The language model reads documents. **It never decides whether a rule applies to
 | Change tests | T1 = 250, T2 = 90, T3 = 140 (90 conflict-flagged), T4 = 110, T5 = 0, each equal to the expected set |
 | Regression suite | 19 / 19 checks pass (`python3 -m navigator.check out/v8 --golden out/golden`) |
 | Unit tests | 25 / 25 pass |
-| Hour-16 rehearsal | Synthetic Cambridge ordinance in two variants: 45 and 21 addresses affected, conflict with G.L. c. 40P flagged, **0 addresses changed outside Cambridge** |
+| Citations | 41 of 49 rules cite supplied corpus text. 8 laws have no supplied text (their official pages are link-only), so they cite a public supplemental copy and are flagged for review; one more was re-pointed to the official corpus copy of the same text |
+| New-law rehearsal (not graded) | A synthetic Cambridge ordinance we wrote, in two variants: 45 and 21 addresses affected, conflict with G.L. c. 40P flagged, **0 addresses changed outside Cambridge** |
 
 ## How it works
 
@@ -60,13 +61,13 @@ corpus ──► route cells ──► extract (LLM, forced tool call) ──►
 | Diff | `pipeline.py` | One generic change engine handles `as_of`, `boundary`, `pending` and `negative` tests. |
 | Prove | `check.py` | 19 invariants: schema, grounding, provenance, level guard, identity, date provenance, status, relation evidence, T1–T5, plus golden checks so untouched jurisdictions cannot drift. |
 
-### A new law (hour 16)
+### Adding a new law
 
 ```bash
 python3 -m navigator.hour16 --manifest NEW/manifest.csv --tests NEW/tests.json --out out/h16
 ```
 
-There is no law-specific code. The command re-extracts only the jurisdictions the new documents touch, reuses the frozen baseline everywhere else, rebuilds lookups and changes, and reports every address whose result changed outside the touched jurisdictions. In both rehearsals that number was 0.
+There is no law-specific code. The command re-extracts only the jurisdictions the new documents touch, reuses the frozen baseline everywhere else, rebuilds lookups and changes, and reports every address whose result changed outside the touched jurisdictions. We tested it with a synthetic Cambridge ordinance of our own (`spike/synthetic/`, clearly fictional and not part of the submission); in both variants that number was 0.
 
 ## Responsible design
 
@@ -74,6 +75,7 @@ There is no law-specific code. The command re-extracts only the jurisdictions th
 - **Inferred facts are not observed facts.** A unit count guessed from an assessor code is used only when that code pattern agrees with observed counts in the same dataset (≥ 95% on ≥ 10 rows). Trusting every guess would flip 517 results; the UI shows this sensitivity.
 - **Legal and factual uncertainty are reported separately.** Conflicts between levels, pending measures and dates that sources disagree on are legal uncertainty. Missing building facts are factual uncertainty.
 - **Conflicts are flagged, never silently resolved.** A human review queue lists conflicts, records dropped by vote, split votes, low-confidence extractions and dates taken from statutory defaults.
+- **Citations come from supplied text first.** When a law has no supplied corpus text, the record cites a public copy, carries `source_in_supplied_corpus: false`, and appears in the review queue. If the same verbatim span also exists in a supplied document, the record cites the supplied one and keeps the other as corroboration.
 - **Pending and failed measures are shown, never applied.** The struck MA ballot question (T5) produces no rent cap anywhere.
 - **Every interface says "not legal advice".** The UI has English and Spanish interface text; legal text stays in its source language.
 
@@ -111,7 +113,7 @@ Checks and tests need no API key: `out/v8` (this build) and `out/golden` are com
 | `submission/` | The three graded files |
 | `out/v8/` | Current build with every intermediate: review decisions, dropped records, relations, roles, refine log |
 | `corpus/supplemental/` | 12 public supplemental documents with source URLs and retrieval dates |
-| `spike/synthetic/` | Synthetic hour-16 ordinance used for rehearsal (fictional, labeled as such) |
+| `spike/synthetic/` | Synthetic ordinance used only to rehearse adding a new law (fictional, labeled as such, not in the submission) |
 | `web/`, `docs/` | Static UI; `docs/` is served by GitHub Pages |
 | `logs/audit.jsonl` | Every model call: tag, model, token usage, latency |
 
@@ -121,4 +123,5 @@ Checks and tests need no API key: `out/v8` (this build) and `out/golden` are com
 - Year built is not the certificate-of-occupancy date. Buildings in a cutoff year are reported as unknown.
 - 23 rules have no effective date in the corpus (mostly long-standing statutes); they are treated as in force and marked `missing`.
 - New Jersey, Boston and Berkeley unit counts are mostly guesses from assessor codes that do not calibrate, so many NJ results are unknown by design.
+- Eight rules (Hoboken ch. 155 and 158, Jersey City § 218-12, Newark ch. 19:2 and 2:31, San Diego div. 8, Santa Ana NS-3090, the MA ballot question) rest on public pages that are link-only in the starter pack, so their citations cannot be checked against supplied text.
 - Relation types come from a model vote with verbatim evidence. They are inputs for a reviewer, not legal conclusions.

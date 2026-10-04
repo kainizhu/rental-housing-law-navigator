@@ -119,7 +119,7 @@ def main():
             "eff_note": r.get("effective_date_note"), "sunset": r.get("sunset_date"),
             "cit": s.get("citation") or r.get("citation"), "raw_cit": r.get("raw_citation"), "aliases": s.get("citation_aliases"),
             "doc": r.get("source_doc_id"), "url": r.get("source_url"), "retrieved": r.get("retrieved_at"),
-            "origin": r.get("source_origin"), "doc_type": doc.source_type if doc else None,
+            "origin": r.get("source_origin"), "in_corpus": r.get("source_in_supplied_corpus", r.get("source_origin") == "official_corpus"), "corrob": r.get("corroborating_sources") or [], "doc_type": doc.source_type if doc else None,
             "quote": r.get("quoted_span"), "qmatch": r.get("quote_match"), "conf": r.get("confidence"),
             "conflict": r.get("conflict_flag"), "conflict_note": r.get("conflict_note"), "interaction": r.get("interaction"),
             "penalty": r.get("penalty"), "conds": conds, "other_dates": r.get("other_dates") or []})

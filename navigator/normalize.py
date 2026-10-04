@@ -159,7 +159,8 @@ def to_schema(rule: dict) -> dict:
     out["citation_aliases"] = list(dict.fromkeys(a.strip() for a in aliases if a and a.strip()))
     # extras (allowed: schema does not forbid additional properties)
     for k in ("raw_citation", "effective_date_provenance", "effective_date_note", "sunset_date", "retrieved_at",
-              "source_origin", "quote_match", "status_certainty", "legal_stage", "penalty"):
+              "source_origin", "quote_match", "status_certainty", "legal_stage", "penalty",
+              "source_in_supplied_corpus", "corroborating_sources"):
         out[k] = rule.get(k)
     return out
 

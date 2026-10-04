@@ -1,7 +1,7 @@
 # Video scripts (≤ 60 s each)
 
 Voice-over budget: ~145 words per minute. Each script below is 125–140 words so there is room to breathe.
-Numbers marked ⟨…⟩ are refreshed from the final build before recording.
+Numbers marked ⟨…⟩ are refreshed from the final build before recording. Organizer guidance: show our own system output and validation (not score.py); there is no hour-16 ordinance in this edition.
 
 ---
 
@@ -44,7 +44,7 @@ Words: ~135.
 | 14–26 | Close-up: a condition with its role chip (scope / expansion / variant) and date provenance | "Dates carry provenance. A three-vote review removes duplicates, and each condition is typed, so an 'also includes' clause can never shrink coverage." |
 | 26–38 | Code view of `evaluate.py` three-valued logic | "Applicability is deterministic three-valued logic. A missing fact gives unknown, never a guess." |
 | 38–50 | Terminal: `python -m navigator.check` scrolling to **19/19 passed**; table T1 250 · T2 90 · T3 140 (90 conflicts) · T4 110 · T5 0 | "Nineteen regression checks gate every build. All five change tests match the expected sets." |
-| 50–60 | Terminal: hour-16 run, "addresses changed outside touched jurisdictions: 0", T6 ⟨n⟩ | "And when tonight's new ordinance arrived, one command re-extracted only Cambridge. Nothing else moved." |
+| 50–60 | Terminal: `navigator.hour16` on our synthetic ordinance, "addresses changed outside touched jurisdictions: 0" | "Adding a law is one command: it re-extracts only the city it touches, and proves nothing else moved." |
 
 Words: ~125.
 

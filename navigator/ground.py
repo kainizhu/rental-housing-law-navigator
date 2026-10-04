@@ -190,3 +190,33 @@ def level_guard(level: str, raw_citation: str):
     if level == "state" and kind == "city_code":
         return {"flag": "city_citation_at_state_level", "normalized": norm}
     return None
+
+
+def reground_official(rules, corpus=None):
+    """Citation policy: only supplied corpus text counts as verifiable. For a record grounded in a
+    supplemental source, look for the SAME verbatim span in an official corpus document of the same
+    jurisdiction; if found, cite that document and keep the supplemental one as corroboration.
+    Records that stay supplemental are marked source_in_supplied_corpus=False (shown for review)."""
+    corpus = corpus or load_corpus()
+    log = []
+    for r in rules:
+        if r.get("source_origin") != "supplemental":
+            r["source_in_supplied_corpus"] = r.get("source_origin") == "official_corpus"
+            continue
+        r["source_in_supplied_corpus"] = False
+        span = r.get("quoted_span")
+        if not span:
+            continue
+        for d in corpus.values():
+            if d.origin != "official_corpus" or r["jurisdiction"] not in d.jurisdictions:
+                continue
+            loc = locate(span, d.text, d.body_start)
+            if loc.found:
+                r.setdefault("corroborating_sources", []).append(
+                    {"doc_id": r["source_doc_id"], "url": r.get("source_url"), "retrieved_at": r.get("retrieved_at")})
+                log.append({"id": r["team_rule_id"], "from": r["source_doc_id"], "to": d.doc_id, "match": loc.mode})
+                r.update({"source_doc_id": d.doc_id, "source_url": d.url, "retrieved_at": d.retrieved_at,
+                          "source_origin": d.origin, "quoted_span": loc.span, "quote_match": loc.mode,
+                          "source_in_supplied_corpus": True})
+                break
+    return log

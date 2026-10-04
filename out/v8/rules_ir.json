@@ -252,7 +252,8 @@
   },
   "merged_conditions_from": [
    "BER-RENT-01"
-  ]
+  ],
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Berkeley, CA",
@@ -367,7 +368,8 @@
     "Just cause required; nonpayment debt must be >= 1 month FMR; notice/lawsuit copies due within 3 business days",
     "Debt >= 1 month FMR"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Berkeley, CA",
@@ -444,7 +446,8 @@
     "Disclosure; no nonrefundable renewal fee"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Berkeley, CA",
@@ -548,7 +551,8 @@
     "No criminal-history screening"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Berkeley, CA",
@@ -640,7 +644,8 @@
     "Ban on pricing algorithms"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Boston, MA",
@@ -719,7 +724,8 @@
     "No blanket criminal-history denial; no convictions older than 5 years; no use of applicant credit score to approve or deny",
     "case-by-case; 5-year limit"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -900,7 +906,8 @@
     "lesser of 5% + cost of living or 10% in any 12-month period; no more than 2 increases in 12 months",
     "5% + CPI, max 10%"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -1125,7 +1132,8 @@
     "Just cause required after 12 months occupancy; no-fault terminations require 1 month rent relocation assistance or rent waiver",
     "Just cause + 1 month aid"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -1257,7 +1265,8 @@
     "1 month's rent generally; 2 months' rent for qualifying small landlords; service members capped at 1 month",
     "1 month; 2 for small landlords"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -1321,7 +1330,8 @@
     "Actual out-of-pocket costs and reasonable time, capped at $30 per applicant, adjusted annually by CPI",
     "Actual cost, max $30 + CPI"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -1378,7 +1388,8 @@
     "No source-of-income discrimination; with government rent subsidy, income standard must be based on tenant portion of rent and credit-history screening must allow alternative evidence",
     "No SOI bias; subsidy screening limits"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -1428,7 +1439,8 @@
     "Actual out-of-pocket costs, capped at $30 per applicant plus annual CPI adjustment; fee barred if no unit available; timing/refund rules apply",
     "Actual cost, max $30 + CPI"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -1478,7 +1490,8 @@
     "No blanket bans; certain records cannot be considered; conviction-based denial must be directly related and individualized",
     "No blanket criminal-history bans"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "CA",
@@ -1528,7 +1541,8 @@
     "Use/distribution of a common pricing algorithm is unlawful in covered antitrust conduct; coercive use/distribution is also unlawful",
     "Algorithm use/distribution unlawful"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Cambridge, MA",
@@ -1590,7 +1604,8 @@
    "model": "gpt-5.4",
    "prompt_version": "x5"
   },
-  "team_rule_id": "CAM-SCR-01"
+  "team_rule_id": "CAM-SCR-01",
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Hoboken, NJ",
@@ -1753,7 +1768,8 @@
     "lesser of 5% or CPI"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": false
  },
  {
   "jurisdiction": "Hoboken, NJ",
@@ -1821,7 +1837,8 @@
     "Algorithmic pricing using nonpublic competitor information is prohibited; fine up to $2,000",
     "ban; fine up to $2,000"
    ]
-  }
+  },
+  "source_in_supplied_corpus": false
  },
  {
   "jurisdiction": "Jersey City, NJ",
@@ -1875,7 +1892,8 @@
    "model": "gpt-5.4",
    "prompt_version": "x4"
   },
-  "team_rule_id": "JC-RENT-01"
+  "team_rule_id": "JC-RENT-01",
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Jersey City, NJ",
@@ -1925,7 +1943,8 @@
     "Prohibits landlord use of algorithmic rent coordination services; fines up to $2,000 per day",
     "$2,000 per day"
    ]
-  }
+  },
+  "source_in_supplied_corpus": false
  },
  {
   "jurisdiction": "Los Angeles, CA",
@@ -2036,7 +2055,8 @@
     "3% annually (July 1, 2025–June 30, 2026); once every 12 months; no additional utility percentage beginning February 2, 2026",
     "3% annually"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Los Angeles, CA",
@@ -2191,7 +2211,8 @@
     "Eviction only for enumerated just causes; relocation assistance required for no-fault evictions",
     "just cause + relocation"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Los Angeles, CA",
@@ -2267,7 +2288,8 @@
     "Eviction only for enumerated just causes in covered RSO units; relocation assistance required for no-fault evictions",
     "just cause + relocation"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "MA",
@@ -2343,7 +2365,8 @@
     "No city or town may enact, maintain or enforce rent control of any kind, except under G.L. c. 40P acceptance with strict limits",
     "Local rent control prohibited"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "MA",
@@ -2407,7 +2430,8 @@
     "failed/struck statewide rent control ballot question",
     "struck ballot question"
    ]
-  }
+  },
+  "source_in_supplied_corpus": false
  },
  {
   "jurisdiction": "MA",
@@ -2485,7 +2509,8 @@
     "Security deposit capped at 1 month's rent; total upfront charges limited to first month, last month, 1 month security deposit, and key/lock cost; optional fee in lieu capped at 1 month's rent if authorized by regulation",
     "1 month's rent"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "MA",
@@ -2552,7 +2577,8 @@
     "Broker/finder fee payable only by the party who originally engaged the broker",
     "engaging party pays fee"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "MA",
@@ -2630,7 +2656,8 @@
     "No more than first month's rent + last month's rent + security deposit equal to first month's rent + key/lock cost; optional fee in lieu of security deposit capped at 1 month's rent",
     "1 month's rent"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "MA",
@@ -2690,7 +2717,8 @@
     "Income-source discrimination in rental accommodations prohibited",
     "income-source discrimination prohibited"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "MA",
@@ -2740,7 +2768,8 @@
    "model": "gpt-5.4",
    "prompt_version": "x4"
   },
-  "team_rule_id": "MA-ALG-P02"
+  "team_rule_id": "MA-ALG-P02",
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "MA",
@@ -2790,7 +2819,8 @@
    "model": "gpt-5.4",
    "prompt_version": "x4"
   },
-  "team_rule_id": "MA-ALG-P01"
+  "team_rule_id": "MA-ALG-P01",
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "NJ",
@@ -2853,7 +2883,8 @@
     "No statewide cap; increase must not be unconscionable and must comply with local rent control",
     "No statewide cap"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "NJ",
@@ -2880,7 +2911,7 @@
     "value": -3.0,
     "text": "Applies to two- and three-family dwellings.",
     "quote": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when a court issues an order for eviction.",
-    "group": "mNJ-JC-02-in_140663817440448",
+    "group": "mNJ-JC-02-in_140572184169600",
     "role": "scope"
    },
    {
@@ -2889,7 +2920,7 @@
     "value": 2.0,
     "text": "Applies to two- and three-family dwellings.",
     "quote": "Tenants of landlord-occupied two- and three-family dwellings can be removed only when a court issues an order for eviction.",
-    "group": "mNJ-JC-02-in_140663817440448",
+    "group": "mNJ-JC-02-in_140572184169600",
     "role": "scope"
    }
   ],
@@ -2959,7 +2990,8 @@
   "merged_conditions_from": [
    "NJ-JC-02",
    "NJ-JC-02"
-  ]
+  ],
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "NJ",
@@ -3046,7 +3078,8 @@
     "Maximum 1.5 months' rent; annual increase cap 10% of current security deposit",
     "1.5 months' rent"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "NJ",
@@ -3134,7 +3167,8 @@
     "$50 maximum application fee, annually CPI-adjusted",
     "$50 max, CPI-adjusted"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "NJ",
@@ -3227,7 +3261,8 @@
     "No pre-offer inquiry"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "NJ",
@@ -3342,7 +3377,8 @@
     "Cannot deny housing based solely on source of lawful income or lawful rent or mortgage payment.",
     "No income-source discrimination"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "NJ",
@@ -3441,7 +3477,8 @@
     "Use of a coordinator or performance of a coordinating function for residential rent pricing is unlawful; effective first day of the twelfth month next following enactment",
     "Algorithmic coordination banned"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Newark, NJ",
@@ -3582,7 +3619,8 @@
     "CPI increase, max 4%"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": false
  },
  {
   "jurisdiction": "Newark, NJ",
@@ -3694,7 +3732,8 @@
     "Criminal-history inquiry only after formal application; indictable convictions lookback 8 years, disorderly persons/municipal violations 5 years; certain serious offenses may be considered regardless of age",
     "Post-application inquiry only"
    ]
-  }
+  },
+  "source_in_supplied_corpus": false
  },
  {
   "jurisdiction": "San Diego, CA",
@@ -3880,7 +3919,8 @@
     "Just cause required; no-fault relocation assistance = 2 months' actual rent, or 3 months' actual rent if tenant is a senior or disabled",
     "2 or 3 months' rent"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "San Diego, CA",
@@ -3961,7 +4001,8 @@
     "Must account for tenant's entire source of income; may not discriminate based on source of income",
     "Count all source of income"
    ]
-  }
+  },
+  "source_in_supplied_corpus": false
  },
  {
   "jurisdiction": "San Diego, CA",
@@ -4031,13 +4072,13 @@
   "citation": "San Diego Municipal Code §§ 98.1101–98.1104",
   "raw_citation": "San Diego Municipal Code §§ 98.1101–98.1104",
   "citation_kind": "raw",
-  "source_doc_id": "S012",
-  "source_url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division11.pdf",
-  "retrieved_at": "2026-10-03T23:40Z",
-  "source_origin": "supplemental",
-  "quoted_span": "(a)    It is unlawful for a person to sell, license, or otherwise provide an algorithmic\n                            device to a landlord.\n\n                     (b)    It is unlawful for a landlord to use an algorithmic device to set rental rates or\n                            occupancy levels for residential rental property.\n\n                            For each month a violation of section 98.1103(b) exists or continues, and for\n                            each residential rental property a landlord uses an algorithmic device, it shall\n                            constitute a separate and distinct violation.",
+  "source_doc_id": "D076",
+  "source_url": "https://sandiego.gov/sites/default/files/2025-04/automated-rent-price-fixing-prohibition-ordinance-materials.pdf",
+  "retrieved_at": "2026-10-01T22:37Z",
+  "source_origin": "official_corpus",
+  "quoted_span": "(a) It is unlawful for a person to sell, license, or otherwise provide an\nalgorithmic device to a landlord.\n(b) It is unlawful for a landlord to use an algorithmic device to set rental rates\nor occupancy levels for residential rental property.\nFor each month a violation of section 98.1103(b) exists or continues, and\nfor each residential rental property a landlord uses an algorithmic device,\nit shall constitute a separate and distinct violation.",
   "quoted_span_single_line": "(a)    It is unlawful for a person to sell, license, or otherwise provide an algorithmic",
-  "quote_match": "raw_exact",
+  "quote_match": "ws_normalized",
   "penalty": "A tenant may seek injunctive relief, damages, or civil penalties of up to $1,000 per violation; a prevailing landlord or tenant shall recover costs and reasonable attorney’s fees; the City may enforce the Division, including civil and criminal remedies.",
   "confidence": 0.98,
   "other_dates": [
@@ -4068,7 +4109,15 @@
     "Use or sale of covered algorithmic devices prohibited; tenant may recover up to $1,000 per violation; each month and each residential rental property can be a separate violation",
     "Ban; up to $1,000/violation"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true,
+  "corroborating_sources": [
+   {
+    "doc_id": "S012",
+    "url": "https://docs.sandiego.gov/municode/municodechapter09/ch09art08division11.pdf",
+    "retrieved_at": "2026-10-03T23:40Z"
+   }
+  ]
  },
  {
   "jurisdiction": "San Francisco, CA",
@@ -4167,7 +4216,8 @@
     "1.6% for March 1, 2026 – February 28, 2027",
     "1.6%"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "San Francisco, CA",
@@ -4263,7 +4313,8 @@
     "17 just-cause reasons"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "San Francisco, CA",
@@ -4315,7 +4366,8 @@
    "model": "gpt-5.4",
    "prompt_version": "x4"
   },
-  "team_rule_id": "SF-SCR-01"
+  "team_rule_id": "SF-SCR-01",
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "San Francisco, CA",
@@ -4382,7 +4434,8 @@
     "Ban on algorithmic devices"
    ],
    "citation_reverted": true
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Santa Ana, CA",
@@ -4463,7 +4516,8 @@
     "lower of 3% per year or 80% of CPI change; if CPI is negative, 0%",
     "lower of 3% or 80% CPI"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Santa Ana, CA",
@@ -4547,7 +4601,8 @@
     "Just cause required after 30 days; 3 months relocation assistance or final 3 months rent waiver for no-fault terminations",
     "just cause after 30 days"
    ]
-  }
+  },
+  "source_in_supplied_corpus": true
  },
  {
   "jurisdiction": "Santa Ana, CA",
@@ -4630,6 +4685,7 @@
     "Use/sale prohibited; up to $1,000 per violation; each month and each residential rental property is a separate violation",
     "use/sale banned; $1,000 max"
    ]
-  }
+  },
+  "source_in_supplied_corpus": false
  }
 ]

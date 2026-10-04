@@ -217,6 +217,8 @@ def build(extractions, out_dir, as_of=DEFAULT_AS_OF, relations_path=None, tests_
             if r["team_rule_id"] == rel["local_rule"] and rel["type"] == "local_governs_where_covered":
                 r["overrides"].append(rel["state_rule"]); r["interaction"] = f"supersedes {rel['state_rule']} where it covers the unit"
     finalize(rules)
+    from navigator.ground import reground_official
+    json.dump(reground_official(rules), open(out_dir / "reground_log.json", "w"), indent=1)
     json.dump({"rules": [to_schema(r) for r in rules]}, open(out_dir / "rules.json", "w"), indent=1, ensure_ascii=False)
     json.dump(rules, open(out_dir / "rules_ir.json", "w"), indent=1, ensure_ascii=False, default=str)
     def expl(x):
